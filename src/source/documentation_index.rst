@@ -1,5 +1,12 @@
-Welcome to PHPUnit's documentation!
-===================================
+==============
+PHPUnit Manual
+==============
+
+*Edition for PHPUnit 6.1. Updated on format="Y-m-d".*
+
+Sebastian Bergmann
+
+This work is licensed under the Creative Commons Attribution 3.0 Unported License.
 
 Contents:
 
