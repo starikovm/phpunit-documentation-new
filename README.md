@@ -1,29 +1,36 @@
-# Building the Documentation
+# PHPUnit Documentation with Sphinx
 
-## Requirements
+The goal of this project is to come up with a proof-of-concept
+for migrating PHPUnit's documentation from DocBook XML to
+reStructuredText in order to achieve:
 
-- Apache Ant
-- PHP 5 (with DOM, PCRE, SPL, and Tokenizer extensions enabled)
-- Ruby
-- xsltproc
+- an more streamlined process for contributing to the documentation
+- better support for translations
+- an easier build process
 
-## Building the Documentation
+As this is a work in progress, the repository only contains the
+documentation for PHPUnit 6.1.
+
+## Converting DocBook XML to ReStructuredText
+
+### Requirements
+
+- Python
+
+Running the `conversion/DockbookToReST` Bash script will take all XML files from
+`src/6.1/en/`, convert them to `.rst` files with the help of
+`dockbookToRst.py` and write them to `src/en/source`.
+
+## Building the HTML Documentation
+
+### Requirements
+
+- Python
+- [Sphinx](http://www.sphinx-doc.org/)
 
 To build the complete documentation use:
 
-    cd build
-    ant
+    cd src/en
+    make html
 
-To build only one version of the documentation use:
-
-    cd build
-    ant build-LANG-VERSION
-
-for example
-
-    cd build
-    ant build-en-4.3
-
-# Output
-
-The generated files will be in `build/output/VERSION/LANG`.
+Afterwards you will find the HTML files in `src/en/build/html`.
