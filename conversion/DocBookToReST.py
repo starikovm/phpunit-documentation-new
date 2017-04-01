@@ -171,6 +171,8 @@ def _make_title(t, level):
     if level == 1:
         return "\n\n" + "=" * len(t) + "\n" + t + "\n" + "=" * len(t)
     char = ["#", "=", "-", "~", "^", "." ]
+    if level > len(char):
+        level = len(char)
     return "\n\n" + t + "\n" + char[level-2] * len(t)
 
 def _join_children(el, sep):
