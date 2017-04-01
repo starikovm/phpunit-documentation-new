@@ -6,8 +6,6 @@
 Logging
 =======
 
-Logging
-
 PHPUnit can produce several types of logfiles.
 
 .. _logging.xml:

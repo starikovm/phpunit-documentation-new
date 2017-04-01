@@ -43,8 +43,6 @@ of $this->assertTrue() or self::assertTrue()).
 
 assertArrayHasKey()
 ###################
-assertArrayHasKey()
-assertArrayNotHasKey()
 
 ``assertArrayHasKey(mixed $key, array $array[, string $message = ''])``
 
@@ -87,8 +85,6 @@ Usage of assertArrayHasKey()
 
 assertClassHasAttribute()
 #########################
-assertClassHasAttribute()
-assertClassNotHasAttribute()
 
 ``assertClassHasAttribute(string $attributeName, string $className[, string $message = ''])``
 
@@ -131,8 +127,6 @@ Usage of assertClassHasAttribute()
 
 assertArraySubset()
 ###################
-assertArraySubset()
-assertArraySubset()
 
 ``assertArraySubset(array $subset, array $array[, bool $strict = '', string $message = ''])``
 
@@ -180,8 +174,6 @@ Usage of assertArraySubset()
 
 assertClassHasStaticAttribute()
 ###############################
-assertClassHasStaticAttribute()
-assertClassNotHasStaticAttribute()
 
 ``assertClassHasStaticAttribute(string $attributeName, string $className[, string $message = ''])``
 
@@ -224,10 +216,6 @@ Usage of assertClassHasStaticAttribute()
 
 assertContains()
 ################
-assertContains()
-assertNotContains()
-assertAttributeContains()
-assertAttributeNotContains()
 
 ``assertContains(mixed $needle, Iterator|array $haystack[, string $message = ''])``
 
@@ -344,10 +332,6 @@ Usage of assertContains() with $ignoreCase
 
 assertContainsOnly()
 ####################
-assertContainsOnly()
-assertNotContainsOnly()
-assertAttributeContainsOnly()
-assertAttributeNotContainsOnly()
 
 ``assertContainsOnly(string $type, Iterator|array $haystack[, boolean $isNativeType = null, string $message = ''])``
 
@@ -398,7 +382,6 @@ Usage of assertContainsOnly()
 
 assertContainsOnlyInstancesOf()
 ###############################
-assertContainsOnlyInstancesOf()
 
 ``assertContainsOnlyInstancesOf(string $classname, Traversable|array $haystack[, string $message = ''])``
 
@@ -442,8 +425,6 @@ Usage of assertContainsOnlyInstancesOf()
 
 assertCount()
 #############
-assertCount()
-assertNotCount()
 
 ``assertCount($expectedCount, $haystack[, string $message = ''])``
 
@@ -486,8 +467,6 @@ Usage of assertCount()
 
 assertDirectoryExists()
 #######################
-assertDirectoryExists()
-assertDirectoryNotExists()
 
 ``assertDirectoryExists(string $directory[, string $message = ''])``
 
@@ -530,8 +509,6 @@ Usage of assertDirectoryExists()
 
 assertDirectoryIsReadable()
 ###########################
-assertDirectoryIsReadable()
-assertDirectoryNotIsReadable()
 
 ``assertDirectoryIsReadable(string $directory[, string $message = ''])``
 
@@ -574,8 +551,6 @@ Usage of assertDirectoryIsReadable()
 
 assertDirectoryIsWritable()
 ###########################
-assertDirectoryIsWritable()
-assertDirectoryNotIsWritable()
 
 ``assertDirectoryIsWritable(string $directory[, string $message = ''])``
 
@@ -618,10 +593,6 @@ Usage of assertDirectoryIsWritable()
 
 assertEmpty()
 #############
-assertEmpty()
-assertNotEmpty()
-assertAttributeEmpty()
-assertAttributeNotEmpty()
 
 ``assertEmpty(mixed $actual[, string $message = ''])``
 
@@ -666,7 +637,6 @@ Usage of assertEmpty()
 
 assertEqualXMLStructure()
 #########################
-assertEqualXMLStructure()
 
 ``assertEqualXMLStructure(DOMElement $expectedElement, DOMElement $actualElement[, boolean $checkAttributes = false, string $message = ''])``
 
@@ -760,10 +730,6 @@ Usage of assertEqualXMLStructure()
 
 assertEquals()
 ##############
-assertEquals()
-assertNotEquals()
-assertAttributeEquals()
-assertAttributeNotEquals()
 
 ``assertEquals(mixed $expected, mixed $actual[, string $message = ''])``
 
@@ -1022,7 +988,6 @@ Usage of assertEquals() with arrays
 
 assertFalse()
 #############
-assertFalse()
 
 ``assertFalse(bool $condition[, string $message = ''])``
 
@@ -1065,8 +1030,6 @@ Usage of assertFalse()
 
 assertFileEquals()
 ##################
-assertFileEquals()
-assertFileNotEquals()
 
 ``assertFileEquals(string $expected, string $actual[, string $message = ''])``
 
@@ -1115,8 +1078,6 @@ Usage of assertFileEquals()
 
 assertFileExists()
 ##################
-assertFileExists()
-assertFileNotExists()
 
 ``assertFileExists(string $filename[, string $message = ''])``
 
@@ -1159,8 +1120,6 @@ Usage of assertFileExists()
 
 assertFileIsReadable()
 ######################
-assertFileIsReadable()
-assertFileNotIsReadable()
 
 ``assertFileIsReadable(string $filename[, string $message = ''])``
 
@@ -1203,8 +1162,6 @@ Usage of assertFileIsReadable()
 
 assertFileIsWritable()
 ######################
-assertFileIsWritable()
-assertFileNotIsWritable()
 
 ``assertFileIsWritable(string $filename[, string $message = ''])``
 
@@ -1247,8 +1204,6 @@ Usage of assertFileIsWritable()
 
 assertGreaterThan()
 ###################
-assertGreaterThan()
-assertAttributeGreaterThan()
 
 ``assertGreaterThan(mixed $expected, mixed $actual[, string $message = ''])``
 
@@ -1291,8 +1246,6 @@ Usage of assertGreaterThan()
 
 assertGreaterThanOrEqual()
 ##########################
-assertGreaterThanOrEqual()
-assertAttributeGreaterThanOrEqual()
 
 ``assertGreaterThanOrEqual(mixed $expected, mixed $actual[, string $message = ''])``
 
@@ -1335,8 +1288,6 @@ Usage of assertGreaterThanOrEqual()
 
 assertInfinite()
 ################
-assertInfinite()
-assertFinite()
 
 ``assertInfinite(mixed $variable[, string $message = ''])``
 
@@ -1379,10 +1330,6 @@ Usage of assertInfinite()
 
 assertInstanceOf()
 ##################
-assertInstanceOf()
-assertNotInstanceOf()
-assertAttributeInstanceOf()
-assertAttributeNotInstanceOf()
 
 ``assertInstanceOf($expected, $actual[, $message = ''])``
 
@@ -1427,10 +1374,6 @@ Usage of assertInstanceOf()
 
 assertInternalType()
 ####################
-assertInternalType()
-assertNotInternalType()
-assertAttributeInternalType()
-assertAttributeNotInternalType()
 
 ``assertInternalType($expected, $actual[, $message = ''])``
 
@@ -1475,8 +1418,6 @@ Usage of assertInternalType()
 
 assertIsReadable()
 ##################
-assertIsReadable()
-assertNotIsReadable()
 
 ``assertIsReadable(string $filename[, string $message = ''])``
 
@@ -1519,8 +1460,6 @@ Usage of assertIsReadable()
 
 assertIsWritable()
 ##################
-assertIsWritable()
-assertNotIsWritable()
 
 ``assertIsWritable(string $filename[, string $message = ''])``
 
@@ -1563,8 +1502,6 @@ Usage of assertIsWritable()
 
 assertJsonFileEqualsJsonFile()
 ##############################
-assertJsonFileEqualsJsonFile()
-assertJsonFileNotEqualsJsonFile()
 
 ``assertJsonFileEqualsJsonFile(mixed $expectedFile, mixed $actualFile[, string $message = ''])``
 
@@ -1607,8 +1544,6 @@ Usage of assertJsonFileEqualsJsonFile()
 
 assertJsonStringEqualsJsonFile()
 ################################
-assertJsonStringEqualsJsonFile()
-assertJsonStringNotEqualsJsonFile()
 
 ``assertJsonStringEqualsJsonFile(mixed $expectedFile, mixed $actualJson[, string $message = ''])``
 
@@ -1652,8 +1587,6 @@ Usage of assertJsonStringEqualsJsonFile()
 
 assertJsonStringEqualsJsonString()
 ##################################
-assertJsonStringEqualsJsonString()
-assertJsonStringNotEqualsJsonString()
 
 ``assertJsonStringEqualsJsonString(mixed $expectedJson, mixed $actualJson[, string $message = ''])``
 
@@ -1705,8 +1638,6 @@ Usage of assertJsonStringEqualsJsonString()
 
 assertLessThan()
 ################
-assertLessThan()
-assertAttributeLessThan()
 
 ``assertLessThan(mixed $expected, mixed $actual[, string $message = ''])``
 
@@ -1749,8 +1680,6 @@ Usage of assertLessThan()
 
 assertLessThanOrEqual()
 #######################
-assertLessThanOrEqual()
-assertAttributeLessThanOrEqual()
 
 ``assertLessThanOrEqual(mixed $expected, mixed $actual[, string $message = ''])``
 
@@ -1793,7 +1722,6 @@ Usage of assertLessThanOrEqual()
 
 assertNan()
 ###########
-assertNan()
 
 ``assertNan(mixed $variable[, string $message = ''])``
 
@@ -1834,8 +1762,6 @@ Usage of assertNan()
 
 assertNull()
 ############
-assertNull()
-assertNotNull()
 
 ``assertNull(mixed $variable[, string $message = ''])``
 
@@ -1878,8 +1804,6 @@ Usage of assertNull()
 
 assertObjectHasAttribute()
 ##########################
-assertObjectHasAttribute()
-assertObjectNotHasAttribute()
 
 ``assertObjectHasAttribute(string $attributeName, object $object[, string $message = ''])``
 
@@ -1922,8 +1846,6 @@ Usage of assertObjectHasAttribute()
 
 assertRegExp()
 ##############
-assertRegExp()
-assertNotRegExp()
 
 ``assertRegExp(string $pattern, string $string[, string $message = ''])``
 
@@ -1966,8 +1888,6 @@ Usage of assertRegExp()
 
 assertStringMatchesFormat()
 ###########################
-assertStringMatchesFormat()
-assertStringNotMatchesFormat()
 
 ``assertStringMatchesFormat(string $format, string $string[, string $message = ''])``
 
@@ -2034,8 +1954,6 @@ The format string may contain the following placeholders:
 
 assertStringMatchesFormatFile()
 ###############################
-assertStringMatchesFormatFile()
-assertStringNotMatchesFormatFile()
 
 ``assertStringMatchesFormatFile(string $formatFile, string $string[, string $message = ''])``
 
@@ -2079,10 +1997,6 @@ Usage of assertStringMatchesFormatFile()
 
 assertSame()
 ############
-assertSame()
-assertNotSame()
-assertAttributeSame()
-assertAttributeNotSame()
 
 ``assertSame(mixed $expected, mixed $actual[, string $message = ''])``
 
@@ -2162,8 +2076,6 @@ Usage of assertSame() with objects
 
 assertStringEndsWith()
 ######################
-assertStringEndsWith()
-assertStringEndsNotWith()
 
 ``assertStringEndsWith(string $suffix, string $string[, string $message = ''])``
 
@@ -2206,8 +2118,6 @@ Usage of assertStringEndsWith()
 
 assertStringEqualsFile()
 ########################
-assertStringEqualsFile()
-assertStringNotEqualsFile()
 
 ``assertStringEqualsFile(string $expectedFile, string $actualString[, string $message = ''])``
 
@@ -2256,8 +2166,6 @@ Usage of assertStringEqualsFile()
 
 assertStringStartsWith()
 ########################
-assertStringStartsWith()
-assertStringStartsNotWith()
 
 ``assertStringStartsWith(string $prefix, string $string[, string $message = ''])``
 
@@ -2300,7 +2208,6 @@ Usage of assertStringStartsWith()
 
 assertThat()
 ############
-assertThat()
 
 More complex assertions can be formulated using the
 ``PHPUnit_Framework_Constraint`` classes. They can be
@@ -2350,135 +2257,102 @@ Constraints
 Constraint
 Meaning
 
-attribute()
 ``PHPUnit_Framework_Constraint_Attribute attribute(PHPUnit_Framework_Constraint $constraint, $attributeName)``
 Constraint that applies another constraint to an attribute of a class or an object.
 
-anything()
 ``PHPUnit_Framework_Constraint_IsAnything anything()``
 Constraint that accepts any input value.
 
-arrayHasKey()
 ``PHPUnit_Framework_Constraint_ArrayHasKey arrayHasKey(mixed $key)``
 Constraint that asserts that the array it is evaluated for has a given key.
 
-contains()
 ``PHPUnit_Framework_Constraint_TraversableContains contains(mixed $value)``
 Constraint that asserts that the ``array`` or object that implements the ``Iterator`` interface it is evaluated for contains a given value.
 
-containsOnly()
 ``PHPUnit_Framework_Constraint_TraversableContainsOnly containsOnly(string $type)``
 Constraint that asserts that the ``array`` or object that implements the ``Iterator`` interface it is evaluated for contains only values of a given type.
 
-containsOnlyInstancesOf()
 ``PHPUnit_Framework_Constraint_TraversableContainsOnly containsOnlyInstancesOf(string $classname)``
 Constraint that asserts that the ``array`` or object that implements the ``Iterator`` interface it is evaluated for contains only instances of a given classname.
 
-equalTo()
 ``PHPUnit_Framework_Constraint_IsEqual equalTo($value, $delta = 0, $maxDepth = 10)``
 Constraint that checks if one value is equal to another.
 
-attributeEqualTo()
 ``PHPUnit_Framework_Constraint_Attribute attributeEqualTo($attributeName, $value, $delta = 0, $maxDepth = 10)``
 Constraint that checks if a value is equal to an attribute of a class or of an object.
 
-directoryExists()
 ``PHPUnit_Framework_Constraint_DirectoryExists directoryExists()``
 Constraint that checks if the directory that it is evaluated for exists.
 
-fileExists()
 ``PHPUnit_Framework_Constraint_FileExists fileExists()``
 Constraint that checks if the file(name) that it is evaluated for exists.
 
-isReadable()
 ``PHPUnit_Framework_Constraint_IsReadable isReadable()``
 Constraint that checks if the file(name) that it is evaluated for is readable.
 
-isWritable()
 ``PHPUnit_Framework_Constraint_IsWritable isWritable()``
 Constraint that checks if the file(name) that it is evaluated for is writable.
 
-greaterThan()
 ``PHPUnit_Framework_Constraint_GreaterThan greaterThan(mixed $value)``
 Constraint that asserts that the value it is evaluated for is greater than a given value.
 
-greaterThanOrEqual()
 ``PHPUnit_Framework_Constraint_Or greaterThanOrEqual(mixed $value)``
 Constraint that asserts that the value it is evaluated for is greater than or equal to a given value.
 
-classHasAttribute()
 ``PHPUnit_Framework_Constraint_ClassHasAttribute classHasAttribute(string $attributeName)``
 Constraint that asserts that the class it is evaluated for has a given attribute.
 
-classHasStaticAttribute()
 ``PHPUnit_Framework_Constraint_ClassHasStaticAttribute classHasStaticAttribute(string $attributeName)``
 Constraint that asserts that the class it is evaluated for has a given static attribute.
 
-hasAttribute()
 ``PHPUnit_Framework_Constraint_ObjectHasAttribute hasAttribute(string $attributeName)``
 Constraint that asserts that the object it is evaluated for has a given attribute.
 
-identicalTo()
 ``PHPUnit_Framework_Constraint_IsIdentical identicalTo(mixed $value)``
 Constraint that asserts that one value is identical to another.
 
-isFalse()
 ``PHPUnit_Framework_Constraint_IsFalse isFalse()``
 Constraint that asserts that the value it is evaluated is ``false``.
 
-isInstanceOf()
 ``PHPUnit_Framework_Constraint_IsInstanceOf isInstanceOf(string $className)``
 Constraint that asserts that the object it is evaluated for is an instance of a given class.
 
-isNull()
 ``PHPUnit_Framework_Constraint_IsNull isNull()``
 Constraint that asserts that the value it is evaluated is ``null``.
 
-isTrue()
 ``PHPUnit_Framework_Constraint_IsTrue isTrue()``
 Constraint that asserts that the value it is evaluated is ``true``.
 
-isType()
 ``PHPUnit_Framework_Constraint_IsType isType(string $type)``
 Constraint that asserts that the value it is evaluated for is of a specified type.
 
-lessThan()
 ``PHPUnit_Framework_Constraint_LessThan lessThan(mixed $value)``
 Constraint that asserts that the value it is evaluated for is smaller than a given value.
 
-lessThanOrEqual()
 ``PHPUnit_Framework_Constraint_Or lessThanOrEqual(mixed $value)``
 Constraint that asserts that the value it is evaluated for is smaller than or equal to a given value.
 
-logicalAnd()
 ``logicalAnd()``
 Logical AND.
 
-logicalNot()
 ``logicalNot(PHPUnit_Framework_Constraint $constraint)``
 Logical NOT.
 
-logicalOr()
 ``logicalOr()``
 Logical OR.
 
-logicalXor()
 ``logicalXor()``
 Logical XOR.
 
-matchesRegularExpression()
 ``PHPUnit_Framework_Constraint_PCREMatch matchesRegularExpression(string $pattern)``
 Constraint that asserts that the string it is evaluated for matches a regular expression.
 
-stringContains()
 ``PHPUnit_Framework_Constraint_StringContains stringContains(string $string, bool $case)``
 Constraint that asserts that the string it is evaluated for contains a given string.
 
-stringEndsWith()
 ``PHPUnit_Framework_Constraint_StringEndsWith stringEndsWith(string $suffix)``
 Constraint that asserts that the string it is evaluated for ends with a given suffix.
 
-stringStartsWith()
 ``PHPUnit_Framework_Constraint_StringStartsWith stringStartsWith(string $prefix)``
 Constraint that asserts that the string it is evaluated for starts with a given prefix.
 
@@ -2486,7 +2360,6 @@ Constraint that asserts that the string it is evaluated for starts with a given 
 
 assertTrue()
 ############
-assertTrue()
 
 ``assertTrue(bool $condition[, string $message = ''])``
 
@@ -2529,8 +2402,6 @@ Usage of assertTrue()
 
 assertXmlFileEqualsXmlFile()
 ############################
-assertXmlFileEqualsXmlFile()
-assertXmlFileNotEqualsXmlFile()
 
 ``assertXmlFileEqualsXmlFile(string $expectedFile, string $actualFile[, string $message = ''])``
 
@@ -2582,8 +2453,6 @@ Usage of assertXmlFileEqualsXmlFile()
 
 assertXmlStringEqualsXmlFile()
 ##############################
-assertXmlStringEqualsXmlFile()
-assertXmlStringNotEqualsXmlFile()
 
 ``assertXmlStringEqualsXmlFile(string $expectedFile, string $actualXml[, string $message = ''])``
 
@@ -2635,8 +2504,6 @@ Usage of assertXmlStringEqualsXmlFile()
 
 assertXmlStringEqualsXmlString()
 ################################
-assertXmlStringEqualsXmlString()
-assertXmlStringNotEqualsXmlString()
 
 ``assertXmlStringEqualsXmlString(string $expectedXml, string $actualXml[, string $message = ''])``
 

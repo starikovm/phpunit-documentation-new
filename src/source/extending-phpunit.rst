@@ -15,8 +15,6 @@ common starting points to extend PHPUnit.
 Subclass PHPUnit\\Framework\\TestCase
 #####################################
 
-PHPUnit\\Framework\\TestCase
-
 Write custom assertions and utility methods in an abstract subclass of
 ``PHPUnit\Framework\TestCase`` and derive your test case
 classes from that class. This is one of the easiest ways to extend
@@ -123,8 +121,6 @@ used as a matcher when configuring mock objects.
 Implement PHPUnit_Framework_TestListener
 ########################################
 
-PHPUnit_Framework_TestListener
-
 :ref:`extending-phpunit.examples.SimpleTestListener.php`
 shows a simple implementation of the ``PHPUnit_Framework_TestListener``
 interface.
@@ -179,8 +175,6 @@ A simple test listener
     }
     ?>
 
-PHPUnit_Framework_BaseTestListener
-
 :ref:`extending-phpunit.examples.BaseTestListener.php`
 shows how to subclass the ``PHPUnit_Framework_BaseTestListener``
 abstract class, which lets you specify only the interface methods that
@@ -214,14 +208,10 @@ execution.
 Subclass PHPUnit_Extensions_TestDecorator
 #########################################
 
-PHPUnit_Extensions_TestDecorator
-
 You can wrap test cases or test suites in a subclass of
 ``PHPUnit_Extensions_TestDecorator`` and use the
 Decorator design pattern to perform some actions before and after the
 test runs.
-
-PHPUnit_Extensions_RepeatedTest
 
 PHPUnit ships with one concrete test decorator:
 ``PHPUnit_Extensions_RepeatedTest``. It is used to run a
@@ -274,9 +264,6 @@ The RepeatedTest Decorator
 
 Implement PHPUnit_Framework_Test
 ################################
-
-PHPUnit_Framework_Test
-Data-Driven Tests
 
 The ``PHPUnit_Framework_Test`` interface is narrow and
 easy to implement. You can write an implementation of

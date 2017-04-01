@@ -6,8 +6,6 @@
 Fixtures
 ========
 
-Fixture
-
 One of the most time-consuming parts of writing tests is writing the
 code to set the world up in a known state and then return it to its
 original state when the test is complete. This known state is called
@@ -22,10 +20,6 @@ of setting up the fixture. This problem gets even worse when you write
 several tests with similar fixtures. Without some help from the testing
 framework, we would have to duplicate the code that sets up the fixture
 for each test we write.
-
-Template Method
-setUp()
-tearDown()
 
 PHPUnit supports sharing the setup code. Before a test method is run, a
 template method called ``setUp()`` is invoked.
@@ -84,31 +78,14 @@ Using setUp() to create the stack fixture
     }
     ?>
 
-Template Method
-setUpBeforeClass()
-setUp()
-tearDown()
-tearDownAfterClass()
-
 The ``setUp()`` and ``tearDown()`` template
 methods are run once for each test method (and on fresh instances) of the
 test case class.
-
-Template Method
-setUpBeforeClass()
-setUp()
-assertPreConditions()
-assertPostConditions()
-tearDown()
-tearDownAfterClass()
-onNotSuccessfulTest()
 
 In addition, the ``setUpBeforeClass()`` and
 ``tearDownAfterClass()`` template methods are called before
 the first test of the test case class is run and after the last test of the
 test case class is run, respectively.
-
-Template Method
 
 The example below shows all template methods that are available in a test
 case class.
@@ -236,9 +213,6 @@ tests is a database connection: you log into the database once and reuse
 the database connection instead of creating a new connection for each
 test. This makes your tests run faster.
 
-setUpBeforeClass
-tearDownAfterClass
-
 :ref:`fixtures.sharing-fixture.examples.DatabaseTest.php`
 uses the ``setUpBeforeClass()`` and
 ``tearDownAfterClass()`` template methods to connect to the
@@ -300,9 +274,6 @@ In PHP, global variables work like this:
 Besides global variables, static attributes of classes are also part of
 the global state.
 
-Global Variable
-Test Isolation
-
 By default, PHPUnit runs your tests in a way where changes to global
 and super-global variables (``$GLOBALS``,
 ``$_ENV``, ``$_POST``,
@@ -317,9 +288,6 @@ isolation can be extended to static attributes of classes.
    Objects of some classes (e.g., ``PDO``) cannot be
    serialized and the backup operation will break when such an object is
    stored e.g. in the ``$GLOBALS`` array.
-
-``@backupGlobals``
-``$backupGlobalsBlacklist``
 
 The ``@backupGlobals`` annotation that is discussed in
 :ref:`appendixes.annotations.backupGlobals` can be used to
@@ -337,9 +305,6 @@ be excluded from the backup and restore operations like this
 
 .. note:: Setting the ``$backupGlobalsBlacklist`` property inside
    e.g. the ``setUp()`` method has no effect.
-
-``@backupStaticAttributes``
-``$backupStaticAttributesBlacklist``
 
 The ``@backupStaticAttributes`` annotation discussed in
 :ref:`appendixes.annotations.backupStaticAttributes`

@@ -13,9 +13,6 @@ Code Coverage Analysis
     tested and has a lower chance of containing software bugs than a program
     with low code coverage.
 
-Code Coverage
-Xdebug
-
 In this chapter you will learn all about PHPUnit's code coverage
 functionality that provides an insight into what parts of the production
 code are executed when the tests are run. It makes use of the
@@ -100,8 +97,6 @@ Various software metrics exist to measure code coverage:
 Whitelisting Files
 ##################
 
-Code CoverageWhitelist
-
 It is mandatory to configure a *whitelist* for telling
 PHPUnit which sourcecode files to include in the code coverage report.
 This can either be done using the ``--whitelist``
@@ -125,11 +120,6 @@ PHPUnit configuration (see :ref:`appendixes.configuration.whitelisting-files`).
 
 Ignoring Code Blocks
 ####################
-
-Annotation
-@codeCoverageIgnore
-@codeCoverageIgnoreStart
-@codeCoverageIgnoreEnd
 
 Sometimes you have blocks of code that you cannot test and that you may
 want to ignore during code coverage analysis. PHPUnit lets you do this
@@ -181,9 +171,6 @@ highlighted.
 
 Specifying Covered Methods
 ##########################
-
-Annotation
-@covers
 
 The ``@covers`` annotation (see
 :ref:`appendixes.annotations.covers.tables.annotations`) can be
@@ -259,9 +246,6 @@ Tests that specify which method they want to cover
         }
     }
     ?>
-
-Annotation
-@coversNothing
 
 It is also possible to specify that a test should not cover
 *any* method by using the

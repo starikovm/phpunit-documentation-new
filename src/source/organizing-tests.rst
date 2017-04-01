@@ -6,8 +6,6 @@
 Organizing Tests
 ================
 
-Test Suite
-
 One of the goals of PHPUnit is that tests
 should be composable: we want to be able to run any number or combination
 of tests together, for instance all tests for the whole project, or the
@@ -88,7 +86,6 @@ For more fine-grained control of which tests to run we can use the
 
 Composing a Test Suite Using XML Configuration
 ##############################################
-XML Configuration
 
 PHPUnit's XML configuration file (:ref:`appendixes.configuration`)
 can also be used to compose a test suite.

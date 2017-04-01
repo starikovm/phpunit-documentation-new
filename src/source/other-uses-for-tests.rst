@@ -14,11 +14,6 @@ more uses for tests. Here are some examples.
 Agile Documentation
 ###################
 
-Agile Documentation
-Automated Documentation
-Extreme Programming
-TestDox
-
 Typically, in a project that is developed using an agile process,
 such as Extreme Programming, the documentation cannot keep up with the
 frequent changes to the project's design and code. Extreme Programming
@@ -55,8 +50,6 @@ Alternatively, the agile documentation can be generated in HTML or plain
 text format and written to a file using the ``--testdox-html``
 and ``--testdox-text`` arguments.
 
-Documenting Assumptions
-
 Agile Documentation can be used to document the assumptions you make
 about the external packages that you use in your project. When you use
 an external package, you are exposed to the risks that the package will
@@ -85,8 +78,6 @@ the tests reveal as many assumptions as possible. Hidden assumptions are
 the death of cooperation. With the tests, you document exactly what you
 expect from the supplied package. The supplier will know the package is
 complete when all the tests run.
-
-Stubs
 
 By using stubs (see the chapter on "Mock Objects", earlier in this book),
 you can further decouple yourself from the supplier: The job of the

@@ -6,8 +6,6 @@
 Annotations
 ===========
 
-Annotation
-
 An annotation is a special form of syntactic metadata that can be added to
 the source code of some programming languages. While PHP has no dedicated
 language feature for annotating source code, the usage of tags such as
@@ -28,8 +26,6 @@ This appendix shows all the varieties of annotations supported by PHPUnit.
 
 @author
 #######
-
-@author
 
 The ``@author`` annotation is an alias for the
 ``@group`` annotation (see :ref:`appendixes.annotations.group`) and allows to filter tests based
@@ -99,8 +95,6 @@ class have been run to clean up shared fixtures.
 @backupGlobals
 ##############
 
-``@backupGlobals``
-
 The backup and restore operations for global variables can be completely
 disabled for all tests of a test case class like this
 ::
@@ -113,8 +107,6 @@ disabled for all tests of a test case class like this
     {
         // ...
     }
-
-``@backupGlobals``
 
 The ``@backupGlobals`` annotation can also be used on the
 test method level. This allows for a fine-grained configuration of the
@@ -140,8 +132,6 @@ backup and restore operations:
 
 @backupStaticAttributes
 #######################
-
-``@backupStaticAttributes``
 
 The ``@backupStaticAttributes`` annotation can be used to
 back up all static property values in all declared classes before each
@@ -234,10 +224,6 @@ class are run to set up shared fixtures.
 @codeCoverageIgnore*
 ####################
 
-@codeCoverageIgnore
-@codeCoverageIgnoreStart
-@codeCoverageIgnoreEnd
-
 The ``@codeCoverageIgnore``,
 ``@codeCoverageIgnoreStart`` and
 ``@codeCoverageIgnoreEnd`` annotations can be used
@@ -249,9 +235,6 @@ For usage see :ref:`code-coverage-analysis.ignoring-code-blocks`.
 
 @covers
 #######
-
-Code Coverage
-@covers
 
 The ``@covers`` annotation can be used in the test code to
 specify which method(s) a test method wants to test:
@@ -314,8 +297,6 @@ Description
 @coversDefaultClass
 ###################
 
-@coversDefaultClass
-
 The ``@coversDefaultClass`` annotation can be used to
 specify a default namespace or class name. That way long names don't need to be
 repeated for every ``@covers`` annotation. See
@@ -351,8 +332,6 @@ Using @coversDefaultClass to shorten annotations
 @coversNothing
 ##############
 
-@coversNothing
-
 The ``@coversNothing`` annotation can be used in the
 test code to specify that no code coverage information will be
 recorded for the annotated test case.
@@ -369,8 +348,6 @@ will override any ``@covers`` tags.
 @dataProvider
 #############
 
-@dataProvider
-
 A test method can accept arbitrary arguments. These arguments are to be
 provided by a data provider method (``provider()`` in
 :ref:`writing-tests-for-phpunit.data-providers.examples.DataTest.php`).
@@ -384,8 +361,6 @@ details.
 
 @depends
 ########
-
-@depends
 
 PHPUnit supports the declaration of explicit dependencies between test
 methods. Such dependencies do not define the order in which the test
@@ -403,8 +378,6 @@ details.
 @expectedException
 ##################
 
-@expectedException
-
 :ref:`writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php`
 shows how to use the ``@expectedException`` annotation to
 test whether an exception is thrown inside the tested code.
@@ -416,8 +389,6 @@ details.
 
 @expectedExceptionCode
 ######################
-
-@expectedExceptionCode
 
 The ``@expectedExceptionCode`` annotation, in conjunction
 with the ``@expectedException`` allows making assertions on
@@ -467,8 +438,6 @@ specify a class constant as an
 
 @expectedExceptionMessage
 #########################
-
-@expectedExceptionMessage
 
 The ``@expectedExceptionMessage`` annotation works similar
 to ``@expectedExceptionCode`` as it lets you make an
@@ -522,8 +491,6 @@ A sample can be found in :ref:`appendixes.annotations.expectedExceptionCode`.
 @expectedExceptionMessageRegExp
 ###############################
 
-@expectedExceptionMessageRegExp
-
 The expected message can also be specified as a regular expression using
 the ``@expectedExceptionMessageRegExp`` annotation. This
 is helpful for situations where a substring is not adequate for matching
@@ -548,8 +515,6 @@ a given message.
 
 @group
 ######
-
-@group
 
 A test can be tagged as belonging to one or more groups using the
 ``@group`` annotation like this
@@ -583,13 +548,8 @@ XML configuration file.
 @large
 ######
 
-``@large``
-
 The ``@large`` annotation is an alias for
 ``@group large``.
-
-``PHP_Invoker``
-``timeoutForLargeTests``
 
 If the ``PHP_Invoker`` package is installed and strict
 mode is enabled, a large test will fail if it takes longer than 60
@@ -602,14 +562,9 @@ configuration file.
 @medium
 #######
 
-``@medium``
-
 The ``@medium`` annotation is an alias for
 ``@group medium``. A medium test must not depend on a test
 marked as ``@large``.
-
-``PHP_Invoker``
-``timeoutForMediumTests``
 
 If the ``PHP_Invoker`` package is installed and strict
 mode is enabled, a medium test will fail if it takes longer than 10
@@ -621,8 +576,6 @@ configuration file.
 
 @preserveGlobalState
 ####################
-
-@preserveGlobalState
 
 When a test is run in a separate process, PHPUnit will
 attempt to preserve the global state from the parent process by
@@ -652,12 +605,9 @@ PHPUnit from preserving global state with the
 @requires
 #########
 
-``@requires``
-
 The ``@requires`` annotation can be used to skip tests when common
 preconditions, like the PHP Version or installed extensions, are not met.
 
-``@requires``
 A complete list of possibilities and examples can be found at
 :ref:`incomplete-and-skipped-tests.requires.tables.api`
 
@@ -665,8 +615,6 @@ A complete list of possibilities and examples can be found at
 
 @runTestsInSeparateProcesses
 ############################
-
-@runTestsInSeparateProcesses
 
 Indicates that all tests in a test class should be run in a separate
 PHP process.
@@ -692,8 +640,6 @@ on how to fix this.
 
 @runInSeparateProcess
 #####################
-
-@runInSeparateProcess
 
 Indicates that a test should be run in a separate PHP process.
 
@@ -723,14 +669,9 @@ on how to fix this.
 @small
 ######
 
-``@small``
-
 The ``@small`` annotation is an alias for
 ``@group small``. A small test must not depend on a test
 marked as ``@medium`` or ``@large``.
-
-``PHP_Invoker``
-``timeoutForSmallTests``
 
 If the ``PHP_Invoker`` package is installed and strict
 mode is enabled, a small test will fail if it takes longer than 1
@@ -745,8 +686,6 @@ configuration file.
 
 @test
 #####
-
-@test
 
 As an alternative to prefixing your test method names with
 ``test``, you can use the ``@test``
@@ -767,9 +706,6 @@ annotation in a method's DocBlock to mark it as a test method.
 @testdox
 ########
 
-TestDox
-@testdox
-
 ::
 
 .. _appendixes.annotations.ticket:
@@ -777,16 +713,12 @@ TestDox
 @ticket
 #######
 
-@ticket
-
 ::
 
 .. _appendixes.annotations.uses:
 
 @uses
 #####
-
-@uses
 
 The ``@uses`` annotation specifies code which will be
 executed by a test, but is not intended to be covered by the test. A good

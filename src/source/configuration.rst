@@ -106,8 +106,6 @@ Additional options that are not available as command-line options are:
 Test Suites
 ###########
 
-Test Suite
-
 The ``<testsuites>`` element and its
 one or more ``<testsuite>`` children can be
 used to compose a test suite out of test suites and test cases.
@@ -146,8 +144,6 @@ defaults to ``>=``.
 Groups
 ######
 
-Test Groups
-
 The ``<groups>`` element and its
 ``<include>``,
 ``<exclude>``, and
@@ -179,9 +175,6 @@ with the following options:
 Whitelisting Files for Code Coverage
 ####################################
 
-Code Coverage
-Whitelist
-
 The ``<filter>`` element and its children can
 be used to configure the whitelist for the code coverage reporting.
 
@@ -202,8 +195,6 @@ be used to configure the whitelist for the code coverage reporting.
 
 Logging
 #######
-
-Logging
 
 The ``<logging>`` element and its
 ``<log>`` children can be used to configure the
@@ -259,9 +250,6 @@ test runner option.
 Test Listeners
 ##############
 
-PHPUnit_Framework_TestListener
-Test Listener
-
 The ``<listeners>`` element and its
 ``<listener>`` children can be used to attach
 additional test listeners to the test execution.
@@ -303,10 +291,6 @@ The XML configuration above corresponds to attaching the
 
 Setting PHP INI settings, Constants and Global Variables
 ########################################################
-
-Constant
-Global Variable
-``php.ini``
 
 The ``<php>`` element and its children can be
 used to configure PHP settings, constants, and global variables. It can

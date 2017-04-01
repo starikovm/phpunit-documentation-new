@@ -6,8 +6,6 @@
 Writing Tests for PHPUnit
 =========================
 
-PHPUnit\\Framework\\TestCase
-
 :ref:`writing-tests-for-phpunit.examples.StackTest.php` shows
 how we can write tests using PHPUnit that exercise PHP's array operations.
 The example introduces the basic conventions and steps for writing tests
@@ -18,7 +16,7 @@ with PHPUnit:
 #. ``ClassTest`` inherits (most of the time) from ``PHPUnit\Framework\TestCase``.
 
 #. The tests are public methods that are named ``test*``.
-   Annotation@testAlternatively, you can use the ``@test`` annotation in a method's docblock to mark it as a test method.
+   Alternatively, you can use the ``@test`` annotation in a method's docblock to mark it as a test method.
 
 #. Inside the test methods, assertion methods such as ``assertEquals()`` (see :ref:`appendixes.assertions`) are used to assert that an actual value matches an expected value.
 
@@ -66,8 +64,6 @@ Test Dependencies
     there are implicit dependencies between test methods, hidden in the
     implementation scenario of a test.
 
-Test Dependencies
-
 PHPUnit supports the declaration of explicit dependencies between test
 methods. Such dependencies do not define the order in which the test
 methods are to be executed but they allow the returning of an instance of
@@ -76,9 +72,6 @@ the test fixture by a producer and passing it to the dependent consumers.
 - A producer is a test method that yields its unit under test as return value.
 
 - A consumer is a test method that depends on one or more producers and their return values.
-
-Annotation
-@depends
 
 :ref:`writing-tests-for-phpunit.examples.StackTest2.php` shows
 how to use the ``@depends`` annotation to express
@@ -129,15 +122,11 @@ depends on ``testEmpty()`` and is passed the result of that
 depended-upon test as its argument. Finally, ``testPop()``
 depends upon ``testPush()``.
 
-.. note:: Annotation
-   @depends
-   The return value yielded by a producer is passed "as-is" to its
+.. note:: The return value yielded by a producer is passed "as-is" to its
    consumers by default. This means that when a producer returns an object
    a reference to that object is passed to the consumers. When a copy
    should be used instead of a reference then @depends clone
    should be used instead of @depends.
-
-Defect Localization
 
 To quickly localize defects, we want our attention to be focussed on
 relevant failing tests. This is why PHPUnit skips the execution of a test
@@ -243,8 +232,6 @@ Test with multiple dependencies
 Data Providers
 ##############
 
-Annotation
-@dataProvider
 A test method can accept arbitrary arguments. These arguments are to be
 provided by a data provider method (``additionProvider()`` in
 :ref:`writing-tests-for-phpunit.data-providers.examples.DataTest.php`).
@@ -425,10 +412,6 @@ The CsvFileIterator class
     }
     ?>
 
-Annotation
-@dataProvider
-@depends
-
 When a test receives input from both a ``@dataProvider``
 method and from one or more tests it ``@depends`` on, the
 arguments from the data provider will come before the ones from
@@ -498,18 +481,12 @@ Combination of @depends and @dataProvider in same test
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
-.. note:: Annotation
-   @dataProvider
-   @depends
-   When a test depends on a test that uses data providers, the depending
+.. note:: When a test depends on a test that uses data providers, the depending
    test will be executed when the test it depends upon is successful for at
    least one data set. The result of a test that uses data providers cannot
    be injected into a depending test.
 
-.. note:: Annotation
-   @dataProvider
-   @depends
-   All data providers are executed before both the call to the ``setUpBeforeClass``
+.. note:: All data providers are executed before both the call to the ``setUpBeforeClass``
    static method and the first call to the ``setUp`` method.
    Because of that you can't access any variables you create there from
    within a data provider. This is required in order for PHPUnit to be able
@@ -519,9 +496,6 @@ Combination of @depends and @dataProvider in same test
 
 Testing Exceptions
 ##################
-
-Exception
-expectException()
 
 :ref:`writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php`
 shows how to use the ``expectException()`` method to test
@@ -557,18 +531,11 @@ Using the expectException() method
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
-expectExceptionCode()
-expectExceptionMessage()
-expectExceptionMessageRegExp()
-
 In addition to the ``expectException()`` method the
 ``expectExceptionCode()``,
 ``expectExceptionMessage()``, and
 ``expectExceptionMessageRegExp()`` methods exist to set up
 expectations for exceptions raised by the code under test.
-
-Annotation
-@expectedException
 
 Alternatively, you can use the ``@expectedException``,
 ``@expectedExceptionCode``,
@@ -615,12 +582,6 @@ Using the @expectedException annotation
 Testing PHP Errors
 ##################
 
-Error Handler
-PHP Error
-PHP Notice
-PHP Warning
-PHPUnit_Framework_Error
-
 By default, PHPUnit converts PHP errors, warnings, and notices that are
 triggered during the execution of a test to an exception. Using these
 exceptions, you can, for instance, expect a test to trigger a PHP error as
@@ -659,9 +620,6 @@ Expecting a PHP error using @expectedException
     .
     Time: 0 seconds, Memory: 5.25Mb
     OK (1 test, 1 assertion)
-
-PHPUnit_Framework_Error_Notice
-PHPUnit_Framework_Error_Warning
 
 ``PHPUnit_Framework_Error_Notice`` and
 ``PHPUnit_Framework_Error_Warning`` represent PHP notices

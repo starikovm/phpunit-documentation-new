@@ -10,15 +10,12 @@ Gerard Meszaros introduces the concept of Test Doubles in
 :ref:`Meszaros2007` like this:
 
     *Gerard Meszaros*:
-    System Under Test
     Sometimes it is just plain hard to test the system under test (SUT)
     because it depends on other components that cannot be used in the test
     environment. This could be because they aren't available, they will not
     return the results needed for the test or because executing them would
     have undesirable side effects. In other cases, our test strategy requires
     us to have more control or visibility of the internal behavior of the SUT.
-    Depended-On Component
-    Test Double
     When we are writing a test in which we cannot (or chose not to) use a real
     depended-on component (DOC), we can replace it with a Test Double. The
     Test Double doesn't have to behave exactly like the real DOC; it merely
@@ -59,16 +56,12 @@ return a value when called.
 Stubs
 #####
 
-Stub
-
 The practice of replacing an object with a test double that (optionally)
 returns configured return values is referred to as
 *stubbing*. You can use a *stub* to
 "replace a real component on which the SUT depends so that the test has a
 control point for the indirect inputs of the SUT. This allows the test to
 force the SUT down paths it might not otherwise execute".
-
-Fluent Interface
 
 :ref:`test-doubles.stubs.examples.StubTest.php` shows how
 to stub method calls and set up return values. We first use the
@@ -101,10 +94,6 @@ The class we want to stub
     ?>
 
 .. _test-doubles.stubs.examples.StubTest.php:
-
-createMock()
-method()
-willReturn()
 
 Stubbing a method call to return a fixed value
 ==============================================
@@ -145,10 +134,6 @@ creation of the test double. The configuration of this test double uses
 the same best practice defaults used by ``createMock()``.
 
 .. _test-doubles.stubs.examples.StubTest2.php:
-
-createMock()
-method()
-willReturn()
 
 Using the Mock Builder API can be used to configure the generated test double class
 ===================================================================================
@@ -191,11 +176,6 @@ can achieve this using ``returnArgument()`` instead of
 
 .. _test-doubles.stubs.examples.StubTest3.php:
 
-createMock()
-method()
-will()
-returnArgument()
-
 Stubbing a method call to return one of the arguments
 =====================================================
 
@@ -227,11 +207,6 @@ can use ``returnSelf()`` to achieve this.
 
 .. _test-doubles.stubs.examples.StubTest4.php:
 
-createMock()
-method()
-will()
-returnSelf()
-
 Stubbing a method call to return a reference to the stub object
 ===============================================================
 
@@ -262,11 +237,6 @@ arguments with corresponding return values. See
 an example.
 
 .. _test-doubles.stubs.examples.StubTest5.php:
-
-createMock()
-method()
-will()
-returnValueMap()
 
 Stubbing a method call to return the value from a map
 =====================================================
@@ -306,11 +276,6 @@ result of a callback function or method. See
 
 .. _test-doubles.stubs.examples.StubTest6.php:
 
-createMock()
-method()
-will()
-returnCallback()
-
 Stubbing a method call to return a value from a callback
 ========================================================
 
@@ -340,11 +305,6 @@ the ``onConsecutiveCalls()`` method. See
 an example.
 
 .. _test-doubles.stubs.examples.StubTest7.php:
-
-createMock()
-method()
-will()
-onConsecutiveCalls()
 
 Stubbing a method call to return a list of values in the
 specified order
@@ -376,11 +336,6 @@ exception. :ref:`test-doubles.stubs.examples.StubTest8.php`
 shows how to use ``throwException()`` to do this.
 
 .. _test-doubles.stubs.examples.StubTest8.php:
-
-createMock()
-method()
-will()
-throwException()
 
 Stubbing a method call to throw an exception
 ============================================
@@ -429,8 +384,6 @@ Mock Objects
 The practice of replacing an object with a test double that verifies
 expectations, for instance asserting that a method has been called, is
 referred to as *mocking*.
-
-Mock Object
 
 You can use a *mock object* "as an observation point
 that is used to verify the indirect outputs of the SUT as it is exercised.
@@ -512,8 +465,6 @@ The Subject and Observer classes that are part of the System under Test (SUT)
         // Other methods.
     }
     ?>
-
-Mock Object
 
 :ref:`test-doubles.mock-objects.examples.SubjectTest.php`
 shows how to use a mock object to test the interaction between
@@ -766,8 +717,6 @@ Returns a matcher that matches when the method it is evaluated for is invoked at
    using this matcher as it can lead to brittle tests which are too
    closely tied to specific implementation details.
 
-getMockBuilder()
-
 As mentioned in the beginning, when the defaults used by the
 ``createMock()`` method to generate the test double do not
 match your needs then you can use the ``getMockBuilder($type)``
@@ -843,8 +792,6 @@ stubs, spies, and mocks using this alternative test double framework.
 Mocking Traits and Abstract Classes
 ###################################
 
-getMockForTrait()
-
 The ``getMockForTrait()`` method returns a mock object
 that uses a specified trait. All abstract methods of the given trait
 are mocked. This allows for testing the concrete methods of a trait.
@@ -878,8 +825,6 @@ Testing the concrete methods of a trait
         }
     }
     ?>
-
-getMockForAbstractClass()
 
 The ``getMockForAbstractClass()`` method returns a mock
 object for an abstract class. All abstract methods of the given abstract
@@ -920,8 +865,6 @@ Testing the concrete methods of an abstract class
 
 Stubbing and Mocking Web Services
 #################################
-
-getMockFromWsdl()
 
 When your application interacts with a web service you want to test it
 without actually interacting with the web service. To make the stubbing

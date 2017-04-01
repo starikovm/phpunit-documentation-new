@@ -130,6 +130,10 @@ def _remove_indent_and_escape(s):
 def _concat(el):
     "concatate .text with children (_conv'ed to text) and their tails"
     s = ""
+
+    if el.tag == "indexterm":
+        return s
+
     id = el.get("id")
     if id is not None and (WRITE_UNUSED_LABELS or id in _linked_ids):
         s += "\n\n.. _%s:\n\n" % id

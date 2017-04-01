@@ -28,10 +28,6 @@ does not help either, since then the test will be interpreted as a
 failure. This would be just as wrong as interpreting an unimplemented
 test as a success.
 
-Incomplete Test
-PHPUnit_Framework_IncompleteTest
-PHPUnit_Framework_IncompleteTestError
-
 If we think of a successful test as a green light and a test failure
 as a red light, we need an additional yellow light to mark a test
 as being incomplete or not yet implemented.

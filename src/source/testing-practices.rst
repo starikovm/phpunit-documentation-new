@@ -19,8 +19,6 @@ Testing Practices
 During Development
 ##################
 
-Refactoring
-
 When you need to make a change to the internal structure of the software
 you are working on to make it easier to understand and cheaper to modify
 without changing its observable behavior, a test suite is invaluable in
