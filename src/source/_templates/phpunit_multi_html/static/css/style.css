@@ -7,10 +7,6 @@ body {
  line-height: 1.6;
 }
 
-.prev-nav {
- padding-left: 30px;
-}
-
 .next-nav {
  margin-right: 30px;
 }
@@ -74,4 +70,8 @@ pre span.keyword {
 pre span.string {
  color: #a40000;
  font-weight: bold;
+}
+
+.right {
+  text-align:right
 }

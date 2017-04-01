@@ -45,27 +45,27 @@
     </div>
     <div class="col-md-8 col-lg-9">
      <div class="row">
-      <div class="col-md-1 pull-left prev-nav">
+      <div class="col-md-4 pull-left prev-nav">
           {%- if prev %}
-          <a accesskey="p" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}">{{ prev.title }}</a>
+          < <a accesskey="p" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}">{{ prev.title }}</a>
           {%- endif %}
       </div>
-      <div class="col-md-1 pull-right next-nav">
+      <div class="col-md-4 pull-right next-nav right">
           {%- if next %}
-          <a accesskey="n" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}">{{ next.title }}</a>
+          <a accesskey="n" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}">{{ next.title }}</a> >
           {%- endif %}
       </div>
      </div>
         {% block body %}{% endblock %}
      <div class="row">
-      <div class="col-md-1 pull-left prev-nav">
+      <div class="col-md-4 pull-left prev-nav">
           {%- if prev %}
-          <a accesskey="p" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}">{{ prev.title }}</a>
+          < <a accesskey="p" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}">{{ prev.title }}</a>
           {%- endif %}
       </div>
-      <div class="col-md-1 pull-right next-nav">
+      <div class="col-md-4 pull-right next-nav right">
           {%- if next %}
-          <a accesskey="n" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}">{{ next.title }}</a>
+          <a accesskey="n" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}">{{ next.title }}</a> >
           {%- endif %}
       </div>
      </div>
