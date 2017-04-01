@@ -17,9 +17,9 @@ documentation for PHPUnit 6.1.
 
 - Python
 
-Running the `conversion/DockbookToReST` Bash script will take all XML files from
-`src/6.1/en/`, convert them to `.rst` files with the help of
-`dockbookToRst.py` and write them to `src/en/source`.
+Running the `conversion/DocBookToReST` Bash script will take all XML files from
+`docbook/`, convert them to `.rst` files with the help of
+`DocBookToReST.py` and write them to `src/source`.
 
 ## Building the HTML Documentation
 
@@ -30,7 +30,7 @@ Running the `conversion/DockbookToReST` Bash script will take all XML files from
 
 To build the complete documentation use:
 
-    cd src/en
+    cd src
     make html
 
-Afterwards you will find the HTML files in `src/en/build/html`.
+Afterwards you will find the HTML files in `src/build/html`.
