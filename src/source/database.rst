@@ -81,7 +81,7 @@ could run against the same database, possibly reusing data multiple
 times. Failures in one test can easily affect the result of the
 following tests making your testing experience very difficult. The
 previously mentioned cleanup step is of major importance
-to solve the ``database is a global input`` problem.
+to solve the database is a global input problem.
 
 DbUnit helps to simplify all these problems with database testing in an
 elegant way.
@@ -157,7 +157,7 @@ go on and test whatever you like with your code.
 In your test use a special assertion called
 ``assertDataSetsEqual()`` for verification purposes,
 however, this is entirely optional. This feature will be explained
-in the section ``Database Assertions``.
+in the section Database Assertions.
 
 .. _database.configuration-of-a-phpunit-database-testcase:
 
@@ -232,7 +232,7 @@ database-name) in a very simple abstraction layer for database
 connections of the type
 ``PHPUnit_Extensions_Database_DB_IDatabaseConnection``.
 
-The section ``Using the Database Connection`` explains
+The section Using the Database Connection explains
 the API of this interface and how you can make the best use of it.
 
 .. _database.implementing-getdataset:
@@ -325,7 +325,7 @@ though. PHPUnit has another awesome feature that could make this
 testcase even more generic. If you use the
 `XML Configuration <appendixes.configuration.html#appendixes.configuration.php-ini-constants-variables>`_
 you could make the database connection configurable per test-run.
-First let's create a ``phpunit.xml`` file in our tests/
+First let's create a phpunit.xml file in our tests/
 directory of the application that looks like:
 
 ::
@@ -372,7 +372,7 @@ configurations from the command-line interface:
 
 ::
 
-    ``user@desktop> phpunit --configuration developer-a.xml MyTests/````user@desktop> phpunit --configuration developer-b.xml MyTests/``
+    user@desktop> phpunit --configuration developer-a.xml MyTests/user@desktop> phpunit --configuration developer-b.xml MyTests/
 
 The possibility to run the database tests against different
 database targets easily is very important if you are developing on
@@ -459,9 +459,9 @@ application could look like this:
 
 This is obviously easy to write. Here
 ``<guestbook>`` is the table name where two rows
-are inserted into each with four columns ``id``,
-``content``, ``user`` and
-``created`` with their respective values.
+are inserted into each with four columns id,
+content, user and
+created with their respective values.
 
 However, this simplicity comes at a cost.
 
@@ -504,15 +504,15 @@ should be part of the table?
 The flat xml dataset makes a crucial assumption now, defining that
 the attributes on the first defined row of a table define the
 columns of this table. In the previous example this would mean
-``id``, ``content``, ``user`` and
-``created`` are columns of the guestbook table. For the
-second row where ``user`` is not defined a NULL would be
+id, content, user and
+created are columns of the guestbook table. For the
+second row where user is not defined a NULL would be
 inserted into the database.
 
 When the first guestbook entry is deleted from the dataset only
-``id``, ``content`` and
-``created`` would be columns of the guestbook table,
-since ``user`` is not specified.
+id, content and
+created would be columns of the guestbook table,
+since user is not specified.
 
 To use the Flat XML dataset effectively when NULL values are
 relevant the first row of each table must not contain any NULL
@@ -523,7 +523,7 @@ for database assertions.
 In turn, if you specify only a subset of the table columns in the
 Flat XML dataset all the omitted values are set to their default
 values. This will lead to errors if one of the omitted columns is
-defined as ``NOT NULL DEFAULT NULL``.
+defined as NOT NULL DEFAULT NULL.
 
 In conclusion I can only advise using the Flat XML datasets if you
 do not need NULL values.
@@ -631,7 +631,7 @@ invoking ``mysqldump`` like so:
 
 ::
 
-    ``mysqldump --xml -t -u \[username] --password=[password] \[database] > /path/to/file.xml``
+    mysqldump --xml -t -u \[username] --password=[password] \[database] > /path/to/file.xml
 
 This file can be used in your Database TestCase by calling the
 ``createMySQLXMLDataSet($filename)`` method:
@@ -787,9 +787,9 @@ datasets:
 
 For this dataset like the Flat XML, CSV and YAML DataSets the keys
 of the first specified row define the table's column names, in the
-previous case this would be ``id``,
-``content``, ``user`` and
-``created``.
+previous case this would be id,
+content, user and
+created.
 
 The implementation for this Array DataSet is simple and
 straightforward:
@@ -1309,7 +1309,7 @@ XML file for this assertion:
 This assertion would only pass on exactly one second of the
 universe though, on *2010–05–01 21:47:08*. Dates
 pose a special problem to database testing and we can circumvent
-the failure by omitting the ``created`` column from the
+the failure by omitting the created column from the
 assertion.
 
 The adjusted *expectedBook.xml* Flat XML file
@@ -1448,8 +1448,8 @@ inside your own code.
 .. _database.what-can-i-do-when-i-get-a-too-much-connections-error:
 
 What can I do, when I get a
-``Too much Connections`` Error?
-===========================================================
+Too much Connections Error?
+=======================================================
 
 If you do not cache the PDO instance that is created from the
 TestCase ``getConnection()`` method the number of
@@ -1459,7 +1459,7 @@ concurrent connections other vendors also have maximum connection
 limits.
 
 The SubSection
-``Use your own Abstract Database TestCase`` shows how
+Use your own Abstract Database TestCase shows how
 you can prevent this error from happening by using a single cached
 PDO instance in all your tests.
 

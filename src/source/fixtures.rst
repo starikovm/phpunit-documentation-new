@@ -145,7 +145,7 @@ Example showing all template methods available
 
 ::
 
-    ``phpunit TemplateMethodsTest``
+    phpunit TemplateMethodsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     TemplateMethodsTest::setUpBeforeClass
     TemplateMethodsTest::setUp

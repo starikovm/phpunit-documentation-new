@@ -73,7 +73,7 @@ example:
 
 ::
 
-    ``phpunit --verbose SampleTest``
+    phpunit --verbose SampleTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     I
     Time: 0 seconds, Memory: 3.95Mb
@@ -150,7 +150,7 @@ following example:
 
 ::
 
-    ``phpunit --verbose DatabaseTest``
+    phpunit --verbose DatabaseTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     S
     Time: 0 seconds, Memory: 3.95Mb

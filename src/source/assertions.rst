@@ -70,7 +70,7 @@ Usage of assertArrayHasKey()
 
 ::
 
-    ``phpunit ArrayHasKeyTest``
+    phpunit ArrayHasKeyTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -112,7 +112,7 @@ Usage of assertClassHasAttribute()
 
 ::
 
-    ``phpunit ClassHasAttributeTest``
+    phpunit ClassHasAttributeTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -154,7 +154,7 @@ Usage of assertArraySubset()
 
 ::
 
-    ``phpunit ArrayHasKeyTest``
+    phpunit ArrayHasKeyTest
     PHPUnit 4.4.0 by Sebastian Bergmann.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -201,7 +201,7 @@ Usage of assertClassHasStaticAttribute()
 
 ::
 
-    ``phpunit ClassHasStaticAttributeTest``
+    phpunit ClassHasStaticAttributeTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -245,7 +245,7 @@ Usage of assertContains()
 
 ::
 
-    ``phpunit ContainsTest``
+    phpunit ContainsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -282,7 +282,7 @@ Usage of assertContains()
 
 ::
 
-    ``phpunit ContainsTest``
+    phpunit ContainsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -317,7 +317,7 @@ Usage of assertContains() with $ignoreCase
 
 ::
 
-    ``phpunit ContainsTest``
+    phpunit ContainsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F.
     Time: 0 seconds, Memory: 2.75Mb
@@ -363,7 +363,7 @@ Usage of assertContainsOnly()
 
 ::
 
-    ``phpunit ContainsOnlyTest``
+    phpunit ContainsOnlyTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -410,7 +410,7 @@ Usage of assertContainsOnlyInstancesOf()
 
 ::
 
-    ``phpunit ContainsOnlyInstancesOfTest``
+    phpunit ContainsOnlyInstancesOfTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -452,7 +452,7 @@ Usage of assertCount()
 
 ::
 
-    ``phpunit CountTest``
+    phpunit CountTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -494,7 +494,7 @@ Usage of assertDirectoryExists()
 
 ::
 
-    ``phpunit DirectoryExistsTest``
+    phpunit DirectoryExistsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -536,7 +536,7 @@ Usage of assertDirectoryIsReadable()
 
 ::
 
-    ``phpunit DirectoryIsReadableTest``
+    phpunit DirectoryIsReadableTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -578,7 +578,7 @@ Usage of assertDirectoryIsWritable()
 
 ::
 
-    ``phpunit DirectoryIsWritableTest``
+    phpunit DirectoryIsWritableTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -622,7 +622,7 @@ Usage of assertEmpty()
 
 ::
 
-    ``phpunit EmptyTest``
+    phpunit EmptyTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -694,7 +694,7 @@ Usage of assertEqualXMLStructure()
 
 ::
 
-    ``phpunit EqualXMLStructureTest``
+    phpunit EqualXMLStructureTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     FFFF
     Time: 0 seconds, Memory: 5.75Mb
@@ -767,7 +767,7 @@ Usage of assertEquals()
 
 ::
 
-    ``phpunit EqualsTest``
+    phpunit EqualsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     FFF
     Time: 0 seconds, Memory: 5.25Mb
@@ -829,7 +829,7 @@ Usage of assertEquals() with floats
 
 ::
 
-    ``phpunit EqualsTest``
+    phpunit EqualsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     .F
     Time: 0 seconds, Memory: 5.75Mb
@@ -868,7 +868,7 @@ Usage of assertEquals() with DOMDocument objects
 
 ::
 
-    ``phpunit EqualsTest``
+    phpunit EqualsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -919,7 +919,7 @@ Usage of assertEquals() with objects
 
 ::
 
-    ``phpunit EqualsTest``
+    phpunit EqualsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
@@ -963,7 +963,7 @@ Usage of assertEquals() with arrays
 
 ::
 
-    ``phpunit EqualsTest``
+    phpunit EqualsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
@@ -1015,7 +1015,7 @@ Usage of assertFalse()
 
 ::
 
-    ``phpunit FalseTest``
+    phpunit FalseTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1057,7 +1057,7 @@ Usage of assertFileEquals()
 
 ::
 
-    ``phpunit FileEqualsTest``
+    phpunit FileEqualsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
@@ -1105,7 +1105,7 @@ Usage of assertFileExists()
 
 ::
 
-    ``phpunit FileExistsTest``
+    phpunit FileExistsTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -1147,7 +1147,7 @@ Usage of assertFileIsReadable()
 
 ::
 
-    ``phpunit FileIsReadableTest``
+    phpunit FileIsReadableTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -1189,7 +1189,7 @@ Usage of assertFileIsWritable()
 
 ::
 
-    ``phpunit FileIsWritableTest``
+    phpunit FileIsWritableTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -1231,7 +1231,7 @@ Usage of assertGreaterThan()
 
 ::
 
-    ``phpunit GreaterThanTest``
+    phpunit GreaterThanTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1273,7 +1273,7 @@ Usage of assertGreaterThanOrEqual()
 
 ::
 
-    ``phpunit GreaterThanOrEqualTest``
+    phpunit GreaterThanOrEqualTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
@@ -1315,7 +1315,7 @@ Usage of assertInfinite()
 
 ::
 
-    ``phpunit InfiniteTest``
+    phpunit InfiniteTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1359,7 +1359,7 @@ Usage of assertInstanceOf()
 
 ::
 
-    ``phpunit InstanceOfTest``
+    phpunit InstanceOfTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1403,7 +1403,7 @@ Usage of assertInternalType()
 
 ::
 
-    ``phpunit InternalTypeTest``
+    phpunit InternalTypeTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1445,7 +1445,7 @@ Usage of assertIsReadable()
 
 ::
 
-    ``phpunit IsReadableTest``
+    phpunit IsReadableTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -1487,7 +1487,7 @@ Usage of assertIsWritable()
 
 ::
 
-    ``phpunit IsWritableTest``
+    phpunit IsWritableTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -1529,7 +1529,7 @@ Usage of assertJsonFileEqualsJsonFile()
 
 ::
 
-    ``phpunit JsonFileEqualsJsonFileTest``
+    phpunit JsonFileEqualsJsonFileTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1572,7 +1572,7 @@ Usage of assertJsonStringEqualsJsonFile()
 
 ::
 
-    ``phpunit JsonStringEqualsJsonFileTest``
+    phpunit JsonStringEqualsJsonFileTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1616,7 +1616,7 @@ Usage of assertJsonStringEqualsJsonString()
 
 ::
 
-    ``phpunit JsonStringEqualsJsonStringTest``
+    phpunit JsonStringEqualsJsonStringTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1665,7 +1665,7 @@ Usage of assertLessThan()
 
 ::
 
-    ``phpunit LessThanTest``
+    phpunit LessThanTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1707,7 +1707,7 @@ Usage of assertLessThanOrEqual()
 
 ::
 
-    ``phpunit LessThanOrEqualTest``
+    phpunit LessThanOrEqualTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
@@ -1747,7 +1747,7 @@ Usage of assertNan()
 
 ::
 
-    ``phpunit NanTest``
+    phpunit NanTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1789,7 +1789,7 @@ Usage of assertNull()
 
 ::
 
-    ``phpunit NotNullTest``
+    phpunit NotNullTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1831,7 +1831,7 @@ Usage of assertObjectHasAttribute()
 
 ::
 
-    ``phpunit ObjectHasAttributeTest``
+    phpunit ObjectHasAttributeTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -1873,7 +1873,7 @@ Usage of assertRegExp()
 
 ::
 
-    ``phpunit RegExpTest``
+    phpunit RegExpTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1915,7 +1915,7 @@ Usage of assertStringMatchesFormat()
 
 ::
 
-    ``phpunit StringMatchesFormatTest``
+    phpunit StringMatchesFormatTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -1981,7 +1981,7 @@ Usage of assertStringMatchesFormatFile()
 
 ::
 
-    ``phpunit StringMatchesFormatFileTest``
+    phpunit StringMatchesFormatFileTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -2026,7 +2026,7 @@ Usage of assertSame()
 
 ::
 
-    ``phpunit SameTest``
+    phpunit SameTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -2061,7 +2061,7 @@ Usage of assertSame() with objects
 
 ::
 
-    ``phpunit SameTest``
+    phpunit SameTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -2103,7 +2103,7 @@ Usage of assertStringEndsWith()
 
 ::
 
-    ``phpunit StringEndsWithTest``
+    phpunit StringEndsWithTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 1 second, Memory: 5.00Mb
@@ -2145,7 +2145,7 @@ Usage of assertStringEqualsFile()
 
 ::
 
-    ``phpunit StringEqualsFileTest``
+    phpunit StringEqualsFileTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
@@ -2193,7 +2193,7 @@ Usage of assertStringStartsWith()
 
 ::
 
-    ``phpunit StringStartsWithTest``
+    phpunit StringStartsWithTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -2387,7 +2387,7 @@ Usage of assertTrue()
 
 ::
 
-    ``phpunit TrueTest``
+    phpunit TrueTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
@@ -2430,7 +2430,7 @@ Usage of assertXmlFileEqualsXmlFile()
 
 ::
 
-    ``phpunit XmlFileEqualsXmlFileTest``
+    phpunit XmlFileEqualsXmlFileTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
@@ -2481,7 +2481,7 @@ Usage of assertXmlStringEqualsXmlFile()
 
 ::
 
-    ``phpunit XmlStringEqualsXmlFileTest``
+    phpunit XmlStringEqualsXmlFileTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
@@ -2532,7 +2532,7 @@ Usage of assertXmlStringEqualsXmlString()
 
 ::
 
-    ``phpunit XmlStringEqualsXmlStringTest``
+    phpunit XmlStringEqualsXmlStringTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb

@@ -160,7 +160,7 @@ Exploiting the dependencies between tests
 
 ::
 
-    ``phpunit --verbose DependencyFailureTest``
+    phpunit --verbose DependencyFailureTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     FS
     Time: 0 seconds, Memory: 5.00Mb
@@ -221,7 +221,7 @@ Test with multiple dependencies
 
 ::
 
-    ``phpunit --verbose MultipleDependenciesTest``
+    phpunit --verbose MultipleDependenciesTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     ...
     Time: 0 seconds, Memory: 3.25Mb
@@ -276,7 +276,7 @@ Using a data provider that returns an array of arrays
 
 ::
 
-    ``phpunit DataTest``
+    phpunit DataTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     ...F
     Time: 0 seconds, Memory: 5.75Mb
@@ -322,7 +322,7 @@ Using a data provider with named datasets
 
 ::
 
-    ``phpunit DataTest``
+    phpunit DataTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     ...F
     Time: 0 seconds, Memory: 5.75Mb
@@ -361,7 +361,7 @@ Using a data provider that returns an Iterator object
 
 ::
 
-    ``phpunit DataTest``
+    phpunit DataTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     ...F
     Time: 0 seconds, Memory: 5.75Mb
@@ -461,7 +461,7 @@ Combination of @depends and @dataProvider in same test
 
 ::
 
-    ``phpunit --verbose DependencyAndDataProviderComboTest``
+    phpunit --verbose DependencyAndDataProviderComboTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     ...F
     Time: 0 seconds, Memory: 3.50Mb
@@ -521,7 +521,7 @@ Using the expectException() method
 
 ::
 
-    ``phpunit ExceptionTest``
+    phpunit ExceptionTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -567,7 +567,7 @@ Using the @expectedException annotation
 
 ::
 
-    ``phpunit ExceptionTest``
+    phpunit ExceptionTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
@@ -615,7 +615,7 @@ Expecting a PHP error using @expectedException
 
 ::
 
-    ``phpunit -d error_reporting=2 ExpectedErrorTest``
+    phpunit -d error_reporting=2 ExpectedErrorTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     .
     Time: 0 seconds, Memory: 5.25Mb
@@ -667,7 +667,7 @@ Testing return values of code that uses PHP Errors
 
 ::
 
-    ``phpunit ErrorSuppressionTest``
+    phpunit ErrorSuppressionTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     .
     Time: 1 seconds, Memory: 5.25Mb
@@ -721,7 +721,7 @@ Testing the output of a function or method
 
 ::
 
-    ``phpunit OutputTest``
+    phpunit OutputTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     .F
     Time: 0 seconds, Memory: 5.75Mb
@@ -791,7 +791,7 @@ Error output generated when an array comparison fails
 
 ::
 
-    ``phpunit ArrayDiffTest``
+    phpunit ArrayDiffTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
@@ -842,7 +842,7 @@ Error output when an array comparison of an long array fails
 
 ::
 
-    ``phpunit LongArrayDiffTest``
+    phpunit LongArrayDiffTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
@@ -897,7 +897,7 @@ Edge case in the diff generation when using weak comparison
 
 ::
 
-    ``phpunit ArrayWeakComparisonTest``
+    phpunit ArrayWeakComparisonTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb

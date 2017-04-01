@@ -12,7 +12,7 @@ tests with the PHPUnit command-line test runner:
 
 ::
 
-    ``phpunit ArrayTest``
+    phpunit ArrayTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     ..
     Time: 0 seconds
@@ -66,7 +66,7 @@ the following code:
 
 ::
 
-    ``phpunit --help``
+    phpunit --help
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     Usage: phpunit \[options] UnitTest \[UnitTest.php]
     phpunit \[options] <directory>

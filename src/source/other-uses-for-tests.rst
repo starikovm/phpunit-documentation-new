@@ -40,7 +40,7 @@ Let us take a look at the agile documentation generated for a
 
 ::
 
-    ``phpunit --testdox BankAccountTest``
+    phpunit --testdox BankAccountTest
     PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
     BankAccount
     \[x] Balance is initially zero

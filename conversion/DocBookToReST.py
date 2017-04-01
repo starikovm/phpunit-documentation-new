@@ -358,7 +358,11 @@ def application(el):
     return ":program:`%s`" % el.text.strip()
 
 def userinput(el):
+    return "%s" % _concat(el).strip()
+
+def literal(el):
     return "``%s``" % _concat(el).strip()
+
 
 systemitem = userinput
 prompt = userinput
@@ -576,7 +580,7 @@ example = _concat
 glossary = _concat
 figure = _concat
 computeroutput = userinput
-literal = userinput
+#literal = userinput
 option = userinput
 procedure = orderedlist
 productname = emphasis

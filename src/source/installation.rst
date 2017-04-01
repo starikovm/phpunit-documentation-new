@@ -57,13 +57,13 @@ To globally install the PHAR:
 
 ::
 
-    ``$`` ``wget https://phar.phpunit.de/phpunit-6.1.phar````$`` ``chmod +x phpunit-6.1.phar````$`` ``sudo mv phpunit-6.1.phar /usr/local/bin/phpunit````$`` ``phpunit --version````PHPUnit x.y.z by Sebastian Bergmann and contributors.``
+    $ wget https://phar.phpunit.de/phpunit-6.1.phar$ chmod +x phpunit-6.1.phar$ sudo mv phpunit-6.1.phar /usr/local/bin/phpunit$ phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 You may also use the downloaded PHAR file directly:
 
 ::
 
-    ``$`` ``wget https://phar.phpunit.de/phpunit-6.1.phar````$`` ``php phpunit-6.1.phar --version````PHPUnit x.y.z by Sebastian Bergmann and contributors.``
+    $ wget https://phar.phpunit.de/phpunit-6.1.phar$ php phpunit-6.1.phar --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 .. _installation.phar.windows:
 
@@ -75,7 +75,7 @@ Globally installing the PHAR involves the same procedure as manually
 
 #. Create a directory for PHP binaries; e.g., :file:`C:\bin`
 
-#. Append ``;C:\\bin`` to your ``PATH``
+#. Append ;C:\\bin to your ``PATH``
    environment variable
    (`related help <http://stackoverflow.com/questions/6318156/adding-python-path-on-windows-7>`_)
 
@@ -84,24 +84,24 @@ Globally installing the PHAR involves the same procedure as manually
 
 #. Open a command line (e.g.,
    press :kbd:`Windows`:kbd:`R`
-   » type ``cmd``
+   » type cmd
    » :kbd:`ENTER`)
 
 #. Create a wrapping batch script (results in
    :file:`C:\bin\phpunit.cmd`):
    ::
-       ``C:\\Users\\username>`` ``cd C:\\bin````C:\\bin>`` ``echo @php "%~dp0phpunit.phar" %* > phpunit.cmd````C:\\bin>`` ``exit``
+       C:\\Users\\username> cd C:\\binC:\\bin> echo @php "%~dp0phpunit.phar" %* > phpunit.cmdC:\\bin> exit
 
 #. Open a new command line and confirm that you can execute PHPUnit
    from any path:
    ::
-       ``C:\\Users\\username>`` ``phpunit --version````PHPUnit x.y.z by Sebastian Bergmann and contributors.``
+       C:\\Users\\username> phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 For Cygwin and/or MingW32 (e.g., TortoiseGit) shell environments, you
 may skip step 5. above, simply save the file as
 :file:`phpunit` (without :file:`.phar`
 extension), and make it executable via
-``chmod 775 phpunit``.
+chmod 775 phpunit.
 
 .. _installation.phar.verification:
 
@@ -118,14 +118,14 @@ detached PGP signature :file:`phpunit.phar.asc`:
 
 ::
 
-    ``wget https://phar.phpunit.de/phpunit.phar````wget https://phar.phpunit.de/phpunit.phar.asc``
+    wget https://phar.phpunit.de/phpunit.pharwget https://phar.phpunit.de/phpunit.phar.asc
 
 We want to verify PHPUnit's PHP Archive (:file:`phpunit.phar`)
 against its detached signature (:file:`phpunit.phar.asc`):
 
 ::
 
-    ``gpg phpunit.phar.asc``
+    gpg phpunit.phar.asc
     gpg: Signature made Sat 19 Jul 2014 01:28:02 PM CEST using RSA key ID 6372C20A
     gpg: Can't check signature: public key not found
 
@@ -137,7 +137,7 @@ are linked together, so you should be able to connect to any key server.
 
 ::
 
-    ``gpg --keyserver pgp.uni-mainz.de --recv-keys 0x4AA394086372C20A``
+    gpg --keyserver pgp.uni-mainz.de --recv-keys 0x4AA394086372C20A
     gpg: requesting key 6372C20A from hkp server pgp.uni-mainz.de
     gpg: key 6372C20A: public key "Sebastian Bergmann <sb@sebastian-bergmann.de>" imported
     gpg: Total number processed: 1
@@ -150,7 +150,7 @@ Bergmann. But, let's try to verify the release signature again.
 
 ::
 
-    ``gpg phpunit.phar.asc``
+    gpg phpunit.phar.asc
     gpg: Signature made Sat 19 Jul 2014 01:28:02 PM CEST using RSA key ID 6372C20A
     gpg: Good signature from "Sebastian Bergmann <sb@sebastian-bergmann.de>"
     gpg:                 aka "Sebastian Bergmann <sebastian@php.net>"
@@ -246,7 +246,7 @@ dependencies of your project:
 
 ::
 
-    ``composer require --dev phpunit/phpunit ^6.1``
+    composer require --dev phpunit/phpunit ^6.1
 
 .. _installation.optional-packages:
 
@@ -261,12 +261,12 @@ The following optional packages are available:
     This package is included in the PHAR distribution of PHPUnit. It can
     be installed via Composer using the following command:
     ::
-        ``composer require --dev phpunit/php-invoker``
+        composer require --dev phpunit/php-invoker
 
 ``DbUnit``
     DbUnit port for PHP/PHPUnit to support database interaction testing.
     This package is not included in the PHAR distribution of PHPUnit. It can
     be installed via Composer using the following command:
     ::
-        ``composer require --dev phpunit/dbunit``
+        composer require --dev phpunit/dbunit
 
