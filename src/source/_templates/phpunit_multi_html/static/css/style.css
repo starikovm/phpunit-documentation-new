@@ -19,10 +19,12 @@ body {
   margin: 0;
   padding:0;
   list-style: none;
+  line-height: 1.9;
 }
 
 .sidebar-nav ul ul{
   margin-left: 1em;
+  margin-bottom: 20px;
 }
 .sidebar-nav li {
 

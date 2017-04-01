@@ -11,7 +11,7 @@ This work is licensed under the Creative Commons Attribution 3.0 Unported Licens
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :numbered: 1
 
    installation
