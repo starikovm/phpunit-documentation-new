@@ -142,9 +142,12 @@ using the ``@codeCoverageIgnore``,
 ``@codeCoverageIgnoreEnd`` annotations as shown in
 :ref:`code-coverage-analysis.ignoring-code-blocks.examples.Sample.php`.
 
-.. code-block:: php
-    :name: code-coverage-analysis.ignoring-code-blocks.examples.Sample.php
-    :caption: Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCoverageIgnoreEnd`` annotations
+.. _code-coverage-analysis.ignoring-code-blocks.examples.Sample.php:
+
+Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCoverageIgnoreEnd`` annotations
+==========================================================================================================
+
+::
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -195,9 +198,12 @@ method(s) will be considered.
 :ref:`code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php`
 shows an example.
 
-.. code-block:: php
-    :name: code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php
-    :caption: Tests that specify which method they want to cover
+.. _code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php:
+
+Tests that specify which method they want to cover
+==================================================
+
+::
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -278,9 +284,12 @@ It is also possible to specify that a test should not cover
 helpful when writing integration tests to make sure you only
 generate code coverage with unit tests.
 
-.. code-block:: php
-    :name: code-coverage-analysis.specifying-covered-methods.examples.GuestbookIntegrationTest.php
-    :caption: A test that specifies that no method should be covered
+.. _code-coverage-analysis.specifying-covered-methods.examples.GuestbookIntegrationTest.php:
+
+A test that specifies that no method should be covered
+======================================================
+
+::
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -315,8 +324,9 @@ Edge Cases
 This section shows noteworthy edge cases that lead to confusing code
 coverage information.
 
-.. code-block:: php
-    :name: code-coverage-analysis.edge-cases.examples.Sample.php
+.. _code-coverage-analysis.edge-cases.examples.Sample.php:
+
+::
 
     <?php
     use PHPUnit\Framework\TestCase;

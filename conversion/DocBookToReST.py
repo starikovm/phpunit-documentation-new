@@ -25,6 +25,8 @@
 # converted to ReST comments.
 # Note that ReST doesn't support inline comments. XML comments
 # are converted to ReST comment blocks, what may break paragraphs.
+from types import NoneType
+
 REMOVE_COMMENTS = False
 
 # id attributes of DocBook elements are translated to ReST labels.
@@ -131,6 +133,9 @@ def _remove_indent_and_escape(s):
 def _concat(el):
     "concatate .text with children (_conv'ed to text) and their tails"
     s = ""
+
+    if type(el) is NoneType:
+        return s
 
     if el.tag == "indexterm":
         return s
@@ -596,6 +601,7 @@ def glossentry(el):
 keyword = _concat
 keywordset = _concat
 abstract = _concat
+example = _concat
 bookinfo = _concat
 corpauthor = _concat
 glossary = _concat

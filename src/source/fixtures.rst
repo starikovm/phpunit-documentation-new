@@ -43,9 +43,12 @@ from the test methods and use the newly introduced instance variable,
 ``$stack`` with the ``assertEquals()``
 assertion method.
 
-.. code-block:: php
-    :name: fixtures.examples.StackTest.php
-    :caption: Using setUp() to create the stack fixture
+.. _fixtures.examples.StackTest.php:
+
+Using setUp() to create the stack fixture
+#########################################
+
+::
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -92,9 +95,12 @@ test case class is run, respectively.
 The example below shows all template methods that are available in a test
 case class.
 
-.. code-block:: php
-    :name: fixtures.examples.TemplateMethodsTest.php
-    :caption: Example showing all template methods available
+.. _fixtures.examples.TemplateMethodsTest.php:
+
+Example showing all template methods available
+##############################################
+
+::
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -150,6 +156,35 @@ case class.
         }
     }
     ?>
+
+::
+
+    $  phpunit TemplateMethodsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    TemplateMethodsTest::setUpBeforeClass
+    TemplateMethodsTest::setUp
+    TemplateMethodsTest::assertPreConditions
+    TemplateMethodsTest::testOne
+    TemplateMethodsTest::assertPostConditions
+    TemplateMethodsTest::tearDown
+    .TemplateMethodsTest::setUp
+    TemplateMethodsTest::assertPreConditions
+    TemplateMethodsTest::testTwo
+    TemplateMethodsTest::tearDown
+    TemplateMethodsTest::onNotSuccessfulTest
+    FTemplateMethodsTest::tearDownAfterClass
+
+    Time: 0 seconds, Memory: 5.25Mb
+
+    There was 1 failure:
+
+    1) TemplateMethodsTest::testTwo
+    Failed asserting that <boolean:false> is true.
+    /home/sb/TemplateMethodsTest.php:30
+
+    FAILURES!
+    Tests: 2, Assertions: 2, Failures: 1.
 
 .. _fixtures.more-setup-than-teardown:
 
@@ -207,9 +242,12 @@ uses the ``setUpBeforeClass()`` and
 database before the test case class' first test and to disconnect from the
 database after the last test of the test case, respectively.
 
-.. code-block:: php
-    :name: fixtures.sharing-fixture.examples.DatabaseTest.php
-    :caption: Sharing fixture between the tests of a test suite
+.. _fixtures.sharing-fixture.examples.DatabaseTest.php:
+
+Sharing fixture between the tests of a test suite
+=================================================
+
+::
 
     <?php
     use PHPUnit\Framework\TestCase;
