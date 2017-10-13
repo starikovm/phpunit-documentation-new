@@ -424,7 +424,13 @@ def title(el):
     return _make_title(t, level)
 
 def screen(el):
-    return "\n::\n" + _indent(el, 4) + "\n"
+    s = "\n.. code-block:: bash\n"
+    id = el.get("id")
+    if id is not None:
+        s += "    :name: %s\n" % id
+    s += _indent(el, 4) + "\n\n"
+
+    return s
 
 literallayout = screen
 
@@ -557,10 +563,9 @@ def example(el):
     listing = el.find("programlisting")
     s += _indent(listing, 4)
 
-    s += "\n.. code-block:: bash\n"
-    s += "    :name: %s-bash\n" % el.get("id")
     screen = el.find("screen")
-    s += _indent(screen, 4)
+    if screen is not None:
+        s += _conv(screen)
 
     s += "\n\n"
 
