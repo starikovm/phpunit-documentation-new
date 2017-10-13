@@ -25,13 +25,15 @@
 # converted to ReST comments.
 # Note that ReST doesn't support inline comments. XML comments
 # are converted to ReST comment blocks, what may break paragraphs.
+from types import NoneType
+
 REMOVE_COMMENTS = False
 
 # id attributes of DocBook elements are translated to ReST labels.
 # If this option is False, only labels that are used in links are generated.
 WRITE_UNUSED_LABELS = True
 
-UNESCAPED_TAGS = ["userinput", "screen", "programlisting", "literal"]
+UNESCAPED_TAGS = ["prompt", "userinput", "screen", "programlisting", "literal"]
 
 import sys
 import re
@@ -132,6 +134,9 @@ def _concat(el):
     "concatate .text with children (_conv'ed to text) and their tails"
     s = ""
 
+    if type(el) is NoneType:
+        return s
+
     if el.tag == "indexterm":
         return s
 
@@ -142,6 +147,10 @@ def _concat(el):
         if el.tag not in UNESCAPED_TAGS:
             s += _remove_indent_and_escape(el.text)
         else:
+            if el.tag == 'userinput' \
+                    and not el.text.startswith('$') \
+                    and 'installation.xml' not in el.base:
+                el.text = '$  ' + el.text
             s += el.text
     for i in el.getchildren():
         s += _conv(i)
@@ -537,16 +546,21 @@ def biblioentry(el):
     return s
 
 def example(el):
-    s = "\n.. code-block:: php\n"
-
-    s += "    :name: %s\n" % el.get("id")
-
+    s = ""
     title = el.find("title")
     if title is not None:
-        s += "    :caption: %s\n" % _concat(title)
+        s += "\n**%s**\n" % _concat(title)
+
+    s += "\n.. code-block:: php\n"
+    s += "    :name: %s\n" % el.get("id")
 
     listing = el.find("programlisting")
     s += _indent(listing, 4)
+
+    s += "\n.. code-block:: bash\n"
+    s += "    :name: %s-bash\n" % el.get("id")
+    screen = el.find("screen")
+    s += _indent(screen, 4)
 
     s += "\n\n"
 

@@ -318,9 +318,10 @@ specify a default namespace or class name. That way long names don't need to be
 repeated for every ``@covers`` annotation. See
 :ref:`appendixes.annotations.examples.CoversDefaultClassTest.php`.
 
+**Using @coversDefaultClass to shorten annotations**
+
 .. code-block:: php
     :name: appendixes.annotations.examples.CoversDefaultClassTest.php
-    :caption: Using @coversDefaultClass to shorten annotations
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -340,6 +341,8 @@ repeated for every ``@covers`` annotation. See
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.annotations.examples.CoversDefaultClassTest.php-bash
 
 .. _appendixes.annotations.coversNothing:
 

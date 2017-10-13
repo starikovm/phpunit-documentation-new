@@ -44,7 +44,7 @@ command-line test runner to the test directory:
 
 ::
 
-    phpunit --bootstrap src/autoload.php tests
+    $  phpunit --bootstrap src/autoload.php tests
     PHPUnit 6.4.0 by Sebastian Bergmann.
 
     .................................
@@ -64,7 +64,7 @@ the following command:
 
 ::
 
-    phpunit --bootstrap src/autoload.php tests/CurrencyTest
+    $  phpunit --bootstrap src/autoload.php tests/CurrencyTest
     PHPUnit 6.4.0 by Sebastian Bergmann.
 
     ........
@@ -78,7 +78,7 @@ For more fine-grained control of which tests to run we can use the
 
 ::
 
-    phpunit --bootstrap src/autoload.php --filter testObjectCanBeConstructedForValidConstructorArgument tests
+    $  phpunit --bootstrap src/autoload.php --filter testObjectCanBeConstructedForValidConstructorArgument tests
     PHPUnit 6.4.0 by Sebastian Bergmann.
 
     ..
@@ -108,9 +108,10 @@ shows a minimal :file:`phpunit.xml` file that will add all
 :file:`*Test.php` files when the :file:`tests`
 directory is recursively traversed.
 
+**Composing a Test Suite Using XML Configuration**
+
 .. code-block:: php
     :name: organizing-tests.xml-configuration.examples.phpunit.xml
-    :caption: Composing a Test Suite Using XML Configuration
 
     <phpunit bootstrap="src/autoload.php">
       <testsuites>
@@ -119,6 +120,8 @@ directory is recursively traversed.
         </testsuite>
       </testsuites>
     </phpunit>
+.. code-block:: bash
+    :name: organizing-tests.xml-configuration.examples.phpunit.xml-bash
 
 If :file:`phpunit.xml` or
 :file:`phpunit.xml.dist` (in that order) exist in the
@@ -128,9 +131,10 @@ read from that file.
 
 The order in which tests are executed can be made explicit:
 
+**Composing a Test Suite Using XML Configuration**
+
 .. code-block:: php
     :name: organizing-tests.xml-configuration.examples.phpunit.xml2
-    :caption: Composing a Test Suite Using XML Configuration
 
     <phpunit bootstrap="src/autoload.php">
       <testsuites>
@@ -141,5 +145,7 @@ The order in which tests are executed can be made explicit:
         </testsuite>
       </testsuites>
     </phpunit>
+.. code-block:: bash
+    :name: organizing-tests.xml-configuration.examples.phpunit.xml2-bash
 
 

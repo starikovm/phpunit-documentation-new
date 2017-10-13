@@ -107,9 +107,9 @@ Globally installing the PHAR involves the same procedure as manually
 
    ::
 
-       C:\\Users\\username>  cd C:\bin
-       C:\\bin>  echo @php "%~dp0phpunit.phar" %* > phpunit.cmd
-       C:\\bin>  exit
+       C:\Users\username>  cd C:\bin
+       C:\bin>  echo @php "%~dp0phpunit.phar" %* > phpunit.cmd
+       C:\bin>  exit
 
 #.
 
@@ -118,7 +118,7 @@ Globally installing the PHAR involves the same procedure as manually
 
    ::
 
-       C:\\Users\\username>  phpunit --version
+       C:\Users\username>  phpunit --version
        PHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 For Cygwin and/or MingW32 (e.g., TortoiseGit) shell environments, you

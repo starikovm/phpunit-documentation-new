@@ -142,9 +142,10 @@ using the ``@codeCoverageIgnore``,
 ``@codeCoverageIgnoreEnd`` annotations as shown in
 :ref:`code-coverage-analysis.ignoring-code-blocks.examples.Sample.php`.
 
+**Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCoverageIgnoreEnd`` annotations**
+
 .. code-block:: php
     :name: code-coverage-analysis.ignoring-code-blocks.examples.Sample.php
-    :caption: Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCoverageIgnoreEnd`` annotations
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -177,6 +178,8 @@ using the ``@codeCoverageIgnore``,
 
     exit; // @codeCoverageIgnore
     ?>
+.. code-block:: bash
+    :name: code-coverage-analysis.ignoring-code-blocks.examples.Sample.php-bash
 
 The ignored lines of code (marked as ignored using the annotations)
 are counted as executed (if they are executable) and will not be
@@ -195,9 +198,10 @@ method(s) will be considered.
 :ref:`code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php`
 shows an example.
 
+**Tests that specify which method they want to cover**
+
 .. code-block:: php
     :name: code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php
-    :caption: Tests that specify which method they want to cover
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -270,6 +274,8 @@ shows an example.
         }
     }
     ?>
+.. code-block:: bash
+    :name: code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php-bash
 
 It is also possible to specify that a test should not cover
 *any* method by using the
@@ -278,9 +284,10 @@ It is also possible to specify that a test should not cover
 helpful when writing integration tests to make sure you only
 generate code coverage with unit tests.
 
+**A test that specifies that no method should be covered**
+
 .. code-block:: php
     :name: code-coverage-analysis.specifying-covered-methods.examples.GuestbookIntegrationTest.php
-    :caption: A test that specifies that no method should be covered
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -306,6 +313,9 @@ generate code coverage with unit tests.
         }
     }
     ?>
+
+.. code-block:: bash
+    :name: code-coverage-analysis.specifying-covered-methods.examples.GuestbookIntegrationTest.php-bash
 
 .. _code-coverage-analysis.edge-cases:
 
@@ -337,5 +347,7 @@ coverage information.
         this_call_will_never_show_up_as_covered();
     }
     ?>
+.. code-block:: bash
+    :name: code-coverage-analysis.edge-cases.examples.Sample.php-bash
 
 

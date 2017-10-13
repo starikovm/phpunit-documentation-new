@@ -50,9 +50,10 @@ Reports an error identified by ``$message`` if ``$array`` does not have the ``$k
 
 ``assertArrayNotHasKey()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertArrayHasKey()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertArrayHasKey.example
-    :caption: Usage of assertArrayHasKey()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -65,6 +66,25 @@ Reports an error identified by ``$message`` if ``$array`` does not have the ``$k
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertArrayHasKey.example-bash
+
+    $ phpunit ArrayHasKeyTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) ArrayHasKeyTest::testFailure
+    Failed asserting that an array has the key 'foo'.
+
+    /home/sb/ArrayHasKeyTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertClassHasAttribute:
 
@@ -77,9 +97,10 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
 
 ``assertClassNotHasAttribute()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertClassHasAttribute()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertClassHasAttribute.example
-    :caption: Usage of assertClassHasAttribute()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -92,6 +113,25 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertClassHasAttribute.example-bash
+
+    $  phpunit ClassHasAttributeTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) ClassHasAttributeTest::testFailure
+    Failed asserting that class "stdClass" has attribute "foo".
+
+    /home/sb/ClassHasAttributeTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertArraySubset:
 
@@ -104,9 +144,10 @@ Reports an error identified by ``$message`` if ``$array`` does not contains the 
 
 ``$strict`` is a flag used to compare the identity of objects within arrays.
 
+**Usage of assertArraySubset()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertArraySubset.example
-    :caption: Usage of assertArraySubset()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -119,6 +160,30 @@ Reports an error identified by ``$message`` if ``$array`` does not contains the 
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertArraySubset.example-bash
+
+    $  phpunit ArrayHasKeyTest
+    PHPUnit 4.4.0 by Sebastian Bergmann.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) Epilog\EpilogTest::testNoFollowOption
+    Failed asserting that an array has the subset Array &0 (
+        'config' => Array &1 (
+            0 => 'key-a'
+            1 => 'key-b'
+        )
+    ).
+
+    /home/sb/ArraySubsetTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertClassHasStaticAttribute:
 
@@ -131,9 +196,10 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
 
 ``assertClassNotHasStaticAttribute()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertClassHasStaticAttribute()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertClassHasStaticAttribute.example
-    :caption: Usage of assertClassHasStaticAttribute()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -146,6 +212,25 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertClassHasStaticAttribute.example-bash
+
+    $  phpunit ClassHasStaticAttributeTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) ClassHasStaticAttributeTest::testFailure
+    Failed asserting that class "stdClass" has static attribute "foo".
+
+    /home/sb/ClassHasStaticAttributeTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertContains:
 
@@ -160,9 +245,10 @@ Reports an error identified by ``$message`` if ``$needle`` is not an element of 
 
 ``assertAttributeContains()`` and ``assertAttributeNotContains()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the haystack.
 
+**Usage of assertContains()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertContains.example
-    :caption: Usage of assertContains()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -175,6 +261,25 @@ Reports an error identified by ``$message`` if ``$needle`` is not an element of 
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertContains.example-bash
+
+    $  phpunit ContainsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) ContainsTest::testFailure
+    Failed asserting that an array contains 4.
+
+    /home/sb/ContainsTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 ``assertContains(string $needle, string $haystack[, string $message = '', boolean $ignoreCase = false])``
 
@@ -182,9 +287,10 @@ Reports an error identified by ``$message`` if ``$needle`` is not a substring of
 
 If ``$ignoreCase`` is ``true``, the test will be case insensitive.
 
+**Usage of assertContains()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertContains.example2
-    :caption: Usage of assertContains()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -197,10 +303,30 @@ If ``$ignoreCase`` is ``true``, the test will be case insensitive.
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertContains.example2-bash
+
+    $  phpunit ContainsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) ContainsTest::testFailure
+    Failed asserting that 'foobar' contains "baz".
+
+    /home/sb/ContainsTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
+
+**Usage of assertContains() with $ignoreCase**
 
 .. code-block:: php
     :name: appendixes.assertions.assertContains.example3
-    :caption: Usage of assertContains() with $ignoreCase
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -218,6 +344,25 @@ If ``$ignoreCase`` is ``true``, the test will be case insensitive.
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertContains.example3-bash
+
+    $  phpunit ContainsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F.
+
+    Time: 0 seconds, Memory: 2.75Mb
+
+    There was 1 failure:
+
+    1) ContainsTest::testFailure
+    Failed asserting that 'FooBar' contains "foo".
+
+    /home/sb/ContainsTest.php:6
+
+    FAILURES!
+    Tests: 2, Assertions: 2, Failures: 1.
 
 .. _appendixes.assertions.assertContainsOnly:
 
@@ -234,9 +379,10 @@ Reports an error identified by ``$message`` if ``$haystack`` does not contain on
 
 ``assertAttributeContainsOnly()`` and ``assertAttributeNotContainsOnly()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the haystack.
 
+**Usage of assertContainsOnly()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertContainsOnly.example
-    :caption: Usage of assertContainsOnly()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -249,6 +395,29 @@ Reports an error identified by ``$message`` if ``$haystack`` does not contain on
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertContainsOnly.example-bash
+
+    $  phpunit ContainsOnlyTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) ContainsOnlyTest::testFailure
+    Failed asserting that Array (
+        0 => '1'
+        1 => '2'
+        2 => 3
+    ) contains only values of type "string".
+
+    /home/sb/ContainsOnlyTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertContainsOnlyInstancesOf:
 
@@ -259,9 +428,10 @@ assertContainsOnlyInstancesOf()
 
 Reports an error identified by ``$message`` if ``$haystack`` does not contain only instances of class ``$classname``.
 
+**Usage of assertContainsOnlyInstancesOf()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertContainsOnlyInstancesOf.example
-    :caption: Usage of assertContainsOnlyInstancesOf()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -277,6 +447,25 @@ Reports an error identified by ``$message`` if ``$haystack`` does not contain on
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertContainsOnlyInstancesOf.example-bash
+
+    $  phpunit ContainsOnlyInstancesOfTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) ContainsOnlyInstancesOfTest::testFailure
+    Failed asserting that Array ([0]=> Bar Object(...)) is an instance of class "Foo".
+
+    /home/sb/ContainsOnlyInstancesOfTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertCount:
 
@@ -289,9 +478,10 @@ Reports an error identified by ``$message`` if the number of elements in ``$hays
 
 ``assertNotCount()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertCount()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertCount.example
-    :caption: Usage of assertCount()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -304,6 +494,25 @@ Reports an error identified by ``$message`` if the number of elements in ``$hays
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertCount.example-bash
+
+    $  phpunit CountTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) CountTest::testFailure
+    Failed asserting that actual size 1 matches expected size 0.
+
+    /home/sb/CountTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertDirectoryExists:
 
@@ -316,9 +525,10 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
 
 ``assertDirectoryNotExists()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertDirectoryExists()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertDirectoryExists.example
-    :caption: Usage of assertDirectoryExists()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -331,6 +541,25 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertDirectoryExists.example-bash
+
+    $  phpunit DirectoryExistsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) DirectoryExistsTest::testFailure
+    Failed asserting that directory "/path/to/directory" exists.
+
+    /home/sb/DirectoryExistsTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertDirectoryIsReadable:
 
@@ -343,9 +572,10 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
 
 ``assertDirectoryNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertDirectoryIsReadable()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertDirectoryIsReadable.example
-    :caption: Usage of assertDirectoryIsReadable()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -358,6 +588,25 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertDirectoryIsReadable.example-bash
+
+    $  phpunit DirectoryIsReadableTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) DirectoryIsReadableTest::testFailure
+    Failed asserting that "/path/to/directory" is readable.
+
+    /home/sb/DirectoryIsReadableTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertDirectoryIsWritable:
 
@@ -370,9 +619,10 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
 
 ``assertDirectoryNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertDirectoryIsWritable()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertDirectoryIsWritable.example
-    :caption: Usage of assertDirectoryIsWritable()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -385,6 +635,25 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertDirectoryIsWritable.example-bash
+
+    $  phpunit DirectoryIsWritableTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) DirectoryIsWritableTest::testFailure
+    Failed asserting that "/path/to/directory" is writable.
+
+    /home/sb/DirectoryIsWritableTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertEmpty:
 
@@ -399,9 +668,10 @@ Reports an error identified by ``$message`` if ``$actual`` is not empty.
 
 ``assertAttributeEmpty()`` and ``assertAttributeNotEmpty()`` are convenience wrappers that can be applied to a ``public``, ``protected``, or ``private`` attribute of a class or object.
 
+**Usage of assertEmpty()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertEmpty.example
-    :caption: Usage of assertEmpty()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -414,6 +684,25 @@ Reports an error identified by ``$message`` if ``$actual`` is not empty.
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertEmpty.example-bash
+
+    $  phpunit EmptyTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) EmptyTest::testFailure
+    Failed asserting that an array is empty.
+
+    /home/sb/EmptyTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertEqualXMLStructure:
 
@@ -424,9 +713,10 @@ assertEqualXMLStructure()
 
 Reports an error identified by ``$message`` if the XML Structure of the DOMElement in ``$actualElement`` is not equal to the XML structure of the DOMElement in ``$expectedElement``.
 
+**Usage of assertEqualXMLStructure()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertEqualXMLStructure.example
-    :caption: Usage of assertEqualXMLStructure()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -481,6 +771,52 @@ Reports an error identified by ``$message`` if the XML Structure of the DOMEleme
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertEqualXMLStructure.example-bash
+
+    $  phpunit EqualXMLStructureTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    FFFF
+
+    Time: 0 seconds, Memory: 5.75Mb
+
+    There were 4 failures:
+
+    1) EqualXMLStructureTest::testFailureWithDifferentNodeNames
+    Failed asserting that two strings are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+    -'foo'
+    +'bar'
+
+    /home/sb/EqualXMLStructureTest.php:9
+
+    2) EqualXMLStructureTest::testFailureWithDifferentNodeAttributes
+    Number of attributes on node "foo" does not match
+    Failed asserting that 0 matches expected 1.
+
+    /home/sb/EqualXMLStructureTest.php:22
+
+    3) EqualXMLStructureTest::testFailureWithDifferentChildrenCount
+    Number of child nodes of "foo" differs
+    Failed asserting that 1 matches expected 3.
+
+    /home/sb/EqualXMLStructureTest.php:35
+
+    4) EqualXMLStructureTest::testFailureWithDifferentChildren
+    Failed asserting that two strings are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+    -'bar'
+    +'baz'
+
+    /home/sb/EqualXMLStructureTest.php:48
+
+    FAILURES!
+    Tests: 4, Assertions: 8, Failures: 4.
 
 .. _appendixes.assertions.assertEquals:
 
@@ -495,9 +831,10 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
 
 ``assertAttributeEquals()`` and ``assertAttributeNotEquals()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
+**Usage of assertEquals()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertEquals.example
-    :caption: Usage of assertEquals()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -520,6 +857,48 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertEquals.example-bash
+
+    $  phpunit EqualsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    FFF
+
+    Time: 0 seconds, Memory: 5.25Mb
+
+    There were 3 failures:
+
+    1) EqualsTest::testFailure
+    Failed asserting that 0 matches expected 1.
+
+    /home/sb/EqualsTest.php:6
+
+    2) EqualsTest::testFailure2
+    Failed asserting that two strings are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+    -'bar'
+    +'baz'
+
+    /home/sb/EqualsTest.php:11
+
+    3) EqualsTest::testFailure3
+    Failed asserting that two strings are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+     'foo
+    -bar
+    +bah
+     baz
+     '
+
+    /home/sb/EqualsTest.php:16
+
+    FAILURES!
+    Tests: 3, Assertions: 3, Failures: 3.
 
 More specialized comparisons are used for specific argument types for ``$expected`` and ``$actual``, see below.
 
@@ -529,9 +908,10 @@ Reports an error identified by ``$message`` if the two floats ``$expected`` and 
 
 Please read "`What Every Computer Scientist Should Know About Floating-Point Arithmetic <http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html>`_" to understand why ``$delta`` is neccessary.
 
+**Usage of assertEquals() with floats**
+
 .. code-block:: php
     :name: appendixes.assertions.assertEquals.example2
-    :caption: Usage of assertEquals() with floats
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -549,14 +929,34 @@ Please read "`What Every Computer Scientist Should Know About Floating-Point Ari
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertEquals.example2-bash
+
+    $  phpunit EqualsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    .F
+
+    Time: 0 seconds, Memory: 5.75Mb
+
+    There was 1 failure:
+
+    1) EqualsTest::testFailure
+    Failed asserting that 1.1 matches expected 1.0.
+
+    /home/sb/EqualsTest.php:11
+
+    FAILURES!
+    Tests: 2, Assertions: 2, Failures: 1.
 
 ``assertEquals(DOMDocument $expected, DOMDocument $actual[, string $message = ''])``
 
 Reports an error identified by ``$message`` if the uncommented canonical form of the XML documents represented by the two DOMDocument objects ``$expected`` and ``$actual`` are not equal.
 
+**Usage of assertEquals() with DOMDocument objects**
+
 .. code-block:: php
     :name: appendixes.assertions.assertEquals.example3
-    :caption: Usage of assertEquals() with DOMDocument objects
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -575,14 +975,44 @@ Reports an error identified by ``$message`` if the uncommented canonical form of
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertEquals.example3-bash
+
+    $  phpunit EqualsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) EqualsTest::testFailure
+    Failed asserting that two DOM documents are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+     <?xml version="1.0"?>
+    -<foo>
+    -  <bar/>
+    -</foo>
+    +<bar>
+    +  <foo/>
+    +</bar>
+
+    /home/sb/EqualsTest.php:12
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 ``assertEquals(object $expected, object $actual[, string $message = ''])``
 
 Reports an error identified by ``$message`` if the two objects ``$expected`` and ``$actual`` do not have equal attribute values.
 
+**Usage of assertEquals() with objects**
+
 .. code-block:: php
     :name: appendixes.assertions.assertEquals.example4
-    :caption: Usage of assertEquals() with objects
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -603,14 +1033,43 @@ Reports an error identified by ``$message`` if the two objects ``$expected`` and
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertEquals.example4-bash
+
+    $  phpunit EqualsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.25Mb
+
+    There was 1 failure:
+
+    1) EqualsTest::testFailure
+    Failed asserting that two objects are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+     stdClass Object (
+    -    'foo' => 'foo'
+    -    'bar' => 'bar'
+    +    'foo' => 'bar'
+    +    'baz' => 'bar'
+     )
+
+    /home/sb/EqualsTest.php:14
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 ``assertEquals(array $expected, array $actual[, string $message = ''])``
 
 Reports an error identified by ``$message`` if the two arrays ``$expected`` and ``$actual`` are not equal.
 
+**Usage of assertEquals() with arrays**
+
 .. code-block:: php
     :name: appendixes.assertions.assertEquals.example5
-    :caption: Usage of assertEquals() with arrays
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -623,6 +1082,35 @@ Reports an error identified by ``$message`` if the two arrays ``$expected`` and 
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertEquals.example5-bash
+
+    $  phpunit EqualsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.25Mb
+
+    There was 1 failure:
+
+    1) EqualsTest::testFailure
+    Failed asserting that two arrays are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+     Array (
+         0 => 'a'
+    -    1 => 'b'
+    -    2 => 'c'
+    +    1 => 'c'
+    +    2 => 'd'
+     )
+
+    /home/sb/EqualsTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertFalse:
 
@@ -635,9 +1123,10 @@ Reports an error identified by ``$message`` if ``$condition`` is ``true``.
 
 ``assertNotFalse()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertFalse()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertFalse.example
-    :caption: Usage of assertFalse()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -650,6 +1139,25 @@ Reports an error identified by ``$message`` if ``$condition`` is ``true``.
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertFalse.example-bash
+
+    $  phpunit FalseTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) FalseTest::testFailure
+    Failed asserting that true is false.
+
+    /home/sb/FalseTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertFileEquals:
 
@@ -662,9 +1170,10 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
 
 ``assertFileNotEquals()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertFileEquals()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertFileEquals.example
-    :caption: Usage of assertFileEquals()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -677,6 +1186,31 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertFileEquals.example-bash
+
+    $  phpunit FileEqualsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.25Mb
+
+    There was 1 failure:
+
+    1) FileEqualsTest::testFailure
+    Failed asserting that two strings are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+    -'expected
+    +'actual
+     '
+
+    /home/sb/FileEqualsTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 3, Failures: 1.
 
 .. _appendixes.assertions.assertFileExists:
 
@@ -689,9 +1223,10 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
 
 ``assertFileNotExists()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertFileExists()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertFileExists.example
-    :caption: Usage of assertFileExists()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -704,6 +1239,25 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertFileExists.example-bash
+
+    $  phpunit FileExistsTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) FileExistsTest::testFailure
+    Failed asserting that file "/path/to/file" exists.
+
+    /home/sb/FileExistsTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertFileIsReadable:
 
@@ -716,9 +1270,10 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
 
 ``assertFileNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertFileIsReadable()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertFileIsReadable.example
-    :caption: Usage of assertFileIsReadable()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -731,6 +1286,25 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertFileIsReadable.example-bash
+
+    $  phpunit FileIsReadableTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) FileIsReadableTest::testFailure
+    Failed asserting that "/path/to/file" is readable.
+
+    /home/sb/FileIsReadableTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertFileIsWritable:
 
@@ -743,9 +1317,10 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
 
 ``assertFileNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertFileIsWritable()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertFileIsWritable.example
-    :caption: Usage of assertFileIsWritable()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -758,6 +1333,25 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertFileIsWritable.example-bash
+
+    $  phpunit FileIsWritableTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) FileIsWritableTest::testFailure
+    Failed asserting that "/path/to/file" is writable.
+
+    /home/sb/FileIsWritableTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertGreaterThan:
 
@@ -770,9 +1364,10 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
 
 ``assertAttributeGreaterThan()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
+**Usage of assertGreaterThan()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertGreaterThan.example
-    :caption: Usage of assertGreaterThan()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -785,6 +1380,25 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertGreaterThan.example-bash
+
+    $  phpunit GreaterThanTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) GreaterThanTest::testFailure
+    Failed asserting that 1 is greater than 2.
+
+    /home/sb/GreaterThanTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertGreaterThanOrEqual:
 
@@ -797,9 +1411,10 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
 
 ``assertAttributeGreaterThanOrEqual()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
+**Usage of assertGreaterThanOrEqual()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertGreaterThanOrEqual.example
-    :caption: Usage of assertGreaterThanOrEqual()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -812,6 +1427,25 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertGreaterThanOrEqual.example-bash
+
+    $  phpunit GreaterThanOrEqualTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.25Mb
+
+    There was 1 failure:
+
+    1) GreatThanOrEqualTest::testFailure
+    Failed asserting that 1 is equal to 2 or is greater than 2.
+
+    /home/sb/GreaterThanOrEqualTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 2, Failures: 1.
 
 .. _appendixes.assertions.assertInfinite:
 
@@ -824,9 +1458,10 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``INF``.
 
 ``assertFinite()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertInfinite()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertInfinite.example
-    :caption: Usage of assertInfinite()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -839,6 +1474,25 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``INF``.
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertInfinite.example-bash
+
+    $  phpunit InfiniteTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) InfiniteTest::testFailure
+    Failed asserting that 1 is infinite.
+
+    /home/sb/InfiniteTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertInstanceOf:
 
@@ -853,9 +1507,10 @@ Reports an error identified by ``$message`` if ``$actual`` is not an instance of
 
 ``assertAttributeInstanceOf()`` and ``assertAttributeNotInstanceOf()`` are convenience wrappers that can be applied to a ``public``, ``protected``, or ``private`` attribute of a class or object.
 
+**Usage of assertInstanceOf()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertInstanceOf.example
-    :caption: Usage of assertInstanceOf()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -868,6 +1523,25 @@ Reports an error identified by ``$message`` if ``$actual`` is not an instance of
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertInstanceOf.example-bash
+
+    $  phpunit InstanceOfTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) InstanceOfTest::testFailure
+    Failed asserting that Exception Object (...) is an instance of class "RuntimeException".
+
+    /home/sb/InstanceOfTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertInternalType:
 
@@ -882,9 +1556,10 @@ Reports an error identified by ``$message`` if ``$actual`` is not of the ``$expe
 
 ``assertAttributeInternalType()`` and ``assertAttributeNotInternalType()`` are convenience wrappers that can be applied to a ``public``, ``protected``, or ``private`` attribute of a class or object.
 
+**Usage of assertInternalType()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertInternalType.example
-    :caption: Usage of assertInternalType()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -897,6 +1572,25 @@ Reports an error identified by ``$message`` if ``$actual`` is not of the ``$expe
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertInternalType.example-bash
+
+    $  phpunit InternalTypeTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) InternalTypeTest::testFailure
+    Failed asserting that 42 is of type "string".
+
+    /home/sb/InternalTypeTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertIsReadable:
 
@@ -909,9 +1603,10 @@ Reports an error identified by ``$message`` if the file or directory specified b
 
 ``assertNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertIsReadable()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertIsReadable.example
-    :caption: Usage of assertIsReadable()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -924,6 +1619,25 @@ Reports an error identified by ``$message`` if the file or directory specified b
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertIsReadable.example-bash
+
+    $  phpunit IsReadableTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) IsReadableTest::testFailure
+    Failed asserting that "/path/to/unreadable" is readable.
+
+    /home/sb/IsReadableTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertIsWritable:
 
@@ -936,9 +1650,10 @@ Reports an error identified by ``$message`` if the file or directory specified b
 
 ``assertNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertIsWritable()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertIsWritable.example
-    :caption: Usage of assertIsWritable()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -951,6 +1666,25 @@ Reports an error identified by ``$message`` if the file or directory specified b
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertIsWritable.example-bash
+
+    $  phpunit IsWritableTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) IsWritableTest::testFailure
+    Failed asserting that "/path/to/unwritable" is writable.
+
+    /home/sb/IsWritableTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertJsonFileEqualsJsonFile:
 
@@ -962,9 +1696,10 @@ assertJsonFileEqualsJsonFile()
 Reports an error identified by ``$message`` if the value of ``$actualFile`` does not match the value of
 ``$expectedFile``.
 
+**Usage of assertJsonFileEqualsJsonFile()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertJsonFileEqualsJsonFile.example
-    :caption: Usage of assertJsonFileEqualsJsonFile()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -978,6 +1713,25 @@ Reports an error identified by ``$message`` if the value of ``$actualFile`` does
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertJsonFileEqualsJsonFile.example-bash
+
+    $  phpunit JsonFileEqualsJsonFileTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) JsonFileEqualsJsonFile::testFailure
+    Failed asserting that '{"Mascot":"Tux"}' matches JSON string "["Mascott", "Tux", "OS", "Linux"]".
+
+    /home/sb/JsonFileEqualsJsonFileTest.php:5
+
+    FAILURES!
+    Tests: 1, Assertions: 3, Failures: 1.
 
 .. _appendixes.assertions.assertJsonStringEqualsJsonFile:
 
@@ -989,9 +1743,10 @@ assertJsonStringEqualsJsonFile()
 Reports an error identified by ``$message`` if the value of ``$actualJson`` does not match the value of
 ``$expectedFile``.
 
+**Usage of assertJsonStringEqualsJsonFile()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertJsonStringEqualsJsonFile.example
-    :caption: Usage of assertJsonStringEqualsJsonFile()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1006,6 +1761,25 @@ Reports an error identified by ``$message`` if the value of ``$actualJson`` does
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertJsonStringEqualsJsonFile.example-bash
+
+    $  phpunit JsonStringEqualsJsonFileTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) JsonStringEqualsJsonFile::testFailure
+    Failed asserting that '{"Mascot":"ux"}' matches JSON string "{"Mascott":"Tux"}".
+
+    /home/sb/JsonStringEqualsJsonFileTest.php:5
+
+    FAILURES!
+    Tests: 1, Assertions: 3, Failures: 1.
 
 .. _appendixes.assertions.assertJsonStringEqualsJsonString:
 
@@ -1017,9 +1791,10 @@ assertJsonStringEqualsJsonString()
 Reports an error identified by ``$message`` if the value of ``$actualJson`` does not match the value of
 ``$expectedJson``.
 
+**Usage of assertJsonStringEqualsJsonString()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertJsonStringEqualsJsonString.example
-    :caption: Usage of assertJsonStringEqualsJsonString()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1035,6 +1810,32 @@ Reports an error identified by ``$message`` if the value of ``$actualJson`` does
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertJsonStringEqualsJsonString.example-bash
+
+    $  phpunit JsonStringEqualsJsonStringTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) JsonStringEqualsJsonStringTest::testFailure
+    Failed asserting that two objects are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+     stdClass Object (
+     -    'Mascot' => 'Tux'
+     +    'Mascot' => 'ux'
+    )
+
+    /home/sb/JsonStringEqualsJsonStringTest.php:5
+
+    FAILURES!
+    Tests: 1, Assertions: 3, Failures: 1.
 
 .. _appendixes.assertions.assertLessThan:
 
@@ -1047,9 +1848,10 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
 
 ``assertAttributeLessThan()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
+**Usage of assertLessThan()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertLessThan.example
-    :caption: Usage of assertLessThan()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1062,6 +1864,25 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertLessThan.example-bash
+
+    $  phpunit LessThanTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) LessThanTest::testFailure
+    Failed asserting that 2 is less than 1.
+
+    /home/sb/LessThanTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertLessThanOrEqual:
 
@@ -1074,9 +1895,10 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
 
 ``assertAttributeLessThanOrEqual()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
+**Usage of assertLessThanOrEqual()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertLessThanOrEqual.example
-    :caption: Usage of assertLessThanOrEqual()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1089,6 +1911,25 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertLessThanOrEqual.example-bash
+
+    $  phpunit LessThanOrEqualTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.25Mb
+
+    There was 1 failure:
+
+    1) LessThanOrEqualTest::testFailure
+    Failed asserting that 2 is equal to 1 or is less than 1.
+
+    /home/sb/LessThanOrEqualTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 2, Failures: 1.
 
 .. _appendixes.assertions.assertNan:
 
@@ -1099,9 +1940,10 @@ assertNan()
 
 Reports an error identified by ``$message`` if ``$variable`` is not ``NAN``.
 
+**Usage of assertNan()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertNan.example
-    :caption: Usage of assertNan()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1114,6 +1956,25 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``NAN``.
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertNan.example-bash
+
+    $  phpunit NanTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) NanTest::testFailure
+    Failed asserting that 1 is nan.
+
+    /home/sb/NanTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertNull:
 
@@ -1126,9 +1987,10 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``null``.
 
 ``assertNotNull()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertNull()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertNull.example
-    :caption: Usage of assertNull()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1141,6 +2003,25 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``null``.
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertNull.example-bash
+
+    $  phpunit NotNullTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) NullTest::testFailure
+    Failed asserting that 'foo' is null.
+
+    /home/sb/NotNullTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertObjectHasAttribute:
 
@@ -1153,9 +2034,10 @@ Reports an error identified by ``$message`` if ``$object->attributeName`` does n
 
 ``assertObjectNotHasAttribute()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertObjectHasAttribute()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertObjectHasAttribute.example
-    :caption: Usage of assertObjectHasAttribute()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1168,6 +2050,25 @@ Reports an error identified by ``$message`` if ``$object->attributeName`` does n
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertObjectHasAttribute.example-bash
+
+    $  phpunit ObjectHasAttributeTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) ObjectHasAttributeTest::testFailure
+    Failed asserting that object of class "stdClass" has attribute "foo".
+
+    /home/sb/ObjectHasAttributeTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertRegExp:
 
@@ -1180,9 +2081,10 @@ Reports an error identified by ``$message`` if ``$string`` does not match the re
 
 ``assertNotRegExp()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertRegExp()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertRegExp.example
-    :caption: Usage of assertRegExp()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1195,6 +2097,25 @@ Reports an error identified by ``$message`` if ``$string`` does not match the re
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertRegExp.example-bash
+
+    $  phpunit RegExpTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) RegExpTest::testFailure
+    Failed asserting that 'bar' matches PCRE pattern "/foo/".
+
+    /home/sb/RegExpTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertStringMatchesFormat:
 
@@ -1207,9 +2128,10 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
 
 ``assertStringNotMatchesFormat()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertStringMatchesFormat()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertStringMatchesFormat.example
-    :caption: Usage of assertStringMatchesFormat()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1222,6 +2144,25 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertStringMatchesFormat.example-bash
+
+    $  phpunit StringMatchesFormatTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) StringMatchesFormatTest::testFailure
+    Failed asserting that 'foo' matches PCRE pattern "/^[+-]?\d+$/s".
+
+    /home/sb/StringMatchesFormatTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 The format string may contain the following placeholders:
 
@@ -1280,9 +2221,10 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
 
 ``assertStringNotMatchesFormatFile()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertStringMatchesFormatFile()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertStringMatchesFormatFile.example
-    :caption: Usage of assertStringMatchesFormatFile()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1295,6 +2237,26 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertStringMatchesFormatFile.example-bash
+
+    $  phpunit StringMatchesFormatFileTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) StringMatchesFormatFileTest::testFailure
+    Failed asserting that 'foo' matches PCRE pattern "/^[+-]?\d+
+    $/s".
+
+    /home/sb/StringMatchesFormatFileTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 2, Failures: 1.
 
 .. _appendixes.assertions.assertSame:
 
@@ -1309,9 +2271,10 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
 
 ``assertAttributeSame()`` and ``assertAttributeNotSame()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
+**Usage of assertSame()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertSame.example
-    :caption: Usage of assertSame()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1324,14 +2287,34 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertSame.example-bash
+
+    $  phpunit SameTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) SameTest::testFailure
+    Failed asserting that 2204 is identical to '2204'.
+
+    /home/sb/SameTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 ``assertSame(object $expected, object $actual[, string $message = ''])``
 
 Reports an error identified by ``$message`` if the two variables ``$expected`` and ``$actual`` do not reference the same object.
 
+**Usage of assertSame() with objects**
+
 .. code-block:: php
     :name: appendixes.assertions.assertSame.example2
-    :caption: Usage of assertSame() with objects
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1344,6 +2327,25 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertSame.example2-bash
+
+    $  phpunit SameTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 4.75Mb
+
+    There was 1 failure:
+
+    1) SameTest::testFailure
+    Failed asserting that two variables reference the same object.
+
+    /home/sb/SameTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertStringEndsWith:
 
@@ -1356,9 +2358,10 @@ Reports an error identified by ``$message`` if the ``$string`` does not end with
 
 ``assertStringEndsNotWith()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertStringEndsWith()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertStringEndsWith.example
-    :caption: Usage of assertStringEndsWith()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1371,6 +2374,25 @@ Reports an error identified by ``$message`` if the ``$string`` does not end with
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertStringEndsWith.example-bash
+
+    $  phpunit StringEndsWithTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 1 second, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) StringEndsWithTest::testFailure
+    Failed asserting that 'foo' ends with "suffix".
+
+    /home/sb/StringEndsWithTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertStringEqualsFile:
 
@@ -1383,9 +2405,10 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
 
 ``assertStringNotEqualsFile()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertStringEqualsFile()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertStringEqualsFile.example
-    :caption: Usage of assertStringEqualsFile()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1398,6 +2421,31 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertStringEqualsFile.example-bash
+
+    $  phpunit StringEqualsFileTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.25Mb
+
+    There was 1 failure:
+
+    1) StringEqualsFileTest::testFailure
+    Failed asserting that two strings are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+    -'expected
+    -'
+    +'actual'
+
+    /home/sb/StringEqualsFileTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 2, Failures: 1.
 
 .. _appendixes.assertions.assertStringStartsWith:
 
@@ -1410,9 +2458,10 @@ Reports an error identified by ``$message`` if the ``$string`` does not start wi
 
 ``assertStringStartsNotWith()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertStringStartsWith()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertStringStartsWith.example
-    :caption: Usage of assertStringStartsWith()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1425,6 +2474,25 @@ Reports an error identified by ``$message`` if the ``$string`` does not start wi
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertStringStartsWith.example-bash
+
+    $  phpunit StringStartsWithTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) StringStartsWithTest::testFailure
+    Failed asserting that 'foo' starts with "prefix".
+
+    /home/sb/StringStartsWithTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertThat:
 
@@ -1443,9 +2511,10 @@ constraints can be used to express the same assertion as
 
 Reports an error identified by ``$message`` if the ``$value`` does not match the ``$constraint``.
 
+**Usage of assertThat()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertThat.example
-    :caption: Usage of assertThat()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1466,6 +2535,8 @@ Reports an error identified by ``$message`` if the ``$value`` does not match the
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertThat.example-bash
 
 :ref:`appendixes.assertions.assertThat.tables.constraints` shows the
 available ``PHPUnit_Framework_Constraint`` classes.
@@ -1588,9 +2659,10 @@ Reports an error identified by ``$message`` if ``$condition`` is ``false``.
 
 ``assertNotTrue()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertTrue()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertTrue.example
-    :caption: Usage of assertTrue()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1603,6 +2675,25 @@ Reports an error identified by ``$message`` if ``$condition`` is ``false``.
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertTrue.example-bash
+
+    $  phpunit TrueTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) TrueTest::testFailure
+    Failed asserting that false is true.
+
+    /home/sb/TrueTest.php:6
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 .. _appendixes.assertions.assertXmlFileEqualsXmlFile:
 
@@ -1615,9 +2706,10 @@ Reports an error identified by ``$message`` if the XML document in ``$actualFile
 
 ``assertXmlFileNotEqualsXmlFile()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertXmlFileEqualsXmlFile()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertXmlFileEqualsXmlFile.example
-    :caption: Usage of assertXmlFileEqualsXmlFile()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1631,6 +2723,33 @@ Reports an error identified by ``$message`` if the XML document in ``$actualFile
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertXmlFileEqualsXmlFile.example-bash
+
+    $  phpunit XmlFileEqualsXmlFileTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.25Mb
+
+    There was 1 failure:
+
+    1) XmlFileEqualsXmlFileTest::testFailure
+    Failed asserting that two DOM documents are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+     <?xml version="1.0"?>
+     <foo>
+    -  <bar/>
+    +  <baz/>
+     </foo>
+
+    /home/sb/XmlFileEqualsXmlFileTest.php:7
+
+    FAILURES!
+    Tests: 1, Assertions: 3, Failures: 1.
 
 .. _appendixes.assertions.assertXmlStringEqualsXmlFile:
 
@@ -1643,9 +2762,10 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
 
 ``assertXmlStringNotEqualsXmlFile()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertXmlStringEqualsXmlFile()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertXmlStringEqualsXmlFile.example
-    :caption: Usage of assertXmlStringEqualsXmlFile()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1659,6 +2779,33 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertXmlStringEqualsXmlFile.example-bash
+
+    $  phpunit XmlStringEqualsXmlFileTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.25Mb
+
+    There was 1 failure:
+
+    1) XmlStringEqualsXmlFileTest::testFailure
+    Failed asserting that two DOM documents are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+     <?xml version="1.0"?>
+     <foo>
+    -  <bar/>
+    +  <baz/>
+     </foo>
+
+    /home/sb/XmlStringEqualsXmlFileTest.php:7
+
+    FAILURES!
+    Tests: 1, Assertions: 2, Failures: 1.
 
 .. _appendixes.assertions.assertXmlStringEqualsXmlString:
 
@@ -1671,9 +2818,10 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
 
 ``assertXmlStringNotEqualsXmlString()`` is the inverse of this assertion and takes the same arguments.
 
+**Usage of assertXmlStringEqualsXmlString()**
+
 .. code-block:: php
     :name: appendixes.assertions.assertXmlStringEqualsXmlString.example
-    :caption: Usage of assertXmlStringEqualsXmlString()
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1687,5 +2835,32 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertXmlStringEqualsXmlString.example-bash
+
+    $  phpunit XmlStringEqualsXmlStringTest
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
+    F
+
+    Time: 0 seconds, Memory: 5.00Mb
+
+    There was 1 failure:
+
+    1) XmlStringEqualsXmlStringTest::testFailure
+    Failed asserting that two DOM documents are equal.
+    --- Expected
+    +++ Actual
+    @@ @@
+     <?xml version="1.0"?>
+     <foo>
+    -  <bar/>
+    +  <baz/>
+     </foo>
+
+    /home/sb/XmlStringEqualsXmlStringTest.php:7
+
+    FAILURES!
+    Tests: 1, Assertions: 1, Failures: 1.
 
 
