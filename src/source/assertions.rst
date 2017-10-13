@@ -73,12 +73,18 @@ Usage of assertArrayHasKey()
 
     phpunit ArrayHasKeyTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) ArrayHasKeyTest::testFailure
     Failed asserting that an array has the key 'foo'.
+
     /home/sb/ArrayHasKeyTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -116,12 +122,18 @@ Usage of assertClassHasAttribute()
 
     phpunit ClassHasAttributeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) ClassHasAttributeTest::testFailure
     Failed asserting that class "stdClass" has attribute "foo".
+
     /home/sb/ClassHasAttributeTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -159,17 +171,23 @@ Usage of assertArraySubset()
 
     phpunit ArrayHasKeyTest
     PHPUnit 4.4.0 by Sebastian Bergmann.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
-    1) Epilog\\EpilogTest::testNoFollowOption
+
+    1) Epilog\EpilogTest::testNoFollowOption
     Failed asserting that an array has the subset Array &0 (
-    'config' => Array &1 (
-    0 => 'key-a'
-    1 => 'key-b'
-    )
+        'config' => Array &1 (
+            0 => 'key-a'
+            1 => 'key-b'
+        )
     ).
+
     /home/sb/ArraySubsetTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -207,12 +225,18 @@ Usage of assertClassHasStaticAttribute()
 
     phpunit ClassHasStaticAttributeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) ClassHasStaticAttributeTest::testFailure
     Failed asserting that class "stdClass" has static attribute "foo".
+
     /home/sb/ClassHasStaticAttributeTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -252,12 +276,18 @@ Usage of assertContains()
 
     phpunit ContainsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) ContainsTest::testFailure
     Failed asserting that an array contains 4.
+
     /home/sb/ContainsTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -290,12 +320,18 @@ Usage of assertContains()
 
     phpunit ContainsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) ContainsTest::testFailure
     Failed asserting that 'foobar' contains "baz".
+
     /home/sb/ContainsTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -327,12 +363,18 @@ Usage of assertContains() with $ignoreCase
 
     phpunit ContainsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F.
+
     Time: 0 seconds, Memory: 2.75Mb
+
     There was 1 failure:
+
     1) ContainsTest::testFailure
     Failed asserting that 'FooBar' contains "foo".
+
     /home/sb/ContainsTest.php:6
+
     FAILURES!
     Tests: 2, Assertions: 2, Failures: 1.
 
@@ -374,16 +416,22 @@ Usage of assertContainsOnly()
 
     phpunit ContainsOnlyTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) ContainsOnlyTest::testFailure
     Failed asserting that Array (
-    0 => '1'
-    1 => '2'
-    2 => 3
+        0 => '1'
+        1 => '2'
+        2 => 3
     ) contains only values of type "string".
+
     /home/sb/ContainsOnlyTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -422,12 +470,18 @@ Usage of assertContainsOnlyInstancesOf()
 
     phpunit ContainsOnlyInstancesOfTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) ContainsOnlyInstancesOfTest::testFailure
-    Failed asserting that Array (\[0]=> Bar Object(...)) is an instance of class "Foo".
+    Failed asserting that Array ([0]=> Bar Object(...)) is an instance of class "Foo".
+
     /home/sb/ContainsOnlyInstancesOfTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -465,12 +519,18 @@ Usage of assertCount()
 
     phpunit CountTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) CountTest::testFailure
     Failed asserting that actual size 1 matches expected size 0.
+
     /home/sb/CountTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -508,12 +568,18 @@ Usage of assertDirectoryExists()
 
     phpunit DirectoryExistsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) DirectoryExistsTest::testFailure
     Failed asserting that directory "/path/to/directory" exists.
+
     /home/sb/DirectoryExistsTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -551,12 +617,18 @@ Usage of assertDirectoryIsReadable()
 
     phpunit DirectoryIsReadableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) DirectoryIsReadableTest::testFailure
     Failed asserting that "/path/to/directory" is readable.
+
     /home/sb/DirectoryIsReadableTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -594,12 +666,18 @@ Usage of assertDirectoryIsWritable()
 
     phpunit DirectoryIsWritableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) DirectoryIsWritableTest::testFailure
     Failed asserting that "/path/to/directory" is writable.
+
     /home/sb/DirectoryIsWritableTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -639,12 +717,18 @@ Usage of assertEmpty()
 
     phpunit EmptyTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) EmptyTest::testFailure
     Failed asserting that an array is empty.
+
     /home/sb/EmptyTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -722,9 +806,13 @@ Usage of assertEqualXMLStructure()
 
     phpunit EqualXMLStructureTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     FFFF
+
     Time: 0 seconds, Memory: 5.75Mb
+
     There were 4 failures:
+
     1) EqualXMLStructureTest::testFailureWithDifferentNodeNames
     Failed asserting that two strings are equal.
     --- Expected
@@ -732,15 +820,21 @@ Usage of assertEqualXMLStructure()
     @@ @@
     -'foo'
     +'bar'
+
     /home/sb/EqualXMLStructureTest.php:9
+
     2) EqualXMLStructureTest::testFailureWithDifferentNodeAttributes
     Number of attributes on node "foo" does not match
     Failed asserting that 0 matches expected 1.
+
     /home/sb/EqualXMLStructureTest.php:22
+
     3) EqualXMLStructureTest::testFailureWithDifferentChildrenCount
     Number of child nodes of "foo" differs
     Failed asserting that 1 matches expected 3.
+
     /home/sb/EqualXMLStructureTest.php:35
+
     4) EqualXMLStructureTest::testFailureWithDifferentChildren
     Failed asserting that two strings are equal.
     --- Expected
@@ -748,7 +842,9 @@ Usage of assertEqualXMLStructure()
     @@ @@
     -'bar'
     +'baz'
+
     /home/sb/EqualXMLStructureTest.php:48
+
     FAILURES!
     Tests: 4, Assertions: 8, Failures: 4.
 
@@ -798,12 +894,18 @@ Usage of assertEquals()
 
     phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     FFF
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There were 3 failures:
+
     1) EqualsTest::testFailure
     Failed asserting that 0 matches expected 1.
+
     /home/sb/EqualsTest.php:6
+
     2) EqualsTest::testFailure2
     Failed asserting that two strings are equal.
     --- Expected
@@ -811,18 +913,22 @@ Usage of assertEquals()
     @@ @@
     -'bar'
     +'baz'
+
     /home/sb/EqualsTest.php:11
+
     3) EqualsTest::testFailure3
     Failed asserting that two strings are equal.
     --- Expected
     +++ Actual
     @@ @@
-    'foo
+     'foo
     -bar
     +bah
-    baz
-    '
+     baz
+     '
+
     /home/sb/EqualsTest.php:16
+
     FAILURES!
     Tests: 3, Assertions: 3, Failures: 3.
 
@@ -862,12 +968,18 @@ Usage of assertEquals() with floats
 
     phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     .F
+
     Time: 0 seconds, Memory: 5.75Mb
+
     There was 1 failure:
+
     1) EqualsTest::testFailure
     Failed asserting that 1.1 matches expected 1.0.
+
     /home/sb/EqualsTest.php:11
+
     FAILURES!
     Tests: 2, Assertions: 2, Failures: 1.
 
@@ -904,22 +1016,28 @@ Usage of assertEquals() with DOMDocument objects
 
     phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) EqualsTest::testFailure
     Failed asserting that two DOM documents are equal.
     --- Expected
     +++ Actual
     @@ @@
-    <?xml version="1.0"?>
+     <?xml version="1.0"?>
     -<foo>
     -  <bar/>
     -</foo>
     +<bar>
     +  <foo/>
     +</bar>
+
     /home/sb/EqualsTest.php:12
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -958,21 +1076,27 @@ Usage of assertEquals() with objects
 
     phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) EqualsTest::testFailure
     Failed asserting that two objects are equal.
     --- Expected
     +++ Actual
     @@ @@
-    stdClass Object (
+     stdClass Object (
     -    'foo' => 'foo'
     -    'bar' => 'bar'
     +    'foo' => 'bar'
     +    'baz' => 'bar'
-    )
+     )
+
     /home/sb/EqualsTest.php:14
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1003,22 +1127,28 @@ Usage of assertEquals() with arrays
 
     phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) EqualsTest::testFailure
     Failed asserting that two arrays are equal.
     --- Expected
     +++ Actual
     @@ @@
-    Array (
-    0 => 'a'
+     Array (
+         0 => 'a'
     -    1 => 'b'
     -    2 => 'c'
     +    1 => 'c'
     +    2 => 'd'
-    )
+     )
+
     /home/sb/EqualsTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1056,12 +1186,18 @@ Usage of assertFalse()
 
     phpunit FalseTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) FalseTest::testFailure
     Failed asserting that true is false.
+
     /home/sb/FalseTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1099,9 +1235,13 @@ Usage of assertFileEquals()
 
     phpunit FileEqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) FileEqualsTest::testFailure
     Failed asserting that two strings are equal.
     --- Expected
@@ -1109,8 +1249,10 @@ Usage of assertFileEquals()
     @@ @@
     -'expected
     +'actual
-    '
+     '
+
     /home/sb/FileEqualsTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 3, Failures: 1.
 
@@ -1148,12 +1290,18 @@ Usage of assertFileExists()
 
     phpunit FileExistsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) FileExistsTest::testFailure
     Failed asserting that file "/path/to/file" exists.
+
     /home/sb/FileExistsTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1191,12 +1339,18 @@ Usage of assertFileIsReadable()
 
     phpunit FileIsReadableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) FileIsReadableTest::testFailure
     Failed asserting that "/path/to/file" is readable.
+
     /home/sb/FileIsReadableTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1234,12 +1388,18 @@ Usage of assertFileIsWritable()
 
     phpunit FileIsWritableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) FileIsWritableTest::testFailure
     Failed asserting that "/path/to/file" is writable.
+
     /home/sb/FileIsWritableTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1277,12 +1437,18 @@ Usage of assertGreaterThan()
 
     phpunit GreaterThanTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) GreaterThanTest::testFailure
     Failed asserting that 1 is greater than 2.
+
     /home/sb/GreaterThanTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1320,12 +1486,18 @@ Usage of assertGreaterThanOrEqual()
 
     phpunit GreaterThanOrEqualTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) GreatThanOrEqualTest::testFailure
     Failed asserting that 1 is equal to 2 or is greater than 2.
+
     /home/sb/GreaterThanOrEqualTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 2, Failures: 1.
 
@@ -1363,12 +1535,18 @@ Usage of assertInfinite()
 
     phpunit InfiniteTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) InfiniteTest::testFailure
     Failed asserting that 1 is infinite.
+
     /home/sb/InfiniteTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1408,12 +1586,18 @@ Usage of assertInstanceOf()
 
     phpunit InstanceOfTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) InstanceOfTest::testFailure
     Failed asserting that Exception Object (...) is an instance of class "RuntimeException".
+
     /home/sb/InstanceOfTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1453,12 +1637,18 @@ Usage of assertInternalType()
 
     phpunit InternalTypeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) InternalTypeTest::testFailure
     Failed asserting that 42 is of type "string".
+
     /home/sb/InternalTypeTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1496,12 +1686,18 @@ Usage of assertIsReadable()
 
     phpunit IsReadableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) IsReadableTest::testFailure
     Failed asserting that "/path/to/unreadable" is readable.
+
     /home/sb/IsReadableTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1539,12 +1735,18 @@ Usage of assertIsWritable()
 
     phpunit IsWritableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) IsWritableTest::testFailure
     Failed asserting that "/path/to/unwritable" is writable.
+
     /home/sb/IsWritableTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1582,12 +1784,18 @@ Usage of assertJsonFileEqualsJsonFile()
 
     phpunit JsonFileEqualsJsonFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) JsonFileEqualsJsonFile::testFailure
-    Failed asserting that '{"Mascot":"Tux"}' matches JSON string "\["Mascott", "Tux", "OS", "Linux"]".
+    Failed asserting that '{"Mascot":"Tux"}' matches JSON string "["Mascott", "Tux", "OS", "Linux"]".
+
     /home/sb/JsonFileEqualsJsonFileTest.php:5
+
     FAILURES!
     Tests: 1, Assertions: 3, Failures: 1.
 
@@ -1626,12 +1834,18 @@ Usage of assertJsonStringEqualsJsonFile()
 
     phpunit JsonStringEqualsJsonFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) JsonStringEqualsJsonFile::testFailure
     Failed asserting that '{"Mascot":"ux"}' matches JSON string "{"Mascott":"Tux"}".
+
     /home/sb/JsonStringEqualsJsonFileTest.php:5
+
     FAILURES!
     Tests: 1, Assertions: 3, Failures: 1.
 
@@ -1671,19 +1885,25 @@ Usage of assertJsonStringEqualsJsonString()
 
     phpunit JsonStringEqualsJsonStringTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) JsonStringEqualsJsonStringTest::testFailure
     Failed asserting that two objects are equal.
     --- Expected
     +++ Actual
     @@ @@
-    stdClass Object (
-    -    'Mascot' => 'Tux'
-    +    'Mascot' => 'ux'
+     stdClass Object (
+     -    'Mascot' => 'Tux'
+     +    'Mascot' => 'ux'
     )
+
     /home/sb/JsonStringEqualsJsonStringTest.php:5
+
     FAILURES!
     Tests: 1, Assertions: 3, Failures: 1.
 
@@ -1721,12 +1941,18 @@ Usage of assertLessThan()
 
     phpunit LessThanTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) LessThanTest::testFailure
     Failed asserting that 2 is less than 1.
+
     /home/sb/LessThanTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1764,12 +1990,18 @@ Usage of assertLessThanOrEqual()
 
     phpunit LessThanOrEqualTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) LessThanOrEqualTest::testFailure
     Failed asserting that 2 is equal to 1 or is less than 1.
+
     /home/sb/LessThanOrEqualTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 2, Failures: 1.
 
@@ -1805,12 +2037,18 @@ Usage of assertNan()
 
     phpunit NanTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) NanTest::testFailure
     Failed asserting that 1 is nan.
+
     /home/sb/NanTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1848,12 +2086,18 @@ Usage of assertNull()
 
     phpunit NotNullTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) NullTest::testFailure
     Failed asserting that 'foo' is null.
+
     /home/sb/NotNullTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1891,12 +2135,18 @@ Usage of assertObjectHasAttribute()
 
     phpunit ObjectHasAttributeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) ObjectHasAttributeTest::testFailure
     Failed asserting that object of class "stdClass" has attribute "foo".
+
     /home/sb/ObjectHasAttributeTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1934,12 +2184,18 @@ Usage of assertRegExp()
 
     phpunit RegExpTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) RegExpTest::testFailure
     Failed asserting that 'bar' matches PCRE pattern "/foo/".
+
     /home/sb/RegExpTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1977,12 +2233,18 @@ Usage of assertStringMatchesFormat()
 
     phpunit StringMatchesFormatTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) StringMatchesFormatTest::testFailure
-    Failed asserting that 'foo' matches PCRE pattern "/^[+-]?\\d+$/s".
+    Failed asserting that 'foo' matches PCRE pattern "/^[+-]?\d+$/s".
+
     /home/sb/StringMatchesFormatTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -2066,13 +2328,19 @@ Usage of assertStringMatchesFormatFile()
 
     phpunit StringMatchesFormatFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) StringMatchesFormatFileTest::testFailure
-    Failed asserting that 'foo' matches PCRE pattern "/^[+-]?\\d+
+    Failed asserting that 'foo' matches PCRE pattern "/^[+-]?\d+
     $/s".
+
     /home/sb/StringMatchesFormatFileTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 2, Failures: 1.
 
@@ -2112,12 +2380,18 @@ Usage of assertSame()
 
     phpunit SameTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) SameTest::testFailure
     Failed asserting that 2204 is identical to '2204'.
+
     /home/sb/SameTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -2148,12 +2422,18 @@ Usage of assertSame() with objects
 
     phpunit SameTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) SameTest::testFailure
     Failed asserting that two variables reference the same object.
+
     /home/sb/SameTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -2191,12 +2471,18 @@ Usage of assertStringEndsWith()
 
     phpunit StringEndsWithTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 1 second, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) StringEndsWithTest::testFailure
     Failed asserting that 'foo' ends with "suffix".
+
     /home/sb/StringEndsWithTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -2234,9 +2520,13 @@ Usage of assertStringEqualsFile()
 
     phpunit StringEqualsFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) StringEqualsFileTest::testFailure
     Failed asserting that two strings are equal.
     --- Expected
@@ -2245,7 +2535,9 @@ Usage of assertStringEqualsFile()
     -'expected
     -'
     +'actual'
+
     /home/sb/StringEqualsFileTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 2, Failures: 1.
 
@@ -2283,12 +2575,18 @@ Usage of assertStringStartsWith()
 
     phpunit StringStartsWithTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) StringStartsWithTest::testFailure
     Failed asserting that 'foo' starts with "prefix".
+
     /home/sb/StringStartsWithTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -2480,12 +2778,18 @@ Usage of assertTrue()
 
     phpunit TrueTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) TrueTest::testFailure
     Failed asserting that false is true.
+
     /home/sb/TrueTest.php:6
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -2524,20 +2828,26 @@ Usage of assertXmlFileEqualsXmlFile()
 
     phpunit XmlFileEqualsXmlFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) XmlFileEqualsXmlFileTest::testFailure
     Failed asserting that two DOM documents are equal.
     --- Expected
     +++ Actual
     @@ @@
-    <?xml version="1.0"?>
-    <foo>
+     <?xml version="1.0"?>
+     <foo>
     -  <bar/>
     +  <baz/>
-    </foo>
+     </foo>
+
     /home/sb/XmlFileEqualsXmlFileTest.php:7
+
     FAILURES!
     Tests: 1, Assertions: 3, Failures: 1.
 
@@ -2576,20 +2886,26 @@ Usage of assertXmlStringEqualsXmlFile()
 
     phpunit XmlStringEqualsXmlFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) XmlStringEqualsXmlFileTest::testFailure
     Failed asserting that two DOM documents are equal.
     --- Expected
     +++ Actual
     @@ @@
-    <?xml version="1.0"?>
-    <foo>
+     <?xml version="1.0"?>
+     <foo>
     -  <bar/>
     +  <baz/>
-    </foo>
+     </foo>
+
     /home/sb/XmlStringEqualsXmlFileTest.php:7
+
     FAILURES!
     Tests: 1, Assertions: 2, Failures: 1.
 
@@ -2628,20 +2944,26 @@ Usage of assertXmlStringEqualsXmlString()
 
     phpunit XmlStringEqualsXmlStringTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) XmlStringEqualsXmlStringTest::testFailure
     Failed asserting that two DOM documents are equal.
     --- Expected
     +++ Actual
     @@ @@
-    <?xml version="1.0"?>
-    <foo>
+     <?xml version="1.0"?>
+     <foo>
     -  <bar/>
     +  <baz/>
-    </foo>
+     </foo>
+
     /home/sb/XmlStringEqualsXmlStringTest.php:7
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 

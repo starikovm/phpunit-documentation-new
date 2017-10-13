@@ -31,7 +31,7 @@ REMOVE_COMMENTS = False
 # If this option is False, only labels that are used in links are generated.
 WRITE_UNUSED_LABELS = True
 
-UNESCAPED_TAGS = ["screen", "programlisting", "literal"]
+UNESCAPED_TAGS = ["userinput", "screen", "programlisting", "literal"]
 
 import sys
 import re
@@ -148,7 +148,10 @@ def _concat(el):
         if i.tail is not None:
             if len(s) > 0 and not s[-1].isspace() and i.tail[0] in " \t":
                 s += i.tail[0]
-            s += _remove_indent_and_escape(i.tail)
+            if el.tag not in UNESCAPED_TAGS:
+                s += _remove_indent_and_escape(i.tail)
+            else:
+                s += i.tail
     return s
 
 def _original_xml(el):

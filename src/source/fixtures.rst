@@ -161,6 +161,7 @@ Example showing all template methods available
 
     phpunit TemplateMethodsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     TemplateMethodsTest::setUpBeforeClass
     TemplateMethodsTest::setUp
     TemplateMethodsTest::assertPreConditions
@@ -173,11 +174,15 @@ Example showing all template methods available
     TemplateMethodsTest::tearDown
     TemplateMethodsTest::onNotSuccessfulTest
     FTemplateMethodsTest::tearDownAfterClass
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) TemplateMethodsTest::testTwo
     Failed asserting that <boolean:false> is true.
     /home/sb/TemplateMethodsTest.php:30
+
     FAILURES!
     Tests: 2, Assertions: 2, Failures: 1.
 
