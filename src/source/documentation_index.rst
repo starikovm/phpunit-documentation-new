@@ -31,6 +31,9 @@ Contents:
    assertions
    annotations
    configuration
+   index
+   bibliography
+   copyright
 
 Indices and tables
 ==================
