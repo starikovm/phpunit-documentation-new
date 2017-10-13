@@ -367,9 +367,7 @@ def literal(el):
     return "``%s``" % _concat(el).strip()
 
 systemitem = userinput
-
-def prompt(el):
-    return "\n%s" % _concat(el).strip()
+prompt = userinput
 
 def filename(el):
     _has_only_text(el)
