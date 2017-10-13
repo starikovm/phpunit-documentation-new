@@ -31,7 +31,7 @@ REMOVE_COMMENTS = False
 # If this option is False, only labels that are used in links are generated.
 WRITE_UNUSED_LABELS = True
 
-UNESCAPED_TAGS = ["screen", "programlisting", "literal"]
+UNESCAPED_TAGS = ["userinput", "screen", "programlisting", "literal"]
 
 import sys
 import re
@@ -148,7 +148,10 @@ def _concat(el):
         if i.tail is not None:
             if len(s) > 0 and not s[-1].isspace() and i.tail[0] in " \t":
                 s += i.tail[0]
-            s += _remove_indent_and_escape(i.tail)
+            if el.tag not in UNESCAPED_TAGS:
+                s += _remove_indent_and_escape(i.tail)
+            else:
+                s += i.tail
     return s
 
 def _original_xml(el):
@@ -535,6 +538,22 @@ def biblioentry(el):
         s += "%s. " % pubdate.text
     return s
 
+def example(el):
+    s = "\n.. code-block:: php\n"
+
+    s += "    :name: %s\n" % el.get("id")
+
+    title = el.find("title")
+    if title is not None:
+        s += "    :caption: %s\n" % _concat(title)
+
+    listing = el.find("programlisting")
+    s += _indent(listing, 4)
+
+    s += "\n\n"
+
+    return s
+
 def bibliography(el):
     _supports_only(el, ("biblioentry",))
     return _make_title("Bibliography", 2) + "\n" + _join_children(el, "\n")
@@ -577,7 +596,6 @@ keywordset = _concat
 abstract = _concat
 bookinfo = _concat
 corpauthor = _concat
-example = _concat
 glossary = _concat
 figure = _concat
 computeroutput = userinput

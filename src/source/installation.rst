@@ -56,17 +56,20 @@ To globally install the PHAR:
 
 ::
 
-    $ wget https://phar.phpunit.de/phpunit-6.2.phar
-    $ chmod +x phpunit-6.2.phar
-    $ sudo mv phpunit-6.2.phar /usr/local/bin/phpunit
-    $ phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
+    $  wget https://phar.phpunit.de/phpunit-6.2.phar
+    $  chmod +x phpunit-6.2.phar
+    $  sudo mv phpunit-6.2.phar /usr/local/bin/phpunit
+    $  phpunit --version
+    PHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 You may also use the downloaded PHAR file directly:
 
 ::
 
-    $ wget https://phar.phpunit.de/phpunit-6.2.phar
-    $ php phpunit-6.2.phar --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
+    $  wget https://phar.phpunit.de/phpunit-6.2.phar
+    $  php phpunit-6.2.phar --version
+    PHPUnit x.y.z by Sebastian Bergmann and contributors.
+
 
 .. _installation.phar.windows:
 
@@ -82,7 +85,7 @@ Globally installing the PHAR involves the same procedure as manually
 
 #.
 
-   Append ;C:\\bin to your ``PATH``
+   Append ;C:\bin to your ``PATH``
    environment variable
    (`related help <http://stackoverflow.com/questions/6318156/adding-python-path-on-windows-7>`_)
 
@@ -105,9 +108,9 @@ Globally installing the PHAR involves the same procedure as manually
 
    ::
 
-       C:\\Users\\username> cd C:\\bin
-       C:\\bin> echo @php "%~dp0phpunit.phar" %* > phpunit.cmd
-       C:\\bin> exit
+       C:\\Users\\username>  cd C:\bin
+       C:\\bin>  echo @php "%~dp0phpunit.phar" %* > phpunit.cmd
+       C:\\bin>  exit
 
 #.
 
@@ -116,7 +119,8 @@ Globally installing the PHAR involves the same procedure as manually
 
    ::
 
-       C:\\Users\\username> phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
+       C:\\Users\\username>  phpunit --version
+       PHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 For Cygwin and/or MingW32 (e.g., TortoiseGit) shell environments, you
 may skip step 5. above, simply save the file as
@@ -139,7 +143,8 @@ detached PGP signature :file:`phpunit.phar.asc`:
 
 ::
 
-    wget https://phar.phpunit.de/phpunit.pharwget https://phar.phpunit.de/phpunit.phar.asc
+    wget https://phar.phpunit.de/phpunit.phar
+    wget https://phar.phpunit.de/phpunit.phar.asc
 
 We want to verify PHPUnit's PHP Archive (:file:`phpunit.phar`)
 against its detached signature (:file:`phpunit.phar.asc`):
@@ -178,7 +183,7 @@ Bergmann. But, let's try to verify the release signature again.
     gpg:                 aka "Sebastian Bergmann <sebastian@thephp.cc>"
     gpg:                 aka "Sebastian Bergmann <sebastian@phpunit.de>"
     gpg:                 aka "Sebastian Bergmann <sebastian.bergmann@thephp.cc>"
-    gpg:                 aka "\[jpeg image of size 40635]"
+    gpg:                 aka "[jpeg image of size 40635]"
     gpg: WARNING: This key is not certified with a trusted signature!
     gpg:          There is no indication that the signature belongs to the owner.
     Primary key fingerprint: D840 6D0D 8294 7747 2937  7831 4AA3 9408 6372 C20A

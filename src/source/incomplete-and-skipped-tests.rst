@@ -44,12 +44,9 @@ method ``markTestIncomplete()`` (which automatically
 raises an ``PHPUnit_Framework_IncompleteTestError``
 exception) in the test method, we mark the test as being incomplete.
 
-.. _incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php:
-
-Marking a test as incomplete
-============================
-
-::
+.. code-block:: php
+    :name: incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php
+    :caption: Marking a test as incomplete
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -77,11 +74,16 @@ example:
 
     phpunit --verbose SampleTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     I
+
     Time: 0 seconds, Memory: 3.95Mb
+
     There was 1 incomplete test:
+
     1) SampleTest::testSomething
     This test has not been implemented yet.
+
     /home/sb/SampleTest.php:12
     OK, but incomplete or skipped tests!
     Tests: 1, Assertions: 1, Incomplete: 1.
@@ -120,12 +122,9 @@ method, ``testConnection()``. In the test case class'
 extension is available and use the ``markTestSkipped()``
 method to skip the test if it is not.
 
-.. _incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php:
-
-Skipping a test
-===============
-
-::
+.. code-block:: php
+    :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php
+    :caption: Skipping a test
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -156,11 +155,16 @@ following example:
 
     phpunit --verbose DatabaseTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     S
+
     Time: 0 seconds, Memory: 3.95Mb
+
     There was 1 skipped test:
+
     1) DatabaseTest::testConnection
     The MySQLi extension is not available.
+
     /home/sb/DatabaseTest.php:9
     OK, but incomplete or skipped tests!
     Tests: 1, Assertions: 0, Skipped: 1.
@@ -225,12 +229,9 @@ Any extension name along with an optional version identifier
 @requires extension mysqli
 @requires extension redis 2.2.0
 
-.. _incomplete-and-skipped-tests.skipping-tests.examples.DatabaseClassSkippingTest.php:
-
-Skipping test cases using @requires
-===================================
-
-::
+.. code-block:: php
+    :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseClassSkippingTest.php
+    :caption: Skipping test cases using @requires
 
     <?php
     use PHPUnit\Framework\TestCase;

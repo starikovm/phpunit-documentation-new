@@ -33,12 +33,9 @@ PHPUnit's own assertions are implemented. As you can see in
 ``isTrue()`` creates a matcher object that is passed on to
 ``assertThat()`` for evaluation.
 
-.. _extending-phpunit.examples.Assert.php:
-
-The assertTrue() and isTrue() methods of the PHPUnit_Framework_Assert class
-===========================================================================
-
-::
+.. code-block:: php
+    :name: extending-phpunit.examples.Assert.php
+    :caption: The assertTrue() and isTrue() methods of the PHPUnit_Framework_Assert class
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -80,12 +77,9 @@ The assertTrue() and isTrue() methods of the PHPUnit_Framework_Assert class
 abstract base class for matcher objects (or constraints),
 ``PHPUnit_Framework_Constraint``.
 
-.. _extending-phpunit.examples.IsTrue.php:
-
-The PHPUnit_Framework_Constraint_IsTrue class
-=============================================
-
-::
+.. code-block:: php
+    :name: extending-phpunit.examples.IsTrue.php
+    :caption: The PHPUnit_Framework_Constraint_IsTrue class
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -132,12 +126,9 @@ Implement PHPUnit_Framework_TestListener
 shows a simple implementation of the ``PHPUnit_Framework_TestListener``
 interface.
 
-.. _extending-phpunit.examples.SimpleTestListener.php:
-
-A simple test listener
-======================
-
-::
+.. code-block:: php
+    :name: extending-phpunit.examples.SimpleTestListener.php
+    :caption: A simple test listener
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -197,12 +188,9 @@ abstract class, which lets you specify only the interface methods that
 are interesting for your use case, while providing empty implementations
 for all the others.
 
-.. _extending-phpunit.examples.BaseTestListener.php:
-
-Using base test listener
-========================
-
-::
+.. code-block:: php
+    :name: extending-phpunit.examples.BaseTestListener.php
+    :caption: Using base test listener
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -239,12 +227,9 @@ successful.
 shows a cut-down version of the ``PHPUnit_Extensions_RepeatedTest``
 test decorator that illustrates how to write your own test decorators.
 
-.. _extending-phpunit.examples.RepeatedTest.php:
-
-The RepeatedTest Decorator
-==========================
-
-::
+.. code-block:: php
+    :name: extending-phpunit.examples.RepeatedTest.php
+    :caption: The RepeatedTest Decorator
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -302,12 +287,9 @@ with Comma-Separated Values (CSV). Each line of such a file looks like
 ``foo;bar``, where the first value is the one we expect
 and the second value is the actual one.
 
-.. _extending-phpunit.examples.DataDrivenTest.php:
-
-A data-driven test
-==================
-
-::
+.. code-block:: php
+    :name: extending-phpunit.examples.DataDrivenTest.php
+    :caption: A data-driven test
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -369,26 +351,5 @@ A data-driven test
     $test = new DataDrivenTest('data_file.csv');
     $result = PHPUnit_TextUI_TestRunner::run($test);
     ?>
-
-::
-
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
-
-    .F
-
-    Time: 0 seconds
-
-    There was 1 failure:
-
-    1) DataDrivenTest
-    Failed asserting that two strings are equal.
-    expected string <bar>
-    difference      <  x>
-    got string      <baz>
-    /home/sb/DataDrivenTest.php:32
-    /home/sb/DataDrivenTest.php:53
-
-    FAILURES!
-    Tests: 2, Failures: 1.
 
 

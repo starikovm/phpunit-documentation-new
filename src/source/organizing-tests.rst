@@ -46,8 +46,11 @@ command-line test runner to the test directory:
 
     phpunit --bootstrap src/autoload.php tests
     PHPUnit 6.4.0 by Sebastian Bergmann.
+
     .................................
+
     Time: 636 ms, Memory: 3.50Mb
+
     OK (33 tests, 52 assertions)
 
 .. note::
@@ -63,8 +66,11 @@ the following command:
 
     phpunit --bootstrap src/autoload.php tests/CurrencyTest
     PHPUnit 6.4.0 by Sebastian Bergmann.
+
     ........
+
     Time: 280 ms, Memory: 2.75Mb
+
     OK (8 tests, 8 assertions)
 
 For more fine-grained control of which tests to run we can use the
@@ -74,8 +80,11 @@ For more fine-grained control of which tests to run we can use the
 
     phpunit --bootstrap src/autoload.php --filter testObjectCanBeConstructedForValidConstructorArgument tests
     PHPUnit 6.4.0 by Sebastian Bergmann.
+
     ..
+
     Time: 167 ms, Memory: 3.00Mb
+
     OK (2 test, 2 assertions)
 
 .. note::
@@ -99,12 +108,9 @@ shows a minimal :file:`phpunit.xml` file that will add all
 :file:`*Test.php` files when the :file:`tests`
 directory is recursively traversed.
 
-.. _organizing-tests.xml-configuration.examples.phpunit.xml:
-
-Composing a Test Suite Using XML Configuration
-==============================================
-
-::
+.. code-block:: php
+    :name: organizing-tests.xml-configuration.examples.phpunit.xml
+    :caption: Composing a Test Suite Using XML Configuration
 
     <phpunit bootstrap="src/autoload.php">
       <testsuites>
@@ -122,12 +128,9 @@ read from that file.
 
 The order in which tests are executed can be made explicit:
 
-.. _organizing-tests.xml-configuration.examples.phpunit.xml2:
-
-Composing a Test Suite Using XML Configuration
-==============================================
-
-::
+.. code-block:: php
+    :name: organizing-tests.xml-configuration.examples.phpunit.xml2
+    :caption: Composing a Test Suite Using XML Configuration
 
     <phpunit bootstrap="src/autoload.php">
       <testsuites>
