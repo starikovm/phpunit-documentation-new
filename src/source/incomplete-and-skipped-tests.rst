@@ -53,12 +53,14 @@ Marking a test as incomplete
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class SampleTest extends TestCase
     {
         public function testSomething()
         {
             // Optional: Test anything here, if you want.
             $this->assertTrue(true, 'This should already work.');
+
             // Stop here and mark this test as incomplete.
             $this->markTestIncomplete(
               'This test has not been implemented yet.'
@@ -74,12 +76,17 @@ example:
 ::
 
     phpunit --verbose SampleTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     I
+
     Time: 0 seconds, Memory: 3.95Mb
+
     There was 1 incomplete test:
+
     1) SampleTest::testSomething
     This test has not been implemented yet.
+
     /home/sb/SampleTest.php:12
     OK, but incomplete or skipped tests!
     Tests: 1, Assertions: 1, Incomplete: 1.
@@ -127,6 +134,7 @@ Skipping a test
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class DatabaseTest extends TestCase
     {
         protected function setUp()
@@ -137,6 +145,7 @@ Skipping a test
                 );
             }
         }
+
         public function testConnection()
         {
             // ...
@@ -151,12 +160,17 @@ following example:
 ::
 
     phpunit --verbose DatabaseTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     S
+
     Time: 0 seconds, Memory: 3.95Mb
+
     There was 1 skipped test:
+
     1) DatabaseTest::testConnection
     The MySQLi extension is not available.
+
     /home/sb/DatabaseTest.php:9
     OK, but incomplete or skipped tests!
     Tests: 1, Assertions: 0, Skipped: 1.
@@ -230,6 +244,7 @@ Skipping test cases using @requires
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     /**
      * @requires extension mysqli
      */
@@ -242,6 +257,7 @@ Skipping test cases using @requires
         {
             // Test requires the mysqli extension and PHP >= 5.3
         }
+
         // ... All other tests require the mysqli extension
     }
     ?>

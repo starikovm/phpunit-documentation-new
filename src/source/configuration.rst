@@ -18,7 +18,7 @@ be used to configure PHPUnit's core functionality.
 
     <phpunit
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
+             xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.5/phpunit.xsd"
              backupGlobals="true"
              backupStaticAttributes="false"
              <!--bootstrap="/path/to/bootstrap.php"-->
@@ -52,50 +52,67 @@ TextUI test runner documented in :ref:`textui.clioptions`.
 Additional options that are not available as command-line options are:
 
 ``convertErrorsToExceptions``
+
     By default, PHPUnit will install an error handler that converts
     the following errors to exceptions:
+
     - ``E_WARNING``
+
     - ``E_NOTICE``
+
     - ``E_USER_ERROR``
+
     - ``E_USER_WARNING``
+
     - ``E_USER_NOTICE``
+
     - ``E_STRICT``
+
     - ``E_RECOVERABLE_ERROR``
+
     - ``E_DEPRECATED``
+
     - ``E_USER_DEPRECATED``
+
     Set ``convertErrorsToExceptions`` to
     ``false`` to disable this feature.
 
 ``convertNoticesToExceptions``
+
     When set to ``false``, the error handler installed
     by ``convertErrorsToExceptions`` will not convert
     ``E_NOTICE``, ``E_USER_NOTICE``, or
     ``E_STRICT`` errors to exceptions.
 
 ``convertWarningsToExceptions``
+
     When set to ``false``, the error handler installed
     by ``convertErrorsToExceptions`` will not convert
     ``E_WARNING`` or ``E_USER_WARNING``
     errors to exceptions.
 
 ``forceCoversAnnotation``
+
     Code Coverage will only be recorded for tests that use the
     ``@covers`` annotation documented in
     :ref:`appendixes.annotations.covers`.
 
 ``timeoutForLargeTests``
+
     If time limits based on test size are enforced then this attribute
     sets the timeout for all tests marked as ``@large``.
     If a test does not complete within its configured timeout, it will
     fail.
 
 ``timeoutForMediumTests``
+
     If time limits based on test size are enforced then this attribute
     sets the timeout for all tests marked as ``@medium``.
     If a test does not complete within its configured timeout, it will
     fail.
 
 ``timeoutForSmallTests``
+
     If time limits based on test size are enforced then this attribute
     sets the timeout for all tests not marked as
     ``@medium`` or ``@large``. If a test
@@ -166,9 +183,13 @@ that should (not) be run.
 The XML configuration above corresponds to invoking the TextUI test runner
 with the following options:
 
-- ``--group name``
+-
 
-- ``--exclude-group name``
+  ``--group name``
+
+-
+
+  ``--exclude-group name``
 
 .. _appendixes.configuration.whitelisting-files:
 
@@ -216,34 +237,58 @@ logging of the test execution.
 The XML configuration above corresponds to invoking the TextUI test runner
 with the following options:
 
-- ``--coverage-html /tmp/report``
+-
 
-- ``--coverage-clover /tmp/coverage.xml``
+  ``--coverage-html /tmp/report``
 
-- ``--coverage-php /tmp/coverage.serialized``
+-
 
-- ``--coverage-text``
+  ``--coverage-clover /tmp/coverage.xml``
 
-- ``> /tmp/logfile.txt``
+-
 
-- ``--log-junit /tmp/logfile.xml``
+  ``--coverage-php /tmp/coverage.serialized``
 
-- ``--testdox-html /tmp/testdox.html``
+-
 
-- ``--testdox-text /tmp/testdox.txt``
+  ``--coverage-text``
+
+-
+
+  ``> /tmp/logfile.txt``
+
+-
+
+  ``--log-junit /tmp/logfile.xml``
+
+-
+
+  ``--testdox-html /tmp/testdox.html``
+
+-
+
+  ``--testdox-text /tmp/testdox.txt``
 
 The ``lowUpperBound``, ``highLowerBound``,
 ``logIncompleteSkipped`` and
 ``showUncoveredFiles`` attributes have no equivalent TextUI
 test runner option.
 
-- ``lowUpperBound``: Maximum coverage percentage to be considered "lowly" covered.
+-
 
-- ``highLowerBound``: Minimum coverage percentage to be considered "highly" covered.
+  ``lowUpperBound``: Maximum coverage percentage to be considered "lowly" covered.
 
-- ``showUncoveredFiles``: Show all whitelisted files in ``--coverage-text`` output not just the ones with coverage information.
+-
 
-- ``showOnlySummary``: Show only the summary in ``--coverage-text`` output.
+  ``highLowerBound``: Minimum coverage percentage to be considered "highly" covered.
+
+-
+
+  ``showUncoveredFiles``: Show all whitelisted files in ``--coverage-text`` output not just the ones with coverage information.
+
+-
+
+  ``showOnlySummary``: Show only the summary in ``--coverage-text`` output.
 
 .. _appendixes.configuration.test-listeners:
 

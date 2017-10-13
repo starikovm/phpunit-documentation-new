@@ -7,6 +7,7 @@ Testing Practices
 =================
 
     *Erich Gamma*:
+
     You can always write more tests. However, you will quickly find that
     only a fraction of the tests you can imagine are actually useful. What
     you want is to write tests that fail even though you think they should
@@ -31,13 +32,21 @@ of your project, while using unit tests to verify that the refactoring's
 transformation steps are, indeed, behavior-preserving and do not
 introduce errors:
 
-#. All unit tests run correctly.
+#.
 
-#. The code communicates its design principles.
+   All unit tests run correctly.
 
-#. The code contains no redundancies.
+#.
 
-#. The code contains the minimal number of classes and methods.
+   The code communicates its design principles.
+
+#.
+
+   The code contains no redundancies.
+
+#.
+
+   The code contains the minimal number of classes and methods.
 
 When you need to add new functionality to the system, write the tests
 first. Then, you will be done developing when the test runs. This
@@ -55,16 +64,24 @@ defect.
 
 You can hold your impulse in check by doing the following:
 
-#. Verify that you can reproduce the defect.
+#.
 
-#. Find the smallest-scale demonstration of the defect in the code.
+   Verify that you can reproduce the defect.
+
+#.
+
+   Find the smallest-scale demonstration of the defect in the code.
    For example, if a number appears incorrectly in an output, find the
    object that is computing that number.
 
-#. Write an automated test that fails now but will succeed when the
+#.
+
+   Write an automated test that fails now but will succeed when the
    defect is fixed.
 
-#. Fix the defect.
+#.
+
+   Fix the defect.
 
 Finding the smallest reliable reproduction of the defect gives you the
 opportunity to really examine the cause of the defect. The test you
@@ -74,12 +91,27 @@ with future code changes. All the tests you wrote before reduce the
 likelihood of inadvertently causing a different problem.
 
     *Benjamin Smedberg*:
+
     Unit testing offers many advantages:
-    - Testing gives code authors and reviewers confidence that patches produce the correct results.
-    - Authoring testcases is a good impetus for developers to discover edge cases.
-    - Testing provides a good way to catch regressions quickly, and to make sure that no regression will be repeated twice.
-    - Unit tests provide working examples for how to use an API and can significantly aid documentation efforts.
+
+    -
+
+      Testing gives code authors and reviewers confidence that patches produce the correct results.
+
+    -
+
+      Authoring testcases is a good impetus for developers to discover edge cases.
+
+    -
+
+      Testing provides a good way to catch regressions quickly, and to make sure that no regression will be repeated twice.
+
+    -
+
+      Unit tests provide working examples for how to use an API and can significantly aid documentation efforts.
+
     Overall, integrated unit testing makes the cost and risk of any
     individual change smaller. It will allow the project to make \[...]
     major architectural improvements \[...] quickly and confidently.
+
 

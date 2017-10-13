@@ -52,23 +52,28 @@ Using setUp() to create the stack fixture
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StackTest extends TestCase
     {
         protected $stack;
+
         protected function setUp()
         {
             $this->stack = [];
         }
+
         public function testEmpty()
         {
             $this->assertTrue(empty($this->stack));
         }
+
         public function testPush()
         {
             array_push($this->stack, 'foo');
             $this->assertEquals('foo', $this->stack[count($this->stack)-1]);
             $this->assertFalse(empty($this->stack));
         }
+
         public function testPop()
         {
             array_push($this->stack, 'foo');
@@ -99,42 +104,51 @@ Example showing all template methods available
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class TemplateMethodsTest extends TestCase
     {
         public static function setUpBeforeClass()
         {
             fwrite(STDOUT, __METHOD__ . "\n");
         }
+
         protected function setUp()
         {
             fwrite(STDOUT, __METHOD__ . "\n");
         }
+
         protected function assertPreConditions()
         {
             fwrite(STDOUT, __METHOD__ . "\n");
         }
+
         public function testOne()
         {
             fwrite(STDOUT, __METHOD__ . "\n");
             $this->assertTrue(true);
         }
+
         public function testTwo()
         {
             fwrite(STDOUT, __METHOD__ . "\n");
             $this->assertTrue(false);
         }
+
         protected function assertPostConditions()
         {
             fwrite(STDOUT, __METHOD__ . "\n");
         }
+
         protected function tearDown()
         {
             fwrite(STDOUT, __METHOD__ . "\n");
         }
+
         public static function tearDownAfterClass()
         {
             fwrite(STDOUT, __METHOD__ . "\n");
         }
+
         protected function onNotSuccessfulTest(Exception $e)
         {
             fwrite(STDOUT, __METHOD__ . "\n");
@@ -146,7 +160,8 @@ Example showing all template methods available
 ::
 
     phpunit TemplateMethodsTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     TemplateMethodsTest::setUpBeforeClass
     TemplateMethodsTest::setUp
     TemplateMethodsTest::assertPreConditions
@@ -159,11 +174,15 @@ Example showing all template methods available
     TemplateMethodsTest::tearDown
     TemplateMethodsTest::onNotSuccessfulTest
     FTemplateMethodsTest::tearDownAfterClass
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) TemplateMethodsTest::testTwo
     Failed asserting that <boolean:false> is true.
     /home/sb/TemplateMethodsTest.php:30
+
     FAILURES!
     Tests: 2, Assertions: 2, Failures: 1.
 
@@ -191,11 +210,15 @@ Variations
 What happens when you have two tests with slightly different setups?
 There are two possibilities:
 
-- If the ``setUp()`` code differs only slightly, move
+-
+
+  If the ``setUp()`` code differs only slightly, move
   the code that differs from the ``setUp()`` code to
   the test method.
 
-- If you really have a different ``setUp()``, you need
+-
+
+  If you really have a different ``setUp()``, you need
   a different test case class. Name the class after the difference in
   the setup.
 
@@ -228,13 +251,16 @@ Sharing fixture between the tests of a test suite
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class DatabaseTest extends TestCase
     {
         protected static $dbh;
+
         public static function setUpBeforeClass()
         {
             self::$dbh = new PDO('sqlite::memory:');
         }
+
         public static function tearDownAfterClass()
         {
             self::$dbh = null;
@@ -263,38 +289,39 @@ change to a global variable might break another test.
 
 In PHP, global variables work like this:
 
-- A global variable ``$foo = 'bar';`` is stored as ``$GLOBALS['foo'] = 'bar';``.
+-
 
-- The ``$GLOBALS`` variable is a so-called *super-global* variable.
+  A global variable ``$foo = 'bar';`` is stored as ``$GLOBALS['foo'] = 'bar';``.
 
-- Super-global variables are built-in variables that are always available in all scopes.
+-
 
-- In the scope of a function or method, you may access the global variable ``$foo`` by either directly accessing ``$GLOBALS['foo']`` or by using ``global $foo;`` to create a local variable with a reference to the global variable.
+  The ``$GLOBALS`` variable is a so-called *super-global* variable.
+
+-
+
+  Super-global variables are built-in variables that are always available in all scopes.
+
+-
+
+  In the scope of a function or method, you may access the global variable ``$foo`` by either directly accessing ``$GLOBALS['foo']`` or by using ``global $foo;`` to create a local variable with a reference to the global variable.
 
 Besides global variables, static attributes of classes are also part of
 the global state.
 
-Prior to version 6, by default, PHPUnit ran your tests in a way where
-changes to global and super-global variables (``$GLOBALS``,
+By default, PHPUnit runs your tests in a way where changes to global
+and super-global variables (``$GLOBALS``,
 ``$_ENV``, ``$_POST``,
 ``$_GET``, ``$_COOKIE``,
 ``$_SERVER``, ``$_FILES``,
-``$_REQUEST``) do not affect other tests.
+``$_REQUEST``) do not affect other tests. Optionally, this
+isolation can be extended to static attributes of classes.
 
-As of version 6, PHPUnit does not perform this backup and restore
-operation for global and super-global variables by default anymore.
-It can be activated by using the ``--globals-backup``
-option or setting ``backupGlobals="true"`` in the
-XML configuration file.
+.. note::
 
-By using the ``--static-backup`` option or setting
-``backupStaticAttributes="true"`` in the
-XML configuration file, this isolation can be extended to static
-attributes of classes.
-
-.. note:: The backup and restore operations for global variables and static
+   The backup and restore operations for global variables and static
    class attributes use ``serialize()`` and
    ``unserialize()``.
+
    Objects of some classes (e.g., ``PDO``) cannot be
    serialized and the backup operation will break when such an object is
    stored e.g. in the ``$GLOBALS`` array.
@@ -310,10 +337,13 @@ be excluded from the backup and restore operations like this
     class MyTest extends TestCase
     {
         protected $backupGlobalsBlacklist = ['globalVariable'];
+
         // ...
     }
 
-.. note:: Setting the ``$backupGlobalsBlacklist`` property inside
+.. note::
+
+   Setting the ``$backupGlobalsBlacklist`` property inside
    e.g. the ``setUp()`` method has no effect.
 
 The ``@backupStaticAttributes`` annotation discussed in
@@ -325,17 +355,21 @@ It processes all classes that are declared at the time a test starts, not
 only the test class itself. It only applies to static class properties,
 not static variables within functions.
 
-.. note:: The ``@backupStaticAttributes`` operation is executed
+.. note::
+
+   The ``@backupStaticAttributes`` operation is executed
    before a test method, but only if it is enabled. If a static value was
    changed by a previously executed test that did not have
    ``@backupStaticAttributes`` enabled, then that value will
    be backed up and restored — not the originally declared default value.
    PHP does not record the originally declared default value of any static
    variable.
+
    The same applies to static properties of classes that were newly
    loaded/declared within a test. They cannot be reset to their originally
    declared default value after the test, since that value is unknown.
    Whichever value is set will leak into subsequent tests.
+
    For unit tests, it is recommended to explicitly reset the values of
    static properties under test in your ``setUp()`` code
    instead (and ideally also ``tearDown()``, so as to not
@@ -351,9 +385,13 @@ from the backup and restore operations:
         protected $backupStaticAttributesBlacklist = [
             'className' => ['attributeName']
         ];
+
         // ...
     }
 
-.. note:: Setting the ``$backupStaticAttributesBlacklist`` property
+.. note::
+
+   Setting the ``$backupStaticAttributesBlacklist`` property
    inside e.g. the ``setUp()`` method has no effect.
+
 

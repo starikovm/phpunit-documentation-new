@@ -9,11 +9,13 @@ Database Testing
 Many beginner and intermediate unit testing examples in any programming
 language suggest that it is perfectly easy to test your application's logic with
 simple tests. For database-centric applications this is far away from the
-reality. Start using WordPress, TYPO3 or Symfony with Doctrine or Propel,
+reality. Start using Wordpress, TYPO3 or Symfony with Doctrine or Propel,
 for example, and you will easily experience considerable problems with
 PHPUnit: just because the database is so tightly coupled to these libraries.
 
-.. note:: Make sure you have the PHP extension ``pdo`` and database
+.. note::
+
+   Make sure you have the PHP extension ``pdo`` and database
    specific extensions such as ``pdo_mysql`` installed.
    Otherwise the examples shown below will not work.
 
@@ -21,13 +23,19 @@ You probably know this scenario from your daily work and projects,
 where you want to put your fresh or experienced PHPUnit skills to
 work and get stuck by one of the following problems:
 
-#. The method you want to test executes a rather large JOIN operation and
+#.
+
+   The method you want to test executes a rather large JOIN operation and
    uses the data to calculate some important results.
 
-#. Your business logic performs a mix of SELECT, INSERT, UPDATE and
+#.
+
+   Your business logic performs a mix of SELECT, INSERT, UPDATE and
    DELETE statements.
 
-#. You need to setup test data in (possibly much) more than two tables
+#.
+
+   You need to setup test data in (possibly much) more than two tables
    to get reasonable initial data for the methods you want to test.
 
 The DbUnit extension considerably simplifies the setup of a database for
@@ -55,13 +63,21 @@ interactions with the database: these kind of tests are both complex to
 setup and maintain. While testing against your database you need to take
 care of the following variables:
 
-- The database schema and tables
+-
 
-- Inserting the rows required for the test into these tables
+  The database schema and tables
 
-- Verifying the state of the database after your test has run
+-
 
-- Cleanup the database for each new test
+  Inserting the rows required for the test into these tables
+
+-
+
+  Verifying the state of the database after your test has run
+
+-
+
+  Cleanup the database for each new test
 
 Because many database APIs such as PDO, MySQLi or OCI8 are cumbersome to
 use and verbose in writing doing these steps manually is an absolute
@@ -69,10 +85,14 @@ nightmare.
 
 Test code should be as short and precise as possible for several reasons:
 
-- You do not want to modify considerable amount of test code for little
+-
+
+  You do not want to modify considerable amount of test code for little
   changes in your production code.
 
-- You want to be able to read and understand the test code easily,
+-
+
+  You want to be able to read and understand the test code easily,
   even months after writing it.
 
 Additionally you have to realize that the database is essentially a
@@ -108,15 +128,24 @@ The four stages of a database test
 In his book on xUnit Test Patterns Gerard Meszaros lists the four
 stages of a unit-test:
 
-#. Set up fixture
+#.
 
-#. Exercise System Under Test
+   Set up fixture
 
-#. Verify outcome
+#.
 
-#. Teardown
+   Exercise System Under Test
+
+#.
+
+   Verify outcome
+
+#.
+
+   Teardown
 
     *What is a Fixture?*
+
     A fixture describes the initial state your application and database
     are in when you execute a test.
 
@@ -172,6 +201,7 @@ following way:
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         public function testCalculate()
@@ -192,9 +222,11 @@ abstract TestCase requiring you to implement two abstract methods
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class MyGuestbookTest extends TestCase
     {
         use TestCaseTrait;
+
         /**
          * @return PHPUnit_Extensions_Database_DB_IDatabaseConnection
          */
@@ -203,6 +235,7 @@ abstract TestCase requiring you to implement two abstract methods
             $pdo = new PDO('sqlite::memory:');
             return $this->createDefaultDBConnection($pdo, ':memory:');
         }
+
         /**
          * @return PHPUnit_Extensions_Database_DataSet_IDataSet
          */
@@ -270,11 +303,15 @@ correctly setup before running the suite.
 There are several means to achieve this pre-condition to database
 testing.
 
-#. If you are using a persistent database (not Sqlite Memory) you can
+#.
+
+   If you are using a persistent database (not Sqlite Memory) you can
    easily setup the database once with tools such as phpMyAdmin for
    MySQL and re-use the database for every test-run.
 
-#. If you are using libraries such as
+#.
+
+   If you are using libraries such as
    `Doctrine 2 <http://www.doctrine-project.org>`_ or
    `Propel <http://www.propelorm.org/>`_
    you can use their APIs to create the database schema you
@@ -300,13 +337,17 @@ different data-fixture for each test case:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     abstract class MyApp_Tests_DatabaseTestCase extends TestCase
     {
         use TestCaseTrait;
+
         // only instantiate pdo once for test clean-up/fixture load
         static private $pdo = null;
+
         // only instantiate PHPUnit_Extensions_Database_DB_IDatabaseConnection once per test
         private $conn = null;
+
         final public function getConnection()
         {
             if ($this->conn === null) {
@@ -315,6 +356,7 @@ different data-fixture for each test case:
                 }
                 $this->conn = $this->createDefaultDBConnection(self::$pdo, ':memory:');
             }
+
             return $this->conn;
         }
     }
@@ -347,13 +389,17 @@ We can now modify our test-case to look like:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     abstract class Generic_Tests_DatabaseTestCase extends TestCase
     {
         use TestCaseTrait;
+
         // only instantiate pdo once for test clean-up/fixture load
         static private $pdo = null;
+
         // only instantiate PHPUnit_Extensions_Database_DB_IDatabaseConnection once per test
         private $conn = null;
+
         final public function getConnection()
         {
             if ($this->conn === null) {
@@ -362,6 +408,7 @@ We can now modify our test-case to look like:
                 }
                 $this->conn = $this->createDefaultDBConnection(self::$pdo, $GLOBALS['DB_DBNAME']);
             }
+
             return $this->conn;
         }
     }
@@ -403,13 +450,19 @@ storage in a semantically similar approach.
 A workflow for database assertions in your tests then consists of
 three simple steps:
 
-- Specify one or more tables in your database by table name (actual
+-
+
+  Specify one or more tables in your database by table name (actual
   dataset)
 
-- Specify the expected dataset in your preferred format (YAML, XML,
+-
+
+  Specify the expected dataset in your preferred format (YAML, XML,
   ..)
 
-- Assert that both dataset representations equal each other.
+-
+
+  Assert that both dataset representations equal each other.
 
 Assertions are not the only use-case for the DataSet and DataTable
 in PHPUnit's Database Extension. As shown in the previous section
@@ -417,9 +470,13 @@ they also describe the initial contents of a database. You are
 forced to define a fixture dataset by the Database TestCase, which
 is then used to:
 
-- Delete all the rows from the tables specified in the dataset.
+-
 
-- Write all the rows in the data-tables into the database.
+  Delete all the rows from the tables specified in the dataset.
+
+-
+
+  Write all the rows in the data-tables into the database.
 
 .. _database.available-implementations:
 
@@ -428,11 +485,17 @@ Available Implementations
 
 There are three different types of datasets/datatables:
 
-- File-Based DataSets and DataTables
+-
 
-- Query-Based DataSet and DataTable
+  File-Based DataSets and DataTables
 
-- Filter and Composition DataSets and DataTables
+-
+
+  Query-Based DataSet and DataTable
+
+-
+
+  Filter and Composition DataSets and DataTables
 
 The file-based datasets and tables are generally used for the
 initial fixture and to describe the expected state of the database.
@@ -537,9 +600,11 @@ Database TestCase by calling the
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class MyTestCase extends TestCase
     {
         use TestCaseTrait;
+
         public function getDataSet()
         {
             return $this->createFlatXmlDataSet('myFlatXmlFixture.xml');
@@ -604,9 +669,11 @@ Database TestCase by calling the
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class MyTestCase extends TestCase
     {
         use TestCaseTrait;
+
         public function getDataSet()
         {
             return $this->createXMLDataSet('myXmlFixture.xml');
@@ -641,9 +708,11 @@ This file can be used in your Database TestCase by calling the
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class MyTestCase extends TestCase
     {
         use TestCaseTrait;
+
         public function getDataSet()
         {
             return $this->createMySQLXMLDataSet('/path/to/file.xml');
@@ -685,13 +754,16 @@ currently, so you have to instantiate it manually:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
-    use PHPUnit\DbUnit\DataSet\YamlDataSet;
+
     class YamlGuestbookTest extends TestCase
     {
         use TestCaseTrait;
+
         protected function getDataSet()
         {
-            return new YamlDataSet(dirname(__FILE__)."/_files/guestbook.yml");
+            return new PHPUnit_Extensions_Database_DataSet_YamlDataSet(
+                dirname(__FILE__)."/_files/guestbook.yml"
+            );
         }
     }
     ?>
@@ -723,13 +795,14 @@ You can create a CSV DataSet by calling:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
-    use PHPUnit\DbUnit\DataSet\CsvDataSet;
+
     class CsvGuestbookTest extends TestCase
     {
         use TestCaseTrait;
+
         protected function getDataSet()
         {
-            $dataSet = new CsvDataSet();
+            $dataSet = new PHPUnit_Extensions_Database_DataSet_CsvDataSet();
             $dataSet->addTable('guestbook', dirname(__FILE__)."/_files/guestbook.csv");
             return $dataSet;
         }
@@ -750,9 +823,11 @@ should look like:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class ArrayGuestbookTest extends TestCase
     {
         use TestCaseTrait;
+
         protected function getDataSet()
         {
             return new MyApp_DbUnit_ArrayDataSet(
@@ -780,9 +855,13 @@ should look like:
 A PHP DataSet has obvious advantages over all the other file-based
 datasets:
 
-- PHP Arrays can obviously handle ``NULL`` values.
+-
 
-- You won't need additional files for assertions and can specify them
+  PHP Arrays can obviously handle ``NULL`` values.
+
+-
+
+  You won't need additional files for assertions and can specify them
   directly in the TestCase.
 
 For this dataset like the Flat XML, CSV and YAML DataSets the keys
@@ -803,6 +882,7 @@ straightforward:
          * @var array
          */
         protected $tables = [];
+
         /**
          * @param array $data
          */
@@ -813,23 +893,28 @@ straightforward:
                 if (isset($rows[0])) {
                     $columns = array_keys($rows[0]);
                 }
+
                 $metaData = new PHPUnit_Extensions_Database_DataSet_DefaultTableMetaData($tableName, $columns);
                 $table = new PHPUnit_Extensions_Database_DataSet_DefaultTable($metaData);
+
                 foreach ($rows AS $row) {
                     $table->addRow($row);
                 }
                 $this->tables[$tableName] = $table;
             }
         }
+
         protected function createIterator($reverse = false)
         {
             return new PHPUnit_Extensions_Database_DataSet_DefaultTableIterator($this->tables, $reverse);
         }
+
         public function getTable($tableName)
         {
             if (!isset($this->tables[$tableName])) {
                 throw new InvalidArgumentException("$tableName is not a table in the current database.");
             }
+
             return $this->tables[$tableName];
         }
     }
@@ -895,9 +980,11 @@ specified table names with a whitelist as shown in
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class MySqlGuestbookTest extends TestCase
     {
         use TestCaseTrait;
+
         /**
          * @return PHPUnit_Extensions_Database_DB_IDatabaseConnection
          */
@@ -909,11 +996,13 @@ specified table names with a whitelist as shown in
             $pdo = new PDO('mysql:...', $user, $password);
             return $this->createDefaultDBConnection($pdo, $database);
         }
+
         public function testGuestbook()
         {
             $dataSet = $this->getConnection()->createDataSet();
             // ...
         }
+
         public function testFilteredGuestbook()
         {
             $tableNames = ['guestbook'];
@@ -952,9 +1041,11 @@ We then wrap the Flat XML DataSet into a Replacement DataSet:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class ReplacementTest extends TestCase
     {
         use TestCaseTrait;
+
         public function getDataSet()
         {
             $ds = $this->createFlatXmlDataSet('myFlatXmlFixture.xml');
@@ -980,22 +1071,27 @@ with the DB DataSet to filter the columns of the datasets.
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class DataSetFilterTest extends TestCase
     {
         use TestCaseTrait;
+
         public function testIncludeFilteredGuestbook()
         {
             $tableNames = ['guestbook'];
             $dataSet = $this->getConnection()->createDataSet();
+
             $filterDataSet = new PHPUnit_Extensions_Database_DataSet_DataSetFilter($dataSet);
             $filterDataSet->addIncludeTables(['guestbook']);
             $filterDataSet->setIncludeColumnsForTable('guestbook', ['id', 'content']);
             // ..
         }
+
         public function testExcludeFilteredGuestbook()
         {
             $tableNames = ['guestbook'];
             $dataSet = $this->getConnection()->createDataSet();
+
             $filterDataSet = new PHPUnit_Extensions_Database_DataSet_DataSetFilter($dataSet);
             $filterDataSet->addExcludeTables(['foo', 'bar', 'baz']); // only keep the guestbook table!
             $filterDataSet->setExcludeColumnsForTable('guestbook', ['user', 'created']);
@@ -1043,16 +1139,20 @@ Using the Composite DataSet we can aggregate both fixture files:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class CompositeTest extends TestCase
     {
         use TestCaseTrait;
+
         public function getDataSet()
         {
             $ds1 = $this->createFlatXmlDataSet('fixture1.xml');
             $ds2 = $this->createFlatXmlDataSet('fixture2.xml');
+
             $compositeDs = new PHPUnit_Extensions_Database_DataSet_CompositeDataSet();
             $compositeDs->addDataSet($ds1);
             $compositeDs->addDataSet($ds2);
+
             return $compositeDs;
         }
     }
@@ -1087,6 +1187,7 @@ do not plan to implement your own DataSet or DataTable.
         public function getTableMetaData($tableName);
         public function getTable($tableName);
         public function assertEquals(PHPUnit_Extensions_Database_DataSet_IDataSet $other);
+
         public function getReverseIterator();
     }
     ?>
@@ -1131,12 +1232,18 @@ implementation of the
 interface, which describes the structure of the table. It holds
 information on:
 
-- The table name
+-
 
-- An array of column-names of the table, ordered by their appearance
+  The table name
+
+-
+
+  An array of column-names of the table, ordered by their appearance
   in the result-set.
 
-- An array of the primary-key columns.
+-
+
+  An array of the primary-key columns.
 
 This interface also has an assertion that checks if two instances
 of Table Metadata equal each other, which is used by the data-set
@@ -1159,19 +1266,26 @@ which has to be returned from the
         public function createDataSet(Array $tableNames = NULL);
         public function createQueryTable($resultName, $sql);
         public function getRowCount($tableName, $whereClause = NULL);
+
         // ...
     }
     ?>
 
-#. The ``createDataSet()`` method creates a Database
+#.
+
+   The ``createDataSet()`` method creates a Database
    (DB) DataSet as described in the DataSet implementations section.
+
    ::
+
        <?php
        use PHPUnit\Framework\TestCase;
        use PHPUnit\DbUnit\TestCaseTrait;
+
        class ConnectionTest extends TestCase
        {
            use TestCaseTrait;
+
            public function testCreateDataSet()
            {
                $tableNames = ['guestbook'];
@@ -1180,18 +1294,24 @@ which has to be returned from the
        }
        ?>
 
-#. The ``createQueryTable()`` method can be used to
+#.
+
+   The ``createQueryTable()`` method can be used to
    create instances of a QueryTable, give them a result name and SQL
    query. This is a handy method when it comes to result/table
    assertions as will be shown in the next section on the Database
    Assertions API.
+
    ::
+
        <?php
        use PHPUnit\Framework\TestCase;
        use PHPUnit\DbUnit\TestCaseTrait;
+
        class ConnectionTest extends TestCase
        {
            use TestCaseTrait;
+
            public function testCreateQueryTable()
            {
                $tableNames = ['guestbook'];
@@ -1200,17 +1320,23 @@ which has to be returned from the
        }
        ?>
 
-#. The ``getRowCount()`` method is a convienent way to
+#.
+
+   The ``getRowCount()`` method is a convienent way to
    access the number of rows in a table, optionally filtered by an
    additional where clause. This can be used with a simple equality
    assertion:
+
    ::
+
        <?php
        use PHPUnit\Framework\TestCase;
        use PHPUnit\DbUnit\TestCaseTrait;
+
        class ConnectionTest extends TestCase
        {
            use TestCaseTrait;
+
            public function testGetRowCount()
            {
                $this->assertEquals(2, $this->getConnection()->getRowCount('guestbook'));
@@ -1245,14 +1371,18 @@ examples, but a third one:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class GuestbookTest extends TestCase
     {
         use TestCaseTrait;
+
         public function testAddEntry()
         {
             $this->assertEquals(2, $this->getConnection()->getRowCount('guestbook'), "Pre-Condition");
+
             $guestbook = new Guestbook();
             $guestbook->addEntry("suzy", "Hello world!");
+
             $this->assertEquals(3, $this->getConnection()->getRowCount('guestbook'), "Inserting failed");
         }
     }
@@ -1277,13 +1407,16 @@ File/Array Based Data Set:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class GuestbookTest extends TestCase
     {
         use TestCaseTrait;
+
         public function testAddEntry()
         {
             $guestbook = new Guestbook();
             $guestbook->addEntry("suzy", "Hello world!");
+
             $queryTable = $this->getConnection()->createQueryTable(
                 'guestbook', 'SELECT * FROM guestbook'
             );
@@ -1349,9 +1482,11 @@ compare it to a dataset:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+
     class ComplexQueryTest extends TestCase
     {
         use TestCaseTrait;
+
         public function testComplexQuery()
         {
             $queryTable = $this->getConnection()->createQueryTable(
@@ -1373,15 +1508,21 @@ For sure you can assert the state of multiple tables at once and
 compare a query dataset against a file based dataset. There are two
 different ways for DataSet assertions.
 
-#. You can use the Database (DB) DataSet from the Connection and
+#.
+
+   You can use the Database (DB) DataSet from the Connection and
    compare it to a File-Based DataSet.
+
    ::
+
        <?php
        use PHPUnit\Framework\TestCase;
        use PHPUnit\DbUnit\TestCaseTrait;
+
        class DataSetAssertionsTest extends TestCase
        {
            use TestCaseTrait;
+
            public function testCreateDataSetAssertion()
            {
                $dataSet = $this->getConnection()->createDataSet(['guestbook']);
@@ -1391,19 +1532,26 @@ different ways for DataSet assertions.
        }
        ?>
 
-#. You can construct the DataSet on your own:
+#.
+
+   You can construct the DataSet on your own:
+
    ::
+
        <?php
        use PHPUnit\Framework\TestCase;
        use PHPUnit\DbUnit\TestCaseTrait;
+
        class DataSetAssertionsTest extends TestCase
        {
            use TestCaseTrait;
+
            public function testManualDataSetAssertion()
            {
                $dataSet = new PHPUnit_Extensions_Database_DataSet_QueryDataSet();
                $dataSet->addTable('guestbook', 'SELECT id, content, user FROM guestbook'); // additional tables
                $expectedDataSet = $this->createFlatXmlDataSet('guestbook.xml');
+
                $this->assertDataSetsEqual($expectedDataSet, $dataSet);
            }
        }

@@ -16,7 +16,9 @@ Reflection API's ``getDocComment()`` method on the function,
 class, method, and attribute level. Applications such as PHPUnit use this
 information at runtime to configure their behaviour.
 
-.. note:: A doc comment in PHP must start with ``/**`` and end with
+.. note::
+
+   A doc comment in PHP must start with ``/**`` and end with
    ``*/``. Annotations in any other style of comment will be
    ignored.
 
@@ -42,6 +44,7 @@ that should be called after each test method in a test case class.
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         /**
@@ -51,6 +54,7 @@ that should be called after each test method in a test case class.
         {
             // ...
         }
+
         /**
          * @after
          */
@@ -72,6 +76,7 @@ class have been run to clean up shared fixtures.
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         /**
@@ -81,6 +86,7 @@ class have been run to clean up shared fixtures.
         {
             // ...
         }
+
         /**
          * @afterClass
          */
@@ -100,6 +106,7 @@ disabled for all tests of a test case class like this
 ::
 
     use PHPUnit\Framework\TestCase;
+
     /**
      * @backupGlobals disabled
      */
@@ -114,6 +121,7 @@ backup and restore operations:
 ::
 
     use PHPUnit\Framework\TestCase;
+
     /**
      * @backupGlobals disabled
      */
@@ -141,6 +149,7 @@ test method level:
 ::
 
     use PHPUnit\Framework\TestCase;
+
     /**
      * @backupStaticAttributes enabled
      */
@@ -155,9 +164,12 @@ test method level:
         }
     }
 
-.. note:: ``@backupStaticAttributes`` is limited by PHP internals
+.. note::
+
+   ``@backupStaticAttributes`` is limited by PHP internals
    and may cause unintended static values to persist and leak into
    subsequent tests in some circumstances.
+
    See :ref:`fixtures.global-state` for details.
 
 .. _appendixes.annotations.before:
@@ -171,6 +183,7 @@ that should be called before each test method in a test case class.
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         /**
@@ -180,6 +193,7 @@ that should be called before each test method in a test case class.
         {
             // ...
         }
+
         /**
          * @before
          */
@@ -201,6 +215,7 @@ class are run to set up shared fixtures.
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         /**
@@ -210,6 +225,7 @@ class are run to set up shared fixtures.
         {
             // ...
         }
+
         /**
          * @beforeClass
          */
@@ -311,6 +327,7 @@ Using @coversDefaultClass to shorten annotations
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     /**
      * @coversDefaultClass \Foo\CoveredClass
      */
@@ -398,6 +415,7 @@ specific exception.
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         /**
@@ -418,6 +436,7 @@ specify a class constant as an
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         /**
@@ -446,6 +465,7 @@ assertion on the error message of an exception.
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         /**
@@ -466,6 +486,7 @@ exception message in the test.
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
          /**
@@ -499,6 +520,7 @@ a given message.
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
          /**
@@ -521,6 +543,7 @@ A test can be tagged as belonging to one or more groups using the
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         /**
@@ -529,6 +552,7 @@ A test can be tagged as belonging to one or more groups using the
         public function testSomething()
         {
         }
+
         /**
          * @group regresssion
          * @group bug2204
@@ -588,6 +612,7 @@ PHPUnit from preserving global state with the
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         /**
@@ -621,6 +646,7 @@ PHP process.
 ::
 
     use PHPUnit\Framework\TestCase;
+
     /**
      * @runTestsInSeparateProcesses
      */
@@ -646,6 +672,7 @@ Indicates that a test should be run in a separate PHP process.
 ::
 
     use PHPUnit\Framework\TestCase;
+
     class MyTest extends TestCase
     {
         /**
@@ -679,7 +706,9 @@ second to execute. This timeout is configurable via the
 ``timeoutForSmallTests`` attribute in the XML
 configuration file.
 
-.. note:: Tests need to be explicitly annotated by either ``@small``,
+.. note::
+
+   Tests need to be explicitly annotated by either ``@small``,
    ``@medium``, or ``@large`` to enable run time limits.
 
 .. _appendixes.annotations.test:

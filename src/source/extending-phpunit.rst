@@ -42,9 +42,11 @@ The assertTrue() and isTrue() methods of the PHPUnit_Framework_Assert class
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     abstract class PHPUnit_Framework_Assert
     {
         // ...
+
         /**
          * Asserts that a condition is true.
          *
@@ -56,7 +58,9 @@ The assertTrue() and isTrue() methods of the PHPUnit_Framework_Assert class
         {
             self::assertThat($condition, self::isTrue(), $message);
         }
+
         // ...
+
         /**
          * Returns a PHPUnit_Framework_Constraint_IsTrue matcher object.
          *
@@ -67,6 +71,7 @@ The assertTrue() and isTrue() methods of the PHPUnit_Framework_Assert class
         {
             return new PHPUnit_Framework_Constraint_IsTrue;
         }
+
         // ...
     }?>
 
@@ -84,6 +89,7 @@ The PHPUnit_Framework_Constraint_IsTrue class
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class PHPUnit_Framework_Constraint_IsTrue extends PHPUnit_Framework_Constraint
     {
         /**
@@ -97,6 +103,7 @@ The PHPUnit_Framework_Constraint_IsTrue class
         {
             return $other === true;
         }
+
         /**
          * Returns a string representation of the constraint.
          *
@@ -134,40 +141,49 @@ A simple test listener
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class SimpleTestListener implements PHPUnit_Framework_TestListener
     {
         public function addError(PHPUnit_Framework_Test $test, Exception $e, $time)
         {
             printf("Error while running test '%s'.\n", $test->getName());
         }
+
         public function addFailure(PHPUnit_Framework_Test $test, PHPUnit_Framework_AssertionFailedError $e, $time)
         {
             printf("Test '%s' failed.\n", $test->getName());
         }
+
         public function addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time)
         {
             printf("Test '%s' is incomplete.\n", $test->getName());
         }
+
         public function addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time)
         {
             printf("Test '%s' is deemed risky.\n", $test->getName());
         }
+
         public function addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time)
         {
             printf("Test '%s' has been skipped.\n", $test->getName());
         }
+
         public function startTest(PHPUnit_Framework_Test $test)
         {
             printf("Test '%s' started.\n", $test->getName());
         }
+
         public function endTest(PHPUnit_Framework_Test $test, $time)
         {
             printf("Test '%s' ended.\n", $test->getName());
         }
+
         public function startTestSuite(PHPUnit_Framework_TestSuite $suite)
         {
             printf("TestSuite '%s' started.\n", $suite->getName());
         }
+
         public function endTestSuite(PHPUnit_Framework_TestSuite $suite)
         {
             printf("TestSuite '%s' ended.\n", $suite->getName());
@@ -190,6 +206,7 @@ Using base test listener
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class ShortTestListener extends PHPUnit_Framework_BaseTestListener
     {
         public function endTest(PHPUnit_Framework_Test $test, $time)
@@ -231,30 +248,38 @@ The RepeatedTest Decorator
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     require_once 'PHPUnit/Extensions/TestDecorator.php';
+
     class PHPUnit_Extensions_RepeatedTest extends PHPUnit_Extensions_TestDecorator
     {
         private $timesRepeat = 1;
+
         public function __construct(PHPUnit_Framework_Test $test, $timesRepeat = 1)
         {
             parent::__construct($test);
+
             if (is_integer($timesRepeat) &&
                 $timesRepeat >= 0) {
                 $this->timesRepeat = $timesRepeat;
             }
         }
+
         public function count()
         {
             return $this->timesRepeat * $this->test->count();
         }
+
         public function run(PHPUnit_Framework_TestResult $result = null)
         {
             if ($result === null) {
                 $result = $this->createResult();
             }
+
             for ($i = 0; $i < $this->timesRepeat && !$result->shouldStop(); $i++) {
                 $this->test->run($result);
             }
+
             return $result;
         }
     }
@@ -286,58 +311,75 @@ A data-driven test
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class DataDrivenTest implements PHPUnit_Framework_Test
     {
         private $lines;
+
         public function __construct($dataFile)
         {
             $this->lines = file($dataFile);
         }
+
         public function count()
         {
             return 1;
         }
+
         public function run(PHPUnit_Framework_TestResult $result = null)
         {
             if ($result === null) {
                 $result = new PHPUnit_Framework_TestResult;
             }
+
             foreach ($this->lines as $line) {
                 $result->startTest($this);
                 PHP_Timer::start();
                 $stopTime = null;
+
                 list($expected, $actual) = explode(';', $line);
+
                 try {
                     PHPUnit_Framework_Assert::assertEquals(
                       trim($expected), trim($actual)
                     );
                 }
+
                 catch (PHPUnit_Framework_AssertionFailedError $e) {
                     $stopTime = PHP_Timer::stop();
                     $result->addFailure($this, $e, $stopTime);
                 }
+
                 catch (Exception $e) {
                     $stopTime = PHP_Timer::stop();
                     $result->addError($this, $e, $stopTime);
                 }
+
                 if ($stopTime === null) {
                     $stopTime = PHP_Timer::stop();
                 }
+
                 $result->endTest($this, $stopTime);
             }
+
             return $result;
         }
     }
+
     $test = new DataDrivenTest('data_file.csv');
     $result = PHPUnit_TextUI_TestRunner::run($test);
     ?>
 
 ::
 
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     .F
+
     Time: 0 seconds
+
     There was 1 failure:
+
     1) DataDrivenTest
     Failed asserting that two strings are equal.
     expected string <bar>
@@ -345,6 +387,7 @@ A data-driven test
     got string      <baz>
     /home/sb/DataDrivenTest.php:32
     /home/sb/DataDrivenTest.php:53
+
     FAILURES!
     Tests: 2, Failures: 1.
 
