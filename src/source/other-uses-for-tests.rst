@@ -42,9 +42,10 @@ Let us take a look at the agile documentation generated for a
 
     phpunit --testdox BankAccountTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+
     BankAccount
-    \[x] Balance is initially zero
-    \[x] Balance cannot become negative
+     [x] Balance is initially zero
+     [x] Balance cannot become negative
 
 Alternatively, the agile documentation can be generated in HTML or plain
 text format and written to a file using the ``--testdox-html``
