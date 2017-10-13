@@ -504,7 +504,6 @@ To ease testing and reduce duplication a shortcut can be used to
 specify a class constant as an
 ``@expectedExceptionMessage`` using the
 "``@expectedExceptionMessage ClassName::CONST``" syntax.
-
 A sample can be found in :ref:`appendixes.annotations.expectedExceptionCode`.
 
 .. _appendixes.annotations.expectedExceptionMessageRegExp:

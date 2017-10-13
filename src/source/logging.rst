@@ -146,16 +146,12 @@ The aim of this output format is to provide a quick coverage overview while
 working on a small set of classes. For bigger projects this output can be
 useful to get an quick overview of the projects coverage or when used with
 the ``--filter`` functionality.
-
 When used from the command-line by writing to ``php://stdout``
 this will honor the ``--colors`` setting.
-
 Writing to standard out is the default option when used from the command-line.
-
 By default this will only show files that have at least one covered line.
 This can only be changed via the ``showUncoveredFiles`` xml
 configuration option. See :ref:`appendixes.configuration.logging`.
-
 By default all files and their coverage status are shown in the detailed report.
 This can be changed via the ``showOnlySummary`` xml
 configuration option.
