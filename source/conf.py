@@ -11,7 +11,7 @@
 #
 # All configuration values have a default; values that are commented out
 # serve to show the default.
-
+import re
 import sys
 import os
 import shlex
@@ -26,6 +26,10 @@ def get_version_from_git():
     version = pipe.stdout.read()
 
     if version:
+        pattern = re.compile('HEAD detached at origin\/(.*)')
+        match = pattern.match(version[2:])
+        if match:
+            return match.group(1)
         return version[2:]
     else:
         return 'unknown'
