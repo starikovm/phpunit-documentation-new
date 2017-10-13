@@ -2406,7 +2406,7 @@ assertThat()
 More complex assertions can be formulated using the
 ``PHPUnit_Framework_Constraint`` classes. They can be
 evaluated using the ``assertThat()`` method.
-:ref:`appendixes.assertions.assertThat.example` shows how the
+:numref:`appendixes.assertions.assertThat.example` shows how the
 ``logicalNot()`` and ``equalTo()``
 constraints can be used to express the same assertion as
 ``assertNotEquals()``.
@@ -2439,7 +2439,7 @@ Reports an error identified by ``$message`` if the ``$value`` does not match the
     }
     ?>
 
-:ref:`appendixes.assertions.assertThat.tables.constraints` shows the
+:numref:`appendixes.assertions.assertThat.tables.constraints` shows the
 available ``PHPUnit_Framework_Constraint`` classes.
 
 .. rst-class:: table

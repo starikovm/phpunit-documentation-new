@@ -83,6 +83,6 @@ pre span.string {
   width: 100%;
 }
 
-.literal-block-wrapper .caption-text {
+.literal-block-wrapper .caption-text, .literal-block-wrapper .caption-number {
     font-weight: bold;
 }

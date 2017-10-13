@@ -267,7 +267,7 @@ def ulink(el):
 # (in DocBook was: the section called “Variables”)
 
 def xref(el):
-    return ":ref:`%s`" % el.get("linkend")
+    return ":numref:`%s`" % el.get("linkend")
 
 def link(el):
     return ":ref:`%s <%s>`" % (_concat(el).strip(), el.get("linkend"))

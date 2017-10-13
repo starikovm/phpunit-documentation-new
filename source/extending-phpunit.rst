@@ -27,7 +27,7 @@ Write custom assertions
 
 When writing custom assertions it is the best practice to follow how
 PHPUnit's own assertions are implemented. As you can see in
-:ref:`extending-phpunit.examples.Assert.php`, the
+:numref:`extending-phpunit.examples.Assert.php`, the
 ``assertTrue()`` method is just a wrapper around the
 ``isTrue()`` and ``assertThat()`` methods:
 ``isTrue()`` creates a matcher object that is passed on to
@@ -72,7 +72,7 @@ PHPUnit's own assertions are implemented. As you can see in
         // ...
     }?>
 
-:ref:`extending-phpunit.examples.IsTrue.php` shows how
+:numref:`extending-phpunit.examples.IsTrue.php` shows how
 ``PHPUnit_Framework_Constraint_IsTrue`` extends the
 abstract base class for matcher objects (or constraints),
 ``PHPUnit_Framework_Constraint``.
@@ -122,7 +122,7 @@ used as a matcher when configuring mock objects.
 Implement PHPUnit_Framework_TestListener
 ########################################
 
-:ref:`extending-phpunit.examples.SimpleTestListener.php`
+:numref:`extending-phpunit.examples.SimpleTestListener.php`
 shows a simple implementation of the ``PHPUnit_Framework_TestListener``
 interface.
 
@@ -182,7 +182,7 @@ interface.
     }
     ?>
 
-:ref:`extending-phpunit.examples.BaseTestListener.php`
+:numref:`extending-phpunit.examples.BaseTestListener.php`
 shows how to subclass the ``PHPUnit_Framework_BaseTestListener``
 abstract class, which lets you specify only the interface methods that
 are interesting for your use case, while providing empty implementations
@@ -204,7 +204,7 @@ for all the others.
     }
     ?>
 
-In :ref:`appendixes.configuration.test-listeners` you can see
+In :numref:`appendixes.configuration.test-listeners` you can see
 how to configure PHPUnit to attach your test listener to the test
 execution.
 
@@ -223,7 +223,7 @@ PHPUnit ships with one concrete test decorator:
 test repeatedly and only count it as a success if all iterations are
 successful.
 
-:ref:`extending-phpunit.examples.RepeatedTest.php`
+:numref:`extending-phpunit.examples.RepeatedTest.php`
 shows a cut-down version of the ``PHPUnit_Extensions_RepeatedTest``
 test decorator that illustrates how to write your own test decorators.
 
@@ -281,7 +281,7 @@ easy to implement. You can write an implementation of
 ``PHPUnit\Framework\TestCase`` and that runs
 *data-driven tests*, for instance.
 
-:ref:`extending-phpunit.examples.DataDrivenTest.php`
+:numref:`extending-phpunit.examples.DataDrivenTest.php`
 shows a data-driven test case class that compares values from a file
 with Comma-Separated Values (CSV). Each line of such a file looks like
 ``foo;bar``, where the first value is the one we expect

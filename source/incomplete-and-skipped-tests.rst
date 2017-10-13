@@ -38,7 +38,7 @@ the result of the test being incomplete or currently not implemented.
 ``PHPUnit_Framework_IncompleteTestError`` is the
 standard implementation of this interface.
 
-:ref:`incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php`
+:numref:`incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php`
 shows a test case class, ``SampleTest``, that contains one test
 method, ``testSomething()``. By calling the convenience
 method ``markTestIncomplete()`` (which automatically
@@ -89,7 +89,7 @@ example:
     OK, but incomplete or skipped tests!
     Tests: 1, Assertions: 1, Incomplete: 1.
 
-:ref:`incomplete-and-skipped-tests.incomplete-tests.tables.api`
+:numref:`incomplete-and-skipped-tests.incomplete-tests.tables.api`
 shows the API for marking tests as incomplete.
 
 .. rst-class:: table
@@ -114,7 +114,7 @@ a database abstraction layer that has several drivers for the different
 database systems it supports. The tests for the MySQL driver can of
 course only be run if a MySQL server is available.
 
-:ref:`incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php`
+:numref:`incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php`
 shows a test case class, ``DatabaseTest``, that contains one test
 method, ``testConnection()``. In the test case class'
 ``setUp()`` template method we check whether the MySQLi
@@ -168,7 +168,7 @@ following example:
     OK, but incomplete or skipped tests!
     Tests: 1, Assertions: 0, Skipped: 1.
 
-:ref:`incomplete-and-skipped-tests.skipped-tests.tables.api`
+:numref:`incomplete-and-skipped-tests.skipped-tests.tables.api`
 shows the API for skipping tests.
 
 .. rst-class:: table
@@ -246,6 +246,6 @@ In addition to the above methods it is also possible to use the
     ?>
 
 If you are using syntax that doesn't compile with a certain PHP Version look into the xml
-configuration for version dependent includes in :ref:`appendixes.configuration.testsuites`
+configuration for version dependent includes in :numref:`appendixes.configuration.testsuites`
 
 

@@ -6,7 +6,7 @@
 Writing Tests for PHPUnit
 =========================
 
-:ref:`writing-tests-for-phpunit.examples.StackTest.php` shows
+:numref:`writing-tests-for-phpunit.examples.StackTest.php` shows
 how we can write tests using PHPUnit that exercise PHP's array operations.
 The example introduces the basic conventions and steps for writing tests
 with PHPUnit:
@@ -27,7 +27,7 @@ with PHPUnit:
 
 #.
 
-   Inside the test methods, assertion methods such as ``assertEquals()`` (see :ref:`appendixes.assertions`) are used to assert that an actual value matches an expected value.
+   Inside the test methods, assertion methods such as ``assertEquals()`` (see :numref:`appendixes.assertions`) are used to assert that an actual value matches an expected value.
 
 .. code-block:: php
     :caption: Testing array operations with PHPUnit
@@ -88,7 +88,7 @@ the test fixture by a producer and passing it to the dependent consumers.
 
   A consumer is a test method that depends on one or more producers and their return values.
 
-:ref:`writing-tests-for-phpunit.examples.StackTest2.php` shows
+:numref:`writing-tests-for-phpunit.examples.StackTest2.php` shows
 how to use the ``@depends`` annotation to express
 dependencies between test methods.
 
@@ -151,7 +151,7 @@ To quickly localize defects, we want our attention to be focussed on
 relevant failing tests. This is why PHPUnit skips the execution of a test
 when a depended-upon test has failed. This improves defect localization by
 exploiting the dependencies between tests as shown in
-:ref:`writing-tests-for-phpunit.examples.DependencyFailureTest.php`.
+:numref:`writing-tests-for-phpunit.examples.DependencyFailureTest.php`.
 
 .. code-block:: php
     :caption: Exploiting the dependencies between tests
@@ -207,7 +207,7 @@ is run.
 A test that has more than one ``@depends`` annotation
 will get a fixture from the first producer as the first argument, a fixture
 from the second producer as the second argument, and so on.
-See :ref:`writing-tests-for-phpunit.examples.MultipleDependencies.php`
+See :numref:`writing-tests-for-phpunit.examples.MultipleDependencies.php`
 
 .. code-block:: php
     :caption: Test with multiple dependencies
@@ -261,7 +261,7 @@ Data Providers
 
 A test method can accept arbitrary arguments. These arguments are to be
 provided by a data provider method (``additionProvider()`` in
-:ref:`writing-tests-for-phpunit.data-providers.examples.DataTest.php`).
+:numref:`writing-tests-for-phpunit.data-providers.examples.DataTest.php`).
 The data provider method to be used is specified using the
 ``@dataProvider`` annotation.
 
@@ -462,7 +462,7 @@ method and from one or more tests it ``@depends`` on, the
 arguments from the data provider will come before the ones from
 depended-upon tests. The arguments from depended-upon tests will be the
 same for each data set.
-See :ref:`writing-tests-for-phpunit.data-providers.examples.DependencyAndDataProviderCombo.php`
+See :numref:`writing-tests-for-phpunit.data-providers.examples.DependencyAndDataProviderCombo.php`
 
 .. code-block:: php
     :caption: Combination of @depends and @dataProvider in same test
@@ -552,7 +552,7 @@ See :ref:`writing-tests-for-phpunit.data-providers.examples.DependencyAndDataPro
 Testing Exceptions
 ##################
 
-:ref:`writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php`
+:numref:`writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php`
 shows how to use the ``expectException()`` method to test
 whether an exception is thrown by the code under test.
 
@@ -599,7 +599,7 @@ Alternatively, you can use the ``@expectedException``,
 ``@expectedExceptionMessage``, and
 ``@expectedExceptionMessageRegExp`` annotations to set up
 expectations for exceptions raised by the code under test.
-:ref:`writing-tests-for-phpunit.exceptions.examples.ExceptionTest2.php`
+:numref:`writing-tests-for-phpunit.exceptions.examples.ExceptionTest2.php`
 shows an example.
 
 .. code-block:: php
@@ -644,7 +644,7 @@ Testing PHP Errors
 By default, PHPUnit converts PHP errors, warnings, and notices that are
 triggered during the execution of a test to an exception. Using these
 exceptions, you can, for instance, expect a test to trigger a PHP error as
-shown in :ref:`writing-tests-for-phpunit.exceptions.examples.ErrorTest.php`.
+shown in :numref:`writing-tests-for-phpunit.exceptions.examples.ErrorTest.php`.
 
 .. note::
 
@@ -754,7 +754,7 @@ instance, generates an expected output (via ``echo`` or
 Buffering <http://www.php.net/manual/en/ref.outcontrol.php>`_ feature to provide the functionality that is
 necessary for this.
 
-:ref:`writing-tests-for-phpunit.output.examples.OutputTest.php`
+:numref:`writing-tests-for-phpunit.output.examples.OutputTest.php`
 shows how to use the ``expectOutputString()`` method to
 set the expected output. If this expected output is not generated, the
 test will be counted as a failure.
@@ -803,7 +803,7 @@ test will be counted as a failure.
     FAILURES!
     Tests: 2, Assertions: 2, Failures: 1.
 
-:ref:`writing-tests-for-phpunit.output.tables.api`
+:numref:`writing-tests-for-phpunit.output.tables.api`
 shows the methods provided for testing output
 
 .. rst-class:: table

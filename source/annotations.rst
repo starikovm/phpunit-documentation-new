@@ -30,7 +30,7 @@ This appendix shows all the varieties of annotations supported by PHPUnit.
 #######
 
 The ``@author`` annotation is an alias for the
-``@group`` annotation (see :ref:`appendixes.annotations.group`) and allows to filter tests based
+``@group`` annotation (see :numref:`appendixes.annotations.group`) and allows to filter tests based
 on their authors.
 
 .. _appendixes.annotations.after:
@@ -170,7 +170,7 @@ test method level:
    and may cause unintended static values to persist and leak into
    subsequent tests in some circumstances.
 
-   See :ref:`fixtures.global-state` for details.
+   See :numref:`fixtures.global-state` for details.
 
 .. _appendixes.annotations.before:
 
@@ -245,7 +245,7 @@ The ``@codeCoverageIgnore``,
 ``@codeCoverageIgnoreEnd`` annotations can be used
 to exclude lines of code from the coverage analysis.
 
-For usage see :ref:`code-coverage-analysis.ignoring-code-blocks`.
+For usage see :numref:`code-coverage-analysis.ignoring-code-blocks`.
 
 .. _appendixes.annotations.covers:
 
@@ -267,7 +267,7 @@ specify which method(s) a test method wants to test:
 If provided, only the code coverage information for the specified
 method(s) will be considered.
 
-:ref:`appendixes.annotations.covers.tables.annotations` shows
+:numref:`appendixes.annotations.covers.tables.annotations` shows
 the syntax of the ``@covers`` annotation.
 
 .. rst-class:: table
@@ -306,7 +306,7 @@ the syntax of the ``@covers`` annotation.
 The ``@coversDefaultClass`` annotation can be used to
 specify a default namespace or class name. That way long names don't need to be
 repeated for every ``@covers`` annotation. See
-:ref:`appendixes.annotations.examples.CoversDefaultClassTest.php`.
+:numref:`appendixes.annotations.examples.CoversDefaultClassTest.php`.
 
 .. code-block:: php
     :caption: Using @coversDefaultClass to shorten annotations
@@ -341,7 +341,7 @@ test code to specify that no code coverage information will be
 recorded for the annotated test case.
 
 This can be used for integration testing. See
-:ref:`code-coverage-analysis.specifying-covered-methods.examples.GuestbookIntegrationTest.php`
+:numref:`code-coverage-analysis.specifying-covered-methods.examples.GuestbookIntegrationTest.php`
 for an example.
 
 The annotation can be used on the class and the method level and
@@ -354,11 +354,11 @@ will override any ``@covers`` tags.
 
 A test method can accept arbitrary arguments. These arguments are to be
 provided by a data provider method (``provider()`` in
-:ref:`writing-tests-for-phpunit.data-providers.examples.DataTest.php`).
+:numref:`writing-tests-for-phpunit.data-providers.examples.DataTest.php`).
 The data provider method to be used is specified using the
 ``@dataProvider`` annotation.
 
-See :ref:`writing-tests-for-phpunit.data-providers` for more
+See :numref:`writing-tests-for-phpunit.data-providers` for more
 details.
 
 .. _appendixes.annotations.depends:
@@ -370,11 +370,11 @@ PHPUnit supports the declaration of explicit dependencies between test
 methods. Such dependencies do not define the order in which the test
 methods are to be executed but they allow the returning of an instance of
 the test fixture by a producer and passing it to the dependent consumers.
-:ref:`writing-tests-for-phpunit.examples.StackTest2.php` shows
+:numref:`writing-tests-for-phpunit.examples.StackTest2.php` shows
 how to use the ``@depends`` annotation to express
 dependencies between test methods.
 
-See :ref:`writing-tests-for-phpunit.test-dependencies` for more
+See :numref:`writing-tests-for-phpunit.test-dependencies` for more
 details.
 
 .. _appendixes.annotations.expectedException:
@@ -382,11 +382,11 @@ details.
 @expectedException
 ##################
 
-:ref:`writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php`
+:numref:`writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php`
 shows how to use the ``@expectedException`` annotation to
 test whether an exception is thrown inside the tested code.
 
-See :ref:`writing-tests-for-phpunit.exceptions` for more
+See :numref:`writing-tests-for-phpunit.exceptions` for more
 details.
 
 .. _appendixes.annotations.expectedExceptionCode:
@@ -491,7 +491,7 @@ To ease testing and reduce duplication a shortcut can be used to
 specify a class constant as an
 ``@expectedExceptionMessage`` using the
 "``@expectedExceptionMessage ClassName::CONST``" syntax.
-A sample can be found in :ref:`appendixes.annotations.expectedExceptionCode`.
+A sample can be found in :numref:`appendixes.annotations.expectedExceptionCode`.
 
 .. _appendixes.annotations.expectedExceptionMessageRegExp:
 
@@ -620,7 +620,7 @@ The ``@requires`` annotation can be used to skip tests when common
 preconditions, like the PHP Version or installed extensions, are not met.
 
 A complete list of possibilities and examples can be found at
-:ref:`incomplete-and-skipped-tests.requires.tables.api`
+:numref:`incomplete-and-skipped-tests.requires.tables.api`
 
 .. _appendixes.annotations.runTestsInSeparateProcesses:
 
@@ -645,7 +645,7 @@ PHP process.
 attempt to preserve the global state from the parent process by
 serializing all globals in the parent process and unserializing them
 in the child process. This can cause problems if the parent process
-contains globals that are not serializable. See :ref:`appendixes.annotations.preserveGlobalState` for information
+contains globals that are not serializable. See :numref:`appendixes.annotations.preserveGlobalState` for information
 on how to fix this.
 
 .. _appendixes.annotations.runInSeparateProcess:
@@ -674,7 +674,7 @@ Indicates that a test should be run in a separate PHP process.
 attempt to preserve the global state from the parent process by
 serializing all globals in the parent process and unserializing them
 in the child process. This can cause problems if the parent process
-contains globals that are not serializable. See :ref:`appendixes.annotations.preserveGlobalState` for information
+contains globals that are not serializable. See :numref:`appendixes.annotations.preserveGlobalState` for information
 on how to fix this.
 
 .. _appendixes.annotations.small:
@@ -752,7 +752,7 @@ example is a value object which is necessary for testing a unit of code.
 
 This annotation is especially useful in strict coverage mode where
 unintentionally covered code will cause a test to fail. See
-:ref:`risky-tests.unintentionally-covered-code` for more
+:numref:`risky-tests.unintentionally-covered-code` for more
 information regarding strict coverage mode.
 
 
