@@ -20,16 +20,14 @@ from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer
 from subprocess import Popen, PIPE
 
-def get_version_from_git():
+def get_version():
+    if os.environ.get('READTHEDOCS') == 'True':
+        return os.environ.get('READTHEDOCS_VERSION')
 
     pipe = Popen('git branch | grep \*', stdout=PIPE, shell=True)
     version = pipe.stdout.read()
 
     if version:
-        pattern = re.compile('HEAD detached at origin\/(.*)')
-        match = pattern.match(version[2:])
-        if match:
-            return match.group(1)
         return version[2:]
     else:
         return 'unknown'
@@ -82,7 +80,7 @@ epub_author = u'Sebastian Bergmann'
 # built documents.
 #
 # The short X.Y version.
-version = get_version_from_git().strip()
+version = get_version().strip()
 # The full version, including alpha/beta/rc tags.
 release = version
 
