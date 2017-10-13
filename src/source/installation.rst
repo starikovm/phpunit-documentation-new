@@ -70,7 +70,6 @@ You may also use the downloaded PHAR file directly:
     $  php phpunit-6.2.phar --version
     PHPUnit x.y.z by Sebastian Bergmann and contributors.
 
-
 .. _installation.phar.windows:
 
 Windows
