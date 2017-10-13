@@ -8,51 +8,71 @@ Copyright
 
 ::
 
-    Copyright (c) 2005-2017 Sebastian Bergmann.
+    Copyright (c) 2005-2016 Sebastian Bergmann.
+
     This work is licensed under the Creative Commons Attribution 3.0
     Unported License.
+
     A summary of the license is given below, followed by the full legal
     text.
+
     --------------------------------------------------------------------
+
     You are free:
+
         * to Share - to copy, distribute and transmit the work
         * to Remix - to adapt the work
+
     Under the following conditions:
+
     Attribution. You must attribute the work in the manner specified by
     the author or licensor (but not in any way that suggests that they
     endorse you or your use of the work).
+
         * For any reuse or distribution, you must make clear to others
           the license terms of this work. The best way to do this is with
           a link to this web page.
+
         * Any of the above conditions can be waived if you get
           permission from the copyright holder.
+
         * Nothing in this license impairs or restricts the author's moral
           rights.
+
     Your fair dealing and other rights are in no way affected by the
     above.
+
     This is a human-readable summary of the Legal Code (the full
     license) below.
+
     ====================================================================
+
     Creative Commons Legal Code
     Attribution 3.0 Unported
+
     CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
     LEGAL SERVICES. DISTRIBUTION OF THIS LICENSE DOES NOT CREATE AN
     ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS
     INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO
     WARRANTIES REGARDING THE INFORMATION PROVIDED, AND DISCLAIMS
     LIABILITY FOR DAMAGES RESULTING FROM ITS USE.
+
     License
+
     THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS
     CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS
     PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE
     WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW
     IS PROHIBITED.
+
     BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND
     AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS
     LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU
     THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF
     SUCH TERMS AND CONDITIONS.
+
     1. Definitions
+
        a. "Adaptation" means a work based upon the Work, or upon the
           Work and other pre-existing works, such as a translation,
           adaptation, derivative work, arrangement of music or other
@@ -67,6 +87,7 @@ Copyright
           the Work in timed-relation with a moving image ("synching")
           will be considered an Adaptation for the purpose of this
           License.
+
        b. "Collection" means a collection of literary or artistic works,
           such as encyclopedias and anthologies, or performances,
           phonograms or broadcasts, or other works or subject matter
@@ -79,11 +100,14 @@ Copyright
           into a collective whole. A work that constitutes a Collection
           will not be considered an Adaptation (as defined above) for
           the purposes of this License.
+
        c. "Distribute" means to make available to the public the
           original and copies of the Work or Adaptation, as appropriate,
           through sale or other transfer of ownership.
+
        d. "Licensor" means the individual, individuals, entity or
           entities that offer(s) the Work under the terms of this License.
+
        e. "Original Author" means, in the case of a literary or artistic
           work, the individual, individuals, entity or entities who
           created the Work or if no individual or entity can be
@@ -96,6 +120,7 @@ Copyright
           sounds of a performance or other sounds; and, (iii) in the
           case of broadcasts, the organization that transmits the
           broadcast.
+
        f. "Work" means the literary and/or artistic work offered under
           the terms of this License including without limitation any
           production in the literary, scientific and artistic domain,
@@ -116,11 +141,13 @@ Copyright
           as a copyrightable work; or a work performed by a variety or
           circus performer to the extent it is not otherwise considered
           a literary or artistic work.
+
        g. "You" means an individual or entity exercising rights under
           this License who has not previously violated the terms of
           this License with respect to the Work, or who has received
           express permission from the Licensor to exercise rights under
           this License despite a previous violation.
+
        h. "Publicly Perform" means to perform public recitations of the
           Work and to communicate to the public those public
           recitations, by any means or process, including by wire or
@@ -132,24 +159,29 @@ Copyright
           the performances of the Work, including by public digital
           performance; to broadcast and rebroadcast the Work by any
           means including signs, sounds or images.
+
        i. "Reproduce" means to make copies of the Work by any means
           including without limitation by sound or visual recordings and
           the right of fixation and reproducing fixations of the Work,
           including storage of a protected performance or phonogram in
           digital form or other electronic medium.
+
     2. Fair Dealing Rights. Nothing in this License is intended to
        reduce, limit, or restrict any uses free from copyright or rights
        arising from limitations or exceptions that are provided for in
        connection with the copyright protection under copyright law or
        other applicable laws.
+
     3. License Grant. Subject to the terms and conditions of this
        License, Licensor hereby grants You a worldwide, royalty-free,
        non-exclusive, perpetual (for the duration of the applicable
        copyright) license to exercise the rights in the Work as stated
        below:
+
        a. to Reproduce the Work, to incorporate the Work into one or
           more Collections, and to Reproduce the Work as incorporated
           in the Collections;
+
        b. to create and Reproduce Adaptations provided that any such
           Adaptation, including any translation in any medium, takes
           reasonable steps to clearly label, demarcate or otherwise
@@ -157,35 +189,44 @@ Copyright
           example, a translation could be marked "The original work was
           translated from English to Spanish," or a modification could
           indicate "The original work has been modified.";
+
        c. to Distribute and Publicly Perform the Work including as
           incorporated in Collections; and,
+
        d. to Distribute and Publicly Perform Adaptations.
+
        e. For the avoidance of doubt:
+
           i. Non-waivable Compulsory License Schemes. In those
              jurisdictions in which the right to collect royalties
              through any statutory or compulsory licensing scheme cannot
              be waived, the Licensor reserves the exclusive right to
              collect such royalties for any exercise by You of the
              rights granted under this License;
+
           ii. Waivable Compulsory License Schemes. In those
               jurisdictions in which the right to collect royalties
               through any statutory or compulsory licensing scheme can
               be waived, the Licensor waives the exclusive right to
               collect such royalties for any exercise by You of the
               rights granted under this License; and,
+
           iii. Voluntary License Schemes. The Licensor waives the right
                to collect royalties, whether individually or, in the
                event that the Licensor is a member of a collecting
                society that administers voluntary licensing schemes, via
                that society, from any exercise by You of the rights
                granted under this License.
+
     The above rights may be exercised in all media and formats whether
     now known or hereafter devised. The above rights include the right
     to make such modifications as are technically necessary to exercise
     the rights in other media and formats. Subject to Section 8(f), all
     rights not expressly granted by Licensor are hereby reserved.
+
     4. Restrictions. The license granted in Section 3 above is expressly
        made subject to and limited by the following restrictions:
+
        a. You may Distribute or Publicly Perform the Work only under the
           terms of this License. You must include a copy of, or the
           Uniform Resource Identifier (URI) for, this License with every
@@ -210,6 +251,7 @@ Copyright
           requested. If You create an Adaptation, upon notice from any
           Licensor You must, to the extent practicable, remove from the
           Adaptation any credit as required by Section 4(b), as requested.
+
        b. If You Distribute, or Publicly Perform the Work or any
           Adaptations or Collections, You must, unless a request has
           been made pursuant to Section 4(a), keep intact all copyright
@@ -245,6 +287,7 @@ Copyright
           of the Work, without the separate, express prior written
           permission of the Original Author, Licensor and/or
           Attribution Parties.
+
        c. Except as otherwise agreed in writing by the Licensor or as
           may be otherwise permitted by applicable law, if You
           Reproduce, Distribute or Publicly Perform the Work either by
@@ -262,7 +305,9 @@ Copyright
           national law, to enable You to reasonably exercise Your right
           under Section 3(b) of this License (right to make Adaptations)
           but not otherwise.
+
     5. Representations, Warranties and Disclaimer
+
     UNLESS OTHERWISE MUTUALLY AGREED TO BY THE PARTIES IN WRITING,
     LICENSOR OFFERS THE WORK AS-IS AND MAKES NO REPRESENTATIONS OR
     WARRANTIES OF ANY KIND CONCERNING THE WORK, EXPRESS, IMPLIED,
@@ -272,13 +317,16 @@ Copyright
     ACCURACY, OR THE PRESENCE OF ABSENCE OF ERRORS, WHETHER OR NOT
     DISCOVERABLE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF
     IMPLIED WARRANTIES, SO SUCH EXCLUSION MAY NOT APPLY TO YOU.
+
     6. Limitation on Liability. EXCEPT TO THE EXTENT REQUIRED BY
        APPLICABLE LAW, IN NO EVENT WILL LICENSOR BE LIABLE TO YOU ON ANY
        LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE
        OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF
        THE WORK, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY
        OF SUCH DAMAGES.
+
     7. Termination
+
        a. This License and the rights granted hereunder will terminate
           automatically upon any breach by You of the terms of this
           License. Individuals or entities who have received Adaptations
@@ -287,6 +335,7 @@ Copyright
           entities remain in full compliance with those licenses.
           Sections 1, 2, 5, 6, 7, and 8 will survive any termination of
           this License.
+
        b. Subject to the above terms and conditions, the license granted
           here is perpetual (for the duration of the applicable
           copyright in the Work). Notwithstanding the above, Licensor
@@ -297,25 +346,31 @@ Copyright
           be, granted under the terms of this License), and this License
           will continue in full force and effect unless terminated as
           stated above.
+
     8. Miscellaneous
+
        a. Each time You Distribute or Publicly Perform the Work or a
           Collection, the Licensor offers to the recipient a license to
           the Work on the same terms and conditions as the license
           granted to You under this License.
+
        b. Each time You Distribute or Publicly Perform an Adaptation,
           Licensor offers to the recipient a license to the original
           Work on the same terms and conditions as the license granted
           to You under this License.
+
        c. If any provision of this License is invalid or unenforceable
           under applicable law, it shall not affect the validity or
           enforceability of the remainder of the terms of this License,
           and without further action by the parties to this agreement,
           such provision shall be reformed to the minimum extent
           necessary to make such provision valid and enforceable.
+
        d. No term or provision of this License shall be deemed waived
           and no breach consented to unless such waiver or consent shall
           be in writing and signed by the party to be charged with such
           waiver or consent.
+
        e. This License constitutes the entire agreement between the
           parties with respect to the Work licensed here. There are no
           understandings, agreements or representations with respect to
@@ -323,6 +378,7 @@ Copyright
           any additional provisions that may appear in any communication
           from You. This License may not be modified without the mutual
           written agreement of the Licensor and You.
+
        f. The rights granted under, and the subject matter referenced,
           in this License were drafted utilizing the terminology of the
           Berne Convention for the Protection of Literary and Artistic
@@ -339,6 +395,7 @@ Copyright
           granted under this License, such additional rights are deemed
           to be included in the License; this License is not intended to
           restrict the license of any rights under applicable law.
+
     Creative Commons is not a party to this License, and makes no
     warranty whatsoever in connection with the Work. Creative Commons
     will not be liable to You or any party on any legal theory for any
@@ -347,6 +404,7 @@ Copyright
     to this license. Notwithstanding the foregoing two (2) sentences,
     if Creative Commons has expressly identified itself as the Licensor
     hereunder, it shall have all rights and obligations of Licensor.
+
     Except for the limited purpose of indicating to the public that the
     Work is licensed under the CCPL, Creative Commons does not authorize
     the use by either party of the trademark "Creative Commons" or any
@@ -357,6 +415,8 @@ Copyright
     available upon request from time to time. For the avoidance of
     doubt, this trademark restriction does not form part of this
     License.
+
     Creative Commons may be contacted at http://creativecommons.org/.
+
     ====================================================================
 

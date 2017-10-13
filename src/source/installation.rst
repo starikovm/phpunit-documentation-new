@@ -11,7 +11,7 @@ Installing PHPUnit
 Requirements
 ############
 
-PHPUnit 6.4 requires PHP 7; using the latest version of PHP is highly
+PHPUnit 6.1 requires PHP 7; using the latest version of PHP is highly
 recommended.
 
 PHPUnit requires the `dom <http://php.net/manual/en/dom.setup.php>`_ and `json <http://php.net/manual/en/json.installation.php>`_
@@ -57,13 +57,13 @@ To globally install the PHAR:
 
 ::
 
-    $ wget https://phar.phpunit.de/phpunit-6.2.phar$ chmod +x phpunit-6.2.phar$ sudo mv phpunit-6.2.phar /usr/local/bin/phpunit$ phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
+    $ wget https://phar.phpunit.de/phpunit-6.1.phar$ chmod +x phpunit-6.1.phar$ sudo mv phpunit-6.1.phar /usr/local/bin/phpunit$ phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 You may also use the downloaded PHAR file directly:
 
 ::
 
-    $ wget https://phar.phpunit.de/phpunit-6.2.phar$ php phpunit-6.2.phar --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
+    $ wget https://phar.phpunit.de/phpunit-6.1.phar$ php phpunit-6.1.phar --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 .. _installation.phar.windows:
 
@@ -73,28 +73,44 @@ Windows
 Globally installing the PHAR involves the same procedure as manually
 `installing Composer on Windows <https://getcomposer.org/doc/00-intro.md#installation-windows>`_:
 
-#. Create a directory for PHP binaries; e.g., :file:`C:\bin`
+#.
 
-#. Append ;C:\\bin to your ``PATH``
+   Create a directory for PHP binaries; e.g., :file:`C:\bin`
+
+#.
+
+   Append ;C:\\bin to your ``PATH``
    environment variable
    (`related help <http://stackoverflow.com/questions/6318156/adding-python-path-on-windows-7>`_)
 
-#. Download `<https://phar.phpunit.de/phpunit-6.2.phar>`_ and
+#.
+
+   Download `<https://phar.phpunit.de/phpunit-6.1.phar>`_ and
    save the file as :file:`C:\bin\phpunit.phar`
 
-#. Open a command line (e.g.,
+#.
+
+   Open a command line (e.g.,
    press :kbd:`Windows`:kbd:`R`
    » type cmd
    » :kbd:`ENTER`)
 
-#. Create a wrapping batch script (results in
+#.
+
+   Create a wrapping batch script (results in
    :file:`C:\bin\phpunit.cmd`):
+
    ::
+
        C:\\Users\\username> cd C:\\binC:\\bin> echo @php "%~dp0phpunit.phar" %* > phpunit.cmdC:\\bin> exit
 
-#. Open a new command line and confirm that you can execute PHPUnit
+#.
+
+   Open a new command line and confirm that you can execute PHPUnit
    from any path:
+
    ::
+
        C:\\Users\\username> phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 For Cygwin and/or MingW32 (e.g., TortoiseGit) shell environments, you
@@ -196,6 +212,7 @@ example:
             exit
         fi
     fi
+
     if [ "$clean" -eq 1 ]; then
         # Let's clean them up, if they exist
         if [ -f phpunit.phar ]; then
@@ -205,6 +222,7 @@ example:
             rm -f phpunit.phar.asc
         fi
     fi
+
     # Let's grab the latest release and its signature
     if [ ! -f phpunit.phar ]; then
         wget https://phar.phpunit.de/phpunit.phar
@@ -212,6 +230,7 @@ example:
     if [ ! -f phpunit.phar.asc ]; then
         wget https://phar.phpunit.de/phpunit.phar.asc
     fi
+
     # Verify before running
     gpg --verify phpunit.phar.asc phpunit.phar
     if [ $? -eq 0 ]; then
@@ -246,7 +265,7 @@ dependencies of your project:
 
 ::
 
-    composer require --dev phpunit/phpunit ^6.2
+    composer require --dev phpunit/phpunit ^6.1
 
 .. _installation.optional-packages:
 
@@ -256,17 +275,26 @@ Optional packages
 The following optional packages are available:
 
 ``PHP_Invoker``
+
     A utility class for invoking callables with a timeout. This package is
     required to enforce test timeouts in strict mode.
+
     This package is included in the PHAR distribution of PHPUnit. It can
     be installed via Composer using the following command:
+
     ::
+
         composer require --dev phpunit/php-invoker
 
 ``DbUnit``
+
     DbUnit port for PHP/PHPUnit to support database interaction testing.
+
     This package is not included in the PHAR distribution of PHPUnit. It can
     be installed via Composer using the following command:
+
     ::
+
         composer require --dev phpunit/dbunit
+
 

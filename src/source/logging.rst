@@ -69,6 +69,7 @@ shows how failures and errors are denoted.
           <failure type="PHPUnit_Framework_ExpectationFailedException">
     testFailure(FailureErrorTest)
     Failed asserting that &lt;integer:2&gt; matches expected value &lt;integer:1&gt;.
+
     /home/sb/FailureErrorTest.php:8
     </failure>
         </testcase>
@@ -80,6 +81,7 @@ shows how failures and errors are denoted.
                   time="0.008288">
           <error type="Exception">testError(FailureErrorTest)
     Exception:
+
     /home/sb/FailureErrorTest.php:13
     </error>
         </testcase>

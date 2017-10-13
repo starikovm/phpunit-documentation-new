@@ -10,12 +10,14 @@ Gerard Meszaros introduces the concept of Test Doubles in
 :ref:`Meszaros2007` like this:
 
     *Gerard Meszaros*:
+
     Sometimes it is just plain hard to test the system under test (SUT)
     because it depends on other components that cannot be used in the test
     environment. This could be because they aren't available, they will not
     return the results needed for the test or because executing them would
     have undesirable side effects. In other cases, our test strategy requires
     us to have more control or visibility of the internal behavior of the SUT.
+
     When we are writing a test in which we cannot (or chose not to) use a real
     depended-on component (DOC), we can replace it with a Test Double. The
     Test Double doesn't have to behave exactly like the real DOC; it merely
@@ -44,8 +46,11 @@ the original method). Using the ``will($this->returnValue())``
 method, for instance, you can configure these dummy implementations to
 return a value when called.
 
-.. note:: Limitation: final, private, and static methods
+.. note::
+
+   Limitation: final, private, and static methods
    ##############################################
+
    Please note that ``final``, ``private``
    and ``static`` methods cannot be stubbed or mocked. They
    are ignored by PHPUnit's test double functionality and retain their
@@ -84,6 +89,7 @@ The class we want to stub
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class SomeClass
     {
         public function doSomething()
@@ -102,15 +108,18 @@ Stubbing a method call to return a fixed value
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StubTest extends TestCase
     {
         public function testStub()
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createMock(SomeClass::class);
+
             // Configure the stub.
             $stub->method('doSomething')
                  ->willReturn('foo');
+
             // Calling $stub->doSomething() will now return
             // 'foo'.
             $this->assertEquals('foo', $stub->doSomething());
@@ -118,10 +127,14 @@ Stubbing a method call to return a fixed value
     }
     ?>
 
-.. note:: Limitation: Methods named "method"
+.. note::
+
+   Limitation: Methods named "method"
    ==================================
+
    The example shown above only works when the original class does not
    declare a method named "method".
+
    If the original class does declare a method named "method" then ``$stub->expects($this->any())->method('doSomething')->willReturn('foo');`` has to be used.
 
 "Behind the scenes", PHPUnit automatically generates a new PHP class that
@@ -142,6 +155,7 @@ Using the Mock Builder API can be used to configure the generated test double cl
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StubTest extends TestCase
     {
         public function testStub()
@@ -153,9 +167,11 @@ Using the Mock Builder API can be used to configure the generated test double cl
                          ->disableArgumentCloning()
                          ->disallowMockingUnknownTypes()
                          ->getMock();
+
             // Configure the stub.
             $stub->method('doSomething')
                  ->willReturn('foo');
+
             // Calling $stub->doSomething() will now return
             // 'foo'.
             $this->assertEquals('foo', $stub->doSomething());
@@ -183,17 +199,21 @@ Stubbing a method call to return one of the arguments
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StubTest extends TestCase
     {
         public function testReturnArgumentStub()
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createMock(SomeClass::class);
+
             // Configure the stub.
             $stub->method('doSomething')
                  ->will($this->returnArgument(0));
+
             // $stub->doSomething('foo') returns 'foo'
             $this->assertEquals('foo', $stub->doSomething('foo'));
+
             // $stub->doSomething('bar') returns 'bar'
             $this->assertEquals('bar', $stub->doSomething('bar'));
         }
@@ -214,15 +234,18 @@ Stubbing a method call to return a reference to the stub object
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StubTest extends TestCase
     {
         public function testReturnSelf()
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createMock(SomeClass::class);
+
             // Configure the stub.
             $stub->method('doSomething')
                  ->will($this->returnSelf());
+
             // $stub->doSomething() returns $stub
             $this->assertSame($stub, $stub->doSomething());
         }
@@ -245,20 +268,24 @@ Stubbing a method call to return the value from a map
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StubTest extends TestCase
     {
         public function testReturnValueMapStub()
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createMock(SomeClass::class);
+
             // Create a map of arguments to return values.
             $map = [
                 ['a', 'b', 'c', 'd'],
                 ['e', 'f', 'g', 'h']
             ];
+
             // Configure the stub.
             $stub->method('doSomething')
                  ->will($this->returnValueMap($map));
+
             // $stub->doSomething() returns different values depending on
             // the provided arguments.
             $this->assertEquals('d', $stub->doSomething('a', 'b', 'c'));
@@ -283,15 +310,18 @@ Stubbing a method call to return a value from a callback
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StubTest extends TestCase
     {
         public function testReturnCallbackStub()
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createMock(SomeClass::class);
+
             // Configure the stub.
             $stub->method('doSomething')
                  ->will($this->returnCallback('str_rot13'));
+
             // $stub->doSomething($argument) returns str_rot13($argument)
             $this->assertEquals('fbzrguvat', $stub->doSomething('something'));
         }
@@ -314,15 +344,18 @@ specified order
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StubTest extends TestCase
     {
         public function testOnConsecutiveCallsStub()
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createMock(SomeClass::class);
+
             // Configure the stub.
             $stub->method('doSomething')
                  ->will($this->onConsecutiveCalls(2, 3, 5, 7));
+
             // $stub->doSomething() returns a different value each time
             $this->assertEquals(2, $stub->doSomething());
             $this->assertEquals(3, $stub->doSomething());
@@ -344,15 +377,18 @@ Stubbing a method call to throw an exception
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StubTest extends TestCase
     {
         public function testThrowExceptionStub()
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createMock(SomeClass::class);
+
             // Configure the stub.
             $stub->method('doSomething')
                  ->will($this->throwException(new Exception));
+
             // $stub->doSomething() throws Exception
             $stub->doSomething();
         }
@@ -393,8 +429,11 @@ tests but the emphasis is on the verification of the indirect outputs.
 Therefore, a mock object is a lot more than just a test stub plus
 assertions; it is used in a fundamentally different way" (Gerard Meszaros).
 
-.. note:: Limitation: Automatic verification of expectations
+.. note::
+
+   Limitation: Automatic verification of expectations
    ==================================================
+
    Only mock objects generated within the scope of a test will be verified
    automatically by PHPUnit. Mock objects generated in data providers, for
    instance, or injected into the test using the ``@depends``
@@ -415,53 +454,65 @@ The Subject and Observer classes that are part of the System under Test (SUT)
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class Subject
     {
         protected $observers = [];
         protected $name;
+
         public function __construct($name)
         {
             $this->name = $name;
         }
+
         public function getName()
         {
             return $this->name;
         }
+
         public function attach(Observer $observer)
         {
             $this->observers[] = $observer;
         }
+
         public function doSomething()
         {
             // Do something.
             // ...
+
             // Notify observers that we did something.
             $this->notify('something');
         }
+
         public function doSomethingBad()
         {
             foreach ($this->observers as $observer) {
                 $observer->reportError(42, 'Something bad happened', $this);
             }
         }
+
         protected function notify($argument)
         {
             foreach ($this->observers as $observer) {
                 $observer->update($argument);
             }
         }
+
         // Other methods.
     }
+
     class Observer
     {
         public function update($argument)
         {
             // Do something.
         }
+
         public function reportError($errorCode, $errorMessage, Subject $subject)
         {
             // Do something
         }
+
         // Other methods.
     }
     ?>
@@ -490,6 +541,7 @@ Testing that a method gets called once and with a specified argument
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class SubjectTest extends TestCase
     {
         public function testObserversAreUpdated()
@@ -499,16 +551,19 @@ Testing that a method gets called once and with a specified argument
             $observer = $this->getMockBuilder(Observer::class)
                              ->setMethods(['update'])
                              ->getMock();
+
             // Set up the expectation for the update() method
             // to be called only once and with the string 'something'
             // as its parameter.
             $observer->expects($this->once())
                      ->method('update')
                      ->with($this->equalTo('something'));
+
             // Create a Subject object and attach the mocked
             // Observer object to it.
             $subject = new Subject('My subject');
             $subject->attach($observer);
+
             // Call the doSomething() method on the $subject object
             // which we expect to call the mocked Observer object's
             // update() method with the string 'something'.
@@ -532,6 +587,7 @@ arguments constrained in different ways
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class SubjectTest extends TestCase
     {
         public function testErrorReported()
@@ -541,6 +597,7 @@ arguments constrained in different ways
             $observer = $this->getMockBuilder(Observer::class)
                              ->setMethods(['reportError'])
                              ->getMock();
+
             $observer->expects($this->once())
                      ->method('reportError')
                      ->with(
@@ -548,8 +605,10 @@ arguments constrained in different ways
                            $this->stringContains('Something'),
                            $this->anything()
                        );
+
             $subject = new Subject('My subject');
             $subject->attach($observer);
+
             // The doSomethingBad() method should report an error to the observer
             // via the reportError() method
             $subject->doSomethingBad();
@@ -571,6 +630,7 @@ Testing that a method gets called two times with specific arguments.
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class FooTest extends TestCase
     {
         public function testFunctionCalledTwoTimesWithSpecificArguments()
@@ -578,12 +638,14 @@ Testing that a method gets called two times with specific arguments.
             $mock = $this->getMockBuilder(stdClass::class)
                          ->setMethods(['set'])
                          ->getMock();
+
             $mock->expects($this->exactly(2))
                  ->method('set')
                  ->withConsecutive(
                      [$this->equalTo('foo'), $this->greaterThan(0)],
                      [$this->equalTo('bar'), $this->greaterThan(0)]
                  );
+
             $mock->set('foo', 21);
             $mock->set('bar', 48);
         }
@@ -605,6 +667,7 @@ More complex argument verification
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class SubjectTest extends TestCase
     {
         public function testErrorReported()
@@ -614,6 +677,7 @@ More complex argument verification
             $observer = $this->getMockBuilder(Observer::class)
                              ->setMethods(['reportError'])
                              ->getMock();
+
             $observer->expects($this->once())
                      ->method('reportError')
                      ->with($this->greaterThan(0),
@@ -622,8 +686,10 @@ More complex argument verification
                               return is_callable([$subject, 'getName']) &&
                                      $subject->getName() == 'My subject';
                             }));
+
             $subject = new Subject('My subject');
             $subject->attach($observer);
+
             // The doSomethingBad() method should report an error to the observer
             // via the reportError() method
             $subject->doSomethingBad();
@@ -640,17 +706,21 @@ Testing that a method gets called once and with the identical object as was pass
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class FooTest extends TestCase
     {
         public function testIdenticalObjectPassed()
         {
             $expectedObject = new stdClass;
+
             $mock = $this->getMockBuilder(stdClass::class)
                          ->setMethods(['foo'])
                          ->getMock();
+
             $mock->expects($this->once())
                  ->method('foo')
                  ->with($this->identicalTo($expectedObject));
+
             $mock->foo($expectedObject);
         }
     }
@@ -665,14 +735,17 @@ Create a mock object with cloning parameters enabled
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class FooTest extends TestCase
     {
         public function testIdenticalObjectPassed()
         {
             $cloneArguments = true;
+
             $mock = $this->getMockBuilder(stdClass::class)
                          ->enableArgumentCloning()
                          ->getMock();
+
             // now your mock clones parameters so the identicalTo constraint
             // will fail.
         }
@@ -711,7 +784,9 @@ Returns a matcher that matches when the method it is evaluated for is executed e
 ``PHPUnit_Framework_MockObject_Matcher_InvokedAtIndex at(int $index)``
 Returns a matcher that matches when the method it is evaluated for is invoked at the given ``$index``.
 
-.. note:: The ``$index`` parameter for the ``at()``
+.. note::
+
+   The ``$index`` parameter for the ``at()``
    matcher refers to the index, starting at zero, in *all method
    invocations* for a given mock object. Exercise caution when
    using this matcher as it can lead to brittle tests which are too
@@ -723,17 +798,29 @@ match your needs then you can use the ``getMockBuilder($type)``
 method to customize the test double generation using a fluent interface.
 Here is a list of methods provided by the Mock Builder:
 
-- ``setMethods(array $methods)`` can be called on the Mock Builder object to specify the methods that are to be replaced with a configurable test double. The behavior of the other methods is not changed. If you call ``setMethods(null)``, then no methods will be replaced.
+-
 
-- ``setConstructorArgs(array $args)`` can be called to provide a parameter array that is passed to the original class' constructor (which is not replaced with a dummy implementation by default).
+  ``setMethods(array $methods)`` can be called on the Mock Builder object to specify the methods that are to be replaced with a configurable test double. The behavior of the other methods is not changed. If you call ``setMethods(null)``, then no methods will be replaced.
 
-- ``setMockClassName($name)`` can be used to specify a class name for the generated test double class.
+-
 
-- ``disableOriginalConstructor()`` can be used to disable the call to the original class' constructor.
+  ``setConstructorArgs(array $args)`` can be called to provide a parameter array that is passed to the original class' constructor (which is not replaced with a dummy implementation by default).
 
-- ``disableOriginalClone()`` can be used to disable the call to the original class' clone constructor.
+-
 
-- ``disableAutoload()`` can be used to disable ``__autoload()`` during the generation of the test double class.
+  ``setMockClassName($name)`` can be used to specify a class name for the generated test double class.
+
+-
+
+  ``disableOriginalConstructor()`` can be used to disable the call to the original class' constructor.
+
+-
+
+  ``disableOriginalClone()`` can be used to disable the call to the original class' clone constructor.
+
+-
+
+  ``disableAutoload()`` can be used to disable ``__autoload()`` during the generation of the test double class.
 
 .. _test-doubles.prophecy:
 
@@ -761,20 +848,25 @@ Testing that a method gets called once and with a specified argument
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class SubjectTest extends TestCase
     {
         public function testObserversAreUpdated()
         {
             $subject = new Subject('My subject');
+
             // Create a prophecy for the Observer class.
             $observer = $this->prophesize(Observer::class);
+
             // Set up the expectation for the update() method
             // to be called only once and with the string 'something'
             // as its parameter.
             $observer->update('something')->shouldBeCalled();
+
             // Reveal the prophecy and attach the mock object
             // to the Subject.
             $subject->attach($observer->reveal());
+
             // Call the doSomething() method on the $subject object
             // which we expect to call the mocked Observer object's
             // update() method with the string 'something'.
@@ -805,22 +897,27 @@ Testing the concrete methods of a trait
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     trait AbstractTrait
     {
         public function concreteMethod()
         {
             return $this->abstractMethod();
         }
+
         public abstract function abstractMethod();
     }
+
     class TraitClassTest extends TestCase
     {
         public function testConcreteMethod()
         {
             $mock = $this->getMockForTrait(AbstractTrait::class);
+
             $mock->expects($this->any())
                  ->method('abstractMethod')
                  ->will($this->returnValue(true));
+
             $this->assertTrue($mock->concreteMethod());
         }
     }
@@ -840,22 +937,27 @@ Testing the concrete methods of an abstract class
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     abstract class AbstractClass
     {
         public function concreteMethod()
         {
             return $this->abstractMethod();
         }
+
         public abstract function abstractMethod();
     }
+
     class AbstractClassTest extends TestCase
     {
         public function testConcreteMethod()
         {
             $stub = $this->getMockForAbstractClass(AbstractClass::class);
+
             $stub->expects($this->any())
                  ->method('abstractMethod')
                  ->will($this->returnValue(true));
+
             $this->assertTrue($stub->concreteMethod());
         }
     }
@@ -887,6 +989,7 @@ Stubbing a web service
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class GoogleTest extends TestCase
     {
         public function testSearch()
@@ -894,9 +997,11 @@ Stubbing a web service
             $googleSearch = $this->getMockFromWsdl(
               'GoogleSearch.wsdl', 'GoogleSearch'
             );
+
             $directoryCategory = new stdClass;
             $directoryCategory->fullViewableName = '';
             $directoryCategory->specialEncoding = '';
+
             $element = new stdClass;
             $element->summary = '';
             $element->URL = 'https://phpunit.de/';
@@ -907,6 +1012,7 @@ Stubbing a web service
             $element->hostName = 'phpunit.de';
             $element->directoryCategory = $directoryCategory;
             $element->directoryTitle = '';
+
             $result = new stdClass;
             $result->documentFiltering = false;
             $result->searchComments = '';
@@ -919,9 +1025,11 @@ Stubbing a web service
             $result->searchTips = '';
             $result->directoryCategories = [];
             $result->searchTime = 0.248822;
+
             $googleSearch->expects($this->any())
                          ->method('doGoogleSearch')
                          ->will($this->returnValue($result));
+
             /**
              * $googleSearch->doGoogleSearch() will now return a stubbed result and
              * the web service's doGoogleSearch() method will not be invoked.
@@ -984,17 +1092,21 @@ A class that interacts with the filesystem
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class Example
     {
         protected $id;
         protected $directory;
+
         public function __construct($id)
         {
             $this->id = $id;
         }
+
         public function setDirectory($directory)
         {
             $this->directory = $directory . DIRECTORY_SEPARATOR . $this->id;
+
             if (!file_exists($this->directory)) {
                 mkdir($this->directory, 0700, true);
             }
@@ -1014,6 +1126,7 @@ Testing a class that interacts with the filesystem
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class ExampleTest extends TestCase
     {
         protected function setUp()
@@ -1022,13 +1135,16 @@ Testing a class that interacts with the filesystem
                 rmdir(dirname(__FILE__) . '/id');
             }
         }
+
         public function testDirectoryIsCreated()
         {
             $example = new Example('id');
             $this->assertFalse(file_exists(dirname(__FILE__) . '/id'));
+
             $example->setDirectory(dirname(__FILE__));
             $this->assertTrue(file_exists(dirname(__FILE__) . '/id'));
         }
+
         protected function tearDown()
         {
             if (file_exists(dirname(__FILE__) . '/id')) {
@@ -1040,11 +1156,17 @@ Testing a class that interacts with the filesystem
 
 The approach above has several drawbacks:
 
-- As with any external resource, there might be intermittent problems with the filesystem. This makes tests interacting with it flaky.
+-
 
-- In the ``setUp()`` and ``tearDown()`` methods we have to ensure that the directory does not exist before and after the test.
+  As with any external resource, there might be intermittent problems with the filesystem. This makes tests interacting with it flaky.
 
-- When the test execution terminates before the ``tearDown()`` method is invoked the directory will stay in the filesystem.
+-
+
+  In the ``setUp()`` and ``tearDown()`` methods we have to ensure that the directory does not exist before and after the test.
+
+-
+
+  When the test execution terminates before the ``tearDown()`` method is invoked the directory will stay in the filesystem.
 
 :ref:`test-doubles.mocking-the-filesystem.examples.ExampleTest2.php`
 shows how vfsStream can be used to mock the filesystem in a test for a
@@ -1059,6 +1181,7 @@ Mocking the filesystem in a test for a class that interacts with the filesystem
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class ExampleTest extends TestCase
     {
         public function setUp()
@@ -1066,10 +1189,12 @@ Mocking the filesystem in a test for a class that interacts with the filesystem
             vfsStreamWrapper::register();
             vfsStreamWrapper::setRoot(new vfsStreamDirectory('exampleDir'));
         }
+
         public function testDirectoryIsCreated()
         {
             $example = new Example('id');
             $this->assertFalse(vfsStreamWrapper::getRoot()->hasChild('id'));
+
             $example->setDirectory(vfsStream::url('exampleDir'));
             $this->assertTrue(vfsStreamWrapper::getRoot()->hasChild('id'));
         }
@@ -1078,10 +1203,16 @@ Mocking the filesystem in a test for a class that interacts with the filesystem
 
 This has several advantages:
 
-- The test itself is more concise.
+-
 
-- vfsStream gives the test developer full control over what the filesystem environment looks like to the tested code.
+  The test itself is more concise.
 
-- Since the filesystem operations do not operate on the real filesystem anymore, cleanup operations in a ``tearDown()`` method are no longer required.
+-
+
+  vfsStream gives the test developer full control over what the filesystem environment looks like to the tested code.
+
+-
+
+  Since the filesystem operations do not operate on the real filesystem anymore, cleanup operations in a ``tearDown()`` method are no longer required.
 
 

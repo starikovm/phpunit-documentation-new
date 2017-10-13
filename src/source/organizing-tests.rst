@@ -45,12 +45,17 @@ command-line test runner to the test directory:
 ::
 
     phpunit --bootstrap src/autoload.php tests
-    PHPUnit 6.4.0 by Sebastian Bergmann.
+    PHPUnit 6.1.0 by Sebastian Bergmann.
+
     .................................
+
     Time: 636 ms, Memory: 3.50Mb
+
     OK (33 tests, 52 assertions)
 
-.. note:: If you point the PHPUnit command-line test runner to a directory it will
+.. note::
+
+   If you point the PHPUnit command-line test runner to a directory it will
    look for :file:`*Test.php` files.
 
 To run only the tests that are declared in the ``CurrencyTest``
@@ -60,9 +65,12 @@ the following command:
 ::
 
     phpunit --bootstrap src/autoload.php tests/CurrencyTest
-    PHPUnit 6.4.0 by Sebastian Bergmann.
+    PHPUnit 6.1.0 by Sebastian Bergmann.
+
     ........
+
     Time: 280 ms, Memory: 2.75Mb
+
     OK (8 tests, 8 assertions)
 
 For more fine-grained control of which tests to run we can use the
@@ -71,12 +79,17 @@ For more fine-grained control of which tests to run we can use the
 ::
 
     phpunit --bootstrap src/autoload.php --filter testObjectCanBeConstructedForValidConstructorArgument tests
-    PHPUnit 6.4.0 by Sebastian Bergmann.
+    PHPUnit 6.1.0 by Sebastian Bergmann.
+
     ..
+
     Time: 167 ms, Memory: 3.00Mb
+
     OK (2 test, 2 assertions)
 
-.. note:: A drawback of this approach is that we have no control over the order in
+.. note::
+
+   A drawback of this approach is that we have no control over the order in
    which the tests are run. This can lead to problems with regard to test
    dependencies, see :ref:`writing-tests-for-phpunit.test-dependencies`.
    In the next section you will see how you can make the test execution

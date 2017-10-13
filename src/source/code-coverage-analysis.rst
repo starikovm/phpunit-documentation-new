@@ -7,6 +7,7 @@ Code Coverage Analysis
 ======================
 
     *Wikipedia*:
+
     In computer science, code coverage is a measure used to describe the
     degree to which the source code of a program is tested by a particular
     test suite. A program with high code coverage has been more thoroughly
@@ -20,7 +21,9 @@ code are executed when the tests are run. It makes use of the
 component, which in turn leverages the code coverage functionality provided
 by the `Xdebug <http://xdebug.org/>`_ extension for PHP.
 
-.. note:: Xdebug is not distributed as part of PHPUnit. If you receive a notice
+.. note::
+
+   Xdebug is not distributed as part of PHPUnit. If you receive a notice
    while running tests that the Xdebug extension is not loaded, it means
    that Xdebug is either not installed or not configured properly. Before
    you can use the code coverage analysis features in PHPUnit, you should
@@ -44,22 +47,26 @@ Software Metrics for Code Coverage
 Various software metrics exist to measure code coverage:
 
 *Line Coverage*
+
     The *Line Coverage* software metric measures
     whether each executable line was executed.
 
 *Function and Method Coverage*
+
     The *Function and Method Coverage* software
     metric measures whether each function or method has been invoked.
     PHP_CodeCoverage only considers a function or method as covered when
     all of its executable lines are covered.
 
 *Class and Trait Coverage*
+
     The *Class and Trait Coverage* software metric
     measures whether each method of a class or trait is covered.
     PHP_CodeCoverage only considers a class or trait as covered when all
     of its methods are covered.
 
 *Opcode Coverage*
+
     The *Opcode Coverage* software metric measures
     whether each opcode of a function or method has been executed while
     running the test suite. A line of code usually compiles into more
@@ -67,12 +74,14 @@ Various software metrics exist to measure code coverage:
     soon as one of its opcodes is executed.
 
 *Branch Coverage*
+
     The *Branch Coverage* software metric measures
     whether the boolean expression of each control structure evaluated
     to both ``true`` and ``false`` while
     running the test suite.
 
 *Path Coverage*
+
     The *Path Coverage* software metric measures
     whether each of the possible execution paths in a function or method
     has been followed while running the test suite. An execution path is
@@ -80,6 +89,7 @@ Various software metrics exist to measure code coverage:
     method to its exit.
 
 *Change Risk Anti-Patterns (CRAP) Index*
+
     The *Change Risk Anti-Patterns (CRAP) Index* is
     calculated based on the cyclomatic complexity and code coverage of a
     unit of code. Code that is not too complex and has an adequate test
@@ -87,7 +97,9 @@ Various software metrics exist to measure code coverage:
     by writing tests and by refactoring the code to lower its
     complexity.
 
-.. note:: The *Opcode Coverage*,
+.. note::
+
+   The *Opcode Coverage*,
    *Branch Coverage*, and
    *Path Coverage* software metrics are not yet
    supported by PHP_CodeCoverage.
@@ -111,7 +123,9 @@ for instance, you also need to set
 ``processUncoveredFilesFromWhitelist="true"`` in your
 PHPUnit configuration (see :ref:`appendixes.configuration.whitelisting-files`).
 
-.. note:: Please note that the loading of sourcecode files that is performed when
+.. note::
+
+   Please note that the loading of sourcecode files that is performed when
    ``processUncoveredFilesFromWhitelist="true"`` is set can
    cause problems when a sourcecode file contains code outside the scope of
    a class or function, for instance.
@@ -137,6 +151,7 @@ Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCover
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     /**
      * @codeCoverageIgnore
      */
@@ -146,6 +161,7 @@ Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCover
         {
         }
     }
+
     class Bar
     {
         /**
@@ -155,11 +171,13 @@ Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCover
         {
         }
     }
+
     if (false) {
         // @codeCoverageIgnoreStart
         print '*';
         // @codeCoverageIgnoreEnd
     }
+
     exit; // @codeCoverageIgnore
     ?>
 
@@ -189,13 +207,16 @@ Tests that specify which method they want to cover
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class BankAccountTest extends TestCase
     {
         protected $ba;
+
         protected function setUp()
         {
             $this->ba = new BankAccount;
         }
+
         /**
          * @covers BankAccount::getBalance
          */
@@ -203,6 +224,7 @@ Tests that specify which method they want to cover
         {
             $this->assertEquals(0, $this->ba->getBalance());
         }
+
         /**
          * @covers BankAccount::withdrawMoney
          */
@@ -211,12 +233,16 @@ Tests that specify which method they want to cover
             try {
                 $this->ba->withdrawMoney(1);
             }
+
             catch (BankAccountException $e) {
                 $this->assertEquals(0, $this->ba->getBalance());
+
                 return;
             }
+
             $this->fail();
         }
+
         /**
          * @covers BankAccount::depositMoney
          */
@@ -225,12 +251,16 @@ Tests that specify which method they want to cover
             try {
                 $this->ba->depositMoney(-1);
             }
+
             catch (BankAccountException $e) {
                 $this->assertEquals(0, $this->ba->getBalance());
+
                 return;
             }
+
             $this->fail();
         }
+
         /**
          * @covers BankAccount::getBalance
          * @covers BankAccount::depositMoney
@@ -263,6 +293,7 @@ A test that specifies that no method should be covered
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class GuestbookIntegrationTest extends PHPUnit_Extensions_Database_TestCase
     {
         /**
@@ -272,11 +303,14 @@ A test that specifies that no method should be covered
         {
             $guestbook = new Guestbook();
             $guestbook->addEntry("suzy", "Hello world!");
+
             $queryTable = $this->getConnection()->createQueryTable(
                 'guestbook', 'SELECT * FROM guestbook'
             );
+
             $expectedTable = $this->createFlatXmlDataSet("expectedBook.xml")
                                   ->getTable("guestbook");
+
             $this->assertTablesEqual($expectedTable, $queryTable);
         }
     }
@@ -296,15 +330,18 @@ coverage information.
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     // Because it is "line based" and not statement base coverage
     // one line will always have one coverage status
     if (false) this_function_call_shows_up_as_covered();
+
     // Due to how code coverage works internally these two lines are special.
     // This line will show up as non executable
     if (false)
         // This line will show up as covered because it is actually the
         // coverage of the if statement in the line above that gets shown here!
         will_also_show_up_as_covered();
+
     // To avoid this it is necessary that braces are used
     if (false) {
         this_call_will_never_show_up_as_covered();

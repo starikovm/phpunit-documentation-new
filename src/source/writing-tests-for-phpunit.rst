@@ -11,14 +11,23 @@ how we can write tests using PHPUnit that exercise PHP's array operations.
 The example introduces the basic conventions and steps for writing tests
 with PHPUnit:
 
-#. The tests for a class ``Class`` go into a class ``ClassTest``.
+#.
 
-#. ``ClassTest`` inherits (most of the time) from ``PHPUnit\Framework\TestCase``.
+   The tests for a class ``Class`` go into a class ``ClassTest``.
 
-#. The tests are public methods that are named ``test*``.
+#.
+
+   ``ClassTest`` inherits (most of the time) from ``PHPUnit\Framework\TestCase``.
+
+#.
+
+   The tests are public methods that are named ``test*``.
+
    Alternatively, you can use the ``@test`` annotation in a method's docblock to mark it as a test method.
 
-#. Inside the test methods, assertion methods such as ``assertEquals()`` (see :ref:`appendixes.assertions`) are used to assert that an actual value matches an expected value.
+#.
+
+   Inside the test methods, assertion methods such as ``assertEquals()`` (see :ref:`appendixes.assertions`) are used to assert that an actual value matches an expected value.
 
 .. _writing-tests-for-phpunit.examples.StackTest.php:
 
@@ -29,15 +38,18 @@ Testing array operations with PHPUnit
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StackTest extends TestCase
     {
         public function testPushAndPop()
         {
             $stack = [];
             $this->assertEquals(0, count($stack));
+
             array_push($stack, 'foo');
             $this->assertEquals('foo', $stack[count($stack)-1]);
             $this->assertEquals(1, count($stack));
+
             $this->assertEquals('foo', array_pop($stack));
             $this->assertEquals(0, count($stack));
         }
@@ -45,6 +57,7 @@ Testing array operations with PHPUnit
     ?>
 
     *Martin Fowler*:
+
     Whenever you are tempted to type something into a
     ``print`` statement or a debugger expression, write it
     as a test instead.
@@ -55,6 +68,7 @@ Test Dependencies
 #################
 
     *Adrian Kuhn et. al.*:
+
     Unit Tests are primarily written as a good practice to help developers
     identify and fix bugs, to refactor code and to serve as documentation
     for a unit of software under test. To achieve these benefits, unit tests
@@ -69,9 +83,13 @@ methods. Such dependencies do not define the order in which the test
 methods are to be executed but they allow the returning of an instance of
 the test fixture by a producer and passing it to the dependent consumers.
 
-- A producer is a test method that yields its unit under test as return value.
+-
 
-- A consumer is a test method that depends on one or more producers and their return values.
+  A producer is a test method that yields its unit under test as return value.
+
+-
+
+  A consumer is a test method that depends on one or more producers and their return values.
 
 :ref:`writing-tests-for-phpunit.examples.StackTest2.php` shows
 how to use the ``@depends`` annotation to express
@@ -86,14 +104,17 @@ Using the ``@depends`` annotation to express dependencies
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class StackTest extends TestCase
     {
         public function testEmpty()
         {
             $stack = [];
             $this->assertEmpty($stack);
+
             return $stack;
         }
+
         /**
          * @depends testEmpty
          */
@@ -102,8 +123,10 @@ Using the ``@depends`` annotation to express dependencies
             array_push($stack, 'foo');
             $this->assertEquals('foo', $stack[count($stack)-1]);
             $this->assertNotEmpty($stack);
+
             return $stack;
         }
+
         /**
          * @depends testPush
          */
@@ -122,10 +145,12 @@ depends on ``testEmpty()`` and is passed the result of that
 depended-upon test as its argument. Finally, ``testPop()``
 depends upon ``testPush()``.
 
-.. note:: The return value yielded by a producer is passed "as-is" to its
-   consumers by default. This means that when a producer returns an object,
+.. note::
+
+   The return value yielded by a producer is passed "as-is" to its
+   consumers by default. This means that when a producer returns an object
    a reference to that object is passed to the consumers. When a copy
-   should be used instead of a reference, then @depends clone
+   should be used instead of a reference then @depends clone
    should be used instead of @depends.
 
 To quickly localize defects, we want our attention to be focussed on
@@ -143,12 +168,14 @@ Exploiting the dependencies between tests
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class DependencyFailureTest extends TestCase
     {
         public function testOne()
         {
             $this->assertTrue(false);
         }
+
         /**
          * @depends testOne
          */
@@ -161,16 +188,24 @@ Exploiting the dependencies between tests
 ::
 
     phpunit --verbose DependencyFailureTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     FS
+
     Time: 0 seconds, Memory: 5.00Mb
+
     There was 1 failure:
+
     1) DependencyFailureTest::testOne
     Failed asserting that false is true.
+
     /home/sb/DependencyFailureTest.php:6
+
     There was 1 skipped test:
+
     1) DependencyFailureTest::testTwo
     This test depends on "DependencyFailureTest::testOne" to pass.
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1, Skipped: 1.
 
@@ -193,6 +228,7 @@ Test with multiple dependencies
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class MultipleDependenciesTest extends TestCase
     {
         public function testProducerFirst()
@@ -200,11 +236,13 @@ Test with multiple dependencies
             $this->assertTrue(true);
             return 'first';
         }
+
         public function testProducerSecond()
         {
             $this->assertTrue(true);
             return 'second';
         }
+
         /**
          * @depends testProducerFirst
          * @depends testProducerSecond
@@ -222,9 +260,12 @@ Test with multiple dependencies
 ::
 
     phpunit --verbose MultipleDependenciesTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     ...
+
     Time: 0 seconds, Memory: 3.25Mb
+
     OK (3 tests, 3 assertions)
 
 .. _writing-tests-for-phpunit.data-providers:
@@ -253,6 +294,7 @@ Using a data provider that returns an array of arrays
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class DataTest extends TestCase
     {
         /**
@@ -262,6 +304,7 @@ Using a data provider that returns an array of arrays
         {
             $this->assertEquals($expected, $a + $b);
         }
+
         public function additionProvider()
         {
             return [
@@ -277,13 +320,19 @@ Using a data provider that returns an array of arrays
 ::
 
     phpunit DataTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     ...F
+
     Time: 0 seconds, Memory: 5.75Mb
+
     There was 1 failure:
+
     1) DataTest::testAdd with data set #3 (1, 1, 3)
     Failed asserting that 2 matches expected 3.
+
     /home/sb/DataTest.php:9
+
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
@@ -299,6 +348,7 @@ Using a data provider with named datasets
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class DataTest extends TestCase
     {
         /**
@@ -308,6 +358,7 @@ Using a data provider with named datasets
         {
             $this->assertEquals($expected, $a + $b);
         }
+
         public function additionProvider()
         {
             return [
@@ -323,13 +374,19 @@ Using a data provider with named datasets
 ::
 
     phpunit DataTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     ...F
+
     Time: 0 seconds, Memory: 5.75Mb
+
     There was 1 failure:
+
     1) DataTest::testAdd with data set "one plus one" (1, 1, 3)
     Failed asserting that 2 matches expected 3.
+
     /home/sb/DataTest.php:9
+
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
@@ -342,7 +399,9 @@ Using a data provider that returns an Iterator object
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     require 'CsvFileIterator.php';
+
     class DataTest extends TestCase
     {
         /**
@@ -352,6 +411,7 @@ Using a data provider that returns an Iterator object
         {
             $this->assertEquals($expected, $a + $b);
         }
+
         public function additionProvider()
         {
             return new CsvFileIterator('data.csv');
@@ -362,13 +422,19 @@ Using a data provider that returns an Iterator object
 ::
 
     phpunit DataTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     ...F
+
     Time: 0 seconds, Memory: 5.75Mb
+
     There was 1 failure:
+
     1) DataTest::testAdd with data set #3 ('1', '1', '3')
     Failed asserting that 2 matches expected '3'.
+
     /home/sb/DataTest.php:11
+
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
@@ -381,30 +447,38 @@ The CsvFileIterator class
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class CsvFileIterator implements Iterator {
         protected $file;
         protected $key = 0;
         protected $current;
+
         public function __construct($file) {
             $this->file = fopen($file, 'r');
         }
+
         public function __destruct() {
             fclose($this->file);
         }
+
         public function rewind() {
             rewind($this->file);
             $this->current = fgetcsv($this->file);
             $this->key = 0;
         }
+
         public function valid() {
             return !feof($this->file);
         }
+
         public function key() {
             return $this->key;
         }
+
         public function current() {
             return $this->current;
         }
+
         public function next() {
             $this->current = fgetcsv($this->file);
             $this->key++;
@@ -428,22 +502,26 @@ Combination of @depends and @dataProvider in same test
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class DependencyAndDataProviderComboTest extends TestCase
     {
         public function provider()
         {
             return [['provider1'], ['provider2']];
         }
+
         public function testProducerFirst()
         {
             $this->assertTrue(true);
             return 'first';
         }
+
         public function testProducerSecond()
         {
             $this->assertTrue(true);
             return 'second';
         }
+
         /**
          * @depends testProducerFirst
          * @depends testProducerSecond
@@ -462,10 +540,14 @@ Combination of @depends and @dataProvider in same test
 ::
 
     phpunit --verbose DependencyAndDataProviderComboTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     ...F
+
     Time: 0 seconds, Memory: 3.50Mb
+
     There was 1 failure:
+
     1) DependencyAndDataProviderComboTest::testConsumer with data set #1 ('provider2')
     Failed asserting that two arrays are equal.
     --- Expected
@@ -477,16 +559,22 @@ Combination of @depends and @dataProvider in same test
     1 => 'first'
     2 => 'second'
     )
+
     /home/sb/DependencyAndDataProviderComboTest.php:31
+
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
-.. note:: When a test depends on a test that uses data providers, the depending
+.. note::
+
+   When a test depends on a test that uses data providers, the depending
    test will be executed when the test it depends upon is successful for at
    least one data set. The result of a test that uses data providers cannot
    be injected into a depending test.
 
-.. note:: All data providers are executed before both the call to the ``setUpBeforeClass``
+.. note::
+
+   All data providers are executed before both the call to the ``setUpBeforeClass``
    static method and the first call to the ``setUp`` method.
    Because of that you can't access any variables you create there from
    within a data provider. This is required in order for PHPUnit to be able
@@ -510,6 +598,7 @@ Using the expectException() method
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class ExceptionTest extends TestCase
     {
         public function testException()
@@ -522,12 +611,17 @@ Using the expectException() method
 ::
 
     phpunit ExceptionTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) ExceptionTest::testException
     Expected exception InvalidArgumentException
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -554,6 +648,7 @@ Using the @expectedException annotation
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class ExceptionTest extends TestCase
     {
         /**
@@ -568,12 +663,17 @@ Using the @expectedException annotation
 ::
 
     phpunit ExceptionTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 4.75Mb
+
     There was 1 failure:
+
     1) ExceptionTest::testException
     Expected exception InvalidArgumentException
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -587,7 +687,9 @@ triggered during the execution of a test to an exception. Using these
 exceptions, you can, for instance, expect a test to trigger a PHP error as
 shown in :ref:`writing-tests-for-phpunit.exceptions.examples.ErrorTest.php`.
 
-.. note:: PHP's ``error_reporting`` runtime configuration can
+.. note::
+
+   PHP's ``error_reporting`` runtime configuration can
    limit which errors PHPUnit will convert to exceptions. If you are
    having issues with this feature, be sure PHP is not configured to
    suppress the type of errors you're testing.
@@ -601,10 +703,11 @@ Expecting a PHP error using @expectedException
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class ExpectedErrorTest extends TestCase
     {
         /**
-         * @expectedException PHPUnit\Framework\Error
+         * @expectedException PHPUnit_Framework_Error
          */
         public function testFailingInclude()
         {
@@ -616,16 +719,21 @@ Expecting a PHP error using @expectedException
 ::
 
     phpunit -d error_reporting=2 ExpectedErrorTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     .
+
     Time: 0 seconds, Memory: 5.25Mb
+
     OK (1 test, 1 assertion)
 
-``PHPUnit\Framework\Error\Notice`` and
-``PHPUnit\Framework\Error\Warning`` represent PHP notices
+``PHPUnit_Framework_Error_Notice`` and
+``PHPUnit_Framework_Error_Warning`` represent PHP notices
 and warnings, respectively.
 
-.. note:: You should be as specific as possible when testing exceptions. Testing
+.. note::
+
+   You should be as specific as possible when testing exceptions. Testing
    for classes that are too generic might lead to undesirable
    side-effects. Accordingly, testing for the ``Exception``
    class with ``@expectedException`` or
@@ -635,7 +743,7 @@ When testing that relies on php functions that trigger errors like
 ``fopen`` it can sometimes be useful to use error
 suppression while testing. This allows you to check the return values by
 suppressing notices that would lead to a phpunit
-``PHPUnit\Framework\Error\Notice``.
+``PHPUnit_Framework_Error_Notice``.
 
 .. _writing-tests-for-phpunit.exceptions.examples.TriggerErrorReturnValue.php:
 
@@ -646,6 +754,7 @@ Testing return values of code that uses PHP Errors
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class ErrorSuppressionTest extends TestCase
     {
         public function testFileWriting() {
@@ -663,14 +772,18 @@ Testing return values of code that uses PHP Errors
             // ...
         }
     }
+
     ?>
 
 ::
 
     phpunit ErrorSuppressionTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     .
+
     Time: 1 seconds, Memory: 5.25Mb
+
     OK (1 test, 1 assertion)
 
 Without the error suppression the test would fail reporting
@@ -704,6 +817,7 @@ Testing the output of a function or method
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class OutputTest extends TestCase
     {
         public function testExpectFooActualFoo()
@@ -711,6 +825,7 @@ Testing the output of a function or method
             $this->expectOutputString('foo');
             print 'foo';
         }
+
         public function testExpectBarActualBaz()
         {
             $this->expectOutputString('bar');
@@ -722,10 +837,14 @@ Testing the output of a function or method
 ::
 
     phpunit OutputTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     .F
+
     Time: 0 seconds, Memory: 5.75Mb
+
     There was 1 failure:
+
     1) OutputTest::testExpectBarActualBaz
     Failed asserting that two strings are equal.
     --- Expected
@@ -733,6 +852,7 @@ Testing the output of a function or method
     @@ @@
     -'bar'
     +'baz'
+
     FAILURES!
     Tests: 2, Assertions: 2, Failures: 1.
 
@@ -759,7 +879,9 @@ Sets up a callback that is used to, for instance, normalize the actual output.
 ``string getActualOutput()``
 Get the actual output.
 
-.. note:: A test that emits output will fail in strict mode.
+.. note::
+
+   A test that emits output will fail in strict mode.
 
 .. _writing-tests-for-phpunit.error-output:
 
@@ -778,6 +900,7 @@ Error output generated when an array comparison fails
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class ArrayDiffTest extends TestCase
     {
         public function testEquality() {
@@ -792,10 +915,14 @@ Error output generated when an array comparison fails
 ::
 
     phpunit ArrayDiffTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) ArrayDiffTest::testEquality
     Failed asserting that two arrays are equal.
     --- Expected
@@ -810,7 +937,9 @@ Error output generated when an array comparison fails
     4 => 5
     5 => 6
     )
+
     /home/sb/ArrayDiffTest.php:7
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -829,6 +958,7 @@ Error output when an array comparison of an long array fails
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class LongArrayDiffTest extends TestCase
     {
         public function testEquality() {
@@ -843,10 +973,14 @@ Error output when an array comparison of an long array fails
 ::
 
     phpunit LongArrayDiffTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) LongArrayDiffTest::testEquality
     Failed asserting that two arrays are equal.
     --- Expected
@@ -859,7 +993,9 @@ Error output when an array comparison of an long array fails
     16 => 5
     17 => 6
     )
+
     /home/sb/LongArrayDiffTest.php:7
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -884,6 +1020,7 @@ Edge case in the diff generation when using weak comparison
 
     <?php
     use PHPUnit\Framework\TestCase;
+
     class ArrayWeakComparisonTest extends TestCase
     {
         public function testEquality() {
@@ -898,10 +1035,14 @@ Edge case in the diff generation when using weak comparison
 ::
 
     phpunit ArrayWeakComparisonTest
-    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+
     F
+
     Time: 0 seconds, Memory: 5.25Mb
+
     There was 1 failure:
+
     1) ArrayWeakComparisonTest::testEquality
     Failed asserting that two arrays are equal.
     --- Expected
@@ -917,7 +1058,9 @@ Edge case in the diff generation when using weak comparison
     4 => 5
     5 => 6
     )
+
     /home/sb/ArrayWeakComparisonTest.php:7
+
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 

@@ -193,8 +193,7 @@ def _indent(el, indent, first_line=None, suppress_blank_line=False):
     if suppress_blank_line:
         start = ""
 
-    lines = [" "*indent + i for i in _concat(el).splitlines()
-             if i and not i.isspace()]
+    lines = [" "*indent + i for i in _concat(el).splitlines()]
     if first_line is not None:
         # replace indentation of the first line with prefix `first_line'
         lines[0] = first_line + lines[0][indent:]
