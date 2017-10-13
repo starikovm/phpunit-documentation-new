@@ -9,7 +9,7 @@ Database Testing
 Many beginner and intermediate unit testing examples in any programming
 language suggest that it is perfectly easy to test your application's logic with
 simple tests. For database-centric applications this is far away from the
-reality. Start using Wordpress, TYPO3 or Symfony with Doctrine or Propel,
+reality. Start using WordPress, TYPO3 or Symfony with Doctrine or Propel,
 for example, and you will easily experience considerable problems with
 PHPUnit: just because the database is so tightly coupled to these libraries.
 
@@ -754,6 +754,7 @@ currently, so you have to instantiate it manually:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+    use PHPUnit\DbUnit\DataSet\YamlDataSet;
 
     class YamlGuestbookTest extends TestCase
     {
@@ -761,9 +762,7 @@ currently, so you have to instantiate it manually:
 
         protected function getDataSet()
         {
-            return new PHPUnit_Extensions_Database_DataSet_YamlDataSet(
-                dirname(__FILE__)."/_files/guestbook.yml"
-            );
+            return new YamlDataSet(dirname(__FILE__)."/_files/guestbook.yml");
         }
     }
     ?>
@@ -795,6 +794,7 @@ You can create a CSV DataSet by calling:
     <?php
     use PHPUnit\Framework\TestCase;
     use PHPUnit\DbUnit\TestCaseTrait;
+    use PHPUnit\DbUnit\DataSet\CsvDataSet;
 
     class CsvGuestbookTest extends TestCase
     {
@@ -802,7 +802,7 @@ You can create a CSV DataSet by calling:
 
         protected function getDataSet()
         {
-            $dataSet = new PHPUnit_Extensions_Database_DataSet_CsvDataSet();
+            $dataSet = new CsvDataSet();
             $dataSet->addTable('guestbook', dirname(__FILE__)."/_files/guestbook.csv");
             return $dataSet;
         }

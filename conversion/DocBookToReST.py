@@ -115,6 +115,7 @@ def _no_special_markup(el):
 
 def _remove_indent_and_escape(s):
     "remove indentation from the string s, escape some of the special chars"
+    s = re.sub(r'(\n)+', '\n', s) # redundant newlines
     s = "\n".join(i.lstrip().replace("\\", "\\\\") for i in s.splitlines())
     # escape inline mark-up start-string characters (even if there is no
     # end-string, docutils show warning if the start-string is not escaped)

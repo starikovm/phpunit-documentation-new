@@ -11,7 +11,7 @@ Installing PHPUnit
 Requirements
 ############
 
-PHPUnit 6.1 requires PHP 7; using the latest version of PHP is highly
+PHPUnit 6.4 requires PHP 7; using the latest version of PHP is highly
 recommended.
 
 PHPUnit requires the `dom <http://php.net/manual/en/dom.setup.php>`_ and `json <http://php.net/manual/en/json.installation.php>`_
@@ -28,7 +28,6 @@ The code coverage report feature requires the
 `Xdebug <http://xdebug.org/>`_ (2.5.0 or later) and
 `tokenizer <http://php.net/manual/en/tokenizer.installation.php>`_
 extensions.
-
 Generating XML reports requires the
 `xmlwriter <http://php.net/manual/en/xmlwriter.installation.php>`_
 extension.
@@ -57,13 +56,13 @@ To globally install the PHAR:
 
 ::
 
-    $ wget https://phar.phpunit.de/phpunit-6.1.phar$ chmod +x phpunit-6.1.phar$ sudo mv phpunit-6.1.phar /usr/local/bin/phpunit$ phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
+    $ wget https://phar.phpunit.de/phpunit-6.2.phar$ chmod +x phpunit-6.2.phar$ sudo mv phpunit-6.2.phar /usr/local/bin/phpunit$ phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 You may also use the downloaded PHAR file directly:
 
 ::
 
-    $ wget https://phar.phpunit.de/phpunit-6.1.phar$ php phpunit-6.1.phar --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
+    $ wget https://phar.phpunit.de/phpunit-6.2.phar$ php phpunit-6.2.phar --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 .. _installation.phar.windows:
 
@@ -85,7 +84,7 @@ Globally installing the PHAR involves the same procedure as manually
 
 #.
 
-   Download `<https://phar.phpunit.de/phpunit-6.1.phar>`_ and
+   Download `<https://phar.phpunit.de/phpunit-6.2.phar>`_ and
    save the file as :file:`C:\bin\phpunit.phar`
 
 #.
@@ -265,7 +264,7 @@ dependencies of your project:
 
 ::
 
-    composer require --dev phpunit/phpunit ^6.1
+    composer require --dev phpunit/phpunit ^6.2
 
 .. _installation.optional-packages:
 

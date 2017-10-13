@@ -148,9 +148,9 @@ depends upon ``testPush()``.
 .. note::
 
    The return value yielded by a producer is passed "as-is" to its
-   consumers by default. This means that when a producer returns an object
+   consumers by default. This means that when a producer returns an object,
    a reference to that object is passed to the consumers. When a copy
-   should be used instead of a reference then @depends clone
+   should be used instead of a reference, then @depends clone
    should be used instead of @depends.
 
 To quickly localize defects, we want our attention to be focussed on
@@ -188,24 +188,16 @@ Exploiting the dependencies between tests
 ::
 
     phpunit --verbose DependencyFailureTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     FS
-
     Time: 0 seconds, Memory: 5.00Mb
-
     There was 1 failure:
-
     1) DependencyFailureTest::testOne
     Failed asserting that false is true.
-
     /home/sb/DependencyFailureTest.php:6
-
     There was 1 skipped test:
-
     1) DependencyFailureTest::testTwo
     This test depends on "DependencyFailureTest::testOne" to pass.
-
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1, Skipped: 1.
 
@@ -260,12 +252,9 @@ Test with multiple dependencies
 ::
 
     phpunit --verbose MultipleDependenciesTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ...
-
     Time: 0 seconds, Memory: 3.25Mb
-
     OK (3 tests, 3 assertions)
 
 .. _writing-tests-for-phpunit.data-providers:
@@ -320,19 +309,13 @@ Using a data provider that returns an array of arrays
 ::
 
     phpunit DataTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ...F
-
     Time: 0 seconds, Memory: 5.75Mb
-
     There was 1 failure:
-
     1) DataTest::testAdd with data set #3 (1, 1, 3)
     Failed asserting that 2 matches expected 3.
-
     /home/sb/DataTest.php:9
-
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
@@ -374,19 +357,13 @@ Using a data provider with named datasets
 ::
 
     phpunit DataTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ...F
-
     Time: 0 seconds, Memory: 5.75Mb
-
     There was 1 failure:
-
     1) DataTest::testAdd with data set "one plus one" (1, 1, 3)
     Failed asserting that 2 matches expected 3.
-
     /home/sb/DataTest.php:9
-
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
@@ -422,19 +399,13 @@ Using a data provider that returns an Iterator object
 ::
 
     phpunit DataTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ...F
-
     Time: 0 seconds, Memory: 5.75Mb
-
     There was 1 failure:
-
     1) DataTest::testAdd with data set #3 ('1', '1', '3')
     Failed asserting that 2 matches expected '3'.
-
     /home/sb/DataTest.php:11
-
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
@@ -540,14 +511,10 @@ Combination of @depends and @dataProvider in same test
 ::
 
     phpunit --verbose DependencyAndDataProviderComboTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ...F
-
     Time: 0 seconds, Memory: 3.50Mb
-
     There was 1 failure:
-
     1) DependencyAndDataProviderComboTest::testConsumer with data set #1 ('provider2')
     Failed asserting that two arrays are equal.
     --- Expected
@@ -559,9 +526,7 @@ Combination of @depends and @dataProvider in same test
     1 => 'first'
     2 => 'second'
     )
-
     /home/sb/DependencyAndDataProviderComboTest.php:31
-
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
@@ -611,17 +576,12 @@ Using the expectException() method
 ::
 
     phpunit ExceptionTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
-
     Time: 0 seconds, Memory: 4.75Mb
-
     There was 1 failure:
-
     1) ExceptionTest::testException
     Expected exception InvalidArgumentException
-
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -663,17 +623,12 @@ Using the @expectedException annotation
 ::
 
     phpunit ExceptionTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
-
     Time: 0 seconds, Memory: 4.75Mb
-
     There was 1 failure:
-
     1) ExceptionTest::testException
     Expected exception InvalidArgumentException
-
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -707,7 +662,7 @@ Expecting a PHP error using @expectedException
     class ExpectedErrorTest extends TestCase
     {
         /**
-         * @expectedException PHPUnit_Framework_Error
+         * @expectedException PHPUnit\Framework\Error
          */
         public function testFailingInclude()
         {
@@ -719,16 +674,13 @@ Expecting a PHP error using @expectedException
 ::
 
     phpunit -d error_reporting=2 ExpectedErrorTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     .
-
     Time: 0 seconds, Memory: 5.25Mb
-
     OK (1 test, 1 assertion)
 
-``PHPUnit_Framework_Error_Notice`` and
-``PHPUnit_Framework_Error_Warning`` represent PHP notices
+``PHPUnit\Framework\Error\Notice`` and
+``PHPUnit\Framework\Error\Warning`` represent PHP notices
 and warnings, respectively.
 
 .. note::
@@ -743,7 +695,7 @@ When testing that relies on php functions that trigger errors like
 ``fopen`` it can sometimes be useful to use error
 suppression while testing. This allows you to check the return values by
 suppressing notices that would lead to a phpunit
-``PHPUnit_Framework_Error_Notice``.
+``PHPUnit\Framework\Error\Notice``.
 
 .. _writing-tests-for-phpunit.exceptions.examples.TriggerErrorReturnValue.php:
 
@@ -778,12 +730,9 @@ Testing return values of code that uses PHP Errors
 ::
 
     phpunit ErrorSuppressionTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     .
-
     Time: 1 seconds, Memory: 5.25Mb
-
     OK (1 test, 1 assertion)
 
 Without the error suppression the test would fail reporting
@@ -837,14 +786,10 @@ Testing the output of a function or method
 ::
 
     phpunit OutputTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     .F
-
     Time: 0 seconds, Memory: 5.75Mb
-
     There was 1 failure:
-
     1) OutputTest::testExpectBarActualBaz
     Failed asserting that two strings are equal.
     --- Expected
@@ -852,7 +797,6 @@ Testing the output of a function or method
     @@ @@
     -'bar'
     +'baz'
-
     FAILURES!
     Tests: 2, Assertions: 2, Failures: 1.
 
@@ -915,14 +859,10 @@ Error output generated when an array comparison fails
 ::
 
     phpunit ArrayDiffTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
-
     Time: 0 seconds, Memory: 5.25Mb
-
     There was 1 failure:
-
     1) ArrayDiffTest::testEquality
     Failed asserting that two arrays are equal.
     --- Expected
@@ -937,9 +877,7 @@ Error output generated when an array comparison fails
     4 => 5
     5 => 6
     )
-
     /home/sb/ArrayDiffTest.php:7
-
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -973,14 +911,10 @@ Error output when an array comparison of an long array fails
 ::
 
     phpunit LongArrayDiffTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
-
     Time: 0 seconds, Memory: 5.25Mb
-
     There was 1 failure:
-
     1) LongArrayDiffTest::testEquality
     Failed asserting that two arrays are equal.
     --- Expected
@@ -993,9 +927,7 @@ Error output when an array comparison of an long array fails
     16 => 5
     17 => 6
     )
-
     /home/sb/LongArrayDiffTest.php:7
-
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
@@ -1035,14 +967,10 @@ Edge case in the diff generation when using weak comparison
 ::
 
     phpunit ArrayWeakComparisonTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
-
     Time: 0 seconds, Memory: 5.25Mb
-
     There was 1 failure:
-
     1) ArrayWeakComparisonTest::testEquality
     Failed asserting that two arrays are equal.
     --- Expected
@@ -1058,9 +986,7 @@ Edge case in the diff generation when using weak comparison
     4 => 5
     5 => 6
     )
-
     /home/sb/ArrayWeakComparisonTest.php:7
-
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
