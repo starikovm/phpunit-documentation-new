@@ -5,5 +5,5 @@ BASEDIR=`dirname "$0"`
 for f in ${BASEDIR}/../docbook/*.xml
 do
     BASENAME=$(basename "$f" .xml)
-    python ${BASEDIR}/DocBookToReST.py ${f} > ${BASEDIR}/../src/source/${BASENAME}.rst
+    python ${BASEDIR}/DocBookToReST.py ${f} > ${BASEDIR}/../source/${BASENAME}.rst
 done
