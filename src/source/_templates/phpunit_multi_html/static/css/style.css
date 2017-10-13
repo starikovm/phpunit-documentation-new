@@ -39,7 +39,7 @@ dd {
   margin-left:1em;
 }
 
-pre code, pre.screen, code {
+div.highlight pre, pre code, pre.screen, code {
   font-family: 'Source Code Pro', sans-serif;
   font-size: 1em;
 }
