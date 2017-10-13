@@ -31,7 +31,7 @@ REMOVE_COMMENTS = False
 # If this option is False, only labels that are used in links are generated.
 WRITE_UNUSED_LABELS = True
 
-UNESCAPED_TAGS = ["userinput", "screen", "programlisting", "literal"]
+UNESCAPED_TAGS = ["prompt", "userinput", "screen", "programlisting", "literal"]
 
 import sys
 import re
@@ -142,6 +142,10 @@ def _concat(el):
         if el.tag not in UNESCAPED_TAGS:
             s += _remove_indent_and_escape(el.text)
         else:
+            if el.tag == 'userinput' \
+                    and not el.text.startswith('$') \
+                    and 'installation.xml' not in el.base:
+                el.text = '$  ' + el.text
             s += el.text
     for i in el.getchildren():
         s += _conv(i)

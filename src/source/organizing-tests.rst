@@ -44,7 +44,7 @@ command-line test runner to the test directory:
 
 ::
 
-    phpunit --bootstrap src/autoload.php tests
+    $  phpunit --bootstrap src/autoload.php tests
     PHPUnit 6.4.0 by Sebastian Bergmann.
 
     .................................
@@ -64,7 +64,7 @@ the following command:
 
 ::
 
-    phpunit --bootstrap src/autoload.php tests/CurrencyTest
+    $  phpunit --bootstrap src/autoload.php tests/CurrencyTest
     PHPUnit 6.4.0 by Sebastian Bergmann.
 
     ........
@@ -78,7 +78,7 @@ For more fine-grained control of which tests to run we can use the
 
 ::
 
-    phpunit --bootstrap src/autoload.php --filter testObjectCanBeConstructedForValidConstructorArgument tests
+    $  phpunit --bootstrap src/autoload.php --filter testObjectCanBeConstructedForValidConstructorArgument tests
     PHPUnit 6.4.0 by Sebastian Bergmann.
 
     ..

@@ -75,7 +75,7 @@ example:
 
 ::
 
-    phpunit --verbose SampleTest
+    $  phpunit --verbose SampleTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     I
@@ -159,7 +159,7 @@ following example:
 
 ::
 
-    phpunit --verbose DatabaseTest
+    $  phpunit --verbose DatabaseTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     S

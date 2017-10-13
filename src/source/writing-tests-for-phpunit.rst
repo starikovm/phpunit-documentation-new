@@ -187,7 +187,7 @@ Exploiting the dependencies between tests
 
 ::
 
-    phpunit --verbose DependencyFailureTest
+    $  phpunit --verbose DependencyFailureTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     FS
@@ -259,7 +259,7 @@ Test with multiple dependencies
 
 ::
 
-    phpunit --verbose MultipleDependenciesTest
+    $  phpunit --verbose MultipleDependenciesTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     ...
@@ -319,7 +319,7 @@ Using a data provider that returns an array of arrays
 
 ::
 
-    phpunit DataTest
+    $  phpunit DataTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     ...F
@@ -373,7 +373,7 @@ Using a data provider with named datasets
 
 ::
 
-    phpunit DataTest
+    $  phpunit DataTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     ...F
@@ -421,7 +421,7 @@ Using a data provider that returns an Iterator object
 
 ::
 
-    phpunit DataTest
+    $  phpunit DataTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     ...F
@@ -539,7 +539,7 @@ Combination of @depends and @dataProvider in same test
 
 ::
 
-    phpunit --verbose DependencyAndDataProviderComboTest
+    $  phpunit --verbose DependencyAndDataProviderComboTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     ...F
@@ -610,7 +610,7 @@ Using the expectException() method
 
 ::
 
-    phpunit ExceptionTest
+    $  phpunit ExceptionTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     F
@@ -662,7 +662,7 @@ Using the @expectedException annotation
 
 ::
 
-    phpunit ExceptionTest
+    $  phpunit ExceptionTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     F
@@ -718,7 +718,7 @@ Expecting a PHP error using @expectedException
 
 ::
 
-    phpunit -d error_reporting=2 ExpectedErrorTest
+    $  phpunit -d error_reporting=2 ExpectedErrorTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     .
@@ -777,7 +777,7 @@ Testing return values of code that uses PHP Errors
 
 ::
 
-    phpunit ErrorSuppressionTest
+    $  phpunit ErrorSuppressionTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     .
@@ -836,7 +836,7 @@ Testing the output of a function or method
 
 ::
 
-    phpunit OutputTest
+    $  phpunit OutputTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     .F
@@ -914,7 +914,7 @@ Error output generated when an array comparison fails
 
 ::
 
-    phpunit ArrayDiffTest
+    $  phpunit ArrayDiffTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     F
@@ -972,7 +972,7 @@ Error output when an array comparison of an long array fails
 
 ::
 
-    phpunit LongArrayDiffTest
+    $  phpunit LongArrayDiffTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     F
@@ -1034,7 +1034,7 @@ Edge case in the diff generation when using weak comparison
 
 ::
 
-    phpunit ArrayWeakComparisonTest
+    $  phpunit ArrayWeakComparisonTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     F

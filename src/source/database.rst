@@ -419,8 +419,8 @@ configurations from the command-line interface:
 
 ::
 
-    user@desktop> phpunit --configuration developer-a.xml MyTests/
-    user@desktop> phpunit --configuration developer-b.xml MyTests/
+    $  user@desktop> phpunit --configuration developer-a.xml MyTests/
+    $  user@desktop> phpunit --configuration developer-b.xml MyTests/
 
 The possibility to run the database tests against different
 database targets easily is very important if you are developing on
@@ -699,7 +699,7 @@ invoking ``mysqldump`` like so:
 
 ::
 
-    mysqldump --xml -t -u [username] --password=[password] [database] > /path/to/file.xml
+    $  mysqldump --xml -t -u [username] --password=[password] [database] > /path/to/file.xml
 
 This file can be used in your Database TestCase by calling the
 ``createMySQLXMLDataSet($filename)`` method:
