@@ -1005,7 +1005,7 @@ dependencies of your project. Here is a minimal example of a
 ``composer.json`` file that just defines a development-time
 dependency on PHPUnit 4.6 and vfsStream:
 
-::
+.. code-block:: bash
 
     {
         "require-dev": {

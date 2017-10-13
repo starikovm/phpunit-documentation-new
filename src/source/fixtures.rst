@@ -151,7 +151,6 @@ case class.
     }
     ?>
 .. code-block:: bash
-    :name: fixtures.examples.TemplateMethodsTest.php-bash
 
     $  phpunit TemplateMethodsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -333,7 +332,7 @@ control the backup and restore operations for global variables.
 Alternatively, you can provide a blacklist of global variables that are to
 be excluded from the backup and restore operations like this
 
-::
+.. code-block:: bash
 
     class MyTest extends TestCase
     {
@@ -379,7 +378,7 @@ not static variables within functions.
 You can provide a blacklist of static attributes that are to be excluded
 from the backup and restore operations:
 
-::
+.. code-block:: bash
 
     class MyTest extends TestCase
     {

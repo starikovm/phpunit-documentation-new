@@ -176,7 +176,6 @@ exploiting the dependencies between tests as shown in
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.examples.DependencyFailureTest.php-bash
 
     $  phpunit --verbose DependencyFailureTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -245,7 +244,6 @@ See :ref:`writing-tests-for-phpunit.examples.MultipleDependencies.php`
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.examples.MultipleDependencies.php-bash
 
     $  phpunit --verbose MultipleDependenciesTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -302,7 +300,6 @@ of the array as its arguments.
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.data-providers.examples.DataTest.php-bash
 
     $  phpunit DataTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -353,7 +350,6 @@ Output will be more verbose as it'll contain that name of a dataset that breaks 
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.data-providers.examples.DataTest1.php-bash
 
     $  phpunit DataTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -398,7 +394,6 @@ Output will be more verbose as it'll contain that name of a dataset that breaks 
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.data-providers.examples.DataTest2.php-bash
 
     $  phpunit DataTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -510,7 +505,6 @@ See :ref:`writing-tests-for-phpunit.data-providers.examples.DependencyAndDataPro
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.data-providers.examples.DependencyAndDataProviderCombo.php-bash
 
     $  phpunit --verbose DependencyAndDataProviderComboTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -578,7 +572,6 @@ whether an exception is thrown by the code under test.
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php-bash
 
     $  phpunit ExceptionTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -627,7 +620,6 @@ shows an example.
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.exceptions.examples.ExceptionTest2.php-bash
 
     $  phpunit ExceptionTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -680,7 +672,6 @@ shown in :ref:`writing-tests-for-phpunit.exceptions.examples.ErrorTest.php`.
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.exceptions.examples.ErrorTest.php-bash
 
     $  phpunit -d error_reporting=2 ExpectedErrorTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -736,7 +727,6 @@ suppressing notices that would lead to a phpunit
 
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.exceptions.examples.TriggerErrorReturnValue.php-bash
 
     $  phpunit ErrorSuppressionTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -792,7 +782,6 @@ test will be counted as a failure.
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.output.examples.OutputTest.php-bash
 
     $  phpunit OutputTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -863,7 +852,6 @@ context as possible that can help to identify the problem.
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.error-output.examples.ArrayDiffTest.php-bash
 
     $  phpunit ArrayDiffTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -918,7 +906,6 @@ and provide a few lines of context around every difference.
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.error-output.examples.LongArrayDiffTest.php-bash
 
     $  phpunit LongArrayDiffTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -977,7 +964,6 @@ functions on arrays or objects.
     }
     ?>
 .. code-block:: bash
-    :name: writing-tests-for-phpunit.error-output.edge-cases.examples.ArrayWeakComparisonTest.php-bash
 
     $  phpunit ArrayWeakComparisonTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.

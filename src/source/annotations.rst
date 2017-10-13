@@ -41,7 +41,7 @@ on their authors.
 The ``@after`` annotation can be used to specify methods
 that should be called after each test method in a test case class.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -73,7 +73,7 @@ The ``@afterClass`` annotation can be used to specify
 static methods that should be called after all test methods in a test
 class have been run to clean up shared fixtures.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -103,7 +103,7 @@ class have been run to clean up shared fixtures.
 
 The backup and restore operations for global variables can be completely
 disabled for all tests of a test case class like this
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -118,7 +118,7 @@ disabled for all tests of a test case class like this
 The ``@backupGlobals`` annotation can also be used on the
 test method level. This allows for a fine-grained configuration of the
 backup and restore operations:
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -146,7 +146,7 @@ back up all static property values in all declared classes before each
 test and restore them afterwards. It may be used at the test case class or
 test method level:
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -180,7 +180,7 @@ test method level:
 The ``@before`` annotation can be used to specify methods
 that should be called before each test method in a test case class.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -212,7 +212,7 @@ The ``@beforeClass`` annotation can be used to specify
 static methods that should be called before any test methods in a test
 class are run to set up shared fixtures.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -254,7 +254,7 @@ For usage see :ref:`code-coverage-analysis.ignoring-code-blocks`.
 
 The ``@covers`` annotation can be used in the test code to
 specify which method(s) a test method wants to test:
-::
+.. code-block:: bash
 
     /**
      * @covers BankAccount::getBalance
@@ -399,7 +399,7 @@ with the ``@expectedException`` allows making assertions on
 the error code of a thrown exception thus being able to narrow down a
 specific exception.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -420,7 +420,7 @@ specify a class constant as an
 ``@expectedExceptionCode`` using the
 "``@expectedExceptionCode ClassName::CONST``" syntax.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -449,7 +449,7 @@ The ``@expectedExceptionMessage`` annotation works similar
 to ``@expectedExceptionCode`` as it lets you make an
 assertion on the error message of an exception.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -470,7 +470,7 @@ This can be useful to only assert that a certain name or parameter that
 was passed in shows up in the exception and not fixate the whole
 exception message in the test.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -503,7 +503,7 @@ the ``@expectedExceptionMessageRegExp`` annotation. This
 is helpful for situations where a substring is not adequate for matching
 a given message.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -526,7 +526,7 @@ a given message.
 
 A test can be tagged as belonging to one or more groups using the
 ``@group`` annotation like this
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -595,7 +595,7 @@ contains globals that are not serializable. To fix this, you can prevent
 PHPUnit from preserving global state with the
 ``@preserveGlobalState`` annotation.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -629,7 +629,7 @@ A complete list of possibilities and examples can be found at
 
 Indicates that all tests in a test class should be run in a separate
 PHP process.
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -655,7 +655,7 @@ on how to fix this.
 
 Indicates that a test should be run in a separate PHP process.
 
-::
+.. code-block:: bash
 
     use PHPUnit\Framework\TestCase;
 
@@ -706,7 +706,7 @@ As an alternative to prefixing your test method names with
 ``test``, you can use the ``@test``
 annotation in a method's DocBlock to mark it as a test method.
 
-::
+.. code-block:: bash
 
     /**
      * @test
@@ -721,14 +721,14 @@ annotation in a method's DocBlock to mark it as a test method.
 @testdox
 ########
 
-::
+.. code-block:: bash
 
 .. _appendixes.annotations.ticket:
 
 @ticket
 #######
 
-::
+.. code-block:: bash
 
 .. _appendixes.annotations.uses:
 
@@ -739,7 +739,7 @@ The ``@uses`` annotation specifies code which will be
 executed by a test, but is not intended to be covered by the test. A good
 example is a value object which is necessary for testing a unit of code.
 
-::
+.. code-block:: bash
 
     /**
      * @covers BankAccount::deposit

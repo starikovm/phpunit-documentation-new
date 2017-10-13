@@ -352,7 +352,6 @@ and the second value is the actual one.
     $result = PHPUnit_TextUI_TestRunner::run($test);
     ?>
 .. code-block:: bash
-    :name: extending-phpunit.examples.DataDrivenTest.php-bash
 
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 

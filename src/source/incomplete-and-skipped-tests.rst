@@ -13,11 +13,12 @@ Incomplete Tests
 
 When you are working on a new test case class, you might want to begin
 by writing empty test methods such as:
-::
+.. code-block:: bash
 
     public function testSomething()
     {
     }
+
 to keep track of the tests that you have to write. The
 problem with empty test methods is that they are interpreted as a
 success by the PHPUnit framework. This misinterpretation leads to the
@@ -70,7 +71,7 @@ An incomplete test is denoted by an ``I`` in the output
 of the PHPUnit command-line test runner, as shown in the following
 example:
 
-::
+.. code-block:: bash
 
     $  phpunit --verbose SampleTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -149,7 +150,7 @@ A test that has been skipped is denoted by an ``S`` in
 the output of the PHPUnit command-line test runner, as shown in the
 following example:
 
-::
+.. code-block:: bash
 
     $  phpunit --verbose DatabaseTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.

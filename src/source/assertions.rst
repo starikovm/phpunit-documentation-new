@@ -66,7 +66,6 @@ Reports an error identified by ``$message`` if ``$array`` does not have the ``$k
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertArrayHasKey.example-bash
 
     $ phpunit ArrayHasKeyTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -112,7 +111,6 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertClassHasAttribute.example-bash
 
     $  phpunit ClassHasAttributeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -158,7 +156,6 @@ Reports an error identified by ``$message`` if ``$array`` does not contains the 
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertArraySubset.example-bash
 
     $  phpunit ArrayHasKeyTest
     PHPUnit 4.4.0 by Sebastian Bergmann.
@@ -209,7 +206,6 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertClassHasStaticAttribute.example-bash
 
     $  phpunit ClassHasStaticAttributeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -257,7 +253,6 @@ Reports an error identified by ``$message`` if ``$needle`` is not an element of 
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertContains.example-bash
 
     $  phpunit ContainsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -298,7 +293,6 @@ If ``$ignoreCase`` is ``true``, the test will be case insensitive.
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertContains.example2-bash
 
     $  phpunit ContainsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -338,7 +332,6 @@ If ``$ignoreCase`` is ``true``, the test will be case insensitive.
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertContains.example3-bash
 
     $  phpunit ContainsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -388,7 +381,6 @@ Reports an error identified by ``$message`` if ``$haystack`` does not contain on
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertContainsOnly.example-bash
 
     $  phpunit ContainsOnlyTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -439,7 +431,6 @@ Reports an error identified by ``$message`` if ``$haystack`` does not contain on
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertContainsOnlyInstancesOf.example-bash
 
     $  phpunit ContainsOnlyInstancesOfTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -485,7 +476,6 @@ Reports an error identified by ``$message`` if the number of elements in ``$hays
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertCount.example-bash
 
     $  phpunit CountTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -531,7 +521,6 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertDirectoryExists.example-bash
 
     $  phpunit DirectoryExistsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -577,7 +566,6 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertDirectoryIsReadable.example-bash
 
     $  phpunit DirectoryIsReadableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -623,7 +611,6 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertDirectoryIsWritable.example-bash
 
     $  phpunit DirectoryIsWritableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -671,7 +658,6 @@ Reports an error identified by ``$message`` if ``$actual`` is not empty.
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertEmpty.example-bash
 
     $  phpunit EmptyTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -757,7 +743,6 @@ Reports an error identified by ``$message`` if the XML Structure of the DOMEleme
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertEqualXMLStructure.example-bash
 
     $  phpunit EqualXMLStructureTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -842,7 +827,6 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertEquals.example-bash
 
     $  phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -913,7 +897,6 @@ Please read "`What Every Computer Scientist Should Know About Floating-Point Ari
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertEquals.example2-bash
 
     $  phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -958,7 +941,6 @@ Reports an error identified by ``$message`` if the uncommented canonical form of
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertEquals.example3-bash
 
     $  phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1015,7 +997,6 @@ Reports an error identified by ``$message`` if the two objects ``$expected`` and
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertEquals.example4-bash
 
     $  phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1063,7 +1044,6 @@ Reports an error identified by ``$message`` if the two arrays ``$expected`` and 
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertEquals.example5-bash
 
     $  phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1119,7 +1099,6 @@ Reports an error identified by ``$message`` if ``$condition`` is ``true``.
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertFalse.example-bash
 
     $  phpunit FalseTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1165,7 +1144,6 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertFileEquals.example-bash
 
     $  phpunit FileEqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1217,7 +1195,6 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertFileExists.example-bash
 
     $  phpunit FileExistsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1263,7 +1240,6 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertFileIsReadable.example-bash
 
     $  phpunit FileIsReadableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1309,7 +1285,6 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertFileIsWritable.example-bash
 
     $  phpunit FileIsWritableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1355,7 +1330,6 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertGreaterThan.example-bash
 
     $  phpunit GreaterThanTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1401,7 +1375,6 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertGreaterThanOrEqual.example-bash
 
     $  phpunit GreaterThanOrEqualTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1447,7 +1420,6 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``INF``.
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertInfinite.example-bash
 
     $  phpunit InfiniteTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1495,7 +1467,6 @@ Reports an error identified by ``$message`` if ``$actual`` is not an instance of
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertInstanceOf.example-bash
 
     $  phpunit InstanceOfTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1543,7 +1514,6 @@ Reports an error identified by ``$message`` if ``$actual`` is not of the ``$expe
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertInternalType.example-bash
 
     $  phpunit InternalTypeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1589,7 +1559,6 @@ Reports an error identified by ``$message`` if the file or directory specified b
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertIsReadable.example-bash
 
     $  phpunit IsReadableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1635,7 +1604,6 @@ Reports an error identified by ``$message`` if the file or directory specified b
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertIsWritable.example-bash
 
     $  phpunit IsWritableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1681,7 +1649,6 @@ Reports an error identified by ``$message`` if the value of ``$actualFile`` does
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertJsonFileEqualsJsonFile.example-bash
 
     $  phpunit JsonFileEqualsJsonFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1728,7 +1695,6 @@ Reports an error identified by ``$message`` if the value of ``$actualJson`` does
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertJsonStringEqualsJsonFile.example-bash
 
     $  phpunit JsonStringEqualsJsonFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1776,7 +1742,6 @@ Reports an error identified by ``$message`` if the value of ``$actualJson`` does
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertJsonStringEqualsJsonString.example-bash
 
     $  phpunit JsonStringEqualsJsonStringTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1829,7 +1794,6 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertLessThan.example-bash
 
     $  phpunit LessThanTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1875,7 +1839,6 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertLessThanOrEqual.example-bash
 
     $  phpunit LessThanOrEqualTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1919,7 +1882,6 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``NAN``.
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertNan.example-bash
 
     $  phpunit NanTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1965,7 +1927,6 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``null``.
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertNull.example-bash
 
     $  phpunit NotNullTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2011,7 +1972,6 @@ Reports an error identified by ``$message`` if ``$object->attributeName`` does n
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertObjectHasAttribute.example-bash
 
     $  phpunit ObjectHasAttributeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2057,7 +2017,6 @@ Reports an error identified by ``$message`` if ``$string`` does not match the re
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertRegExp.example-bash
 
     $  phpunit RegExpTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2103,7 +2062,6 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertStringMatchesFormat.example-bash
 
     $  phpunit StringMatchesFormatTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2195,7 +2153,6 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertStringMatchesFormatFile.example-bash
 
     $  phpunit StringMatchesFormatFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2244,7 +2201,6 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertSame.example-bash
 
     $  phpunit SameTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2283,7 +2239,6 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertSame.example2-bash
 
     $  phpunit SameTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2329,7 +2284,6 @@ Reports an error identified by ``$message`` if the ``$string`` does not end with
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertStringEndsWith.example-bash
 
     $  phpunit StringEndsWithTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2375,7 +2329,6 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertStringEqualsFile.example-bash
 
     $  phpunit StringEqualsFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2427,7 +2380,6 @@ Reports an error identified by ``$message`` if the ``$string`` does not start wi
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertStringStartsWith.example-bash
 
     $  phpunit StringStartsWithTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2591,7 +2543,6 @@ Reports an error identified by ``$message`` if ``$condition`` is ``false``.
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertTrue.example-bash
 
     $  phpunit TrueTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2638,7 +2589,6 @@ Reports an error identified by ``$message`` if the XML document in ``$actualFile
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertXmlFileEqualsXmlFile.example-bash
 
     $  phpunit XmlFileEqualsXmlFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2693,7 +2643,6 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertXmlStringEqualsXmlFile.example-bash
 
     $  phpunit XmlStringEqualsXmlFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2748,7 +2697,6 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
     }
     ?>
 .. code-block:: bash
-    :name: appendixes.assertions.assertXmlStringEqualsXmlString.example-bash
 
     $  phpunit XmlStringEqualsXmlStringTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.

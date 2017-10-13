@@ -5,7 +5,7 @@
 =========
 Copyright
 =========
-::
+.. code-block:: bash
 
     Copyright (c) 2005-2017 Sebastian Bergmann.
 
@@ -418,4 +418,5 @@ Copyright
     Creative Commons may be contacted at http://creativecommons.org/.
 
     ====================================================================
+
 
