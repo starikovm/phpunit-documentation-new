@@ -140,7 +140,7 @@ used to compose a test suite out of test suites and test cases.
 Using the ``phpVersion`` and
 ``phpVersionOperator`` attributes, a required PHP version
 can be specified. The example below will only add the
-:file:`/path/to/*Test.php` files and
+:file:`/path/to/\*Test.php` files and
 :file:`/path/to/MyTest.php` file if the PHP version is at
 least 5.3.0.
 

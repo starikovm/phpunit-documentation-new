@@ -80,7 +80,7 @@ Globally installing the PHAR involves the same procedure as manually
 
 #.
 
-   Create a directory for PHP binaries; e.g., :file:`C:\bin`
+   Create a directory for PHP binaries; e.g., :file:`C:\\bin`
 
 #.
 
@@ -91,7 +91,7 @@ Globally installing the PHAR involves the same procedure as manually
 #.
 
    Download `<https://phar.phpunit.de/phpunit-6.2.phar>`_ and
-   save the file as :file:`C:\bin\phpunit.phar`
+   save the file as :file:`C:\\bin\\phpunit.phar`
 
 #.
 
@@ -103,7 +103,7 @@ Globally installing the PHAR involves the same procedure as manually
 #.
 
    Create a wrapping batch script (results in
-   :file:`C:\bin\phpunit.cmd`):
+   :file:`C:\\bin\\phpunit.cmd`):
 
    ::
 
