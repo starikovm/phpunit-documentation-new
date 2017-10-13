@@ -546,16 +546,21 @@ def biblioentry(el):
     return s
 
 def example(el):
-    s = "\n.. code-block:: php\n"
-
-    s += "    :name: %s\n" % el.get("id")
-
+    s = ""
     title = el.find("title")
     if title is not None:
-        s += "    :caption: %s\n" % _concat(title)
+        s += "\n**%s**\n" % _concat(title)
+
+    s += "\n.. code-block:: php\n"
+    s += "    :name: %s\n" % el.get("id")
 
     listing = el.find("programlisting")
     s += _indent(listing, 4)
+
+    s += "\n.. code-block:: bash\n"
+    s += "    :name: %s-bash\n" % el.get("id")
+    screen = el.find("screen")
+    s += _indent(screen, 4)
 
     s += "\n\n"
 
@@ -601,7 +606,6 @@ def glossentry(el):
 keyword = _concat
 keywordset = _concat
 abstract = _concat
-example = _concat
 bookinfo = _concat
 corpauthor = _concat
 glossary = _concat

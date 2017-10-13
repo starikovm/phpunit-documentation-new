@@ -266,12 +266,10 @@ the following code:
         :ref:`textui.examples.TestCaseClass.php` for an
         example of named data sets.
 
-        .. _textui.examples.TestCaseClass.php:
+        **Named data sets**
 
-        Named data sets
-        ^^^^^^^^^^^^^^^
-
-        ::
+        .. code-block:: php
+            :name: textui.examples.TestCaseClass.php
 
             <?php
             use PHPUnit\Framework\TestCase;
@@ -297,6 +295,8 @@ the following code:
                 }
             }
             ?>
+        .. code-block:: bash
+            :name: textui.examples.TestCaseClass.php-bash
 
     ``/path/to/my/test.phpt``
 
@@ -305,83 +305,25 @@ the following code:
     See :ref:`textui.examples.filter-patterns` for examples
     of valid filter patterns.
 
-    .. _textui.examples.filter-patterns:
+    **Filter pattern examples**
 
-    Filter pattern examples
-    ^^^^^^^^^^^^^^^^^^^^^^^
+    .. code-block:: php
+        :name: textui.examples.filter-patterns
 
-    -
-
-      ``--filter 'TestNamespace\\TestCaseClass::testMethod'``
-
-    -
-
-      ``--filter 'TestNamespace\\TestCaseClass'``
-
-    -
-
-      ``--filter TestNamespace``
-
-    -
-
-      ``--filter TestCaseClass``
-
-    -
-
-      ``--filter testMethod``
-
-    -
-
-      ``--filter '/::testMethod .*"my named data"/'``
-
-    -
-
-      ``--filter '/::testMethod .*#5$/'``
-
-    -
-
-      ``--filter '/::testMethod .*#(5|6|7)$/'``
+    .. code-block:: bash
+        :name: textui.examples.filter-patterns-bash
 
     See :ref:`textui.examples.filter-shortcuts` for some
     additional shortcuts that are available for matching data
     providers.
 
-    .. _textui.examples.filter-shortcuts:
+    **Filter shortcuts**
 
-    Filter shortcuts
-    ^^^^^^^^^^^^^^^^
+    .. code-block:: php
+        :name: textui.examples.filter-shortcuts
 
-    -
-
-      ``--filter 'testMethod#2'``
-
-    -
-
-      ``--filter 'testMethod#2-4'``
-
-    -
-
-      ``--filter '#2'``
-
-    -
-
-      ``--filter '#2-4'``
-
-    -
-
-      ``--filter 'testMethod@my named data'``
-
-    -
-
-      ``--filter 'testMethod@my.*data'``
-
-    -
-
-      ``--filter '@my named data'``
-
-    -
-
-      ``--filter '@my.*data'``
+    .. code-block:: bash
+        :name: textui.examples.filter-shortcuts-bash
 
 ``--testsuite``
 

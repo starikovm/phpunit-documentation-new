@@ -43,12 +43,10 @@ from the test methods and use the newly introduced instance variable,
 ``$stack`` with the ``assertEquals()``
 assertion method.
 
-.. _fixtures.examples.StackTest.php:
+**Using setUp() to create the stack fixture**
 
-Using setUp() to create the stack fixture
-#########################################
-
-::
+.. code-block:: php
+    :name: fixtures.examples.StackTest.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -82,6 +80,8 @@ Using setUp() to create the stack fixture
         }
     }
     ?>
+.. code-block:: bash
+    :name: fixtures.examples.StackTest.php-bash
 
 The ``setUp()`` and ``tearDown()`` template
 methods are run once for each test method (and on fresh instances) of the
@@ -95,12 +95,10 @@ test case class is run, respectively.
 The example below shows all template methods that are available in a test
 case class.
 
-.. _fixtures.examples.TemplateMethodsTest.php:
+**Example showing all template methods available**
 
-Example showing all template methods available
-##############################################
-
-::
+.. code-block:: php
+    :name: fixtures.examples.TemplateMethodsTest.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -156,8 +154,8 @@ Example showing all template methods available
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: fixtures.examples.TemplateMethodsTest.php-bash
 
     $  phpunit TemplateMethodsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -242,12 +240,10 @@ uses the ``setUpBeforeClass()`` and
 database before the test case class' first test and to disconnect from the
 database after the last test of the test case, respectively.
 
-.. _fixtures.sharing-fixture.examples.DatabaseTest.php:
+**Sharing fixture between the tests of a test suite**
 
-Sharing fixture between the tests of a test suite
-=================================================
-
-::
+.. code-block:: php
+    :name: fixtures.sharing-fixture.examples.DatabaseTest.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -267,6 +263,8 @@ Sharing fixture between the tests of a test suite
         }
     }
     ?>
+.. code-block:: bash
+    :name: fixtures.sharing-fixture.examples.DatabaseTest.php-bash
 
 It cannot be emphasized enough that sharing fixtures between tests
 reduces the value of the tests. The underlying design problem is

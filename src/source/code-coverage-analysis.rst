@@ -142,12 +142,10 @@ using the ``@codeCoverageIgnore``,
 ``@codeCoverageIgnoreEnd`` annotations as shown in
 :ref:`code-coverage-analysis.ignoring-code-blocks.examples.Sample.php`.
 
-.. _code-coverage-analysis.ignoring-code-blocks.examples.Sample.php:
+**Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCoverageIgnoreEnd`` annotations**
 
-Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCoverageIgnoreEnd`` annotations
-==========================================================================================================
-
-::
+.. code-block:: php
+    :name: code-coverage-analysis.ignoring-code-blocks.examples.Sample.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -180,6 +178,8 @@ Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCover
 
     exit; // @codeCoverageIgnore
     ?>
+.. code-block:: bash
+    :name: code-coverage-analysis.ignoring-code-blocks.examples.Sample.php-bash
 
 The ignored lines of code (marked as ignored using the annotations)
 are counted as executed (if they are executable) and will not be
@@ -198,12 +198,10 @@ method(s) will be considered.
 :ref:`code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php`
 shows an example.
 
-.. _code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php:
+**Tests that specify which method they want to cover**
 
-Tests that specify which method they want to cover
-==================================================
-
-::
+.. code-block:: php
+    :name: code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -276,6 +274,8 @@ Tests that specify which method they want to cover
         }
     }
     ?>
+.. code-block:: bash
+    :name: code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php-bash
 
 It is also possible to specify that a test should not cover
 *any* method by using the
@@ -284,12 +284,10 @@ It is also possible to specify that a test should not cover
 helpful when writing integration tests to make sure you only
 generate code coverage with unit tests.
 
-.. _code-coverage-analysis.specifying-covered-methods.examples.GuestbookIntegrationTest.php:
+**A test that specifies that no method should be covered**
 
-A test that specifies that no method should be covered
-======================================================
-
-::
+.. code-block:: php
+    :name: code-coverage-analysis.specifying-covered-methods.examples.GuestbookIntegrationTest.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -316,6 +314,9 @@ A test that specifies that no method should be covered
     }
     ?>
 
+.. code-block:: bash
+    :name: code-coverage-analysis.specifying-covered-methods.examples.GuestbookIntegrationTest.php-bash
+
 .. _code-coverage-analysis.edge-cases:
 
 Edge Cases
@@ -324,9 +325,8 @@ Edge Cases
 This section shows noteworthy edge cases that lead to confusing code
 coverage information.
 
-.. _code-coverage-analysis.edge-cases.examples.Sample.php:
-
-::
+.. code-block:: php
+    :name: code-coverage-analysis.edge-cases.examples.Sample.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -347,5 +347,7 @@ coverage information.
         this_call_will_never_show_up_as_covered();
     }
     ?>
+.. code-block:: bash
+    :name: code-coverage-analysis.edge-cases.examples.Sample.php-bash
 
 

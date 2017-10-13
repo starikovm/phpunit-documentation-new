@@ -108,12 +108,10 @@ shows a minimal :file:`phpunit.xml` file that will add all
 :file:`*Test.php` files when the :file:`tests`
 directory is recursively traversed.
 
-.. _organizing-tests.xml-configuration.examples.phpunit.xml:
+**Composing a Test Suite Using XML Configuration**
 
-Composing a Test Suite Using XML Configuration
-==============================================
-
-::
+.. code-block:: php
+    :name: organizing-tests.xml-configuration.examples.phpunit.xml
 
     <phpunit bootstrap="src/autoload.php">
       <testsuites>
@@ -122,6 +120,8 @@ Composing a Test Suite Using XML Configuration
         </testsuite>
       </testsuites>
     </phpunit>
+.. code-block:: bash
+    :name: organizing-tests.xml-configuration.examples.phpunit.xml-bash
 
 If :file:`phpunit.xml` or
 :file:`phpunit.xml.dist` (in that order) exist in the
@@ -131,12 +131,10 @@ read from that file.
 
 The order in which tests are executed can be made explicit:
 
-.. _organizing-tests.xml-configuration.examples.phpunit.xml2:
+**Composing a Test Suite Using XML Configuration**
 
-Composing a Test Suite Using XML Configuration
-==============================================
-
-::
+.. code-block:: php
+    :name: organizing-tests.xml-configuration.examples.phpunit.xml2
 
     <phpunit bootstrap="src/autoload.php">
       <testsuites>
@@ -147,5 +145,7 @@ Composing a Test Suite Using XML Configuration
         </testsuite>
       </testsuites>
     </phpunit>
+.. code-block:: bash
+    :name: organizing-tests.xml-configuration.examples.phpunit.xml2-bash
 
 

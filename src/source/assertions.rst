@@ -50,12 +50,10 @@ Reports an error identified by ``$message`` if ``$array`` does not have the ``$k
 
 ``assertArrayNotHasKey()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertArrayHasKey.example:
+**Usage of assertArrayHasKey()**
 
-Usage of assertArrayHasKey()
-============================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertArrayHasKey.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -68,8 +66,8 @@ Usage of assertArrayHasKey()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertArrayHasKey.example-bash
 
     $ phpunit ArrayHasKeyTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -99,12 +97,10 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
 
 ``assertClassNotHasAttribute()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertClassHasAttribute.example:
+**Usage of assertClassHasAttribute()**
 
-Usage of assertClassHasAttribute()
-==================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertClassHasAttribute.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -117,8 +113,8 @@ Usage of assertClassHasAttribute()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertClassHasAttribute.example-bash
 
     $  phpunit ClassHasAttributeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -148,12 +144,10 @@ Reports an error identified by ``$message`` if ``$array`` does not contains the 
 
 ``$strict`` is a flag used to compare the identity of objects within arrays.
 
-.. _appendixes.assertions.assertArraySubset.example:
+**Usage of assertArraySubset()**
 
-Usage of assertArraySubset()
-============================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertArraySubset.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -166,8 +160,8 @@ Usage of assertArraySubset()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertArraySubset.example-bash
 
     $  phpunit ArrayHasKeyTest
     PHPUnit 4.4.0 by Sebastian Bergmann.
@@ -202,12 +196,10 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
 
 ``assertClassNotHasStaticAttribute()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertClassHasStaticAttribute.example:
+**Usage of assertClassHasStaticAttribute()**
 
-Usage of assertClassHasStaticAttribute()
-========================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertClassHasStaticAttribute.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -220,8 +212,8 @@ Usage of assertClassHasStaticAttribute()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertClassHasStaticAttribute.example-bash
 
     $  phpunit ClassHasStaticAttributeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -253,12 +245,10 @@ Reports an error identified by ``$message`` if ``$needle`` is not an element of 
 
 ``assertAttributeContains()`` and ``assertAttributeNotContains()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the haystack.
 
-.. _appendixes.assertions.assertContains.example:
+**Usage of assertContains()**
 
-Usage of assertContains()
-=========================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertContains.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -271,8 +261,8 @@ Usage of assertContains()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertContains.example-bash
 
     $  phpunit ContainsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -297,12 +287,10 @@ Reports an error identified by ``$message`` if ``$needle`` is not a substring of
 
 If ``$ignoreCase`` is ``true``, the test will be case insensitive.
 
-.. _appendixes.assertions.assertContains.example2:
+**Usage of assertContains()**
 
-Usage of assertContains()
-=========================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertContains.example2
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -315,8 +303,8 @@ Usage of assertContains()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertContains.example2-bash
 
     $  phpunit ContainsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -335,12 +323,10 @@ Usage of assertContains()
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
-.. _appendixes.assertions.assertContains.example3:
+**Usage of assertContains() with $ignoreCase**
 
-Usage of assertContains() with $ignoreCase
-==========================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertContains.example3
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -358,8 +344,8 @@ Usage of assertContains() with $ignoreCase
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertContains.example3-bash
 
     $  phpunit ContainsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -393,12 +379,10 @@ Reports an error identified by ``$message`` if ``$haystack`` does not contain on
 
 ``assertAttributeContainsOnly()`` and ``assertAttributeNotContainsOnly()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the haystack.
 
-.. _appendixes.assertions.assertContainsOnly.example:
+**Usage of assertContainsOnly()**
 
-Usage of assertContainsOnly()
-=============================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertContainsOnly.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -411,8 +395,8 @@ Usage of assertContainsOnly()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertContainsOnly.example-bash
 
     $  phpunit ContainsOnlyTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -444,12 +428,10 @@ assertContainsOnlyInstancesOf()
 
 Reports an error identified by ``$message`` if ``$haystack`` does not contain only instances of class ``$classname``.
 
-.. _appendixes.assertions.assertContainsOnlyInstancesOf.example:
+**Usage of assertContainsOnlyInstancesOf()**
 
-Usage of assertContainsOnlyInstancesOf()
-========================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertContainsOnlyInstancesOf.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -465,8 +447,8 @@ Usage of assertContainsOnlyInstancesOf()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertContainsOnlyInstancesOf.example-bash
 
     $  phpunit ContainsOnlyInstancesOfTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -496,12 +478,10 @@ Reports an error identified by ``$message`` if the number of elements in ``$hays
 
 ``assertNotCount()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertCount.example:
+**Usage of assertCount()**
 
-Usage of assertCount()
-======================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertCount.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -514,8 +494,8 @@ Usage of assertCount()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertCount.example-bash
 
     $  phpunit CountTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -545,12 +525,10 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
 
 ``assertDirectoryNotExists()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertDirectoryExists.example:
+**Usage of assertDirectoryExists()**
 
-Usage of assertDirectoryExists()
-================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertDirectoryExists.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -563,8 +541,8 @@ Usage of assertDirectoryExists()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertDirectoryExists.example-bash
 
     $  phpunit DirectoryExistsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -594,12 +572,10 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
 
 ``assertDirectoryNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertDirectoryIsReadable.example:
+**Usage of assertDirectoryIsReadable()**
 
-Usage of assertDirectoryIsReadable()
-====================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertDirectoryIsReadable.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -612,8 +588,8 @@ Usage of assertDirectoryIsReadable()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertDirectoryIsReadable.example-bash
 
     $  phpunit DirectoryIsReadableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -643,12 +619,10 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
 
 ``assertDirectoryNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertDirectoryIsWritable.example:
+**Usage of assertDirectoryIsWritable()**
 
-Usage of assertDirectoryIsWritable()
-====================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertDirectoryIsWritable.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -661,8 +635,8 @@ Usage of assertDirectoryIsWritable()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertDirectoryIsWritable.example-bash
 
     $  phpunit DirectoryIsWritableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -694,12 +668,10 @@ Reports an error identified by ``$message`` if ``$actual`` is not empty.
 
 ``assertAttributeEmpty()`` and ``assertAttributeNotEmpty()`` are convenience wrappers that can be applied to a ``public``, ``protected``, or ``private`` attribute of a class or object.
 
-.. _appendixes.assertions.assertEmpty.example:
+**Usage of assertEmpty()**
 
-Usage of assertEmpty()
-======================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertEmpty.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -712,8 +684,8 @@ Usage of assertEmpty()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertEmpty.example-bash
 
     $  phpunit EmptyTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -741,12 +713,10 @@ assertEqualXMLStructure()
 
 Reports an error identified by ``$message`` if the XML Structure of the DOMElement in ``$actualElement`` is not equal to the XML structure of the DOMElement in ``$expectedElement``.
 
-.. _appendixes.assertions.assertEqualXMLStructure.example:
+**Usage of assertEqualXMLStructure()**
 
-Usage of assertEqualXMLStructure()
-==================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertEqualXMLStructure.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -801,8 +771,8 @@ Usage of assertEqualXMLStructure()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertEqualXMLStructure.example-bash
 
     $  phpunit EqualXMLStructureTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -861,12 +831,10 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
 
 ``assertAttributeEquals()`` and ``assertAttributeNotEquals()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-.. _appendixes.assertions.assertEquals.example:
+**Usage of assertEquals()**
 
-Usage of assertEquals()
-=======================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertEquals.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -889,8 +857,8 @@ Usage of assertEquals()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertEquals.example-bash
 
     $  phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -940,12 +908,10 @@ Reports an error identified by ``$message`` if the two floats ``$expected`` and 
 
 Please read "`What Every Computer Scientist Should Know About Floating-Point Arithmetic <http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html>`_" to understand why ``$delta`` is neccessary.
 
-.. _appendixes.assertions.assertEquals.example2:
+**Usage of assertEquals() with floats**
 
-Usage of assertEquals() with floats
-===================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertEquals.example2
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -963,8 +929,8 @@ Usage of assertEquals() with floats
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertEquals.example2-bash
 
     $  phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -987,12 +953,10 @@ Usage of assertEquals() with floats
 
 Reports an error identified by ``$message`` if the uncommented canonical form of the XML documents represented by the two DOMDocument objects ``$expected`` and ``$actual`` are not equal.
 
-.. _appendixes.assertions.assertEquals.example3:
+**Usage of assertEquals() with DOMDocument objects**
 
-Usage of assertEquals() with DOMDocument objects
-================================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertEquals.example3
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1011,8 +975,8 @@ Usage of assertEquals() with DOMDocument objects
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertEquals.example3-bash
 
     $  phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1045,12 +1009,10 @@ Usage of assertEquals() with DOMDocument objects
 
 Reports an error identified by ``$message`` if the two objects ``$expected`` and ``$actual`` do not have equal attribute values.
 
-.. _appendixes.assertions.assertEquals.example4:
+**Usage of assertEquals() with objects**
 
-Usage of assertEquals() with objects
-====================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertEquals.example4
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1071,8 +1033,8 @@ Usage of assertEquals() with objects
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertEquals.example4-bash
 
     $  phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1104,12 +1066,10 @@ Usage of assertEquals() with objects
 
 Reports an error identified by ``$message`` if the two arrays ``$expected`` and ``$actual`` are not equal.
 
-.. _appendixes.assertions.assertEquals.example5:
+**Usage of assertEquals() with arrays**
 
-Usage of assertEquals() with arrays
-===================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertEquals.example5
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1122,8 +1082,8 @@ Usage of assertEquals() with arrays
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertEquals.example5-bash
 
     $  phpunit EqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1163,12 +1123,10 @@ Reports an error identified by ``$message`` if ``$condition`` is ``true``.
 
 ``assertNotFalse()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertFalse.example:
+**Usage of assertFalse()**
 
-Usage of assertFalse()
-======================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertFalse.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1181,8 +1139,8 @@ Usage of assertFalse()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertFalse.example-bash
 
     $  phpunit FalseTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1212,12 +1170,10 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
 
 ``assertFileNotEquals()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertFileEquals.example:
+**Usage of assertFileEquals()**
 
-Usage of assertFileEquals()
-===========================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertFileEquals.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1230,8 +1186,8 @@ Usage of assertFileEquals()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertFileEquals.example-bash
 
     $  phpunit FileEqualsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1267,12 +1223,10 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
 
 ``assertFileNotExists()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertFileExists.example:
+**Usage of assertFileExists()**
 
-Usage of assertFileExists()
-===========================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertFileExists.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1285,8 +1239,8 @@ Usage of assertFileExists()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertFileExists.example-bash
 
     $  phpunit FileExistsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1316,12 +1270,10 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
 
 ``assertFileNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertFileIsReadable.example:
+**Usage of assertFileIsReadable()**
 
-Usage of assertFileIsReadable()
-===============================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertFileIsReadable.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1334,8 +1286,8 @@ Usage of assertFileIsReadable()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertFileIsReadable.example-bash
 
     $  phpunit FileIsReadableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1365,12 +1317,10 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
 
 ``assertFileNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertFileIsWritable.example:
+**Usage of assertFileIsWritable()**
 
-Usage of assertFileIsWritable()
-===============================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertFileIsWritable.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1383,8 +1333,8 @@ Usage of assertFileIsWritable()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertFileIsWritable.example-bash
 
     $  phpunit FileIsWritableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1414,12 +1364,10 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
 
 ``assertAttributeGreaterThan()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-.. _appendixes.assertions.assertGreaterThan.example:
+**Usage of assertGreaterThan()**
 
-Usage of assertGreaterThan()
-============================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertGreaterThan.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1432,8 +1380,8 @@ Usage of assertGreaterThan()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertGreaterThan.example-bash
 
     $  phpunit GreaterThanTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1463,12 +1411,10 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
 
 ``assertAttributeGreaterThanOrEqual()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-.. _appendixes.assertions.assertGreaterThanOrEqual.example:
+**Usage of assertGreaterThanOrEqual()**
 
-Usage of assertGreaterThanOrEqual()
-===================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertGreaterThanOrEqual.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1481,8 +1427,8 @@ Usage of assertGreaterThanOrEqual()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertGreaterThanOrEqual.example-bash
 
     $  phpunit GreaterThanOrEqualTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1512,12 +1458,10 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``INF``.
 
 ``assertFinite()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertInfinite.example:
+**Usage of assertInfinite()**
 
-Usage of assertInfinite()
-=========================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertInfinite.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1530,8 +1474,8 @@ Usage of assertInfinite()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertInfinite.example-bash
 
     $  phpunit InfiniteTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1563,12 +1507,10 @@ Reports an error identified by ``$message`` if ``$actual`` is not an instance of
 
 ``assertAttributeInstanceOf()`` and ``assertAttributeNotInstanceOf()`` are convenience wrappers that can be applied to a ``public``, ``protected``, or ``private`` attribute of a class or object.
 
-.. _appendixes.assertions.assertInstanceOf.example:
+**Usage of assertInstanceOf()**
 
-Usage of assertInstanceOf()
-===========================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertInstanceOf.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1581,8 +1523,8 @@ Usage of assertInstanceOf()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertInstanceOf.example-bash
 
     $  phpunit InstanceOfTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1614,12 +1556,10 @@ Reports an error identified by ``$message`` if ``$actual`` is not of the ``$expe
 
 ``assertAttributeInternalType()`` and ``assertAttributeNotInternalType()`` are convenience wrappers that can be applied to a ``public``, ``protected``, or ``private`` attribute of a class or object.
 
-.. _appendixes.assertions.assertInternalType.example:
+**Usage of assertInternalType()**
 
-Usage of assertInternalType()
-=============================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertInternalType.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1632,8 +1572,8 @@ Usage of assertInternalType()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertInternalType.example-bash
 
     $  phpunit InternalTypeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1663,12 +1603,10 @@ Reports an error identified by ``$message`` if the file or directory specified b
 
 ``assertNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertIsReadable.example:
+**Usage of assertIsReadable()**
 
-Usage of assertIsReadable()
-===========================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertIsReadable.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1681,8 +1619,8 @@ Usage of assertIsReadable()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertIsReadable.example-bash
 
     $  phpunit IsReadableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1712,12 +1650,10 @@ Reports an error identified by ``$message`` if the file or directory specified b
 
 ``assertNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertIsWritable.example:
+**Usage of assertIsWritable()**
 
-Usage of assertIsWritable()
-===========================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertIsWritable.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1730,8 +1666,8 @@ Usage of assertIsWritable()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertIsWritable.example-bash
 
     $  phpunit IsWritableTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1760,12 +1696,10 @@ assertJsonFileEqualsJsonFile()
 Reports an error identified by ``$message`` if the value of ``$actualFile`` does not match the value of
 ``$expectedFile``.
 
-.. _appendixes.assertions.assertJsonFileEqualsJsonFile.example:
+**Usage of assertJsonFileEqualsJsonFile()**
 
-Usage of assertJsonFileEqualsJsonFile()
-=======================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertJsonFileEqualsJsonFile.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1779,8 +1713,8 @@ Usage of assertJsonFileEqualsJsonFile()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertJsonFileEqualsJsonFile.example-bash
 
     $  phpunit JsonFileEqualsJsonFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1809,12 +1743,10 @@ assertJsonStringEqualsJsonFile()
 Reports an error identified by ``$message`` if the value of ``$actualJson`` does not match the value of
 ``$expectedFile``.
 
-.. _appendixes.assertions.assertJsonStringEqualsJsonFile.example:
+**Usage of assertJsonStringEqualsJsonFile()**
 
-Usage of assertJsonStringEqualsJsonFile()
-=========================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertJsonStringEqualsJsonFile.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1829,8 +1761,8 @@ Usage of assertJsonStringEqualsJsonFile()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertJsonStringEqualsJsonFile.example-bash
 
     $  phpunit JsonStringEqualsJsonFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1859,12 +1791,10 @@ assertJsonStringEqualsJsonString()
 Reports an error identified by ``$message`` if the value of ``$actualJson`` does not match the value of
 ``$expectedJson``.
 
-.. _appendixes.assertions.assertJsonStringEqualsJsonString.example:
+**Usage of assertJsonStringEqualsJsonString()**
 
-Usage of assertJsonStringEqualsJsonString()
-===========================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertJsonStringEqualsJsonString.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1880,8 +1810,8 @@ Usage of assertJsonStringEqualsJsonString()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertJsonStringEqualsJsonString.example-bash
 
     $  phpunit JsonStringEqualsJsonStringTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1918,12 +1848,10 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
 
 ``assertAttributeLessThan()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-.. _appendixes.assertions.assertLessThan.example:
+**Usage of assertLessThan()**
 
-Usage of assertLessThan()
-=========================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertLessThan.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1936,8 +1864,8 @@ Usage of assertLessThan()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertLessThan.example-bash
 
     $  phpunit LessThanTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -1967,12 +1895,10 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
 
 ``assertAttributeLessThanOrEqual()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-.. _appendixes.assertions.assertLessThanOrEqual.example:
+**Usage of assertLessThanOrEqual()**
 
-Usage of assertLessThanOrEqual()
-================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertLessThanOrEqual.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1985,8 +1911,8 @@ Usage of assertLessThanOrEqual()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertLessThanOrEqual.example-bash
 
     $  phpunit LessThanOrEqualTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2014,12 +1940,10 @@ assertNan()
 
 Reports an error identified by ``$message`` if ``$variable`` is not ``NAN``.
 
-.. _appendixes.assertions.assertNan.example:
+**Usage of assertNan()**
 
-Usage of assertNan()
-====================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertNan.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2032,8 +1956,8 @@ Usage of assertNan()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertNan.example-bash
 
     $  phpunit NanTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2063,12 +1987,10 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``null``.
 
 ``assertNotNull()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertNull.example:
+**Usage of assertNull()**
 
-Usage of assertNull()
-=====================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertNull.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2081,8 +2003,8 @@ Usage of assertNull()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertNull.example-bash
 
     $  phpunit NotNullTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2112,12 +2034,10 @@ Reports an error identified by ``$message`` if ``$object->attributeName`` does n
 
 ``assertObjectNotHasAttribute()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertObjectHasAttribute.example:
+**Usage of assertObjectHasAttribute()**
 
-Usage of assertObjectHasAttribute()
-===================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertObjectHasAttribute.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2130,8 +2050,8 @@ Usage of assertObjectHasAttribute()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertObjectHasAttribute.example-bash
 
     $  phpunit ObjectHasAttributeTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2161,12 +2081,10 @@ Reports an error identified by ``$message`` if ``$string`` does not match the re
 
 ``assertNotRegExp()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertRegExp.example:
+**Usage of assertRegExp()**
 
-Usage of assertRegExp()
-=======================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertRegExp.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2179,8 +2097,8 @@ Usage of assertRegExp()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertRegExp.example-bash
 
     $  phpunit RegExpTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2210,12 +2128,10 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
 
 ``assertStringNotMatchesFormat()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertStringMatchesFormat.example:
+**Usage of assertStringMatchesFormat()**
 
-Usage of assertStringMatchesFormat()
-====================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertStringMatchesFormat.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2228,8 +2144,8 @@ Usage of assertStringMatchesFormat()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertStringMatchesFormat.example-bash
 
     $  phpunit StringMatchesFormatTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2305,12 +2221,10 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
 
 ``assertStringNotMatchesFormatFile()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertStringMatchesFormatFile.example:
+**Usage of assertStringMatchesFormatFile()**
 
-Usage of assertStringMatchesFormatFile()
-========================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertStringMatchesFormatFile.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2323,8 +2237,8 @@ Usage of assertStringMatchesFormatFile()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertStringMatchesFormatFile.example-bash
 
     $  phpunit StringMatchesFormatFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2357,12 +2271,10 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
 
 ``assertAttributeSame()`` and ``assertAttributeNotSame()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-.. _appendixes.assertions.assertSame.example:
+**Usage of assertSame()**
 
-Usage of assertSame()
-=====================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertSame.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2375,8 +2287,8 @@ Usage of assertSame()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertSame.example-bash
 
     $  phpunit SameTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2399,12 +2311,10 @@ Usage of assertSame()
 
 Reports an error identified by ``$message`` if the two variables ``$expected`` and ``$actual`` do not reference the same object.
 
-.. _appendixes.assertions.assertSame.example2:
+**Usage of assertSame() with objects**
 
-Usage of assertSame() with objects
-==================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertSame.example2
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2417,8 +2327,8 @@ Usage of assertSame() with objects
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertSame.example2-bash
 
     $  phpunit SameTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2448,12 +2358,10 @@ Reports an error identified by ``$message`` if the ``$string`` does not end with
 
 ``assertStringEndsNotWith()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertStringEndsWith.example:
+**Usage of assertStringEndsWith()**
 
-Usage of assertStringEndsWith()
-===============================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertStringEndsWith.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2466,8 +2374,8 @@ Usage of assertStringEndsWith()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertStringEndsWith.example-bash
 
     $  phpunit StringEndsWithTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2497,12 +2405,10 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
 
 ``assertStringNotEqualsFile()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertStringEqualsFile.example:
+**Usage of assertStringEqualsFile()**
 
-Usage of assertStringEqualsFile()
-=================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertStringEqualsFile.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2515,8 +2421,8 @@ Usage of assertStringEqualsFile()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertStringEqualsFile.example-bash
 
     $  phpunit StringEqualsFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2552,12 +2458,10 @@ Reports an error identified by ``$message`` if the ``$string`` does not start wi
 
 ``assertStringStartsNotWith()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertStringStartsWith.example:
+**Usage of assertStringStartsWith()**
 
-Usage of assertStringStartsWith()
-=================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertStringStartsWith.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2570,8 +2474,8 @@ Usage of assertStringStartsWith()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertStringStartsWith.example-bash
 
     $  phpunit StringStartsWithTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2607,12 +2511,10 @@ constraints can be used to express the same assertion as
 
 Reports an error identified by ``$message`` if the ``$value`` does not match the ``$constraint``.
 
-.. _appendixes.assertions.assertThat.example:
+**Usage of assertThat()**
 
-Usage of assertThat()
-=====================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertThat.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2633,6 +2535,8 @@ Usage of assertThat()
         }
     }
     ?>
+.. code-block:: bash
+    :name: appendixes.assertions.assertThat.example-bash
 
 :ref:`appendixes.assertions.assertThat.tables.constraints` shows the
 available ``PHPUnit_Framework_Constraint`` classes.
@@ -2755,12 +2659,10 @@ Reports an error identified by ``$message`` if ``$condition`` is ``false``.
 
 ``assertNotTrue()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertTrue.example:
+**Usage of assertTrue()**
 
-Usage of assertTrue()
-=====================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertTrue.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2773,8 +2675,8 @@ Usage of assertTrue()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertTrue.example-bash
 
     $  phpunit TrueTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2804,12 +2706,10 @@ Reports an error identified by ``$message`` if the XML document in ``$actualFile
 
 ``assertXmlFileNotEqualsXmlFile()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertXmlFileEqualsXmlFile.example:
+**Usage of assertXmlFileEqualsXmlFile()**
 
-Usage of assertXmlFileEqualsXmlFile()
-=====================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertXmlFileEqualsXmlFile.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2823,8 +2723,8 @@ Usage of assertXmlFileEqualsXmlFile()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertXmlFileEqualsXmlFile.example-bash
 
     $  phpunit XmlFileEqualsXmlFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2862,12 +2762,10 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
 
 ``assertXmlStringNotEqualsXmlFile()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertXmlStringEqualsXmlFile.example:
+**Usage of assertXmlStringEqualsXmlFile()**
 
-Usage of assertXmlStringEqualsXmlFile()
-=======================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertXmlStringEqualsXmlFile.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2881,8 +2779,8 @@ Usage of assertXmlStringEqualsXmlFile()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertXmlStringEqualsXmlFile.example-bash
 
     $  phpunit XmlStringEqualsXmlFileTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -2920,12 +2818,10 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
 
 ``assertXmlStringNotEqualsXmlString()`` is the inverse of this assertion and takes the same arguments.
 
-.. _appendixes.assertions.assertXmlStringEqualsXmlString.example:
+**Usage of assertXmlStringEqualsXmlString()**
 
-Usage of assertXmlStringEqualsXmlString()
-=========================================
-
-::
+.. code-block:: php
+    :name: appendixes.assertions.assertXmlStringEqualsXmlString.example
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -2939,8 +2835,8 @@ Usage of assertXmlStringEqualsXmlString()
         }
     }
     ?>
-
-::
+.. code-block:: bash
+    :name: appendixes.assertions.assertXmlStringEqualsXmlString.example-bash
 
     $  phpunit XmlStringEqualsXmlStringTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.

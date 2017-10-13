@@ -44,12 +44,10 @@ method ``markTestIncomplete()`` (which automatically
 raises an ``PHPUnit_Framework_IncompleteTestError``
 exception) in the test method, we mark the test as being incomplete.
 
-.. _incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php:
+**Marking a test as incomplete**
 
-Marking a test as incomplete
-============================
-
-::
+.. code-block:: php
+    :name: incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -68,6 +66,8 @@ Marking a test as incomplete
         }
     }
     ?>
+.. code-block:: bash
+    :name: incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php-bash
 
 An incomplete test is denoted by an ``I`` in the output
 of the PHPUnit command-line test runner, as shown in the following
@@ -125,12 +125,10 @@ method, ``testConnection()``. In the test case class'
 extension is available and use the ``markTestSkipped()``
 method to skip the test if it is not.
 
-.. _incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php:
+**Skipping a test**
 
-Skipping a test
-===============
-
-::
+.. code-block:: php
+    :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -152,6 +150,8 @@ Skipping a test
         }
     }
     ?>
+.. code-block:: bash
+    :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php-bash
 
 A test that has been skipped is denoted by an ``S`` in
 the output of the PHPUnit command-line test runner, as shown in the
@@ -235,12 +235,10 @@ Any extension name along with an optional version identifier
 @requires extension mysqli
 @requires extension redis 2.2.0
 
-.. _incomplete-and-skipped-tests.skipping-tests.examples.DatabaseClassSkippingTest.php:
+**Skipping test cases using @requires**
 
-Skipping test cases using @requires
-===================================
-
-::
+.. code-block:: php
+    :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseClassSkippingTest.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -261,6 +259,8 @@ Skipping test cases using @requires
         // ... All other tests require the mysqli extension
     }
     ?>
+.. code-block:: bash
+    :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseClassSkippingTest.php-bash
 
 If you are using syntax that doesn't compile with a certain PHP Version look into the xml
 configuration for version dependent includes in :ref:`appendixes.configuration.testsuites`
