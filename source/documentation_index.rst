@@ -2,7 +2,7 @@
 PHPUnit Manual
 ==============
 
-*Edition for PHPUnit 6.4. Updated on format="Y-m-d".*
+Edition for PHPUnit |version|. Updated on |today|.
 
 Sebastian Bergmann
 
