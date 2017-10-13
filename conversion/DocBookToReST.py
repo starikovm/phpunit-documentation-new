@@ -380,7 +380,7 @@ prompt = userinput
 
 def filename(el):
     _has_only_text(el)
-    return ":file:`%s`" % el.text
+    return ":file:`%s`" % _remove_indent_and_escape(el.text)
 
 def command(el):
     return ":command:`%s`" % _concat(el).strip()
