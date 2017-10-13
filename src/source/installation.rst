@@ -56,13 +56,17 @@ To globally install the PHAR:
 
 ::
 
-    $ wget https://phar.phpunit.de/phpunit-6.2.phar$ chmod +x phpunit-6.2.phar$ sudo mv phpunit-6.2.phar /usr/local/bin/phpunit$ phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
+    $ wget https://phar.phpunit.de/phpunit-6.2.phar
+    $ chmod +x phpunit-6.2.phar
+    $ sudo mv phpunit-6.2.phar /usr/local/bin/phpunit
+    $ phpunit --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 You may also use the downloaded PHAR file directly:
 
 ::
 
-    $ wget https://phar.phpunit.de/phpunit-6.2.phar$ php phpunit-6.2.phar --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
+    $ wget https://phar.phpunit.de/phpunit-6.2.phar
+    $ php phpunit-6.2.phar --versionPHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 .. _installation.phar.windows:
 
@@ -101,7 +105,9 @@ Globally installing the PHAR involves the same procedure as manually
 
    ::
 
-       C:\\Users\\username> cd C:\\binC:\\bin> echo @php "%~dp0phpunit.phar" %* > phpunit.cmdC:\\bin> exit
+       C:\\Users\\username> cd C:\\bin
+       C:\\bin> echo @php "%~dp0phpunit.phar" %* > phpunit.cmd
+       C:\\bin> exit
 
 #.
 
