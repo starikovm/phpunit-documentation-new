@@ -77,3 +77,11 @@ pre span.string {
 .right {
   text-align:right
 }
+
+.literal-block-wrapper {
+  padding: 0
+}
+
+.literal-block-wrapper .caption-text {
+    font-weight: bold;
+}

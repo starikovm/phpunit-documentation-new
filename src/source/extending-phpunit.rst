@@ -33,9 +33,8 @@ PHPUnit's own assertions are implemented. As you can see in
 ``isTrue()`` creates a matcher object that is passed on to
 ``assertThat()`` for evaluation.
 
-**The assertTrue() and isTrue() methods of the PHPUnit_Framework_Assert class**
-
 .. code-block:: php
+    :caption: The assertTrue() and isTrue() methods of the PHPUnit_Framework_Assert class
     :name: extending-phpunit.examples.Assert.php
 
     <?php
@@ -80,9 +79,8 @@ PHPUnit's own assertions are implemented. As you can see in
 abstract base class for matcher objects (or constraints),
 ``PHPUnit_Framework_Constraint``.
 
-**The PHPUnit_Framework_Constraint_IsTrue class**
-
 .. code-block:: php
+    :caption: The PHPUnit_Framework_Constraint_IsTrue class
     :name: extending-phpunit.examples.IsTrue.php
 
     <?php
@@ -132,9 +130,8 @@ Implement PHPUnit_Framework_TestListener
 shows a simple implementation of the ``PHPUnit_Framework_TestListener``
 interface.
 
-**A simple test listener**
-
 .. code-block:: php
+    :caption: A simple test listener
     :name: extending-phpunit.examples.SimpleTestListener.php
 
     <?php
@@ -197,9 +194,8 @@ abstract class, which lets you specify only the interface methods that
 are interesting for your use case, while providing empty implementations
 for all the others.
 
-**Using base test listener**
-
 .. code-block:: php
+    :caption: Using base test listener
     :name: extending-phpunit.examples.BaseTestListener.php
 
     <?php
@@ -239,9 +235,8 @@ successful.
 shows a cut-down version of the ``PHPUnit_Extensions_RepeatedTest``
 test decorator that illustrates how to write your own test decorators.
 
-**The RepeatedTest Decorator**
-
 .. code-block:: php
+    :caption: The RepeatedTest Decorator
     :name: extending-phpunit.examples.RepeatedTest.php
 
     <?php
@@ -302,9 +297,8 @@ with Comma-Separated Values (CSV). Each line of such a file looks like
 ``foo;bar``, where the first value is the one we expect
 and the second value is the actual one.
 
-**A data-driven test**
-
 .. code-block:: php
+    :caption: A data-driven test
     :name: extending-phpunit.examples.DataDrivenTest.php
 
     <?php

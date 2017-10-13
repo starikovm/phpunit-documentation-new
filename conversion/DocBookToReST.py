@@ -546,12 +546,12 @@ def biblioentry(el):
     return s
 
 def example(el):
-    s = ""
+    s = "\n.. code-block:: php\n"
+
     title = el.find("title")
     if title is not None:
-        s += "\n**%s**\n" % _concat(title)
+        s += "    :caption: %s\n" % _concat(title)
 
-    s += "\n.. code-block:: php\n"
     s += "    :name: %s\n" % el.get("id")
 
     listing = el.find("programlisting")
@@ -565,6 +565,39 @@ def example(el):
     s += "\n\n"
 
     return s
+
+def table(el):
+    title = el.find("title")
+    s = "\n.. rst-class:: table"
+    s += "\n.. list-table:: "
+    if title is not None:
+        s += title.text
+
+    s += "\n    :name: %s\n" % el.get("id")
+    s += "    :header-rows: 1\n\n"
+
+    tableGroup = el.find("tgroup")
+    tableHead = tableGroup.find("thead")
+
+    s += "    * "
+    for index, entry_element in enumerate(tableHead.find("row").findall("entry")):
+        if index == 0:
+            s += "- "
+        else:
+            s += "      - "
+        s += entry_element.text + "\n"
+
+    for row_el in tableGroup.find("tbody").findall("row"):
+        s += "    * "
+        for index, col_el in enumerate(row_el.findall("entry")):
+            if index == 0:
+                s += "- "
+            else:
+                s += "      - "
+            s += "%s\n" % _conv(col_el).strip()
+
+    return s
+
 
 def bibliography(el):
     _supports_only(el, ("biblioentry",))

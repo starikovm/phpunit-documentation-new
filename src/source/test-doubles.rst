@@ -80,9 +80,8 @@ this means that you do not need to create several temporary objects and
 wire them together afterwards. Instead, you chain method calls as shown in
 the example. This leads to more readable and "fluent" code.
 
-**The class we want to stub**
-
 .. code-block:: php
+    :caption: The class we want to stub
     :name: test-doubles.stubs.examples.SomeClass.php
 
     <?php
@@ -99,9 +98,8 @@ the example. This leads to more readable and "fluent" code.
 .. code-block:: bash
     :name: test-doubles.stubs.examples.SomeClass.php-bash
 
-**Stubbing a method call to return a fixed value**
-
 .. code-block:: php
+    :caption: Stubbing a method call to return a fixed value
     :name: test-doubles.stubs.examples.StubTest.php
 
     <?php
@@ -146,9 +144,8 @@ example of how to use the Mock Builder's fluent interface to configure the
 creation of the test double. The configuration of this test double uses
 the same best practice defaults used by ``createMock()``.
 
-**Using the Mock Builder API can be used to configure the generated test double class**
-
 .. code-block:: php
+    :caption: Using the Mock Builder API can be used to configure the generated test double class
     :name: test-doubles.stubs.examples.StubTest2.php
 
     <?php
@@ -190,9 +187,8 @@ Sometimes you want to return one of the arguments of a method call
 can achieve this using ``returnArgument()`` instead of
 ``returnValue()``.
 
-**Stubbing a method call to return one of the arguments**
-
 .. code-block:: php
+    :caption: Stubbing a method call to return one of the arguments
     :name: test-doubles.stubs.examples.StubTest3.php
 
     <?php
@@ -225,9 +221,8 @@ method return a reference to the stubbed object.
 :ref:`test-doubles.stubs.examples.StubTest4.php` shows how you
 can use ``returnSelf()`` to achieve this.
 
-**Stubbing a method call to return a reference to the stub object**
-
 .. code-block:: php
+    :caption: Stubbing a method call to return a reference to the stub object
     :name: test-doubles.stubs.examples.StubTest4.php
 
     <?php
@@ -259,9 +254,8 @@ arguments with corresponding return values. See
 :ref:`test-doubles.stubs.examples.StubTest5.php` for
 an example.
 
-**Stubbing a method call to return the value from a map**
-
 .. code-block:: php
+    :caption: Stubbing a method call to return the value from a map
     :name: test-doubles.stubs.examples.StubTest5.php
 
     <?php
@@ -301,9 +295,8 @@ argument (see ``returnArgument()``), you can use
 result of a callback function or method. See
 :ref:`test-doubles.stubs.examples.StubTest6.php` for an example.
 
-**Stubbing a method call to return a value from a callback**
-
 .. code-block:: php
+    :caption: Stubbing a method call to return a value from a callback
     :name: test-doubles.stubs.examples.StubTest6.php
 
     <?php
@@ -334,10 +327,9 @@ the ``onConsecutiveCalls()`` method. See
 :ref:`test-doubles.stubs.examples.StubTest7.php` for
 an example.
 
-**Stubbing a method call to return a list of values in the
-specified order**
-
 .. code-block:: php
+    :caption: Stubbing a method call to return a list of values in the
+specified order
     :name: test-doubles.stubs.examples.StubTest7.php
 
     <?php
@@ -368,9 +360,8 @@ Instead of returning a value, a stubbed method can also raise an
 exception. :ref:`test-doubles.stubs.examples.StubTest8.php`
 shows how to use ``throwException()`` to do this.
 
-**Stubbing a method call to throw an exception**
-
 .. code-block:: php
+    :caption: Stubbing a method call to throw an exception
     :name: test-doubles.stubs.examples.StubTest8.php
 
     <?php
@@ -445,9 +436,8 @@ observes another object. :ref:`test-doubles.mock-objects.examples.SUT.php`
 shows the code for the ``Subject`` and ``Observer``
 classes that are part of the System under Test (SUT).
 
-**The Subject and Observer classes that are part of the System under Test (SUT)**
-
 .. code-block:: php
+    :caption: The Subject and Observer classes that are part of the System under Test (SUT)
     :name: test-doubles.mock-objects.examples.SUT.php
 
     <?php
@@ -532,9 +522,8 @@ Because we are interested in verifying that a method is called, and which
 arguments it is called with, we introduce the ``expects()`` and
 ``with()`` methods to specify how this interaction should look.
 
-**Testing that a method gets called once and with a specified argument**
-
 .. code-block:: php
+    :caption: Testing that a method gets called once and with a specified argument
     :name: test-doubles.mock-objects.examples.SubjectTest.php
 
     <?php
@@ -577,10 +566,9 @@ arguments, corresponding to the number of arguments to the
 method being mocked. You can specify more advanced constraints
 on the method's arguments than a simple match.
 
-**Testing that a method gets called with a number of
-arguments constrained in different ways**
-
 .. code-block:: php
+    :caption: Testing that a method gets called with a number of
+arguments constrained in different ways
     :name: test-doubles.mock-objects.examples.SubjectTest2.php
 
     <?php
@@ -621,9 +609,8 @@ arrays of arguments, depending on the calls you want to test against.
 Each array is a list of constraints corresponding to the arguments of the
 method being mocked, like in ``with()``.
 
-**Testing that a method gets called two times with specific arguments.**
-
 .. code-block:: php
+    :caption: Testing that a method gets called two times with specific arguments.
     :name: test-doubles.mock-objects.examples.with-consecutive.php
 
     <?php
@@ -658,9 +645,8 @@ argument. The PHP callback will receive the argument to be verified as
 its only argument and should return ``true`` if the
 argument passes verification and ``false`` otherwise.
 
-**More complex argument verification**
-
 .. code-block:: php
+    :caption: More complex argument verification
     :name: test-doubles.mock-objects.examples.SubjectTest3.php
 
     <?php
@@ -697,9 +683,8 @@ argument passes verification and ``false`` otherwise.
 .. code-block:: bash
     :name: test-doubles.mock-objects.examples.SubjectTest3.php-bash
 
-**Testing that a method gets called once and with the identical object as was passed**
-
 .. code-block:: php
+    :caption: Testing that a method gets called once and with the identical object as was passed
     :name: test-doubles.mock-objects.examples.clone-object-parameters-usecase.php
 
     <?php
@@ -726,9 +711,8 @@ argument passes verification and ``false`` otherwise.
 .. code-block:: bash
     :name: test-doubles.mock-objects.examples.clone-object-parameters-usecase.php-bash
 
-**Create a mock object with cloning parameters enabled**
-
 .. code-block:: php
+    :caption: Create a mock object with cloning parameters enabled
     :name: test-doubles.mock-objects.examples.enable-clone-object-parameters.php
 
     <?php
@@ -758,31 +742,25 @@ shows the constraints that can be applied to method arguments and
 shows the matchers that are available to specify the number of
 invocations.
 
-.. _test-doubles.mock-objects.tables.matchers:
+.. rst-class:: table
+.. list-table:: Matchers
+    :name: test-doubles.mock-objects.tables.matchers
+    :header-rows: 1
 
-Matchers
-========
-
-Matcher
-Meaning
-
-``PHPUnit_Framework_MockObject_Matcher_AnyInvokedCount any()``
-Returns a matcher that matches when the method it is evaluated for is executed zero or more times.
-
-``PHPUnit_Framework_MockObject_Matcher_InvokedCount never()``
-Returns a matcher that matches when the method it is evaluated for is never executed.
-
-``PHPUnit_Framework_MockObject_Matcher_InvokedAtLeastOnce atLeastOnce()``
-Returns a matcher that matches when the method it is evaluated for is executed at least once.
-
-``PHPUnit_Framework_MockObject_Matcher_InvokedCount once()``
-Returns a matcher that matches when the method it is evaluated for is executed exactly once.
-
-``PHPUnit_Framework_MockObject_Matcher_InvokedCount exactly(int $count)``
-Returns a matcher that matches when the method it is evaluated for is executed exactly ``$count`` times.
-
-``PHPUnit_Framework_MockObject_Matcher_InvokedAtIndex at(int $index)``
-Returns a matcher that matches when the method it is evaluated for is invoked at the given ``$index``.
+    * - Matcher
+      - Meaning
+    * - ``PHPUnit_Framework_MockObject_Matcher_AnyInvokedCount any()``
+      - Returns a matcher that matches when the method it is evaluated for is executed zero or more times.
+    * - ``PHPUnit_Framework_MockObject_Matcher_InvokedCount never()``
+      - Returns a matcher that matches when the method it is evaluated for is never executed.
+    * - ``PHPUnit_Framework_MockObject_Matcher_InvokedAtLeastOnce atLeastOnce()``
+      - Returns a matcher that matches when the method it is evaluated for is executed at least once.
+    * - ``PHPUnit_Framework_MockObject_Matcher_InvokedCount once()``
+      - Returns a matcher that matches when the method it is evaluated for is executed exactly once.
+    * - ``PHPUnit_Framework_MockObject_Matcher_InvokedCount exactly(int $count)``
+      - Returns a matcher that matches when the method it is evaluated for is executed exactly ``$count`` times.
+    * - ``PHPUnit_Framework_MockObject_Matcher_InvokedAtIndex at(int $index)``
+      - Returns a matcher that matches when the method it is evaluated for is invoked at the given ``$index``.
 
 .. note::
 
@@ -839,9 +817,8 @@ shows how the same test shown in :ref:`test-doubles.mock-objects.examples.Subjec
 can be expressed using Prophecy's philosophy of prophecies and
 revelations:
 
-**Testing that a method gets called once and with a specified argument**
-
 .. code-block:: php
+    :caption: Testing that a method gets called once and with a specified argument
     :name: test-doubles.prophecy.examples.SubjectTest.php
 
     <?php
@@ -888,9 +865,8 @@ The ``getMockForTrait()`` method returns a mock object
 that uses a specified trait. All abstract methods of the given trait
 are mocked. This allows for testing the concrete methods of a trait.
 
-**Testing the concrete methods of a trait**
-
 .. code-block:: php
+    :caption: Testing the concrete methods of a trait
     :name: test-doubles.mock-objects.examples.TraitClassTest.php
 
     <?php
@@ -928,9 +904,8 @@ object for an abstract class. All abstract methods of the given abstract
 class are mocked. This allows for testing the concrete methods of an
 abstract class.
 
-**Testing the concrete methods of an abstract class**
-
 .. code-block:: php
+    :caption: Testing the concrete methods of an abstract class
     :name: test-doubles.mock-objects.examples.AbstractClassTest.php
 
     <?php
@@ -980,9 +955,8 @@ returns a stub or mock based on a PHP class or interface.
 shows how ``getMockFromWsdl()`` can be used to stub, for
 example, the web service described in :file:`GoogleSearch.wsdl`.
 
-**Stubbing a web service**
-
 .. code-block:: php
+    :caption: Stubbing a web service
     :name: test-doubles.stubbing-and-mocking-web-services.examples.GoogleTest.php
 
     <?php
@@ -1083,9 +1057,8 @@ dependency on PHPUnit 4.6 and vfsStream:
 :ref:`test-doubles.mocking-the-filesystem.examples.Example.php`
 shows a class that interacts with the filesystem.
 
-**A class that interacts with the filesystem**
-
 .. code-block:: php
+    :caption: A class that interacts with the filesystem
     :name: test-doubles.mocking-the-filesystem.examples.Example.php
 
     <?php
@@ -1117,9 +1090,8 @@ Without a virtual filesystem such as vfsStream we cannot test the
 ``setDirectory()`` method in isolation from external
 influence (see :ref:`test-doubles.mocking-the-filesystem.examples.ExampleTest.php`).
 
-**Testing a class that interacts with the filesystem**
-
 .. code-block:: php
+    :caption: Testing a class that interacts with the filesystem
     :name: test-doubles.mocking-the-filesystem.examples.ExampleTest.php
 
     <?php
@@ -1172,9 +1144,8 @@ The approach above has several drawbacks:
 shows how vfsStream can be used to mock the filesystem in a test for a
 class that interacts with the filesystem.
 
-**Mocking the filesystem in a test for a class that interacts with the filesystem**
-
 .. code-block:: php
+    :caption: Mocking the filesystem in a test for a class that interacts with the filesystem
     :name: test-doubles.mocking-the-filesystem.examples.ExampleTest2.php
 
     <?php

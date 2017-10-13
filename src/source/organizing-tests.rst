@@ -108,9 +108,8 @@ shows a minimal :file:`phpunit.xml` file that will add all
 :file:`*Test.php` files when the :file:`tests`
 directory is recursively traversed.
 
-**Composing a Test Suite Using XML Configuration**
-
 .. code-block:: php
+    :caption: Composing a Test Suite Using XML Configuration
     :name: organizing-tests.xml-configuration.examples.phpunit.xml
 
     <phpunit bootstrap="src/autoload.php">
@@ -131,9 +130,8 @@ read from that file.
 
 The order in which tests are executed can be made explicit:
 
-**Composing a Test Suite Using XML Configuration**
-
 .. code-block:: php
+    :caption: Composing a Test Suite Using XML Configuration
     :name: organizing-tests.xml-configuration.examples.phpunit.xml2
 
     <phpunit bootstrap="src/autoload.php">

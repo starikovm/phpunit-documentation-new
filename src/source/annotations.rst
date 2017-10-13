@@ -270,43 +270,33 @@ method(s) will be considered.
 :ref:`appendixes.annotations.covers.tables.annotations` shows
 the syntax of the ``@covers`` annotation.
 
-.. _appendixes.annotations.covers.tables.annotations:
+.. rst-class:: table
+.. list-table:: Annotations for specifying which methods are covered by a test
+    :name: appendixes.annotations.covers.tables.annotations
+    :header-rows: 1
 
-Annotations for specifying which methods are covered by a test
-==============================================================
-
-Annotation
-Description
-
-``@covers ClassName::methodName``
-``Specifies that the annotated test method covers the specified method.``
-
-``@covers ClassName``
-``Specifies that the annotated test method covers all methods of a given class.``
-
-``@covers ClassName<extended>``
-``Specifies that the annotated test method covers all methods of a given class and its parent class(es) and interface(s).``
-
-``@covers ClassName::<public>``
-``Specifies that the annotated test method covers all public methods of a given class.``
-
-``@covers ClassName::<protected>``
-``Specifies that the annotated test method covers all protected methods of a given class.``
-
-``@covers ClassName::<private>``
-``Specifies that the annotated test method covers all private methods of a given class.``
-
-``@covers ClassName::<!public>``
-``Specifies that the annotated test method covers all methods of a given class that are not public.``
-
-``@covers ClassName::<!protected>``
-``Specifies that the annotated test method covers all methods of a given class that are not protected.``
-
-``@covers ClassName::<!private>``
-``Specifies that the annotated test method covers all methods of a given class that are not private.``
-
-``@covers ::functionName``
-``Specifies that the annotated test method covers the specified global function.``
+    * - Annotation
+      - Description
+    * - ``@covers ClassName::methodName``
+      - ``Specifies that the annotated test method covers the specified method.``
+    * - ``@covers ClassName``
+      - ``Specifies that the annotated test method covers all methods of a given class.``
+    * - ``@covers ClassName<extended>``
+      - ``Specifies that the annotated test method covers all methods of a given class and its parent class(es) and interface(s).``
+    * - ``@covers ClassName::<public>``
+      - ``Specifies that the annotated test method covers all public methods of a given class.``
+    * - ``@covers ClassName::<protected>``
+      - ``Specifies that the annotated test method covers all protected methods of a given class.``
+    * - ``@covers ClassName::<private>``
+      - ``Specifies that the annotated test method covers all private methods of a given class.``
+    * - ``@covers ClassName::<!public>``
+      - ``Specifies that the annotated test method covers all methods of a given class that are not public.``
+    * - ``@covers ClassName::<!protected>``
+      - ``Specifies that the annotated test method covers all methods of a given class that are not protected.``
+    * - ``@covers ClassName::<!private>``
+      - ``Specifies that the annotated test method covers all methods of a given class that are not private.``
+    * - ``@covers ::functionName``
+      - ``Specifies that the annotated test method covers the specified global function.``
 
 .. _appendixes.annotations.coversDefaultClass:
 
@@ -318,9 +308,8 @@ specify a default namespace or class name. That way long names don't need to be
 repeated for every ``@covers`` annotation. See
 :ref:`appendixes.annotations.examples.CoversDefaultClassTest.php`.
 
-**Using @coversDefaultClass to shorten annotations**
-
 .. code-block:: php
+    :caption: Using @coversDefaultClass to shorten annotations
     :name: appendixes.annotations.examples.CoversDefaultClassTest.php
 
     <?php

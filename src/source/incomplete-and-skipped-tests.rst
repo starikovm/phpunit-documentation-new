@@ -44,9 +44,8 @@ method ``markTestIncomplete()`` (which automatically
 raises an ``PHPUnit_Framework_IncompleteTestError``
 exception) in the test method, we mark the test as being incomplete.
 
-**Marking a test as incomplete**
-
 .. code-block:: php
+    :caption: Marking a test as incomplete
     :name: incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php
 
     <?php
@@ -94,19 +93,17 @@ example:
 :ref:`incomplete-and-skipped-tests.incomplete-tests.tables.api`
 shows the API for marking tests as incomplete.
 
-.. _incomplete-and-skipped-tests.incomplete-tests.tables.api:
+.. rst-class:: table
+.. list-table:: API for Incomplete Tests
+    :name: incomplete-and-skipped-tests.incomplete-tests.tables.api
+    :header-rows: 1
 
-API for Incomplete Tests
-========================
-
-Method
-Meaning
-
-``void markTestIncomplete()``
-Marks the current test as incomplete.
-
-``void markTestIncomplete(string $message)``
-Marks the current test as incomplete using ``$message`` as an explanatory message.
+    * - Method
+      - Meaning
+    * - ``void markTestIncomplete()``
+      - Marks the current test as incomplete.
+    * - ``void markTestIncomplete(string $message)``
+      - Marks the current test as incomplete using ``$message`` as an explanatory message.
 
 .. _incomplete-and-skipped-tests.skipping-tests:
 
@@ -125,9 +122,8 @@ method, ``testConnection()``. In the test case class'
 extension is available and use the ``markTestSkipped()``
 method to skip the test if it is not.
 
-**Skipping a test**
-
 .. code-block:: php
+    :caption: Skipping a test
     :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php
 
     <?php
@@ -178,19 +174,17 @@ following example:
 :ref:`incomplete-and-skipped-tests.skipped-tests.tables.api`
 shows the API for skipping tests.
 
-.. _incomplete-and-skipped-tests.skipped-tests.tables.api:
+.. rst-class:: table
+.. list-table:: API for Skipping Tests
+    :name: incomplete-and-skipped-tests.skipped-tests.tables.api
+    :header-rows: 1
 
-API for Skipping Tests
-======================
-
-Method
-Meaning
-
-``void markTestSkipped()``
-Marks the current test as skipped.
-
-``void markTestSkipped(string $message)``
-Marks the current test as skipped using ``$message`` as an explanatory message.
+    * - Method
+      - Meaning
+    * - ``void markTestSkipped()``
+      - Marks the current test as skipped.
+    * - ``void markTestSkipped(string $message)``
+      - Marks the current test as skipped using ``$message`` as an explanatory message.
 
 .. _incomplete-and-skipped-tests.skipping-tests-using-requires:
 
@@ -200,44 +194,38 @@ Skipping Tests using @requires
 In addition to the above methods it is also possible to use the
 ``@requires`` annotation to express common preconditions for a test case.
 
-.. _incomplete-and-skipped-tests.requires.tables.api:
+.. rst-class:: table
+.. list-table:: Possible @requires usages
+    :name: incomplete-and-skipped-tests.requires.tables.api
+    :header-rows: 1
 
-Possible @requires usages
-=========================
-
-Type
-Possible Values
-Examples
-Another example
-
-``PHP``
-Any PHP version identifier
-@requires PHP 5.3.3
-@requires PHP 7.1-dev
-
-``PHPUnit``
-Any PHPUnit version identifier
-@requires PHPUnit 3.6.3
-@requires PHPUnit 4.6
-
-``OS``
-A regexp matching `PHP_OS <http://php.net/manual/en/reserved.constants.php#constant.php-os>`_
-@requires OS Linux
-@requires OS WIN32|WINNT
-
-``function``
-Any valid parameter to `function_exists <http://php.net/function_exists>`_
-@requires function imap_open
-@requires function ReflectionMethod::setAccessible
-
-``extension``
-Any extension name along with an optional version identifier
-@requires extension mysqli
-@requires extension redis 2.2.0
-
-**Skipping test cases using @requires**
+    * - Type
+      - Possible Values
+      - Examples
+      - Another example
+    * - ``PHP``
+      - Any PHP version identifier
+      - @requires PHP 5.3.3
+      - @requires PHP 7.1-dev
+    * - ``PHPUnit``
+      - Any PHPUnit version identifier
+      - @requires PHPUnit 3.6.3
+      - @requires PHPUnit 4.6
+    * - ``OS``
+      - A regexp matching `PHP_OS <http://php.net/manual/en/reserved.constants.php#constant.php-os>`_
+      - @requires OS Linux
+      - @requires OS WIN32|WINNT
+    * - ``function``
+      - Any valid parameter to `function_exists <http://php.net/function_exists>`_
+      - @requires function imap_open
+      - @requires function ReflectionMethod::setAccessible
+    * - ``extension``
+      - Any extension name along with an optional version identifier
+      - @requires extension mysqli
+      - @requires extension redis 2.2.0
 
 .. code-block:: php
+    :caption: Skipping test cases using @requires
     :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseClassSkippingTest.php
 
     <?php

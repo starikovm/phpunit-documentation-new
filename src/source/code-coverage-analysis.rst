@@ -142,9 +142,8 @@ using the ``@codeCoverageIgnore``,
 ``@codeCoverageIgnoreEnd`` annotations as shown in
 :ref:`code-coverage-analysis.ignoring-code-blocks.examples.Sample.php`.
 
-**Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCoverageIgnoreEnd`` annotations**
-
 .. code-block:: php
+    :caption: Using the ``@codeCoverageIgnore``, ``@codeCoverageIgnoreStart`` and ``@codeCoverageIgnoreEnd`` annotations
     :name: code-coverage-analysis.ignoring-code-blocks.examples.Sample.php
 
     <?php
@@ -198,9 +197,8 @@ method(s) will be considered.
 :ref:`code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php`
 shows an example.
 
-**Tests that specify which method they want to cover**
-
 .. code-block:: php
+    :caption: Tests that specify which method they want to cover
     :name: code-coverage-analysis.specifying-covered-methods.examples.BankAccountTest.php
 
     <?php
@@ -284,9 +282,8 @@ It is also possible to specify that a test should not cover
 helpful when writing integration tests to make sure you only
 generate code coverage with unit tests.
 
-**A test that specifies that no method should be covered**
-
 .. code-block:: php
+    :caption: A test that specifies that no method should be covered
     :name: code-coverage-analysis.specifying-covered-methods.examples.GuestbookIntegrationTest.php
 
     <?php

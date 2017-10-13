@@ -266,9 +266,8 @@ the following code:
         :ref:`textui.examples.TestCaseClass.php` for an
         example of named data sets.
 
-        **Named data sets**
-
         .. code-block:: php
+            :caption: Named data sets
             :name: textui.examples.TestCaseClass.php
 
             <?php
@@ -305,9 +304,8 @@ the following code:
     See :ref:`textui.examples.filter-patterns` for examples
     of valid filter patterns.
 
-    **Filter pattern examples**
-
     .. code-block:: php
+        :caption: Filter pattern examples
         :name: textui.examples.filter-patterns
 
     .. code-block:: bash
@@ -317,9 +315,8 @@ the following code:
     additional shortcuts that are available for matching data
     providers.
 
-    **Filter shortcuts**
-
     .. code-block:: php
+        :caption: Filter shortcuts
         :name: textui.examples.filter-shortcuts
 
     .. code-block:: bash

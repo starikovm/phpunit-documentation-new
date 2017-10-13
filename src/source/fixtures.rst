@@ -43,9 +43,8 @@ from the test methods and use the newly introduced instance variable,
 ``$stack`` with the ``assertEquals()``
 assertion method.
 
-**Using setUp() to create the stack fixture**
-
 .. code-block:: php
+    :caption: Using setUp() to create the stack fixture
     :name: fixtures.examples.StackTest.php
 
     <?php
@@ -95,9 +94,8 @@ test case class is run, respectively.
 The example below shows all template methods that are available in a test
 case class.
 
-**Example showing all template methods available**
-
 .. code-block:: php
+    :caption: Example showing all template methods available
     :name: fixtures.examples.TemplateMethodsTest.php
 
     <?php
@@ -240,9 +238,8 @@ uses the ``setUpBeforeClass()`` and
 database before the test case class' first test and to disconnect from the
 database after the last test of the test case, respectively.
 
-**Sharing fixture between the tests of a test suite**
-
 .. code-block:: php
+    :caption: Sharing fixture between the tests of a test suite
     :name: fixtures.sharing-fixture.examples.DatabaseTest.php
 
     <?php
