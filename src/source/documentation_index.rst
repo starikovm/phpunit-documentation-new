@@ -28,12 +28,19 @@ Contents:
    other-uses-for-tests
    logging
    extending-phpunit
+
+.. toctree::
+   :caption: Appendix
+   :maxdepth: 2
+   :numbered: 1
+
    assertions
    annotations
    configuration
    index
    bibliography
    copyright
+
 
 Indices and tables
 ==================
