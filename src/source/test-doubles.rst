@@ -95,8 +95,6 @@ the example. This leads to more readable and "fluent" code.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.stubs.examples.SomeClass.php-bash
 
 .. code-block:: php
     :caption: Stubbing a method call to return a fixed value
@@ -122,8 +120,6 @@ the example. This leads to more readable and "fluent" code.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.stubs.examples.StubTest.php-bash
 
 .. note::
 
@@ -173,8 +169,6 @@ the same best practice defaults used by ``createMock()``.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.stubs.examples.StubTest2.php-bash
 
 In the examples so far we have been returning simple values using
 ``willReturn($value)``. This short syntax is the same as
@@ -213,8 +207,6 @@ can achieve this using ``returnArgument()`` instead of
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.stubs.examples.StubTest3.php-bash
 
 When testing a fluent interface, it is sometimes useful to have a stubbed
 method return a reference to the stubbed object.
@@ -244,8 +236,6 @@ can use ``returnSelf()`` to achieve this.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.stubs.examples.StubTest4.php-bash
 
 Sometimes a stubbed method should return different values depending on
 a predefined list of arguments.  You can use
@@ -285,8 +275,6 @@ an example.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.stubs.examples.StubTest5.php-bash
 
 When the stubbed method call should return a calculated value instead of
 a fixed one (see ``returnValue()``) or an (unchanged)
@@ -318,8 +306,6 @@ result of a callback function or method. See
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.stubs.examples.StubTest6.php-bash
 
 A simpler alternative to setting up a callback method may be to
 specify a list of desired return values. You can do this with
@@ -353,8 +339,6 @@ specified order
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.stubs.examples.StubTest7.php-bash
 
 Instead of returning a value, a stubbed method can also raise an
 exception. :ref:`test-doubles.stubs.examples.StubTest8.php`
@@ -383,8 +367,6 @@ shows how to use ``throwException()`` to do this.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.stubs.examples.StubTest8.php-bash
 
 Alternatively, you can write the stub yourself and improve your design
 along the way. Widely used resources are accessed through a single façade,
@@ -504,8 +486,6 @@ classes that are part of the System under Test (SUT).
         // Other methods.
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mock-objects.examples.SUT.php-bash
 
 :ref:`test-doubles.mock-objects.examples.SubjectTest.php`
 shows how to use a mock object to test the interaction between
@@ -558,8 +538,6 @@ arguments it is called with, we introduce the ``expects()`` and
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mock-objects.examples.SubjectTest.php-bash
 
 The ``with()`` method can take any number of
 arguments, corresponding to the number of arguments to the
@@ -601,8 +579,6 @@ arguments constrained in different ways
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mock-objects.examples.SubjectTest2.php-bash
 
 The ``withConsecutive()`` method can take any number of
 arrays of arguments, depending on the calls you want to test against.
@@ -636,8 +612,6 @@ method being mocked, like in ``with()``.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mock-objects.examples.with-consecutive.php-bash
 
 The ``callback()`` constraint can be used for more complex
 argument verification. This constraint takes a PHP callback as its only
@@ -680,8 +654,6 @@ argument passes verification and ``false`` otherwise.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mock-objects.examples.SubjectTest3.php-bash
 
 .. code-block:: php
     :caption: Testing that a method gets called once and with the identical object as was passed
@@ -708,8 +680,6 @@ argument passes verification and ``false`` otherwise.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mock-objects.examples.clone-object-parameters-usecase.php-bash
 
 .. code-block:: php
     :caption: Create a mock object with cloning parameters enabled
@@ -733,8 +703,6 @@ argument passes verification and ``false`` otherwise.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mock-objects.examples.enable-clone-object-parameters.php-bash
 
 :ref:`appendixes.assertions.assertThat.tables.constraints`
 shows the constraints that can be applied to method arguments and
@@ -849,8 +817,6 @@ revelations:
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.prophecy.examples.SubjectTest.php-bash
 
 Please refer to the `documentation <https://github.com/phpspec/prophecy#how-to-use-it>`_
 for Prophecy for further details on how to create, configure, and use
@@ -896,8 +862,6 @@ are mocked. This allows for testing the concrete methods of a trait.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mock-objects.examples.TraitClassTest.php-bash
 
 The ``getMockForAbstractClass()`` method returns a mock
 object for an abstract class. All abstract methods of the given abstract
@@ -935,8 +899,6 @@ abstract class.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mock-objects.examples.AbstractClassTest.php-bash
 
 .. _test-doubles.stubbing-and-mocking-web-services:
 
@@ -1024,8 +986,6 @@ example, the web service described in :file:`GoogleSearch.wsdl`.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.stubbing-and-mocking-web-services.examples.GoogleTest.php-bash
 
 .. _test-doubles.mocking-the-filesystem:
 
@@ -1083,8 +1043,6 @@ shows a class that interacts with the filesystem.
             }
         }
     }?>
-.. code-block:: bash
-    :name: test-doubles.mocking-the-filesystem.examples.Example.php-bash
 
 Without a virtual filesystem such as vfsStream we cannot test the
 ``setDirectory()`` method in isolation from external
@@ -1123,8 +1081,6 @@ influence (see :ref:`test-doubles.mocking-the-filesystem.examples.ExampleTest.ph
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mocking-the-filesystem.examples.ExampleTest.php-bash
 
 The approach above has several drawbacks:
 
@@ -1169,8 +1125,6 @@ class that interacts with the filesystem.
         }
     }
     ?>
-.. code-block:: bash
-    :name: test-doubles.mocking-the-filesystem.examples.ExampleTest2.php-bash
 
 This has several advantages:
 

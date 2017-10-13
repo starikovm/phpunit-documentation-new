@@ -52,8 +52,6 @@ with PHPUnit:
         }
     }
     ?>
-.. code-block:: bash
-    :name: writing-tests-for-phpunit.examples.StackTest.php-bash
 
     *Martin Fowler*:
 
@@ -133,8 +131,6 @@ dependencies between test methods.
         }
     }
     ?>
-.. code-block:: bash
-    :name: writing-tests-for-phpunit.examples.StackTest2.php-bash
 
 In the example above, the first test, ``testEmpty()``,
 creates a new array and asserts that it is empty. The test then returns
@@ -465,8 +461,6 @@ Output will be more verbose as it'll contain that name of a dataset that breaks 
         }
     }
     ?>
-.. code-block:: bash
-    :name: writing-tests-for-phpunit.data-providers.examples.CsvFileIterator.php-bash
 
 When a test receives input from both a ``@dataProvider``
 method and from one or more tests it ``@depends`` on, the

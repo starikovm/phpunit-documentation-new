@@ -294,8 +294,6 @@ the following code:
                 }
             }
             ?>
-        .. code-block:: bash
-            :name: textui.examples.TestCaseClass.php-bash
 
     ``/path/to/my/test.phpt``
 
@@ -308,9 +306,6 @@ the following code:
         :caption: Filter pattern examples
         :name: textui.examples.filter-patterns
 
-    .. code-block:: bash
-        :name: textui.examples.filter-patterns-bash
-
     See :ref:`textui.examples.filter-shortcuts` for some
     additional shortcuts that are available for matching data
     providers.
@@ -318,9 +313,6 @@ the following code:
     .. code-block:: php
         :caption: Filter shortcuts
         :name: textui.examples.filter-shortcuts
-
-    .. code-block:: bash
-        :name: textui.examples.filter-shortcuts-bash
 
 ``--testsuite``
 

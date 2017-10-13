@@ -79,8 +79,6 @@ assertion method.
         }
     }
     ?>
-.. code-block:: bash
-    :name: fixtures.examples.StackTest.php-bash
 
 The ``setUp()`` and ``tearDown()`` template
 methods are run once for each test method (and on fresh instances) of the
@@ -260,8 +258,6 @@ database after the last test of the test case, respectively.
         }
     }
     ?>
-.. code-block:: bash
-    :name: fixtures.sharing-fixture.examples.DatabaseTest.php-bash
 
 It cannot be emphasized enough that sharing fixtures between tests
 reduces the value of the tests. The underlying design problem is

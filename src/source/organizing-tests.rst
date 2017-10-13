@@ -119,8 +119,6 @@ directory is recursively traversed.
         </testsuite>
       </testsuites>
     </phpunit>
-.. code-block:: bash
-    :name: organizing-tests.xml-configuration.examples.phpunit.xml-bash
 
 If :file:`phpunit.xml` or
 :file:`phpunit.xml.dist` (in that order) exist in the
@@ -143,7 +141,5 @@ The order in which tests are executed can be made explicit:
         </testsuite>
       </testsuites>
     </phpunit>
-.. code-block:: bash
-    :name: organizing-tests.xml-configuration.examples.phpunit.xml2-bash
 
 

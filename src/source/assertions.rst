@@ -2486,8 +2486,6 @@ Reports an error identified by ``$message`` if the ``$value`` does not match the
         }
     }
     ?>
-.. code-block:: bash
-    :name: appendixes.assertions.assertThat.example-bash
 
 :ref:`appendixes.assertions.assertThat.tables.constraints` shows the
 available ``PHPUnit_Framework_Constraint`` classes.

@@ -330,8 +330,6 @@ repeated for every ``@covers`` annotation. See
         }
     }
     ?>
-.. code-block:: bash
-    :name: appendixes.annotations.examples.CoversDefaultClassTest.php-bash
 
 .. _appendixes.annotations.coversNothing:
 

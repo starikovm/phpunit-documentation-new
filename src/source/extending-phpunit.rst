@@ -71,8 +71,6 @@ PHPUnit's own assertions are implemented. As you can see in
 
         // ...
     }?>
-.. code-block:: bash
-    :name: extending-phpunit.examples.Assert.php-bash
 
 :ref:`extending-phpunit.examples.IsTrue.php` shows how
 ``PHPUnit_Framework_Constraint_IsTrue`` extends the
@@ -110,8 +108,6 @@ abstract base class for matcher objects (or constraints),
             return 'is true';
         }
     }?>
-.. code-block:: bash
-    :name: extending-phpunit.examples.IsTrue.php-bash
 
 The effort of implementing the ``assertTrue()`` and
 ``isTrue()`` methods as well as the
@@ -185,8 +181,6 @@ interface.
         }
     }
     ?>
-.. code-block:: bash
-    :name: extending-phpunit.examples.SimpleTestListener.php-bash
 
 :ref:`extending-phpunit.examples.BaseTestListener.php`
 shows how to subclass the ``PHPUnit_Framework_BaseTestListener``
@@ -209,8 +203,6 @@ for all the others.
         }
     }
     ?>
-.. code-block:: bash
-    :name: extending-phpunit.examples.BaseTestListener.php-bash
 
 In :ref:`appendixes.configuration.test-listeners` you can see
 how to configure PHPUnit to attach your test listener to the test
@@ -277,8 +269,6 @@ test decorator that illustrates how to write your own test decorators.
         }
     }
     ?>
-.. code-block:: bash
-    :name: extending-phpunit.examples.RepeatedTest.php-bash
 
 .. _extending-phpunit.PHPUnit_Framework_Test:
 

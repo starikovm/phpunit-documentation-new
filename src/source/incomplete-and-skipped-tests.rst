@@ -65,8 +65,6 @@ exception) in the test method, we mark the test as being incomplete.
         }
     }
     ?>
-.. code-block:: bash
-    :name: incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php-bash
 
 An incomplete test is denoted by an ``I`` in the output
 of the PHPUnit command-line test runner, as shown in the following
@@ -146,8 +144,6 @@ method to skip the test if it is not.
         }
     }
     ?>
-.. code-block:: bash
-    :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php-bash
 
 A test that has been skipped is denoted by an ``S`` in
 the output of the PHPUnit command-line test runner, as shown in the
@@ -247,8 +243,6 @@ In addition to the above methods it is also possible to use the
         // ... All other tests require the mysqli extension
     }
     ?>
-.. code-block:: bash
-    :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseClassSkippingTest.php-bash
 
 If you are using syntax that doesn't compile with a certain PHP Version look into the xml
 configuration for version dependent includes in :ref:`appendixes.configuration.testsuites`
