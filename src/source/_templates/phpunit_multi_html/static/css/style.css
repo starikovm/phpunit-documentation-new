@@ -79,8 +79,8 @@ pre span.string {
 }
 
 .literal-block-wrapper {
-  padding: 0
-  width: 100%
+  padding: 0;
+  width: 100%;
 }
 
 .literal-block-wrapper .caption-text {
