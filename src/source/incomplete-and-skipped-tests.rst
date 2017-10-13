@@ -74,7 +74,7 @@ example:
 ::
 
     phpunit --verbose SampleTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     I
     Time: 0 seconds, Memory: 3.95Mb
     There was 1 incomplete test:
@@ -151,7 +151,7 @@ following example:
 ::
 
     phpunit --verbose DatabaseTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     S
     Time: 0 seconds, Memory: 3.95Mb
     There was 1 skipped test:

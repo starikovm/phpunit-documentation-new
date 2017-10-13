@@ -334,7 +334,7 @@ A data-driven test
 
 ::
 
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     .F
     Time: 0 seconds
     There was 1 failure:

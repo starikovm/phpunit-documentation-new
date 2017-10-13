@@ -71,7 +71,7 @@ Usage of assertArrayHasKey()
 ::
 
     phpunit ArrayHasKeyTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -113,7 +113,7 @@ Usage of assertClassHasAttribute()
 ::
 
     phpunit ClassHasAttributeTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -202,7 +202,7 @@ Usage of assertClassHasStaticAttribute()
 ::
 
     phpunit ClassHasStaticAttributeTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -246,7 +246,7 @@ Usage of assertContains()
 ::
 
     phpunit ContainsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -283,7 +283,7 @@ Usage of assertContains()
 ::
 
     phpunit ContainsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -318,7 +318,7 @@ Usage of assertContains() with $ignoreCase
 ::
 
     phpunit ContainsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F.
     Time: 0 seconds, Memory: 2.75Mb
     There was 1 failure:
@@ -364,7 +364,7 @@ Usage of assertContainsOnly()
 ::
 
     phpunit ContainsOnlyTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -411,7 +411,7 @@ Usage of assertContainsOnlyInstancesOf()
 ::
 
     phpunit ContainsOnlyInstancesOfTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -453,7 +453,7 @@ Usage of assertCount()
 ::
 
     phpunit CountTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -495,7 +495,7 @@ Usage of assertDirectoryExists()
 ::
 
     phpunit DirectoryExistsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -537,7 +537,7 @@ Usage of assertDirectoryIsReadable()
 ::
 
     phpunit DirectoryIsReadableTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -579,7 +579,7 @@ Usage of assertDirectoryIsWritable()
 ::
 
     phpunit DirectoryIsWritableTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -623,7 +623,7 @@ Usage of assertEmpty()
 ::
 
     phpunit EmptyTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -695,7 +695,7 @@ Usage of assertEqualXMLStructure()
 ::
 
     phpunit EqualXMLStructureTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     FFFF
     Time: 0 seconds, Memory: 5.75Mb
     There were 4 failures:
@@ -768,7 +768,7 @@ Usage of assertEquals()
 ::
 
     phpunit EqualsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     FFF
     Time: 0 seconds, Memory: 5.25Mb
     There were 3 failures:
@@ -830,7 +830,7 @@ Usage of assertEquals() with floats
 ::
 
     phpunit EqualsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     .F
     Time: 0 seconds, Memory: 5.75Mb
     There was 1 failure:
@@ -869,7 +869,7 @@ Usage of assertEquals() with DOMDocument objects
 ::
 
     phpunit EqualsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -920,7 +920,7 @@ Usage of assertEquals() with objects
 ::
 
     phpunit EqualsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
@@ -964,7 +964,7 @@ Usage of assertEquals() with arrays
 ::
 
     phpunit EqualsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
@@ -1016,7 +1016,7 @@ Usage of assertFalse()
 ::
 
     phpunit FalseTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1058,7 +1058,7 @@ Usage of assertFileEquals()
 ::
 
     phpunit FileEqualsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
@@ -1106,7 +1106,7 @@ Usage of assertFileExists()
 ::
 
     phpunit FileExistsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -1148,7 +1148,7 @@ Usage of assertFileIsReadable()
 ::
 
     phpunit FileIsReadableTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -1190,7 +1190,7 @@ Usage of assertFileIsWritable()
 ::
 
     phpunit FileIsWritableTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -1232,7 +1232,7 @@ Usage of assertGreaterThan()
 ::
 
     phpunit GreaterThanTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1274,7 +1274,7 @@ Usage of assertGreaterThanOrEqual()
 ::
 
     phpunit GreaterThanOrEqualTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
@@ -1316,7 +1316,7 @@ Usage of assertInfinite()
 ::
 
     phpunit InfiniteTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1360,7 +1360,7 @@ Usage of assertInstanceOf()
 ::
 
     phpunit InstanceOfTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1404,7 +1404,7 @@ Usage of assertInternalType()
 ::
 
     phpunit InternalTypeTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1446,7 +1446,7 @@ Usage of assertIsReadable()
 ::
 
     phpunit IsReadableTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -1488,7 +1488,7 @@ Usage of assertIsWritable()
 ::
 
     phpunit IsWritableTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -1530,7 +1530,7 @@ Usage of assertJsonFileEqualsJsonFile()
 ::
 
     phpunit JsonFileEqualsJsonFileTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1573,7 +1573,7 @@ Usage of assertJsonStringEqualsJsonFile()
 ::
 
     phpunit JsonStringEqualsJsonFileTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1617,7 +1617,7 @@ Usage of assertJsonStringEqualsJsonString()
 ::
 
     phpunit JsonStringEqualsJsonStringTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1666,7 +1666,7 @@ Usage of assertLessThan()
 ::
 
     phpunit LessThanTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1708,7 +1708,7 @@ Usage of assertLessThanOrEqual()
 ::
 
     phpunit LessThanOrEqualTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
@@ -1748,7 +1748,7 @@ Usage of assertNan()
 ::
 
     phpunit NanTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1790,7 +1790,7 @@ Usage of assertNull()
 ::
 
     phpunit NotNullTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1832,7 +1832,7 @@ Usage of assertObjectHasAttribute()
 ::
 
     phpunit ObjectHasAttributeTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -1874,7 +1874,7 @@ Usage of assertRegExp()
 ::
 
     phpunit RegExpTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1916,7 +1916,7 @@ Usage of assertStringMatchesFormat()
 ::
 
     phpunit StringMatchesFormatTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -1982,7 +1982,7 @@ Usage of assertStringMatchesFormatFile()
 ::
 
     phpunit StringMatchesFormatFileTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -2027,7 +2027,7 @@ Usage of assertSame()
 ::
 
     phpunit SameTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -2062,7 +2062,7 @@ Usage of assertSame() with objects
 ::
 
     phpunit SameTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -2104,7 +2104,7 @@ Usage of assertStringEndsWith()
 ::
 
     phpunit StringEndsWithTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 1 second, Memory: 5.00Mb
     There was 1 failure:
@@ -2146,7 +2146,7 @@ Usage of assertStringEqualsFile()
 ::
 
     phpunit StringEqualsFileTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
@@ -2194,7 +2194,7 @@ Usage of assertStringStartsWith()
 ::
 
     phpunit StringStartsWithTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -2388,7 +2388,7 @@ Usage of assertTrue()
 ::
 
     phpunit TrueTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -2431,7 +2431,7 @@ Usage of assertXmlFileEqualsXmlFile()
 ::
 
     phpunit XmlFileEqualsXmlFileTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
@@ -2482,7 +2482,7 @@ Usage of assertXmlStringEqualsXmlFile()
 ::
 
     phpunit XmlStringEqualsXmlFileTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
@@ -2533,7 +2533,7 @@ Usage of assertXmlStringEqualsXmlString()
 ::
 
     phpunit XmlStringEqualsXmlStringTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:

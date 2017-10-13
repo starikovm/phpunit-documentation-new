@@ -123,9 +123,9 @@ depended-upon test as its argument. Finally, ``testPop()``
 depends upon ``testPush()``.
 
 .. note:: The return value yielded by a producer is passed "as-is" to its
-   consumers by default. This means that when a producer returns an object
+   consumers by default. This means that when a producer returns an object,
    a reference to that object is passed to the consumers. When a copy
-   should be used instead of a reference then @depends clone
+   should be used instead of a reference, then @depends clone
    should be used instead of @depends.
 
 To quickly localize defects, we want our attention to be focussed on
@@ -161,7 +161,7 @@ Exploiting the dependencies between tests
 ::
 
     phpunit --verbose DependencyFailureTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     FS
     Time: 0 seconds, Memory: 5.00Mb
     There was 1 failure:
@@ -222,7 +222,7 @@ Test with multiple dependencies
 ::
 
     phpunit --verbose MultipleDependenciesTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ...
     Time: 0 seconds, Memory: 3.25Mb
     OK (3 tests, 3 assertions)
@@ -277,7 +277,7 @@ Using a data provider that returns an array of arrays
 ::
 
     phpunit DataTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ...F
     Time: 0 seconds, Memory: 5.75Mb
     There was 1 failure:
@@ -323,7 +323,7 @@ Using a data provider with named datasets
 ::
 
     phpunit DataTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ...F
     Time: 0 seconds, Memory: 5.75Mb
     There was 1 failure:
@@ -362,7 +362,7 @@ Using a data provider that returns an Iterator object
 ::
 
     phpunit DataTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ...F
     Time: 0 seconds, Memory: 5.75Mb
     There was 1 failure:
@@ -462,7 +462,7 @@ Combination of @depends and @dataProvider in same test
 ::
 
     phpunit --verbose DependencyAndDataProviderComboTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ...F
     Time: 0 seconds, Memory: 3.50Mb
     There was 1 failure:
@@ -522,7 +522,7 @@ Using the expectException() method
 ::
 
     phpunit ExceptionTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -568,7 +568,7 @@ Using the @expectedException annotation
 ::
 
     phpunit ExceptionTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 4.75Mb
     There was 1 failure:
@@ -604,7 +604,7 @@ Expecting a PHP error using @expectedException
     class ExpectedErrorTest extends TestCase
     {
         /**
-         * @expectedException PHPUnit_Framework_Error
+         * @expectedException PHPUnit\Framework\Error
          */
         public function testFailingInclude()
         {
@@ -616,13 +616,13 @@ Expecting a PHP error using @expectedException
 ::
 
     phpunit -d error_reporting=2 ExpectedErrorTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     .
     Time: 0 seconds, Memory: 5.25Mb
     OK (1 test, 1 assertion)
 
-``PHPUnit_Framework_Error_Notice`` and
-``PHPUnit_Framework_Error_Warning`` represent PHP notices
+``PHPUnit\Framework\Error\Notice`` and
+``PHPUnit\Framework\Error\Warning`` represent PHP notices
 and warnings, respectively.
 
 .. note:: You should be as specific as possible when testing exceptions. Testing
@@ -635,7 +635,7 @@ When testing that relies on php functions that trigger errors like
 ``fopen`` it can sometimes be useful to use error
 suppression while testing. This allows you to check the return values by
 suppressing notices that would lead to a phpunit
-``PHPUnit_Framework_Error_Notice``.
+``PHPUnit\Framework\Error\Notice``.
 
 .. _writing-tests-for-phpunit.exceptions.examples.TriggerErrorReturnValue.php:
 
@@ -668,7 +668,7 @@ Testing return values of code that uses PHP Errors
 ::
 
     phpunit ErrorSuppressionTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     .
     Time: 1 seconds, Memory: 5.25Mb
     OK (1 test, 1 assertion)
@@ -722,7 +722,7 @@ Testing the output of a function or method
 ::
 
     phpunit OutputTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     .F
     Time: 0 seconds, Memory: 5.75Mb
     There was 1 failure:
@@ -792,7 +792,7 @@ Error output generated when an array comparison fails
 ::
 
     phpunit ArrayDiffTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
@@ -843,7 +843,7 @@ Error output when an array comparison of an long array fails
 ::
 
     phpunit LongArrayDiffTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
@@ -898,7 +898,7 @@ Edge case in the diff generation when using weak comparison
 ::
 
     phpunit ArrayWeakComparisonTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     F
     Time: 0 seconds, Memory: 5.25Mb
     There was 1 failure:
