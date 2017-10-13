@@ -13,12 +13,9 @@ tests with the PHPUnit command-line test runner:
 ::
 
     phpunit ArrayTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     ..
-
     Time: 0 seconds
-
     OK (2 tests, 2 assertions)
 
 When invoked as shown above, the PHPUnit command-line test runner will look
@@ -76,13 +73,10 @@ the following code:
 ::
 
     phpunit --help
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     Usage: phpunit \[options] UnitTest \[UnitTest.php]
     phpunit \[options] <directory>
-
     Code Coverage Options:
-
     --coverage-clover <file>    Generate code coverage report in Clover XML format.
     --coverage-crap4j <file>    Generate code coverage report in Crap4J XML format.
     --coverage-html <dir>       Generate code coverage report in HTML format.
@@ -92,18 +86,14 @@ the following code:
     --coverage-xml <dir>        Generate code coverage report in PHPUnit XML format.
     --whitelist <dir>           Whitelist <dir> for code coverage analysis.
     --disable-coverage-ignore   Disable annotations for ignoring code coverage.
-
     Logging Options:
-
     --log-junit <file>          Log test execution in JUnit XML format to file.
     --log-teamcity <file>       Log test execution in TeamCity format to file.
     --testdox-html <file>       Write agile documentation in HTML format to file.
     --testdox-text <file>       Write agile documentation in Text format to file.
     --testdox-xml <file>        Write agile documentation in XML format to file.
     --reverse-list              Print defects in reverse order
-
     Test Selection Options:
-
     --filter <pattern>          Filter which tests to run.
     --testsuite <name,...>      Filter which testsuite to run.
     --group ...                 Only runs tests from the specified group(s).
@@ -112,9 +102,7 @@ the following code:
     --list-suites               List available test suites.
     --test-suffix ...           Only search for test in files with specified
     suffix(es). Default: Test.php,.phpt
-
     Test Execution Options:
-
     --dont-report-useless-tests Do not report tests that do not test anything.
     --strict-coverage           Be strict about @covers annotation usage.
     --strict-global-state       Be strict about changes to global state
@@ -122,11 +110,9 @@ the following code:
     --disallow-resource-usage   Be strict about resource usage during small tests.
     --enforce-time-limit        Enforce time limit based on test size.
     --disallow-todo-tests       Disallow @todo-annotated tests.
-
     --process-isolation         Run each test in a separate PHP process.
     --globals-backup            Backup and restore $GLOBALS for each test.
     --static-backup             Backup and restore static attributes for each test.
-
     --colors=<flag>             Use colors in output ("never", "auto" or "always").
     --columns <n>               Number of columns to use for progress output.
     --columns max               Use maximum number of columns for progress output.
@@ -141,7 +127,6 @@ the following code:
     --fail-on-risky             Treat risky tests as failures.
     -v|--verbose                Output more verbose information.
     --debug                     Display debugging information.
-
     --loader <loader>           TestSuiteLoader implementation to use.
     --repeat <times>            Runs the test(s) repeatedly.
     --teamcity                  Report test execution progress in TeamCity format.
@@ -149,9 +134,7 @@ the following code:
     --testdox-group             Only include tests from the specified group(s).
     --testdox-exclude-group     Exclude tests from the specified group(s).
     --printer <printer>         TestListener implementation to use.
-
     Configuration Options:
-
     --bootstrap <file>          A "bootstrap" PHP file that is run before the tests.
     -c|--configuration <file>   Read configuration from XML file.
     --no-configuration          Ignore default configuration file (phpunit.xml).
@@ -160,9 +143,7 @@ the following code:
     --include-path <path(s)>    Prepend PHP's include_path with given path(s).
     -d key[=value]              Sets a php.ini value.
     --generate-configuration    Generate configuration file with suggested settings.
-
     Miscellaneous Options:
-
     -h|--help                   Prints this usage information.
     --version                   Prints the version and exits.
     --atleast-version <min>     Checks that version is greater than min and exits.

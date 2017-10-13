@@ -45,12 +45,9 @@ command-line test runner to the test directory:
 ::
 
     phpunit --bootstrap src/autoload.php tests
-    PHPUnit 6.1.0 by Sebastian Bergmann.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann.
     .................................
-
     Time: 636 ms, Memory: 3.50Mb
-
     OK (33 tests, 52 assertions)
 
 .. note::
@@ -65,12 +62,9 @@ the following command:
 ::
 
     phpunit --bootstrap src/autoload.php tests/CurrencyTest
-    PHPUnit 6.1.0 by Sebastian Bergmann.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann.
     ........
-
     Time: 280 ms, Memory: 2.75Mb
-
     OK (8 tests, 8 assertions)
 
 For more fine-grained control of which tests to run we can use the
@@ -79,12 +73,9 @@ For more fine-grained control of which tests to run we can use the
 ::
 
     phpunit --bootstrap src/autoload.php --filter testObjectCanBeConstructedForValidConstructorArgument tests
-    PHPUnit 6.1.0 by Sebastian Bergmann.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann.
     ..
-
     Time: 167 ms, Memory: 3.00Mb
-
     OK (2 test, 2 assertions)
 
 .. note::

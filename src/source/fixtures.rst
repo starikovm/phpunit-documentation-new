@@ -160,8 +160,7 @@ Example showing all template methods available
 ::
 
     phpunit TemplateMethodsTest
-    PHPUnit 6.1.0 by Sebastian Bergmann and contributors.
-
+    PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
     TemplateMethodsTest::setUpBeforeClass
     TemplateMethodsTest::setUp
     TemplateMethodsTest::assertPreConditions
@@ -174,15 +173,11 @@ Example showing all template methods available
     TemplateMethodsTest::tearDown
     TemplateMethodsTest::onNotSuccessfulTest
     FTemplateMethodsTest::tearDownAfterClass
-
     Time: 0 seconds, Memory: 5.25Mb
-
     There was 1 failure:
-
     1) TemplateMethodsTest::testTwo
     Failed asserting that <boolean:false> is true.
     /home/sb/TemplateMethodsTest.php:30
-
     FAILURES!
     Tests: 2, Assertions: 2, Failures: 1.
 
@@ -308,13 +303,23 @@ In PHP, global variables work like this:
 Besides global variables, static attributes of classes are also part of
 the global state.
 
-By default, PHPUnit runs your tests in a way where changes to global
-and super-global variables (``$GLOBALS``,
+Prior to version 6, by default, PHPUnit ran your tests in a way where
+changes to global and super-global variables (``$GLOBALS``,
 ``$_ENV``, ``$_POST``,
 ``$_GET``, ``$_COOKIE``,
 ``$_SERVER``, ``$_FILES``,
-``$_REQUEST``) do not affect other tests. Optionally, this
-isolation can be extended to static attributes of classes.
+``$_REQUEST``) do not affect other tests.
+
+As of version 6, PHPUnit does not perform this backup and restore
+operation for global and super-global variables by default anymore.
+It can be activated by using the ``--globals-backup``
+option or setting ``backupGlobals="true"`` in the
+XML configuration file.
+
+By using the ``--static-backup`` option or setting
+``backupStaticAttributes="true"`` in the
+XML configuration file, this isolation can be extended to static
+attributes of classes.
 
 .. note::
 
