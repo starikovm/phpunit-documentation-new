@@ -537,6 +537,22 @@ def biblioentry(el):
         s += "%s. " % pubdate.text
     return s
 
+def example(el):
+    s = "\n.. code-block:: php\n"
+
+    s += "    :name: %s\n" % el.get("id")
+
+    title = el.find("title")
+    if title is not None:
+        s += "    :caption: %s\n" % _concat(title)
+
+    listing = el.find("programlisting")
+    s += _indent(listing, 4)
+
+    s += "\n\n"
+
+    return s
+
 def bibliography(el):
     _supports_only(el, ("biblioentry",))
     return _make_title("Bibliography", 2) + "\n" + _join_children(el, "\n")
@@ -579,7 +595,6 @@ keywordset = _concat
 abstract = _concat
 bookinfo = _concat
 corpauthor = _concat
-example = _concat
 glossary = _concat
 figure = _concat
 computeroutput = userinput

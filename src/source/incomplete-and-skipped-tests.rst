@@ -44,12 +44,9 @@ method ``markTestIncomplete()`` (which automatically
 raises an ``PHPUnit_Framework_IncompleteTestError``
 exception) in the test method, we mark the test as being incomplete.
 
-.. _incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php:
-
-Marking a test as incomplete
-============================
-
-::
+.. code-block:: php
+    :name: incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php
+    :caption: Marking a test as incomplete
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -125,12 +122,9 @@ method, ``testConnection()``. In the test case class'
 extension is available and use the ``markTestSkipped()``
 method to skip the test if it is not.
 
-.. _incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php:
-
-Skipping a test
-===============
-
-::
+.. code-block:: php
+    :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php
+    :caption: Skipping a test
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -235,12 +229,9 @@ Any extension name along with an optional version identifier
 @requires extension mysqli
 @requires extension redis 2.2.0
 
-.. _incomplete-and-skipped-tests.skipping-tests.examples.DatabaseClassSkippingTest.php:
-
-Skipping test cases using @requires
-===================================
-
-::
+.. code-block:: php
+    :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseClassSkippingTest.php
+    :caption: Skipping test cases using @requires
 
     <?php
     use PHPUnit\Framework\TestCase;
