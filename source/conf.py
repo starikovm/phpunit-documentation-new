@@ -319,7 +319,4 @@ numfig_format = {
     'section': 'Section'
 }
 
-epub_theme = "epub"
-epub_theme_options = {
-    "footer": False
-}
+epub_theme = "phpunit_epub"
