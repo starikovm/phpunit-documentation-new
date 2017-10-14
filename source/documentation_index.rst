@@ -2,7 +2,7 @@
 PHPUnit Manual
 ==============
 
-*Edition for PHPUnit 6.4. Updated on format="Y-m-d".*
+Edition for PHPUnit |version|. Updated on |today|.
 
 Sebastian Bergmann
 
@@ -12,6 +12,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 3
+   :numbered: 1
 
    installation
    writing-tests-for-phpunit
@@ -31,6 +32,7 @@ Contents:
 .. toctree::
    :caption: Appendix
    :maxdepth: 2
+   :numbered: 1
 
    assertions
    annotations

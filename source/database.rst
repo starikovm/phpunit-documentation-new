@@ -197,7 +197,7 @@ Usually when using PHPUnit your testcases would extend the
 ``PHPUnit\Framework\TestCase`` class in the
 following way:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -217,7 +217,7 @@ abstract TestCase requiring you to implement two abstract methods
 ``getConnection()`` and
 ``getDataSet()``:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -332,7 +332,7 @@ can refactor the code a little bit to get a generic abstract test
 case for your application, which still allows you to specify a
 different data-fixture for each test case:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -370,7 +370,7 @@ you could make the database connection configurable per test-run.
 First let's create a phpunit.xml file in our tests/
 directory of the application that looks like:
 
-::
+.. code-block:: bash
 
     <?xml version="1.0" encoding="UTF-8" ?>
     <phpunit>
@@ -384,7 +384,7 @@ directory of the application that looks like:
 
 We can now modify our test-case to look like:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -417,7 +417,7 @@ We can now modify our test-case to look like:
 We can now run the database test suite using different
 configurations from the command-line interface:
 
-::
+.. code-block:: bash
 
     $  user@desktop> phpunit --configuration developer-a.xml MyTests/
     $  user@desktop> phpunit --configuration developer-b.xml MyTests/
@@ -513,7 +513,7 @@ database. The tags name equals the table to insert the row into and
 an attribute represents the column. An example for a simple guestbook
 application could look like this:
 
-::
+.. code-block:: bash
 
     <?xml version="1.0" ?>
     <dataset>
@@ -534,7 +534,7 @@ empty table. You can insert a tag with no attributes with the name
 of the empty table. A flat xml file for an empty guestbook table
 would then look like:
 
-::
+.. code-block:: bash
 
     <?xml version="1.0" ?>
     <dataset>
@@ -550,7 +550,7 @@ guestbook would allow anonymous entries represented by a NULL value
 in the user column, a hypothetical state of the guestbook table
 could look like:
 
-::
+.. code-block:: bash
 
     <?xml version="1.0" ?>
     <dataset>
@@ -596,7 +596,7 @@ You can create a flat xml dataset instance from within your
 Database TestCase by calling the
 ``createFlatXmlDataSet($filename)`` method:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -627,7 +627,7 @@ can specify ``<table>``,
 ``<null />`` tags. An equivalent dataset to the
 previously defined Guestbook Flat XML looks like:
 
-::
+.. code-block:: bash
 
     <?xml version="1.0" ?>
     <dataset>
@@ -665,7 +665,7 @@ You can create a xml dataset instance from within your
 Database TestCase by calling the
 ``createXmlDataSet($filename)`` method:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -697,14 +697,14 @@ also supports, a single file in this XML format can contain data
 for multiple tables. You can create a file in this format by
 invoking ``mysqldump`` like so:
 
-::
+.. code-block:: bash
 
     $  mysqldump --xml -t -u [username] --password=[password] [database] > /path/to/file.xml
 
 This file can be used in your Database TestCase by calling the
 ``createMySQLXMLDataSet($filename)`` method:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -728,7 +728,7 @@ YAML DataSet
 
 Alternatively, you can use YAML dataset for the guestbook example:
 
-::
+.. code-block:: bash
 
     guestbook:
       -
@@ -750,7 +750,7 @@ name without no value specified. An empty string is specified as
 The YAML Dataset has no factory method on the Database TestCase
 currently, so you have to instantiate it manually:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -777,7 +777,7 @@ Another file-based dataset is based on CSV files. Each table of the
 dataset is represented as a single CSV file. For our guestbook
 example we would define a guestbook-table.csv file:
 
-::
+.. code-block:: bash
 
     id,content,user,created
     1,"Hello buddy!","joe","2010-04-24 17:15:23"
@@ -790,7 +790,7 @@ into the column.
 
 You can create a CSV DataSet by calling:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -819,7 +819,7 @@ There is no Array based DataSet in PHPUnit's Database Extension
 (yet), but we can implement our own easily. Our guestbook example
 should look like:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -874,7 +874,7 @@ created.
 The implementation for this Array DataSet is simple and
 straightforward:
 
-::
+.. code-block:: php
 
     <?php
     class MyApp_DbUnit_ArrayDataSet extends PHPUnit_Extensions_Database_DataSet_AbstractDataSet
@@ -930,7 +930,7 @@ For database assertions you do not only need the file-based datasets
 but also a Query/SQL based Dataset that contains the actual
 contents of the database. This is where the Query DataSet shines:
 
-::
+.. code-block:: php
 
     <?php
     $ds = new PHPUnit_Extensions_Database_DataSet_QueryDataSet($this->getConnection());
@@ -940,7 +940,7 @@ contents of the database. This is where the Query DataSet shines:
 Adding a table just by name is an implicit way to define the
 data-table with the following query:
 
-::
+.. code-block:: php
 
     <?php
     $ds = new PHPUnit_Extensions_Database_DataSet_QueryDataSet($this->getConnection());
@@ -951,7 +951,7 @@ You can make use of this by specifying arbitrary queries for your
 tables, for example restricting rows, column or adding
 ``ORDER BY`` clauses:
 
-::
+.. code-block:: php
 
     <?php
     $ds = new PHPUnit_Extensions_Database_DataSet_QueryDataSet($this->getConnection());
@@ -976,7 +976,7 @@ in ``testGuestbook()``, or restrict it to a set of
 specified table names with a whitelist as shown in
 ``testFilteredGuestbook()`` method.
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1027,7 +1027,7 @@ allows you to replace values in any column of the dataset by another
 replacement value. To get our guestbook example working with NULL
 values we specify the file like:
 
-::
+.. code-block:: bash
 
     <?xml version="1.0" ?>
     <dataset>
@@ -1037,7 +1037,7 @@ values we specify the file like:
 
 We then wrap the Flat XML DataSet into a Replacement DataSet:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1067,7 +1067,7 @@ white- and blacklisting of tables and columns that should be
 contained in a sub-dataset. This is especially handy in combination
 with the DB DataSet to filter the columns of the datasets.
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1117,7 +1117,7 @@ datasets contain the same table the rows are appended in the
 specified order. For example if we have two datasets
 *fixture1.xml*:
 
-::
+.. code-block:: bash
 
     <?xml version="1.0" ?>
     <dataset>
@@ -1126,7 +1126,7 @@ specified order. For example if we have two datasets
 
 and *fixture2.xml*:
 
-::
+.. code-block:: bash
 
     <?xml version="1.0" ?>
     <dataset>
@@ -1135,7 +1135,7 @@ and *fixture2.xml*:
 
 Using the Composite DataSet we can aggregate both fixture files:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1179,7 +1179,7 @@ To understand the internals of DataSets and DataTables, lets have a
 look at the interface of a DataSet. You can skip this part if you
 do not plan to implement your own DataSet or DataTable.
 
-::
+.. code-block:: php
 
     <?php
     interface PHPUnit_Extensions_Database_DataSet_IDataSet extends IteratorAggregate
@@ -1210,7 +1210,7 @@ file-based datasets such as ``YamlDataSet``,
 
 A table is also represented by the following interface:
 
-::
+.. code-block:: php
 
     <?php
     interface PHPUnit_Extensions_Database_DataSet_ITable
@@ -1259,7 +1259,7 @@ There are three interesting methods on the Connection interface
 which has to be returned from the
 ``getConnection()`` method on the Database TestCase:
 
-::
+.. code-block:: php
 
     <?php
     interface PHPUnit_Extensions_Database_DB_IDatabaseConnection
@@ -1277,7 +1277,7 @@ which has to be returned from the
    The ``createDataSet()`` method creates a Database
    (DB) DataSet as described in the DataSet implementations section.
 
-   ::
+   .. code-block:: php
 
        <?php
        use PHPUnit\Framework\TestCase;
@@ -1303,7 +1303,7 @@ which has to be returned from the
    assertions as will be shown in the next section on the Database
    Assertions API.
 
-   ::
+   .. code-block:: php
 
        <?php
        use PHPUnit\Framework\TestCase;
@@ -1328,7 +1328,7 @@ which has to be returned from the
    additional where clause. This can be used with a simple equality
    assertion:
 
-   ::
+   .. code-block:: php
 
        <?php
        use PHPUnit\Framework\TestCase;
@@ -1367,7 +1367,7 @@ insertion of a row into our guestbook we not only have the two
 initial entries that have accompanied us in all the previous
 examples, but a third one:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1403,7 +1403,7 @@ For this we would define a Query Table instance which derives its
 content from a table name and SQL query and compare it to a
 File/Array Based Data Set:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1431,7 +1431,7 @@ File/Array Based Data Set:
 Now we have to write the *expectedBook.xml* Flat
 XML file for this assertion:
 
-::
+.. code-block:: bash
 
     <?xml version="1.0" ?>
     <dataset>
@@ -1450,7 +1450,7 @@ The adjusted *expectedBook.xml* Flat XML file
 would probably have to look like the following to make the
 assertion pass:
 
-::
+.. code-block:: bash
 
     <?xml version="1.0" ?>
     <dataset>
@@ -1461,7 +1461,7 @@ assertion pass:
 
 We have to fix up the Query Table call:
 
-::
+.. code-block:: php
 
     <?php
     $queryTable = $this->getConnection()->createQueryTable(
@@ -1478,7 +1478,7 @@ You can also assert the result of complex queries with the Query
 Table approach, just specify a result name with a query and
 compare it to a dataset:
 
-::
+.. code-block:: php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1514,7 +1514,7 @@ different ways for DataSet assertions.
    You can use the Database (DB) DataSet from the Connection and
    compare it to a File-Based DataSet.
 
-   ::
+   .. code-block:: php
 
        <?php
        use PHPUnit\Framework\TestCase;
@@ -1537,7 +1537,7 @@ different ways for DataSet assertions.
 
    You can construct the DataSet on your own:
 
-   ::
+   .. code-block:: php
 
        <?php
        use PHPUnit\Framework\TestCase;

@@ -24,6 +24,26 @@ class TestConversion(unittest.TestCase):
 
         self.assertEqual(out, expected_content)
 
+    def test_table(self):
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+
+        print 'python ' + dir_path + '/../DocBookToReST.py'
+
+        process = subprocess.Popen(
+            [
+                'python',
+                dir_path + '/../DocBookToReST.py',
+                dir_path + '/fixtures/table.xml'
+            ],
+            stdout=subprocess.PIPE
+        )
+        out, err = process.communicate()
+
+        with open(dir_path + '/fixtures/expected-table.rst', 'r') as content_file:
+            expected_content = content_file.read()
+
+        self.assertEqual(out, expected_content)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -2,10 +2,11 @@
 
 .. _appendixes.copyright:
 
-============
-F. Copyright
-============
-::
+=========
+Copyright
+=========
+
+.. code-block:: php
 
     Copyright (c) 2005-2017 Sebastian Bergmann.
 
@@ -418,4 +419,5 @@ F. Copyright
     Creative Commons may be contacted at http://creativecommons.org/.
 
     ====================================================================
+
 

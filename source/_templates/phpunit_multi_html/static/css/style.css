@@ -39,7 +39,7 @@ dd {
   margin-left:1em;
 }
 
-pre code, pre.screen, code {
+div.highlight pre, pre code, pre.screen, code {
   font-family: 'Source Code Pro', sans-serif;
   font-size: 1em;
 }
@@ -76,4 +76,27 @@ pre span.string {
 
 .right {
   text-align:right
+}
+
+.literal-block-wrapper {
+  padding: 0;
+  width: 100%;
+}
+
+.literal-block-wrapper .caption-text, .literal-block-wrapper .caption-number {
+    font-weight: bold;
+}
+
+.note {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.admonition-title {
+    font-size: 24px;
 }

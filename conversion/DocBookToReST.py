@@ -271,7 +271,12 @@ def ulink(el):
 # (in DocBook was: the section called “Variables”)
 
 def xref(el):
-    return ":ref:`%s`" % el.get("linkend")
+    target_id = el.get("linkend")
+    target_element_list = el.getroottree().xpath("//*[@id='%s']" % target_id)
+
+    if len(target_element_list) == 0 or target_element_list[0].tag == 'section':
+        return ":ref:`%s`" % target_id
+    return ":numref:`%s`" % target_id
 
 def link(el):
     return ":ref:`%s <%s>`" % (_concat(el).strip(), el.get("linkend"))
@@ -384,7 +389,7 @@ prompt = userinput
 
 def filename(el):
     _has_only_text(el)
-    return ":file:`%s`" % el.text
+    return ":file:`%s`" % _remove_indent_and_escape(el.text)
 
 def command(el):
     return ":command:`%s`" % _concat(el).strip()
@@ -430,7 +435,16 @@ def title(el):
     return _make_title(t, level)
 
 def screen(el):
-    return "\n::\n" + _indent(el, 4) + "\n"
+    language = "bash"
+    if el.tag == "programlisting":
+        language = "php"
+    s = "\n\n.. code-block:: %s\n" % language
+    id = el.get("id")
+    if id is not None:
+        s += "    :name: %s\n" % id
+    s += _indent(el, 4) + "\n\n"
+
+    return s
 
 literallayout = screen
 
@@ -557,26 +571,57 @@ def example(el):
     except AttributeError:
         setattr(example, 'exampleNumber', 1)
 
-    s = ""
+    s = "\n.. code-block:: php\n"
     title = el.find("title")
     if title is not None:
         strTitle = 'Example ' + chapterTitle(el) + '.' + str(example.exampleNumber) + ' ' + _concat(title)
-        s += "\n**%s**\n" % strTitle
+        s += "    :caption: %s\n" % strTitle
 
-    s += "\n.. code-block:: php\n"
     s += "    :name: %s\n" % el.get("id")
 
     listing = el.find("programlisting")
     s += _indent(listing, 4)
 
-    s += "\n.. code-block:: bash\n"
-    s += "    :name: %s-bash\n" % el.get("id")
     screen = el.find("screen")
-    s += _indent(screen, 4)
+    if screen is not None:
+        s += _conv(screen)
 
     s += "\n\n"
 
     return s
+
+def table(el):
+    title = el.find("title")
+    s = "\n.. rst-class:: table"
+    s += "\n.. list-table:: "
+    if title is not None:
+        s += title.text
+
+    s += "\n    :name: %s\n" % el.get("id")
+    s += "    :header-rows: 1\n\n"
+
+    tableGroup = el.find("tgroup")
+    tableHead = tableGroup.find("thead")
+
+    s += "    * "
+    for index, entry_element in enumerate(tableHead.find("row").findall("entry")):
+        if index == 0:
+            s += "- "
+        else:
+            s += "      - "
+        s += entry_element.text + "\n"
+
+    for row_el in tableGroup.find("tbody").findall("row"):
+        s += "    * "
+        for index, col_el in enumerate(row_el.findall("entry")):
+            if index == 0:
+                s += "- "
+            else:
+                s += "      - "
+            s += "%s\n" % _conv(col_el).strip()
+
+    return s
+
 
 def bibliography(el):
     _supports_only(el, ("biblioentry",))

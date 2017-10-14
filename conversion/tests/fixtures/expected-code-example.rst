@@ -7,8 +7,8 @@ Writing Tests for PHPUnit
 =========================
 
 .. code-block:: php
-    :name: writing-tests-for-phpunit.examples.StackTest2.php
     :caption: Using the ``@depends`` annotation to express dependencies
+    :name: writing-tests-for-phpunit.examples.StackTest2.php
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -45,5 +45,7 @@ Writing Tests for PHPUnit
         }
     }
     ?>
+.. code-block:: bash
+    :name: writing-tests-for-phpunit.examples.StackTest2.php-bash
 
 

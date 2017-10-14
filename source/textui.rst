@@ -2,15 +2,15 @@
 
 .. _textui:
 
-===============================
-3. The Command-Line Test Runner
-===============================
+============================
+The Command-Line Test Runner
+============================
 
 The PHPUnit command-line test runner can be invoked through the
 :file:`phpunit` command. The following code shows how to run
 tests with the PHPUnit command-line test runner:
 
-::
+.. code-block:: bash
 
     $  phpunit ArrayTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -73,7 +73,7 @@ Command-Line Options
 Let's take a look at the command-line test runner's options in
 the following code:
 
-::
+.. code-block:: bash
 
     $  phpunit --help
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -263,12 +263,11 @@ the following code:
         When a test has a data provider that uses named sets, each
         iteration of the data gets the current name appended to the
         end of the default test name. See
-        :ref:`textui.examples.TestCaseClass.php` for an
+        :numref:`textui.examples.TestCaseClass.php` for an
         example of named data sets.
 
-        **Example 3.1 Named data sets**
-
         .. code-block:: php
+            :caption: Named data sets
             :name: textui.examples.TestCaseClass.php
 
             <?php
@@ -295,35 +294,25 @@ the following code:
                 }
             }
             ?>
-        .. code-block:: bash
-            :name: textui.examples.TestCaseClass.php-bash
 
     ``/path/to/my/test.phpt``
 
         The test name for a PHPT test is the filesystem path.
 
-    See :ref:`textui.examples.filter-patterns` for examples
+    See :numref:`textui.examples.filter-patterns` for examples
     of valid filter patterns.
 
-    **Example 3.2 Filter pattern examples**
-
     .. code-block:: php
+        :caption: Filter pattern examples
         :name: textui.examples.filter-patterns
 
-    .. code-block:: bash
-        :name: textui.examples.filter-patterns-bash
-
-    See :ref:`textui.examples.filter-shortcuts` for some
+    See :numref:`textui.examples.filter-shortcuts` for some
     additional shortcuts that are available for matching data
     providers.
 
-    **Example 3.3 Filter shortcuts**
-
     .. code-block:: php
+        :caption: Filter shortcuts
         :name: textui.examples.filter-shortcuts
-
-    .. code-block:: bash
-        :name: textui.examples.filter-shortcuts-bash
 
 ``--testsuite``
 
