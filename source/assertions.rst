@@ -65,6 +65,7 @@ Reports an error identified by ``$message`` if ``$array`` does not have the ``$k
         }
     }
     ?>
+
 .. code-block:: bash
 
     $ phpunit ArrayHasKeyTest
@@ -110,6 +111,7 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit ClassHasAttributeTest
@@ -155,6 +157,7 @@ Reports an error identified by ``$message`` if ``$array`` does not contains the 
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit ArrayHasKeyTest
@@ -205,6 +208,7 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit ClassHasStaticAttributeTest
@@ -252,6 +256,7 @@ Reports an error identified by ``$message`` if ``$needle`` is not an element of 
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit ContainsTest
@@ -292,6 +297,7 @@ If ``$ignoreCase`` is ``true``, the test will be case insensitive.
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit ContainsTest
@@ -331,6 +337,7 @@ If ``$ignoreCase`` is ``true``, the test will be case insensitive.
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit ContainsTest
@@ -380,6 +387,7 @@ Reports an error identified by ``$message`` if ``$haystack`` does not contain on
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit ContainsOnlyTest
@@ -430,6 +438,7 @@ Reports an error identified by ``$message`` if ``$haystack`` does not contain on
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit ContainsOnlyInstancesOfTest
@@ -475,6 +484,7 @@ Reports an error identified by ``$message`` if the number of elements in ``$hays
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit CountTest
@@ -520,6 +530,7 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit DirectoryExistsTest
@@ -565,6 +576,7 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit DirectoryIsReadableTest
@@ -610,6 +622,7 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit DirectoryIsWritableTest
@@ -657,6 +670,7 @@ Reports an error identified by ``$message`` if ``$actual`` is not empty.
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit EmptyTest
@@ -742,6 +756,7 @@ Reports an error identified by ``$message`` if the XML Structure of the DOMEleme
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit EqualXMLStructureTest
@@ -826,6 +841,7 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit EqualsTest
@@ -896,6 +912,7 @@ Please read "`What Every Computer Scientist Should Know About Floating-Point Ari
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit EqualsTest
@@ -940,6 +957,7 @@ Reports an error identified by ``$message`` if the uncommented canonical form of
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit EqualsTest
@@ -996,6 +1014,7 @@ Reports an error identified by ``$message`` if the two objects ``$expected`` and
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit EqualsTest
@@ -1043,6 +1062,7 @@ Reports an error identified by ``$message`` if the two arrays ``$expected`` and 
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit EqualsTest
@@ -1098,6 +1118,7 @@ Reports an error identified by ``$message`` if ``$condition`` is ``true``.
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit FalseTest
@@ -1143,6 +1164,7 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit FileEqualsTest
@@ -1194,6 +1216,7 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit FileExistsTest
@@ -1239,6 +1262,7 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit FileIsReadableTest
@@ -1284,6 +1308,7 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit FileIsWritableTest
@@ -1329,6 +1354,7 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit GreaterThanTest
@@ -1374,6 +1400,7 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit GreaterThanOrEqualTest
@@ -1419,6 +1446,7 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``INF``.
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit InfiniteTest
@@ -1466,6 +1494,7 @@ Reports an error identified by ``$message`` if ``$actual`` is not an instance of
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit InstanceOfTest
@@ -1513,6 +1542,7 @@ Reports an error identified by ``$message`` if ``$actual`` is not of the ``$expe
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit InternalTypeTest
@@ -1558,6 +1588,7 @@ Reports an error identified by ``$message`` if the file or directory specified b
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit IsReadableTest
@@ -1603,6 +1634,7 @@ Reports an error identified by ``$message`` if the file or directory specified b
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit IsWritableTest
@@ -1648,6 +1680,7 @@ Reports an error identified by ``$message`` if the value of ``$actualFile`` does
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit JsonFileEqualsJsonFileTest
@@ -1694,6 +1727,7 @@ Reports an error identified by ``$message`` if the value of ``$actualJson`` does
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit JsonStringEqualsJsonFileTest
@@ -1741,6 +1775,7 @@ Reports an error identified by ``$message`` if the value of ``$actualJson`` does
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit JsonStringEqualsJsonStringTest
@@ -1793,6 +1828,7 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit LessThanTest
@@ -1838,6 +1874,7 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit LessThanOrEqualTest
@@ -1881,6 +1918,7 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``NAN``.
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit NanTest
@@ -1926,6 +1964,7 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``null``.
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit NotNullTest
@@ -1971,6 +2010,7 @@ Reports an error identified by ``$message`` if ``$object->attributeName`` does n
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit ObjectHasAttributeTest
@@ -2016,6 +2056,7 @@ Reports an error identified by ``$message`` if ``$string`` does not match the re
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit RegExpTest
@@ -2061,6 +2102,7 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit StringMatchesFormatTest
@@ -2152,6 +2194,7 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit StringMatchesFormatFileTest
@@ -2200,6 +2243,7 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit SameTest
@@ -2238,6 +2282,7 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit SameTest
@@ -2283,6 +2328,7 @@ Reports an error identified by ``$message`` if the ``$string`` does not end with
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit StringEndsWithTest
@@ -2328,6 +2374,7 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit StringEqualsFileTest
@@ -2379,6 +2426,7 @@ Reports an error identified by ``$message`` if the ``$string`` does not start wi
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit StringStartsWithTest
@@ -2542,6 +2590,7 @@ Reports an error identified by ``$message`` if ``$condition`` is ``false``.
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit TrueTest
@@ -2588,6 +2637,7 @@ Reports an error identified by ``$message`` if the XML document in ``$actualFile
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit XmlFileEqualsXmlFileTest
@@ -2642,6 +2692,7 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit XmlStringEqualsXmlFileTest
@@ -2696,6 +2747,7 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit XmlStringEqualsXmlStringTest

@@ -44,17 +44,17 @@ indicate progress:
 ``R``
 
     Printed when the test has been marked as risky (see
-    :numref:`risky-tests`).
+    :ref:`risky-tests`).
 
 ``S``
 
     Printed when the test has been skipped (see
-    :numref:`incomplete-and-skipped-tests`).
+    :ref:`incomplete-and-skipped-tests`).
 
 ``I``
 
     Printed when the test is marked as being incomplete or not yet
-    implemented (see :numref:`incomplete-and-skipped-tests`).
+    implemented (see :ref:`incomplete-and-skipped-tests`).
 
 PHPUnit distinguishes between *failures* and
 *errors*. A failure is a violated PHPUnit
@@ -189,7 +189,7 @@ the following code:
 ``--coverage-clover``
 
     Generates a logfile in XML format with the code coverage information
-    for the tests run. See :numref:`logging` for more details.
+    for the tests run. See :ref:`logging` for more details.
 
     Please note that this functionality is only available when the
     tokenizer and Xdebug extensions are installed.
@@ -197,7 +197,7 @@ the following code:
 ``--coverage-crap4j``
 
     Generates a code coverage report in Crap4j format. See
-    :numref:`code-coverage-analysis` for more details.
+    :ref:`code-coverage-analysis` for more details.
 
     Please note that this functionality is only available when the
     tokenizer and Xdebug extensions are installed.
@@ -205,7 +205,7 @@ the following code:
 ``--coverage-html``
 
     Generates a code coverage report in HTML format. See
-    :numref:`code-coverage-analysis` for more details.
+    :ref:`code-coverage-analysis` for more details.
 
     Please note that this functionality is only available when the
     tokenizer and Xdebug extensions are installed.
@@ -222,7 +222,7 @@ the following code:
 
     Generates a logfile or command-line output in human readable format
     with the code coverage information for the tests run.
-    See :numref:`logging` for more details.
+    See :ref:`logging` for more details.
 
     Please note that this functionality is only available when the
     tokenizer and Xdebug extensions are installed.
@@ -230,12 +230,12 @@ the following code:
 ``--log-junit``
 
     Generates a logfile in JUnit XML format for the tests run.
-    See :numref:`logging` for more details.
+    See :ref:`logging` for more details.
 
 ``--testdox-html`` and ``--testdox-text``
 
     Generates agile documentation in HTML or plain text format for the
-    tests that are run. See :numref:`other-uses-for-tests` for
+    tests that are run. See :ref:`other-uses-for-tests` for
     more details.
 
 ``--filter``
@@ -342,19 +342,19 @@ the following code:
 
 ``--report-useless-tests``
 
-    Be strict about tests that do not test anything. See :numref:`risky-tests` for details.
+    Be strict about tests that do not test anything. See :ref:`risky-tests` for details.
 
 ``--strict-coverage``
 
-    Be strict about unintentionally covered code. See :numref:`risky-tests` for details.
+    Be strict about unintentionally covered code. See :ref:`risky-tests` for details.
 
 ``--strict-global-state``
 
-    Be strict about global state manipulation. See :numref:`risky-tests` for details.
+    Be strict about global state manipulation. See :ref:`risky-tests` for details.
 
 ``--disallow-test-output``
 
-    Be strict about output during tests. See :numref:`risky-tests` for details.
+    Be strict about output during tests. See :ref:`risky-tests` for details.
 
 ``--disallow-todo-tests``
 
@@ -362,7 +362,7 @@ the following code:
 
 ``--enforce-time-limit``
 
-    Enforce time limit based on test size. See :numref:`risky-tests` for details.
+    Enforce time limit based on test size. See :ref:`risky-tests` for details.
 
 ``--process-isolation``
 
@@ -370,13 +370,13 @@ the following code:
 
 ``--no-globals-backup``
 
-    Do not backup and restore $GLOBALS. See :numref:`fixtures.global-state`
+    Do not backup and restore $GLOBALS. See :ref:`fixtures.global-state`
     for more details.
 
 ``--static-backup``
 
     Backup and restore static attributes of user-defined classes.
-    See :numref:`fixtures.global-state` for more details.
+    See :ref:`fixtures.global-state` for more details.
 
 ``--colors``
 
@@ -460,7 +460,7 @@ the following code:
 ``--testdox``
 
     Reports the test progress as agile documentation. See
-    :numref:`other-uses-for-tests` for more details.
+    :ref:`other-uses-for-tests` for more details.
 
 ``--printer``
 
@@ -475,7 +475,7 @@ the following code:
 ``--configuration``, ``-c``
 
     Read configuration from XML file.
-    See :numref:`appendixes.configuration` for more details.
+    See :ref:`appendixes.configuration` for more details.
 
     If :file:`phpunit.xml` or
     :file:`phpunit.xml.dist` (in that order) exist in the

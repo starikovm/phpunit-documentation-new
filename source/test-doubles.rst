@@ -7,7 +7,7 @@ Test Doubles
 ============
 
 Gerard Meszaros introduces the concept of Test Doubles in
-:numref:`Meszaros2007` like this:
+:ref:`Meszaros2007` like this:
 
     *Gerard Meszaros*:
 
@@ -704,7 +704,7 @@ argument passes verification and ``false`` otherwise.
     }
     ?>
 
-:numref:`appendixes.assertions.assertThat.tables.constraints`
+:ref:`appendixes.assertions.assertThat.tables.constraints`
 shows the constraints that can be applied to method arguments and
 :numref:`test-doubles.mock-objects.tables.matchers`
 shows the matchers that are available to specify the number of
@@ -1005,7 +1005,7 @@ dependencies of your project. Here is a minimal example of a
 ``composer.json`` file that just defines a development-time
 dependency on PHPUnit 4.6 and vfsStream:
 
-.. code-block:: bash
+.. code-block:: php
 
     {
         "require-dev": {

@@ -13,7 +13,8 @@ Incomplete Tests
 
 When you are working on a new test case class, you might want to begin
 by writing empty test methods such as:
-.. code-block:: bash
+
+.. code-block:: php
 
     public function testSomething()
     {
@@ -246,6 +247,6 @@ In addition to the above methods it is also possible to use the
     ?>
 
 If you are using syntax that doesn't compile with a certain PHP Version look into the xml
-configuration for version dependent includes in :numref:`appendixes.configuration.testsuites`
+configuration for version dependent includes in :ref:`appendixes.configuration.testsuites`
 
 

@@ -204,7 +204,7 @@ for all the others.
     }
     ?>
 
-In :numref:`appendixes.configuration.test-listeners` you can see
+In :ref:`appendixes.configuration.test-listeners` you can see
 how to configure PHPUnit to attach your test listener to the test
 execution.
 
@@ -351,6 +351,7 @@ and the second value is the actual one.
     $test = new DataDrivenTest('data_file.csv');
     $result = PHPUnit_TextUI_TestRunner::run($test);
     ?>
+
 .. code-block:: bash
 
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.

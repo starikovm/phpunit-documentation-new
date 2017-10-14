@@ -47,7 +47,7 @@ be used to configure PHPUnit's core functionality.
     </phpunit>
 
 The XML configuration above corresponds to the default behaviour of the
-TextUI test runner documented in :numref:`textui.clioptions`.
+TextUI test runner documented in :ref:`textui.clioptions`.
 
 Additional options that are not available as command-line options are:
 
@@ -95,7 +95,7 @@ Additional options that are not available as command-line options are:
 
     Code Coverage will only be recorded for tests that use the
     ``@covers`` annotation documented in
-    :numref:`appendixes.annotations.covers`.
+    :ref:`appendixes.annotations.covers`.
 
 ``timeoutForLargeTests``
 
@@ -166,7 +166,7 @@ The ``<groups>`` element and its
 ``<exclude>``, and
 ``<group>`` children can be used to select
 groups of tests marked with the ``@group`` annotation
-(documented in :numref:`appendixes.annotations.group`)
+(documented in :ref:`appendixes.annotations.group`)
 that should (not) be run.
 
 .. code-block:: bash

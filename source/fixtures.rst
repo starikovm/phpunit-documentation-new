@@ -11,7 +11,7 @@ code to set the world up in a known state and then return it to its
 original state when the test is complete. This known state is called
 the *fixture* of the test.
 
-In :numref:`writing-tests-for-phpunit.examples.StackTest.php`, the
+In :ref:`writing-tests-for-phpunit.examples.StackTest.php`, the
 fixture was simply the array that is stored in the ``$stack``
 variable. Most of the time, though, the fixture will be more complex
 than a simple array, and the amount of code needed to set it up will
@@ -29,7 +29,7 @@ succeeded or failed, another template method called
 ``tearDown()`` is invoked. ``tearDown()``
 is where you clean up the objects against which you tested.
 
-In :numref:`writing-tests-for-phpunit.examples.StackTest2.php` we
+In :ref:`writing-tests-for-phpunit.examples.StackTest2.php` we
 used the producer-consumer relationship between tests to share a fixture. This
 is not always desired or even possible. :numref:`fixtures.examples.StackTest.php`
 shows how we can write the tests of the ``StackTest`` in such
@@ -150,6 +150,7 @@ case class.
         }
     }
     ?>
+
 .. code-block:: bash
 
     $  phpunit TemplateMethodsTest
@@ -262,7 +263,7 @@ It cannot be emphasized enough that sharing fixtures between tests
 reduces the value of the tests. The underlying design problem is
 that objects are not loosely coupled. You will achieve better
 results solving the underlying design problem and then writing tests
-using stubs (see :numref:`test-doubles`), than by creating
+using stubs (see :ref:`test-doubles`), than by creating
 dependencies between tests at runtime and ignoring the opportunity
 to improve your design.
 
@@ -327,12 +328,12 @@ attributes of classes.
    stored e.g. in the ``$GLOBALS`` array.
 
 The ``@backupGlobals`` annotation that is discussed in
-:numref:`appendixes.annotations.backupGlobals` can be used to
+:ref:`appendixes.annotations.backupGlobals` can be used to
 control the backup and restore operations for global variables.
 Alternatively, you can provide a blacklist of global variables that are to
 be excluded from the backup and restore operations like this
 
-.. code-block:: bash
+.. code-block:: php
 
     class MyTest extends TestCase
     {
@@ -347,7 +348,7 @@ be excluded from the backup and restore operations like this
    e.g. the ``setUp()`` method has no effect.
 
 The ``@backupStaticAttributes`` annotation discussed in
-:numref:`appendixes.annotations.backupStaticAttributes`
+:ref:`appendixes.annotations.backupStaticAttributes`
 can be used to back up all static property values in all declared classes
 before each test and restore them afterwards.
 
@@ -378,7 +379,7 @@ not static variables within functions.
 You can provide a blacklist of static attributes that are to be excluded
 from the backup and restore operations:
 
-.. code-block:: bash
+.. code-block:: php
 
     class MyTest extends TestCase
     {

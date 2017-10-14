@@ -267,7 +267,12 @@ def ulink(el):
 # (in DocBook was: the section called “Variables”)
 
 def xref(el):
-    return ":numref:`%s`" % el.get("linkend")
+    target_id = el.get("linkend")
+    target_element_list = el.getroottree().xpath("//*[@id='%s']" % target_id)
+
+    if len(target_element_list) == 0 or target_element_list[0].tag == 'section':
+        return ":ref:`%s`" % target_id
+    return ":numref:`%s`" % target_id
 
 def link(el):
     return ":ref:`%s <%s>`" % (_concat(el).strip(), el.get("linkend"))
@@ -424,7 +429,10 @@ def title(el):
     return _make_title(t, level)
 
 def screen(el):
-    s = "\n.. code-block:: bash\n"
+    language = "bash"
+    if el.tag == "programlisting":
+        language = "php"
+    s = "\n\n.. code-block:: %s\n" % language
     id = el.get("id")
     if id is not None:
         s += "    :name: %s\n" % id

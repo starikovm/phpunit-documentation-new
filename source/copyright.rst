@@ -5,7 +5,8 @@
 =========
 Copyright
 =========
-.. code-block:: bash
+
+.. code-block:: php
 
     Copyright (c) 2005-2017 Sebastian Bergmann.
 

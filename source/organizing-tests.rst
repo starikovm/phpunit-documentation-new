@@ -91,7 +91,7 @@ For more fine-grained control of which tests to run we can use the
 
    A drawback of this approach is that we have no control over the order in
    which the tests are run. This can lead to problems with regard to test
-   dependencies, see :numref:`writing-tests-for-phpunit.test-dependencies`.
+   dependencies, see :ref:`writing-tests-for-phpunit.test-dependencies`.
    In the next section you will see how you can make the test execution
    order explicit by using the XML configuration file.
 
@@ -100,7 +100,7 @@ For more fine-grained control of which tests to run we can use the
 Composing a Test Suite Using XML Configuration
 ##############################################
 
-PHPUnit's XML configuration file (:numref:`appendixes.configuration`)
+PHPUnit's XML configuration file (:ref:`appendixes.configuration`)
 can also be used to compose a test suite.
 :numref:`organizing-tests.xml-configuration.examples.phpunit.xml`
 shows a minimal :file:`phpunit.xml` file that will add all

@@ -35,8 +35,8 @@ XML-based logfiles with code coverage information in various formats
 as text (and printed to STDOUT) and exported as PHP code for further
 processing.
 
-Please refer to :numref:`textui` for a list of commandline switches
-that control code coverage functionality as well as :numref:`appendixes.configuration.logging` for the relevant
+Please refer to :ref:`textui` for a list of commandline switches
+that control code coverage functionality as well as :ref:`appendixes.configuration.logging` for the relevant
 configuration settings.
 
 .. _code-coverage-analysis.metrics:
@@ -112,16 +112,16 @@ Whitelisting Files
 It is mandatory to configure a *whitelist* for telling
 PHPUnit which sourcecode files to include in the code coverage report.
 This can either be done using the ``--whitelist``
-commandline option or via the configuration file (see :numref:`appendixes.configuration.whitelisting-files`).
+commandline option or via the configuration file (see :ref:`appendixes.configuration.whitelisting-files`).
 
 Optionally, all whitelisted files can be added to the code coverage
 report by setting ``addUncoveredFilesFromWhitelist="true"``
-in your PHPUnit configuration (see :numref:`appendixes.configuration.whitelisting-files`). This allows the
+in your PHPUnit configuration (see :ref:`appendixes.configuration.whitelisting-files`). This allows the
 inclusion of files that are not tested yet at all. If you want to get
 information about which lines of such an uncovered file are executable,
 for instance, you also need to set
 ``processUncoveredFilesFromWhitelist="true"`` in your
-PHPUnit configuration (see :numref:`appendixes.configuration.whitelisting-files`).
+PHPUnit configuration (see :ref:`appendixes.configuration.whitelisting-files`).
 
 .. note::
 
@@ -188,7 +188,7 @@ Specifying Covered Methods
 ##########################
 
 The ``@covers`` annotation (see
-:numref:`appendixes.annotations.covers.tables.annotations`) can be
+:ref:`appendixes.annotations.covers.tables.annotations`) can be
 used in the test code to specify which method(s) a test method wants to
 test. If provided, only the code coverage information for the specified
 method(s) will be considered.
@@ -274,7 +274,7 @@ shows an example.
 It is also possible to specify that a test should not cover
 *any* method by using the
 ``@coversNothing`` annotation (see
-:numref:`appendixes.annotations.coversNothing`). This can be
+:ref:`appendixes.annotations.coversNothing`). This can be
 helpful when writing integration tests to make sure you only
 generate code coverage with unit tests.
 
