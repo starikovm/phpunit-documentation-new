@@ -2,9 +2,9 @@
 
 .. _organizing-tests:
 
-================
-Organizing Tests
-================
+===================
+5. Organizing Tests
+===================
 
 One of the goals of PHPUnit is that tests
 should be composable: we want to be able to run any number or combination
@@ -108,7 +108,7 @@ shows a minimal :file:`phpunit.xml` file that will add all
 :file:`*Test.php` files when the :file:`tests`
 directory is recursively traversed.
 
-**Composing a Test Suite Using XML Configuration**
+**Example 5.1 Composing a Test Suite Using XML Configuration**
 
 .. code-block:: php
     :name: organizing-tests.xml-configuration.examples.phpunit.xml
@@ -131,7 +131,7 @@ read from that file.
 
 The order in which tests are executed can be made explicit:
 
-**Composing a Test Suite Using XML Configuration**
+**Example 5.2 Composing a Test Suite Using XML Configuration**
 
 .. code-block:: php
     :name: organizing-tests.xml-configuration.examples.phpunit.xml2

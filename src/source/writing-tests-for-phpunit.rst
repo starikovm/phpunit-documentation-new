@@ -2,9 +2,9 @@
 
 .. _writing-tests-for-phpunit:
 
-=========================
-Writing Tests for PHPUnit
-=========================
+============================
+2. Writing Tests for PHPUnit
+============================
 
 :ref:`writing-tests-for-phpunit.examples.StackTest.php` shows
 how we can write tests using PHPUnit that exercise PHP's array operations.
@@ -29,7 +29,7 @@ with PHPUnit:
 
    Inside the test methods, assertion methods such as ``assertEquals()`` (see :ref:`appendixes.assertions`) are used to assert that an actual value matches an expected value.
 
-**Testing array operations with PHPUnit**
+**Example 2.1 Testing array operations with PHPUnit**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.examples.StackTest.php
@@ -95,7 +95,7 @@ the test fixture by a producer and passing it to the dependent consumers.
 how to use the ``@depends`` annotation to express
 dependencies between test methods.
 
-**Using the ``@depends`` annotation to express dependencies**
+**Example 2.2 Using the ``@depends`` annotation to express dependencies**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.examples.StackTest2.php
@@ -159,7 +159,7 @@ when a depended-upon test has failed. This improves defect localization by
 exploiting the dependencies between tests as shown in
 :ref:`writing-tests-for-phpunit.examples.DependencyFailureTest.php`.
 
-**Exploiting the dependencies between tests**
+**Example 2.3 Exploiting the dependencies between tests**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.examples.DependencyFailureTest.php
@@ -217,7 +217,7 @@ will get a fixture from the first producer as the first argument, a fixture
 from the second producer as the second argument, and so on.
 See :ref:`writing-tests-for-phpunit.examples.MultipleDependencies.php`
 
-**Test with multiple dependencies**
+**Example 2.4 Test with multiple dependencies**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.examples.MultipleDependencies.php
@@ -281,7 +281,7 @@ interface and yields an array for each iteration step. For each array that
 is part of the collection the test method will be called with the contents
 of the array as its arguments.
 
-**Using a data provider that returns an array of arrays**
+**Example 2.5 Using a data provider that returns an array of arrays**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.data-providers.examples.DataTest.php
@@ -333,7 +333,7 @@ of the array as its arguments.
 When using a large number of datasets it's useful to name each one with string key instead of default numeric.
 Output will be more verbose as it'll contain that name of a dataset that breaks a test.
 
-**Using a data provider with named datasets**
+**Example 2.6 Using a data provider with named datasets**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.data-providers.examples.DataTest1.php
@@ -382,7 +382,7 @@ Output will be more verbose as it'll contain that name of a dataset that breaks 
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
-**Using a data provider that returns an Iterator object**
+**Example 2.7 Using a data provider that returns an Iterator object**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.data-providers.examples.DataTest2.php
@@ -428,7 +428,7 @@ Output will be more verbose as it'll contain that name of a dataset that breaks 
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
-**The CsvFileIterator class**
+**Example 2.8 The CsvFileIterator class**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.data-providers.examples.CsvFileIterator.php
@@ -483,7 +483,7 @@ depended-upon tests. The arguments from depended-upon tests will be the
 same for each data set.
 See :ref:`writing-tests-for-phpunit.data-providers.examples.DependencyAndDataProviderCombo.php`
 
-**Combination of @depends and @dataProvider in same test**
+**Example 2.9 Combination of @depends and @dataProvider in same test**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.data-providers.examples.DependencyAndDataProviderCombo.php
@@ -577,7 +577,7 @@ Testing Exceptions
 shows how to use the ``expectException()`` method to test
 whether an exception is thrown by the code under test.
 
-**Using the expectException() method**
+**Example 2.10 Using the expectException() method**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php
@@ -625,7 +625,7 @@ expectations for exceptions raised by the code under test.
 :ref:`writing-tests-for-phpunit.exceptions.examples.ExceptionTest2.php`
 shows an example.
 
-**Using the @expectedException annotation**
+**Example 2.11 Using the @expectedException annotation**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.exceptions.examples.ExceptionTest2.php
@@ -678,7 +678,7 @@ shown in :ref:`writing-tests-for-phpunit.exceptions.examples.ErrorTest.php`.
    having issues with this feature, be sure PHP is not configured to
    suppress the type of errors you're testing.
 
-**Expecting a PHP error using @expectedException**
+**Example 2.12 Expecting a PHP error using @expectedException**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.exceptions.examples.ErrorTest.php
@@ -727,7 +727,7 @@ suppression while testing. This allows you to check the return values by
 suppressing notices that would lead to a phpunit
 ``PHPUnit\Framework\Error\Notice``.
 
-**Testing return values of code that uses PHP Errors**
+**Example 2.13 Testing return values of code that uses PHP Errors**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.exceptions.examples.TriggerErrorReturnValue.php
@@ -788,7 +788,7 @@ shows how to use the ``expectOutputString()`` method to
 set the expected output. If this expected output is not generated, the
 test will be counted as a failure.
 
-**Testing the output of a function or method**
+**Example 2.14 Testing the output of a function or method**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.output.examples.OutputTest.php
@@ -869,7 +869,7 @@ Error output
 Whenever a test fails PHPUnit tries its best to provide you with as much
 context as possible that can help to identify the problem.
 
-**Error output generated when an array comparison fails**
+**Example 2.15 Error output generated when an array comparison fails**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.error-output.examples.ArrayDiffTest.php
@@ -925,7 +925,7 @@ are shown to provide context on where the error occurred.
 When the generated output would be long to read PHPUnit will split it up
 and provide a few lines of context around every difference.
 
-**Error output when an array comparison of an long array fails**
+**Example 2.16 Error output when an array comparison of an long array fails**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.error-output.examples.LongArrayDiffTest.php
@@ -985,7 +985,7 @@ might show more problems than actually exist.
 This only happens when using assertEquals or other 'weak' comparison
 functions on arrays or objects.
 
-**Edge case in the diff generation when using weak comparison**
+**Example 2.17 Edge case in the diff generation when using weak comparison**
 
 .. code-block:: php
     :name: writing-tests-for-phpunit.error-output.edge-cases.examples.ArrayWeakComparisonTest.php

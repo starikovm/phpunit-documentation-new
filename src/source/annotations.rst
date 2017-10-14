@@ -2,9 +2,9 @@
 
 .. _appendixes.annotations:
 
-===========
-Annotations
-===========
+==============
+B. Annotations
+==============
 
 An annotation is a special form of syntactic metadata that can be added to
 the source code of some programming languages. While PHP has no dedicated
@@ -318,7 +318,7 @@ specify a default namespace or class name. That way long names don't need to be
 repeated for every ``@covers`` annotation. See
 :ref:`appendixes.annotations.examples.CoversDefaultClassTest.php`.
 
-**Using @coversDefaultClass to shorten annotations**
+**Example B.1 Using @coversDefaultClass to shorten annotations**
 
 .. code-block:: php
     :name: appendixes.annotations.examples.CoversDefaultClassTest.php

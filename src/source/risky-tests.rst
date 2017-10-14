@@ -2,9 +2,9 @@
 
 .. _risky-tests:
 
-===========
-Risky Tests
-===========
+==============
+6. Risky Tests
+==============
 
 PHPUnit can perform the additional checks documented below while it executes
 the tests.

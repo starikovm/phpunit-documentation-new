@@ -2,9 +2,9 @@
 
 .. _textui:
 
-============================
-The Command-Line Test Runner
-============================
+===============================
+3. The Command-Line Test Runner
+===============================
 
 The PHPUnit command-line test runner can be invoked through the
 :file:`phpunit` command. The following code shows how to run
@@ -266,7 +266,7 @@ the following code:
         :ref:`textui.examples.TestCaseClass.php` for an
         example of named data sets.
 
-        **Named data sets**
+        **Example 3.1 Named data sets**
 
         .. code-block:: php
             :name: textui.examples.TestCaseClass.php
@@ -305,7 +305,7 @@ the following code:
     See :ref:`textui.examples.filter-patterns` for examples
     of valid filter patterns.
 
-    **Filter pattern examples**
+    **Example 3.2 Filter pattern examples**
 
     .. code-block:: php
         :name: textui.examples.filter-patterns
@@ -317,7 +317,7 @@ the following code:
     additional shortcuts that are available for matching data
     providers.
 
-    **Filter shortcuts**
+    **Example 3.3 Filter shortcuts**
 
     .. code-block:: php
         :name: textui.examples.filter-shortcuts

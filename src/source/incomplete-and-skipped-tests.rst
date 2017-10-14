@@ -2,9 +2,9 @@
 
 .. _incomplete-and-skipped-tests:
 
-============================
-Incomplete and Skipped Tests
-============================
+===============================
+7. Incomplete and Skipped Tests
+===============================
 
 .. _incomplete-and-skipped-tests.incomplete-tests:
 
@@ -44,7 +44,7 @@ method ``markTestIncomplete()`` (which automatically
 raises an ``PHPUnit_Framework_IncompleteTestError``
 exception) in the test method, we mark the test as being incomplete.
 
-**Marking a test as incomplete**
+**Example 7.1 Marking a test as incomplete**
 
 .. code-block:: php
     :name: incomplete-and-skipped-tests.incomplete-tests.examples.SampleTest.php
@@ -125,7 +125,7 @@ method, ``testConnection()``. In the test case class'
 extension is available and use the ``markTestSkipped()``
 method to skip the test if it is not.
 
-**Skipping a test**
+**Example 7.2 Skipping a test**
 
 .. code-block:: php
     :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseTest.php
@@ -235,7 +235,7 @@ Any extension name along with an optional version identifier
 @requires extension mysqli
 @requires extension redis 2.2.0
 
-**Skipping test cases using @requires**
+**Example 7.3 Skipping test cases using @requires**
 
 .. code-block:: php
     :name: incomplete-and-skipped-tests.skipping-tests.examples.DatabaseClassSkippingTest.php

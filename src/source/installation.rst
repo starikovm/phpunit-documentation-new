@@ -2,9 +2,9 @@
 
 .. _installation:
 
-==================
-Installing PHPUnit
-==================
+=====================
+1. Installing PHPUnit
+=====================
 
 .. _installation.requirements:
 

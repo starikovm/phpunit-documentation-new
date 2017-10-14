@@ -2,9 +2,9 @@
 
 .. _appendixes.copyright:
 
-=========
-Copyright
-=========
+============
+F. Copyright
+============
 ::
 
     Copyright (c) 2005-2017 Sebastian Bergmann.

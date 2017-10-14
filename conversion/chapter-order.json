@@ -1,0 +1,26 @@
+{
+  "chapters" : {
+    "1": "installation",
+    "2": "writing-tests-for-phpunit",
+    "3": "textui",
+    "4": "fixtures",
+    "5": "organizing-tests",
+    "6": "risky-tests",
+    "7": "incomplete-and-skipped-tests",
+    "8": "database",
+    "9": "test-doubles",
+    "10": "testing-practices",
+    "11": "code-coverage-analysis",
+    "12": "other-uses-for-tests",
+    "13": "logging",
+    "14": "extending-phpunit"
+  },
+  "appendix": {
+    "A": "assertions",
+    "B": "annotations",
+    "C": "configuration",
+    "D": "index",
+    "E": "bibliography",
+    "F": "copyright"
+  }
+}

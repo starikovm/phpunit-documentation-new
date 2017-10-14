@@ -2,9 +2,9 @@
 
 .. _extending-phpunit:
 
-=================
-Extending PHPUnit
-=================
+=====================
+14. Extending PHPUnit
+=====================
 
 PHPUnit can be extended in various ways to make the writing of tests
 easier and customize the feedback you get from running tests. Here are
@@ -33,7 +33,7 @@ PHPUnit's own assertions are implemented. As you can see in
 ``isTrue()`` creates a matcher object that is passed on to
 ``assertThat()`` for evaluation.
 
-**The assertTrue() and isTrue() methods of the PHPUnit_Framework_Assert class**
+**Example 14.1 The assertTrue() and isTrue() methods of the PHPUnit_Framework_Assert class**
 
 .. code-block:: php
     :name: extending-phpunit.examples.Assert.php
@@ -80,7 +80,7 @@ PHPUnit's own assertions are implemented. As you can see in
 abstract base class for matcher objects (or constraints),
 ``PHPUnit_Framework_Constraint``.
 
-**The PHPUnit_Framework_Constraint_IsTrue class**
+**Example 14.2 The PHPUnit_Framework_Constraint_IsTrue class**
 
 .. code-block:: php
     :name: extending-phpunit.examples.IsTrue.php
@@ -132,7 +132,7 @@ Implement PHPUnit_Framework_TestListener
 shows a simple implementation of the ``PHPUnit_Framework_TestListener``
 interface.
 
-**A simple test listener**
+**Example 14.3 A simple test listener**
 
 .. code-block:: php
     :name: extending-phpunit.examples.SimpleTestListener.php
@@ -197,7 +197,7 @@ abstract class, which lets you specify only the interface methods that
 are interesting for your use case, while providing empty implementations
 for all the others.
 
-**Using base test listener**
+**Example 14.4 Using base test listener**
 
 .. code-block:: php
     :name: extending-phpunit.examples.BaseTestListener.php
@@ -239,7 +239,7 @@ successful.
 shows a cut-down version of the ``PHPUnit_Extensions_RepeatedTest``
 test decorator that illustrates how to write your own test decorators.
 
-**The RepeatedTest Decorator**
+**Example 14.5 The RepeatedTest Decorator**
 
 .. code-block:: php
     :name: extending-phpunit.examples.RepeatedTest.php
@@ -302,7 +302,7 @@ with Comma-Separated Values (CSV). Each line of such a file looks like
 ``foo;bar``, where the first value is the one we expect
 and the second value is the actual one.
 
-**A data-driven test**
+**Example 14.6 A data-driven test**
 
 .. code-block:: php
     :name: extending-phpunit.examples.DataDrivenTest.php

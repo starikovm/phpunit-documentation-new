@@ -2,9 +2,9 @@
 
 .. _fixtures:
 
-========
-Fixtures
-========
+===========
+4. Fixtures
+===========
 
 One of the most time-consuming parts of writing tests is writing the
 code to set the world up in a known state and then return it to its
@@ -43,7 +43,7 @@ from the test methods and use the newly introduced instance variable,
 ``$stack`` with the ``assertEquals()``
 assertion method.
 
-**Using setUp() to create the stack fixture**
+**Example 4.1 Using setUp() to create the stack fixture**
 
 .. code-block:: php
     :name: fixtures.examples.StackTest.php
@@ -95,7 +95,7 @@ test case class is run, respectively.
 The example below shows all template methods that are available in a test
 case class.
 
-**Example showing all template methods available**
+**Example 4.2 Example showing all template methods available**
 
 .. code-block:: php
     :name: fixtures.examples.TemplateMethodsTest.php
@@ -240,7 +240,7 @@ uses the ``setUpBeforeClass()`` and
 database before the test case class' first test and to disconnect from the
 database after the last test of the test case, respectively.
 
-**Sharing fixture between the tests of a test suite**
+**Example 4.3 Sharing fixture between the tests of a test suite**
 
 .. code-block:: php
     :name: fixtures.sharing-fixture.examples.DatabaseTest.php

@@ -25,7 +25,11 @@
 # converted to ReST comments.
 # Note that ReST doesn't support inline comments. XML comments
 # are converted to ReST comment blocks, what may break paragraphs.
+import inspect
+import json
 from types import NoneType
+
+import os
 
 REMOVE_COMMENTS = False
 
@@ -421,6 +425,8 @@ def title(el):
     parent = el.getparent().tag
     ## title in elements other than the following will trigger assertion
     #if parent in ("book", "chapter", "section", "variablelist", "appendix"):
+    if level == 1:
+        t = chapterTitle(el) + '. ' + t
     return _make_title(t, level)
 
 def screen(el):
@@ -546,10 +552,16 @@ def biblioentry(el):
     return s
 
 def example(el):
+    try:
+        example.exampleNumber += 1
+    except AttributeError:
+        setattr(example, 'exampleNumber', 1)
+
     s = ""
     title = el.find("title")
     if title is not None:
-        s += "\n**%s**\n" % _concat(title)
+        strTitle = 'Example ' + chapterTitle(el) + '.' + str(example.exampleNumber) + ' ' + _concat(title)
+        s += "\n**%s**\n" % strTitle
 
     s += "\n.. code-block:: php\n"
     s += "    :name: %s\n" % el.get("id")
@@ -601,6 +613,22 @@ def glossentry(el):
         s += blockquote(glossdef, None, True)
 
     return s
+
+def chapterTitle(el):
+    with open(os.path.dirname(os.path.abspath(__file__)) + '/chapter-order.json') as data_file:
+        data = json.load(data_file)
+        for chapterType, titles in data.items():
+            currentChapter = findCurrentChapterNumber(el, titles)
+            if currentChapter != 0:
+                chapter = str(currentChapter)
+                return str(chapter).title()
+
+
+def findCurrentChapterNumber(el, titles):
+    for i, val in titles.items():
+        if val in el.base:
+            return i
+    return 0
 
 # Tags to simply ignore
 keyword = _concat

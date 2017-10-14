@@ -2,9 +2,9 @@
 
 .. _testing-practices:
 
-=================
-Testing Practices
-=================
+=====================
+10. Testing Practices
+=====================
 
     *Erich Gamma*:
 

@@ -2,9 +2,9 @@
 
 .. _database:
 
-================
-Database Testing
-================
+===================
+8. Database Testing
+===================
 
 Many beginner and intermediate unit testing examples in any programming
 language suggest that it is perfectly easy to test your application's logic with

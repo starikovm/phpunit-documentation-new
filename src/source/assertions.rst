@@ -2,9 +2,9 @@
 
 .. _appendixes.assertions:
 
-==========
-Assertions
-==========
+=============
+A. Assertions
+=============
 
 This appendix lists the various assertion methods that are available.
 
@@ -50,7 +50,7 @@ Reports an error identified by ``$message`` if ``$array`` does not have the ``$k
 
 ``assertArrayNotHasKey()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertArrayHasKey()**
+**Example A.1 Usage of assertArrayHasKey()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertArrayHasKey.example
@@ -97,7 +97,7 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
 
 ``assertClassNotHasAttribute()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertClassHasAttribute()**
+**Example A.2 Usage of assertClassHasAttribute()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertClassHasAttribute.example
@@ -144,7 +144,7 @@ Reports an error identified by ``$message`` if ``$array`` does not contains the 
 
 ``$strict`` is a flag used to compare the identity of objects within arrays.
 
-**Usage of assertArraySubset()**
+**Example A.3 Usage of assertArraySubset()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertArraySubset.example
@@ -196,7 +196,7 @@ Reports an error identified by ``$message`` if ``$className::attributeName`` doe
 
 ``assertClassNotHasStaticAttribute()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertClassHasStaticAttribute()**
+**Example A.4 Usage of assertClassHasStaticAttribute()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertClassHasStaticAttribute.example
@@ -245,7 +245,7 @@ Reports an error identified by ``$message`` if ``$needle`` is not an element of 
 
 ``assertAttributeContains()`` and ``assertAttributeNotContains()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the haystack.
 
-**Usage of assertContains()**
+**Example A.5 Usage of assertContains()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertContains.example
@@ -287,7 +287,7 @@ Reports an error identified by ``$message`` if ``$needle`` is not a substring of
 
 If ``$ignoreCase`` is ``true``, the test will be case insensitive.
 
-**Usage of assertContains()**
+**Example A.6 Usage of assertContains()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertContains.example2
@@ -323,7 +323,7 @@ If ``$ignoreCase`` is ``true``, the test will be case insensitive.
     FAILURES!
     Tests: 1, Assertions: 1, Failures: 1.
 
-**Usage of assertContains() with $ignoreCase**
+**Example A.7 Usage of assertContains() with $ignoreCase**
 
 .. code-block:: php
     :name: appendixes.assertions.assertContains.example3
@@ -379,7 +379,7 @@ Reports an error identified by ``$message`` if ``$haystack`` does not contain on
 
 ``assertAttributeContainsOnly()`` and ``assertAttributeNotContainsOnly()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the haystack.
 
-**Usage of assertContainsOnly()**
+**Example A.8 Usage of assertContainsOnly()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertContainsOnly.example
@@ -428,7 +428,7 @@ assertContainsOnlyInstancesOf()
 
 Reports an error identified by ``$message`` if ``$haystack`` does not contain only instances of class ``$classname``.
 
-**Usage of assertContainsOnlyInstancesOf()**
+**Example A.9 Usage of assertContainsOnlyInstancesOf()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertContainsOnlyInstancesOf.example
@@ -478,7 +478,7 @@ Reports an error identified by ``$message`` if the number of elements in ``$hays
 
 ``assertNotCount()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertCount()**
+**Example A.10 Usage of assertCount()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertCount.example
@@ -525,7 +525,7 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
 
 ``assertDirectoryNotExists()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertDirectoryExists()**
+**Example A.11 Usage of assertDirectoryExists()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertDirectoryExists.example
@@ -572,7 +572,7 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
 
 ``assertDirectoryNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertDirectoryIsReadable()**
+**Example A.12 Usage of assertDirectoryIsReadable()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertDirectoryIsReadable.example
@@ -619,7 +619,7 @@ Reports an error identified by ``$message`` if the directory specified by ``$dir
 
 ``assertDirectoryNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertDirectoryIsWritable()**
+**Example A.13 Usage of assertDirectoryIsWritable()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertDirectoryIsWritable.example
@@ -668,7 +668,7 @@ Reports an error identified by ``$message`` if ``$actual`` is not empty.
 
 ``assertAttributeEmpty()`` and ``assertAttributeNotEmpty()`` are convenience wrappers that can be applied to a ``public``, ``protected``, or ``private`` attribute of a class or object.
 
-**Usage of assertEmpty()**
+**Example A.14 Usage of assertEmpty()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertEmpty.example
@@ -713,7 +713,7 @@ assertEqualXMLStructure()
 
 Reports an error identified by ``$message`` if the XML Structure of the DOMElement in ``$actualElement`` is not equal to the XML structure of the DOMElement in ``$expectedElement``.
 
-**Usage of assertEqualXMLStructure()**
+**Example A.15 Usage of assertEqualXMLStructure()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertEqualXMLStructure.example
@@ -831,7 +831,7 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
 
 ``assertAttributeEquals()`` and ``assertAttributeNotEquals()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-**Usage of assertEquals()**
+**Example A.16 Usage of assertEquals()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertEquals.example
@@ -908,7 +908,7 @@ Reports an error identified by ``$message`` if the two floats ``$expected`` and 
 
 Please read "`What Every Computer Scientist Should Know About Floating-Point Arithmetic <http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html>`_" to understand why ``$delta`` is neccessary.
 
-**Usage of assertEquals() with floats**
+**Example A.17 Usage of assertEquals() with floats**
 
 .. code-block:: php
     :name: appendixes.assertions.assertEquals.example2
@@ -953,7 +953,7 @@ Please read "`What Every Computer Scientist Should Know About Floating-Point Ari
 
 Reports an error identified by ``$message`` if the uncommented canonical form of the XML documents represented by the two DOMDocument objects ``$expected`` and ``$actual`` are not equal.
 
-**Usage of assertEquals() with DOMDocument objects**
+**Example A.18 Usage of assertEquals() with DOMDocument objects**
 
 .. code-block:: php
     :name: appendixes.assertions.assertEquals.example3
@@ -1009,7 +1009,7 @@ Reports an error identified by ``$message`` if the uncommented canonical form of
 
 Reports an error identified by ``$message`` if the two objects ``$expected`` and ``$actual`` do not have equal attribute values.
 
-**Usage of assertEquals() with objects**
+**Example A.19 Usage of assertEquals() with objects**
 
 .. code-block:: php
     :name: appendixes.assertions.assertEquals.example4
@@ -1066,7 +1066,7 @@ Reports an error identified by ``$message`` if the two objects ``$expected`` and
 
 Reports an error identified by ``$message`` if the two arrays ``$expected`` and ``$actual`` are not equal.
 
-**Usage of assertEquals() with arrays**
+**Example A.20 Usage of assertEquals() with arrays**
 
 .. code-block:: php
     :name: appendixes.assertions.assertEquals.example5
@@ -1123,7 +1123,7 @@ Reports an error identified by ``$message`` if ``$condition`` is ``true``.
 
 ``assertNotFalse()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertFalse()**
+**Example A.21 Usage of assertFalse()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertFalse.example
@@ -1170,7 +1170,7 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
 
 ``assertFileNotEquals()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertFileEquals()**
+**Example A.22 Usage of assertFileEquals()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertFileEquals.example
@@ -1223,7 +1223,7 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
 
 ``assertFileNotExists()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertFileExists()**
+**Example A.23 Usage of assertFileExists()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertFileExists.example
@@ -1270,7 +1270,7 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
 
 ``assertFileNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertFileIsReadable()**
+**Example A.24 Usage of assertFileIsReadable()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertFileIsReadable.example
@@ -1317,7 +1317,7 @@ Reports an error identified by ``$message`` if the file specified by ``$filename
 
 ``assertFileNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertFileIsWritable()**
+**Example A.25 Usage of assertFileIsWritable()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertFileIsWritable.example
@@ -1364,7 +1364,7 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
 
 ``assertAttributeGreaterThan()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-**Usage of assertGreaterThan()**
+**Example A.26 Usage of assertGreaterThan()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertGreaterThan.example
@@ -1411,7 +1411,7 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not g
 
 ``assertAttributeGreaterThanOrEqual()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-**Usage of assertGreaterThanOrEqual()**
+**Example A.27 Usage of assertGreaterThanOrEqual()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertGreaterThanOrEqual.example
@@ -1458,7 +1458,7 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``INF``.
 
 ``assertFinite()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertInfinite()**
+**Example A.28 Usage of assertInfinite()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertInfinite.example
@@ -1507,7 +1507,7 @@ Reports an error identified by ``$message`` if ``$actual`` is not an instance of
 
 ``assertAttributeInstanceOf()`` and ``assertAttributeNotInstanceOf()`` are convenience wrappers that can be applied to a ``public``, ``protected``, or ``private`` attribute of a class or object.
 
-**Usage of assertInstanceOf()**
+**Example A.29 Usage of assertInstanceOf()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertInstanceOf.example
@@ -1556,7 +1556,7 @@ Reports an error identified by ``$message`` if ``$actual`` is not of the ``$expe
 
 ``assertAttributeInternalType()`` and ``assertAttributeNotInternalType()`` are convenience wrappers that can be applied to a ``public``, ``protected``, or ``private`` attribute of a class or object.
 
-**Usage of assertInternalType()**
+**Example A.30 Usage of assertInternalType()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertInternalType.example
@@ -1603,7 +1603,7 @@ Reports an error identified by ``$message`` if the file or directory specified b
 
 ``assertNotIsReadable()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertIsReadable()**
+**Example A.31 Usage of assertIsReadable()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertIsReadable.example
@@ -1650,7 +1650,7 @@ Reports an error identified by ``$message`` if the file or directory specified b
 
 ``assertNotIsWritable()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertIsWritable()**
+**Example A.32 Usage of assertIsWritable()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertIsWritable.example
@@ -1696,7 +1696,7 @@ assertJsonFileEqualsJsonFile()
 Reports an error identified by ``$message`` if the value of ``$actualFile`` does not match the value of
 ``$expectedFile``.
 
-**Usage of assertJsonFileEqualsJsonFile()**
+**Example A.33 Usage of assertJsonFileEqualsJsonFile()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertJsonFileEqualsJsonFile.example
@@ -1743,7 +1743,7 @@ assertJsonStringEqualsJsonFile()
 Reports an error identified by ``$message`` if the value of ``$actualJson`` does not match the value of
 ``$expectedFile``.
 
-**Usage of assertJsonStringEqualsJsonFile()**
+**Example A.34 Usage of assertJsonStringEqualsJsonFile()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertJsonStringEqualsJsonFile.example
@@ -1791,7 +1791,7 @@ assertJsonStringEqualsJsonString()
 Reports an error identified by ``$message`` if the value of ``$actualJson`` does not match the value of
 ``$expectedJson``.
 
-**Usage of assertJsonStringEqualsJsonString()**
+**Example A.35 Usage of assertJsonStringEqualsJsonString()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertJsonStringEqualsJsonString.example
@@ -1848,7 +1848,7 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
 
 ``assertAttributeLessThan()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-**Usage of assertLessThan()**
+**Example A.36 Usage of assertLessThan()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertLessThan.example
@@ -1895,7 +1895,7 @@ Reports an error identified by ``$message`` if the value of ``$actual`` is not l
 
 ``assertAttributeLessThanOrEqual()`` is a convenience wrapper that uses a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-**Usage of assertLessThanOrEqual()**
+**Example A.37 Usage of assertLessThanOrEqual()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertLessThanOrEqual.example
@@ -1940,7 +1940,7 @@ assertNan()
 
 Reports an error identified by ``$message`` if ``$variable`` is not ``NAN``.
 
-**Usage of assertNan()**
+**Example A.38 Usage of assertNan()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertNan.example
@@ -1987,7 +1987,7 @@ Reports an error identified by ``$message`` if ``$variable`` is not ``null``.
 
 ``assertNotNull()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertNull()**
+**Example A.39 Usage of assertNull()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertNull.example
@@ -2034,7 +2034,7 @@ Reports an error identified by ``$message`` if ``$object->attributeName`` does n
 
 ``assertObjectNotHasAttribute()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertObjectHasAttribute()**
+**Example A.40 Usage of assertObjectHasAttribute()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertObjectHasAttribute.example
@@ -2081,7 +2081,7 @@ Reports an error identified by ``$message`` if ``$string`` does not match the re
 
 ``assertNotRegExp()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertRegExp()**
+**Example A.41 Usage of assertRegExp()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertRegExp.example
@@ -2128,7 +2128,7 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
 
 ``assertStringNotMatchesFormat()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertStringMatchesFormat()**
+**Example A.42 Usage of assertStringMatchesFormat()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertStringMatchesFormat.example
@@ -2221,7 +2221,7 @@ Reports an error identified by ``$message`` if the ``$string`` does not match th
 
 ``assertStringNotMatchesFormatFile()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertStringMatchesFormatFile()**
+**Example A.43 Usage of assertStringMatchesFormatFile()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertStringMatchesFormatFile.example
@@ -2271,7 +2271,7 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
 
 ``assertAttributeSame()`` and ``assertAttributeNotSame()`` are convenience wrappers that use a ``public``, ``protected``, or ``private`` attribute of a class or object as the actual value.
 
-**Usage of assertSame()**
+**Example A.44 Usage of assertSame()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertSame.example
@@ -2311,7 +2311,7 @@ Reports an error identified by ``$message`` if the two variables ``$expected`` a
 
 Reports an error identified by ``$message`` if the two variables ``$expected`` and ``$actual`` do not reference the same object.
 
-**Usage of assertSame() with objects**
+**Example A.45 Usage of assertSame() with objects**
 
 .. code-block:: php
     :name: appendixes.assertions.assertSame.example2
@@ -2358,7 +2358,7 @@ Reports an error identified by ``$message`` if the ``$string`` does not end with
 
 ``assertStringEndsNotWith()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertStringEndsWith()**
+**Example A.46 Usage of assertStringEndsWith()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertStringEndsWith.example
@@ -2405,7 +2405,7 @@ Reports an error identified by ``$message`` if the file specified by ``$expected
 
 ``assertStringNotEqualsFile()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertStringEqualsFile()**
+**Example A.47 Usage of assertStringEqualsFile()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertStringEqualsFile.example
@@ -2458,7 +2458,7 @@ Reports an error identified by ``$message`` if the ``$string`` does not start wi
 
 ``assertStringStartsNotWith()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertStringStartsWith()**
+**Example A.48 Usage of assertStringStartsWith()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertStringStartsWith.example
@@ -2511,7 +2511,7 @@ constraints can be used to express the same assertion as
 
 Reports an error identified by ``$message`` if the ``$value`` does not match the ``$constraint``.
 
-**Usage of assertThat()**
+**Example A.49 Usage of assertThat()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertThat.example
@@ -2659,7 +2659,7 @@ Reports an error identified by ``$message`` if ``$condition`` is ``false``.
 
 ``assertNotTrue()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertTrue()**
+**Example A.50 Usage of assertTrue()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertTrue.example
@@ -2706,7 +2706,7 @@ Reports an error identified by ``$message`` if the XML document in ``$actualFile
 
 ``assertXmlFileNotEqualsXmlFile()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertXmlFileEqualsXmlFile()**
+**Example A.51 Usage of assertXmlFileEqualsXmlFile()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertXmlFileEqualsXmlFile.example
@@ -2762,7 +2762,7 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
 
 ``assertXmlStringNotEqualsXmlFile()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertXmlStringEqualsXmlFile()**
+**Example A.52 Usage of assertXmlStringEqualsXmlFile()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertXmlStringEqualsXmlFile.example
@@ -2818,7 +2818,7 @@ Reports an error identified by ``$message`` if the XML document in ``$actualXml`
 
 ``assertXmlStringNotEqualsXmlString()`` is the inverse of this assertion and takes the same arguments.
 
-**Usage of assertXmlStringEqualsXmlString()**
+**Example A.53 Usage of assertXmlStringEqualsXmlString()**
 
 .. code-block:: php
     :name: appendixes.assertions.assertXmlStringEqualsXmlString.example

@@ -2,9 +2,9 @@
 
 .. _logging:
 
-=======
-Logging
-=======
+===========
+13. Logging
+===========
 
 PHPUnit can produce several types of logfiles.
 
