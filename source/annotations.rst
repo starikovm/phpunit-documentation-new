@@ -16,7 +16,7 @@ Reflection API's ``getDocComment()`` method on the function,
 class, method, and attribute level. Applications such as PHPUnit use this
 information at runtime to configure their behaviour.
 
-.. note::
+.. admonition:: Note
 
    A doc comment in PHP must start with ``/**`` and end with
    ``*/``. Annotations in any other style of comment will be
@@ -166,7 +166,7 @@ test method level:
         }
     }
 
-.. note::
+.. admonition:: Note
 
    ``@backupStaticAttributes`` is limited by PHP internals
    and may cause unintended static values to persist and leak into
@@ -697,7 +697,7 @@ second to execute. This timeout is configurable via the
 ``timeoutForSmallTests`` attribute in the XML
 configuration file.
 
-.. note::
+.. admonition:: Note
 
    Tests need to be explicitly annotated by either ``@small``,
    ``@medium``, or ``@large`` to enable run time limits.

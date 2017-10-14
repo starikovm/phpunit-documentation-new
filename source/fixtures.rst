@@ -317,7 +317,7 @@ By using the ``--static-backup`` option or setting
 XML configuration file, this isolation can be extended to static
 attributes of classes.
 
-.. note::
+.. admonition:: Note
 
    The backup and restore operations for global variables and static
    class attributes use ``serialize()`` and
@@ -342,7 +342,7 @@ be excluded from the backup and restore operations like this
         // ...
     }
 
-.. note::
+.. admonition:: Note
 
    Setting the ``$backupGlobalsBlacklist`` property inside
    e.g. the ``setUp()`` method has no effect.
@@ -356,7 +356,7 @@ It processes all classes that are declared at the time a test starts, not
 only the test class itself. It only applies to static class properties,
 not static variables within functions.
 
-.. note::
+.. admonition:: Note
 
    The ``@backupStaticAttributes`` operation is executed
    before a test method, but only if it is enabled. If a static value was
@@ -390,7 +390,7 @@ from the backup and restore operations:
         // ...
     }
 
-.. note::
+.. admonition:: Note
 
    Setting the ``$backupStaticAttributesBlacklist`` property
    inside e.g. the ``setUp()`` method has no effect.

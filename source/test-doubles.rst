@@ -46,10 +46,7 @@ the original method). Using the ``will($this->returnValue())``
 method, for instance, you can configure these dummy implementations to
 return a value when called.
 
-.. note::
-
-   Limitation: final, private, and static methods
-   ##############################################
+.. admonition:: Limitation: final, private, and static methods
 
    Please note that ``final``, ``private``
    and ``static`` methods cannot be stubbed or mocked. They
@@ -121,10 +118,7 @@ the example. This leads to more readable and "fluent" code.
     }
     ?>
 
-.. note::
-
-   Limitation: Methods named "method"
-   ==================================
+.. admonition:: Limitation: Methods named "method"
 
    The example shown above only works when the original class does not
    declare a method named "method".
@@ -314,8 +308,7 @@ the ``onConsecutiveCalls()`` method. See
 an example.
 
 .. code-block:: php
-    :caption: Stubbing a method call to return a list of values in the
-specified order
+    :caption: Stubbing a method call to return a list of values in the specified order
     :name: test-doubles.stubs.examples.StubTest7.php
 
     <?php
@@ -402,10 +395,7 @@ tests but the emphasis is on the verification of the indirect outputs.
 Therefore, a mock object is a lot more than just a test stub plus
 assertions; it is used in a fundamentally different way" (Gerard Meszaros).
 
-.. note::
-
-   Limitation: Automatic verification of expectations
-   ==================================================
+.. admonition:: Limitation: Automatic verification of expectations
 
    Only mock objects generated within the scope of a test will be verified
    automatically by PHPUnit. Mock objects generated in data providers, for
@@ -545,8 +535,7 @@ method being mocked. You can specify more advanced constraints
 on the method's arguments than a simple match.
 
 .. code-block:: php
-    :caption: Testing that a method gets called with a number of
-arguments constrained in different ways
+    :caption: Testing that a method gets called with a number of arguments constrained in different ways
     :name: test-doubles.mock-objects.examples.SubjectTest2.php
 
     <?php
@@ -730,7 +719,7 @@ invocations.
     * - ``PHPUnit_Framework_MockObject_Matcher_InvokedAtIndex at(int $index)``
       - Returns a matcher that matches when the method it is evaluated for is invoked at the given ``$index``.
 
-.. note::
+.. admonition:: Note
 
    The ``$index`` parameter for the ``at()``
    matcher refers to the index, starting at zero, in *all method
