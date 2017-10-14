@@ -21,6 +21,10 @@ Running the `conversion/DocBookToReST` Bash script will take all XML files from
 `docbook/`, convert them to `.rst` files with the help of
 `DocBookToReST.py` and write them to `source/`.
 
+### Tests
+
+Run tests by executing command `python tests/conversion.py`
+
 ## Building the HTML Documentation
 
 ### Requirements
