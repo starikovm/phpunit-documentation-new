@@ -1,11 +1,1 @@
-
-
-.. _appendixes.index:
-
-=====
-Index
-=====
-
-.. _appendixes.index.index:
-
-
+../phpunit-documentation-new/source/documentation_index.rst
