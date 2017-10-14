@@ -31,6 +31,7 @@ Run tests by executing command `python tests/conversion.py`
 
 - Python
 - [Sphinx](http://www.sphinx-doc.org/)
+- [Read the Docs Sphinx Theme](https://github.com/rtfd/sphinx_rtd_theme)
 
 To build the complete documentation run:
 
