@@ -153,7 +153,7 @@ case class.
 
 .. code-block:: bash
 
-    $  phpunit TemplateMethodsTest
+    $ phpunit TemplateMethodsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     TemplateMethodsTest::setUpBeforeClass
