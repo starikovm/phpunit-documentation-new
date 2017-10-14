@@ -39,6 +39,10 @@ import sys
 import re
 import lxml.etree as ET
 
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 # to avoid dupliate error reports
 _not_handled_tags = set()
 
@@ -115,6 +119,16 @@ def _conv(el):
 def _no_special_markup(el):
     return _concat(el)
 
+def _remove_newlines(s):
+    s = " ".join(i.lstrip().replace("\\", "\\\\") for i in s.splitlines())
+    s = re.sub(r"([\s'\"([{</:-])" # start-string is preceded by one of these
+               r"([|*`[])" # the start-string
+               r"(\S)",    # start-string is followed by non-whitespace
+               r"\1\\\2\3", # insert backslash
+               s)
+
+    return s
+
 def _remove_indent_and_escape(s):
     "remove indentation from the string s, escape some of the special chars"
     s = re.sub(r'(\n)+', '\n', s) # redundant newlines
@@ -130,8 +144,8 @@ def _remove_indent_and_escape(s):
                s)
     return s
 
+
 def _concat(el):
-    "concatate .text with children (_conv'ed to text) and their tails"
     s = ""
 
     if type(el) is NoneType:
@@ -144,7 +158,9 @@ def _concat(el):
     if id is not None and (WRITE_UNUSED_LABELS or id in _linked_ids):
         s += "\n\n.. _%s:\n\n" % id
     if el.text is not None:
-        if el.tag not in UNESCAPED_TAGS:
+        if el.tag == "title":
+            s += _remove_newlines(el.text)
+        elif el.tag not in UNESCAPED_TAGS:
             s += _remove_indent_and_escape(el.text)
         else:
             if el.tag == 'userinput' \
@@ -617,6 +633,8 @@ def table(el):
 
     return s
 
+def quote(el):
+    return "“%s“" % el.text
 
 def bibliography(el):
     _supports_only(el, ("biblioentry",))
@@ -669,7 +687,6 @@ procedure = orderedlist
 productname = emphasis
 programlisting = screen
 pubdate = emphasis
-quote = userinput
 simpara = _block_separated_with_blank_line
 
 

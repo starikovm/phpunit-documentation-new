@@ -308,8 +308,7 @@ the ``onConsecutiveCalls()`` method. See
 an example.
 
 .. code-block:: php
-    :caption: Stubbing a method call to return a list of values in the
-specified order
+    :caption: Stubbing a method call to return a list of values in the specified order
     :name: test-doubles.stubs.examples.StubTest7.php
 
     <?php
@@ -536,8 +535,7 @@ method being mocked. You can specify more advanced constraints
 on the method's arguments than a simple match.
 
 .. code-block:: php
-    :caption: Testing that a method gets called with a number of
-arguments constrained in different ways
+    :caption: Testing that a method gets called with a number of arguments constrained in different ways
     :name: test-doubles.mock-objects.examples.SubjectTest2.php
 
     <?php
