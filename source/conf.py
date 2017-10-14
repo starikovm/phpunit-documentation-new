@@ -318,3 +318,8 @@ numfig_format = {
     'table': 'Table %s',
     'section': 'Section'
 }
+
+epub_theme = "epub"
+epub_theme_options = {
+    "footer": False
+}
