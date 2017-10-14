@@ -45,7 +45,5 @@ Writing Tests for PHPUnit
         }
     }
     ?>
-.. code-block:: bash
-    :name: writing-tests-for-phpunit.examples.StackTest2.php-bash
 
 
