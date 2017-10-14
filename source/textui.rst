@@ -497,7 +497,7 @@ the following code:
 
     Sets the value of the given PHP configuration option.
 
-.. note::
+.. admonition:: Note
 
    Please note that as of 4.8, options can be put after the argument(s).
 

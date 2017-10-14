@@ -139,7 +139,7 @@ depends on ``testEmpty()`` and is passed the result of that
 depended-upon test as its argument. Finally, ``testPop()``
 depends upon ``testPush()``.
 
-.. note::
+.. admonition:: Note
 
    The return value yielded by a producer is passed "as-is" to its
    consumers by default. This means that when a producer returns an object,
@@ -538,14 +538,14 @@ See :numref:`writing-tests-for-phpunit.data-providers.examples.DependencyAndData
     FAILURES!
     Tests: 4, Assertions: 4, Failures: 1.
 
-.. note::
+.. admonition:: Note
 
    When a test depends on a test that uses data providers, the depending
    test will be executed when the test it depends upon is successful for at
    least one data set. The result of a test that uses data providers cannot
    be injected into a depending test.
 
-.. note::
+.. admonition:: Note
 
    All data providers are executed before both the call to the ``setUpBeforeClass``
    static method and the first call to the ``setUp`` method.
@@ -654,7 +654,7 @@ triggered during the execution of a test to an exception. Using these
 exceptions, you can, for instance, expect a test to trigger a PHP error as
 shown in :numref:`writing-tests-for-phpunit.exceptions.examples.ErrorTest.php`.
 
-.. note::
+.. admonition:: Note
 
    PHP's ``error_reporting`` runtime configuration can
    limit which errors PHPUnit will convert to exceptions. If you are
@@ -695,7 +695,7 @@ shown in :numref:`writing-tests-for-phpunit.exceptions.examples.ErrorTest.php`.
 ``PHPUnit\Framework\Error\Warning`` represent PHP notices
 and warnings, respectively.
 
-.. note::
+.. admonition:: Note
 
    You should be as specific as possible when testing exceptions. Testing
    for classes that are too generic might lead to undesirable
@@ -833,7 +833,7 @@ shows the methods provided for testing output
     * - ``string getActualOutput()``
       - Get the actual output.
 
-.. note::
+.. admonition:: Note
 
    A test that emits output will fail in strict mode.
 

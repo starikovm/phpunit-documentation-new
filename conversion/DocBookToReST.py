@@ -496,7 +496,13 @@ def variablelist(el):
 # admonition directives
 
 def note(el):
-    return _indent(el, 3, ".. note:: ")
+    title = "Note"
+    title_element = el.find("title")
+    if title_element is not None:
+        title = title_element.text
+        title_element.getparent().remove(title_element)
+
+    return _indent(el, 3, ".. admonition:: %s" % title)
 def caution(el):
     return _indent(el, 3, ".. caution:: ")
 def important(el):

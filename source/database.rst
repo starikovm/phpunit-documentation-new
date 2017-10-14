@@ -13,7 +13,7 @@ reality. Start using WordPress, TYPO3 or Symfony with Doctrine or Propel,
 for example, and you will easily experience considerable problems with
 PHPUnit: just because the database is so tightly coupled to these libraries.
 
-.. note::
+.. admonition:: Note
 
    Make sure you have the PHP extension ``pdo`` and database
    specific extensions such as ``pdo_mysql`` installed.

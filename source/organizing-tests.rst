@@ -53,7 +53,7 @@ command-line test runner to the test directory:
 
     OK (33 tests, 52 assertions)
 
-.. note::
+.. admonition:: Note
 
    If you point the PHPUnit command-line test runner to a directory it will
    look for :file:`*Test.php` files.
@@ -87,7 +87,7 @@ For more fine-grained control of which tests to run we can use the
 
     OK (2 test, 2 assertions)
 
-.. note::
+.. admonition:: Note
 
    A drawback of this approach is that we have no control over the order in
    which the tests are run. This can lead to problems with regard to test

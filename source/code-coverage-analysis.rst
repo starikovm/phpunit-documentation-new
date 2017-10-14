@@ -21,7 +21,7 @@ code are executed when the tests are run. It makes use of the
 component, which in turn leverages the code coverage functionality provided
 by the `Xdebug <http://xdebug.org/>`_ extension for PHP.
 
-.. note::
+.. admonition:: Note
 
    Xdebug is not distributed as part of PHPUnit. If you receive a notice
    while running tests that the Xdebug extension is not loaded, it means
@@ -97,7 +97,7 @@ Various software metrics exist to measure code coverage:
     by writing tests and by refactoring the code to lower its
     complexity.
 
-.. note::
+.. admonition:: Note
 
    The *Opcode Coverage*,
    *Branch Coverage*, and
@@ -123,7 +123,7 @@ for instance, you also need to set
 ``processUncoveredFilesFromWhitelist="true"`` in your
 PHPUnit configuration (see :ref:`appendixes.configuration.whitelisting-files`).
 
-.. note::
+.. admonition:: Note
 
    Please note that the loading of sourcecode files that is performed when
    ``processUncoveredFilesFromWhitelist="true"`` is set can
