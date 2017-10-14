@@ -166,7 +166,7 @@ def _concat(el):
             if el.tag == 'userinput' \
                     and not el.text.startswith('$') \
                     and 'installation.xml' not in el.base:
-                el.text = '$  ' + el.text
+                el.text = '$ ' + el.text
             s += el.text
     for i in el.getchildren():
         s += _conv(i)

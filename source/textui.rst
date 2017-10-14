@@ -12,7 +12,7 @@ tests with the PHPUnit command-line test runner:
 
 .. code-block:: bash
 
-    $  phpunit ArrayTest
+    $ phpunit ArrayTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     ..
@@ -75,7 +75,7 @@ the following code:
 
 .. code-block:: bash
 
-    $  phpunit --help
+    $ phpunit --help
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
 
     Usage: phpunit [options] UnitTest [UnitTest.php]
