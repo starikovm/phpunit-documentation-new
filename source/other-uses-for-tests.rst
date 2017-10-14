@@ -2,9 +2,9 @@
 
 .. _other-uses-for-tests:
 
-========================
-12. Other Uses for Tests
-========================
+====================
+Other Uses for Tests
+====================
 
 Once you get used to writing automated tests, you will likely discover
 more uses for tests. Here are some examples.

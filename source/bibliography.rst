@@ -2,9 +2,9 @@
 
 .. _appendixes.bibliography:
 
-===============
-E. Bibliography
-===============
+============
+Bibliography
+============
 
 [Astels2003] David Astels. *Test Driven Development*.
 

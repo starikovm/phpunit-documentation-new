@@ -430,8 +430,6 @@ def title(el):
     parent = el.getparent().tag
     ## title in elements other than the following will trigger assertion
     #if parent in ("book", "chapter", "section", "variablelist", "appendix"):
-    if level == 1:
-        t = chapterTitle(el) + '. ' + t
     return _make_title(t, level)
 
 def screen(el):
@@ -566,16 +564,10 @@ def biblioentry(el):
     return s
 
 def example(el):
-    try:
-        example.exampleNumber += 1
-    except AttributeError:
-        setattr(example, 'exampleNumber', 1)
-
     s = "\n.. code-block:: php\n"
     title = el.find("title")
     if title is not None:
-        strTitle = 'Example ' + chapterTitle(el) + '.' + str(example.exampleNumber) + ' ' + _concat(title)
-        s += "    :caption: %s\n" % strTitle
+        s += "    :caption: %s\n" % _concat(title)
 
     s += "    :name: %s\n" % el.get("id")
 
@@ -658,22 +650,6 @@ def glossentry(el):
         s += blockquote(glossdef, None, True)
 
     return s
-
-def chapterTitle(el):
-    with open(os.path.dirname(os.path.abspath(__file__)) + '/chapter-order.json') as data_file:
-        data = json.load(data_file)
-        for chapterType, titles in data.items():
-            currentChapter = findCurrentChapterNumber(el, titles)
-            if currentChapter != 0:
-                chapter = str(currentChapter)
-                return str(chapter).title()
-
-
-def findCurrentChapterNumber(el, titles):
-    for i, val in titles.items():
-        if val in el.base:
-            return i
-    return 0
 
 # Tags to simply ignore
 keyword = _concat

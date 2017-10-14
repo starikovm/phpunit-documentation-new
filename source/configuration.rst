@@ -2,9 +2,9 @@
 
 .. _appendixes.configuration:
 
-=============================
-C. The XML Configuration File
-=============================
+==========================
+The XML Configuration File
+==========================
 
 .. _appendixes.configuration.phpunit:
 

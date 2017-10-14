@@ -2,9 +2,9 @@
 
 .. _appendixes.index:
 
-========
-D. Index
-========
+=====
+Index
+=====
 
 .. _appendixes.index.index:
 
