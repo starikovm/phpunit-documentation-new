@@ -25,11 +25,7 @@
 # converted to ReST comments.
 # Note that ReST doesn't support inline comments. XML comments
 # are converted to ReST comment blocks, what may break paragraphs.
-import inspect
-import json
 from types import NoneType
-
-import os
 
 REMOVE_COMMENTS = False
 
@@ -565,6 +561,7 @@ def biblioentry(el):
 
 def example(el):
     s = "\n.. code-block:: php\n"
+
     title = el.find("title")
     if title is not None:
         s += "    :caption: %s\n" % _concat(title)
