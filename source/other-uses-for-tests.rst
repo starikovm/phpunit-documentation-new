@@ -38,7 +38,7 @@ all of these tests succeed.
 Let us take a look at the agile documentation generated for a
 ``BankAccount`` class:
 
-::
+.. code-block:: bash
 
     $  phpunit --testdox BankAccountTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.

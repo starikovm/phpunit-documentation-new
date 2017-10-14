@@ -31,7 +31,7 @@ is where you clean up the objects against which you tested.
 
 In :ref:`writing-tests-for-phpunit.examples.StackTest2.php` we
 used the producer-consumer relationship between tests to share a fixture. This
-is not always desired or even possible. :ref:`fixtures.examples.StackTest.php`
+is not always desired or even possible. :numref:`fixtures.examples.StackTest.php`
 shows how we can write the tests of the ``StackTest`` in such
 a way that not the fixture itself is reused but the code that creates it.
 First we declare the instance variable, ``$stack``, that we
@@ -43,9 +43,8 @@ from the test methods and use the newly introduced instance variable,
 ``$stack`` with the ``assertEquals()``
 assertion method.
 
-**Using setUp() to create the stack fixture**
-
 .. code-block:: php
+    :caption: Using setUp() to create the stack fixture
     :name: fixtures.examples.StackTest.php
 
     <?php
@@ -80,8 +79,6 @@ assertion method.
         }
     }
     ?>
-.. code-block:: bash
-    :name: fixtures.examples.StackTest.php-bash
 
 The ``setUp()`` and ``tearDown()`` template
 methods are run once for each test method (and on fresh instances) of the
@@ -95,9 +92,8 @@ test case class is run, respectively.
 The example below shows all template methods that are available in a test
 case class.
 
-**Example showing all template methods available**
-
 .. code-block:: php
+    :caption: Example showing all template methods available
     :name: fixtures.examples.TemplateMethodsTest.php
 
     <?php
@@ -154,8 +150,8 @@ case class.
         }
     }
     ?>
+
 .. code-block:: bash
-    :name: fixtures.examples.TemplateMethodsTest.php-bash
 
     $  phpunit TemplateMethodsTest
     PHPUnit 6.4.0 by Sebastian Bergmann and contributors.
@@ -234,15 +230,14 @@ tests is a database connection: you log into the database once and reuse
 the database connection instead of creating a new connection for each
 test. This makes your tests run faster.
 
-:ref:`fixtures.sharing-fixture.examples.DatabaseTest.php`
+:numref:`fixtures.sharing-fixture.examples.DatabaseTest.php`
 uses the ``setUpBeforeClass()`` and
 ``tearDownAfterClass()`` template methods to connect to the
 database before the test case class' first test and to disconnect from the
 database after the last test of the test case, respectively.
 
-**Sharing fixture between the tests of a test suite**
-
 .. code-block:: php
+    :caption: Sharing fixture between the tests of a test suite
     :name: fixtures.sharing-fixture.examples.DatabaseTest.php
 
     <?php
@@ -263,8 +258,6 @@ database after the last test of the test case, respectively.
         }
     }
     ?>
-.. code-block:: bash
-    :name: fixtures.sharing-fixture.examples.DatabaseTest.php-bash
 
 It cannot be emphasized enough that sharing fixtures between tests
 reduces the value of the tests. The underlying design problem is
@@ -340,7 +333,7 @@ control the backup and restore operations for global variables.
 Alternatively, you can provide a blacklist of global variables that are to
 be excluded from the backup and restore operations like this
 
-::
+.. code-block:: php
 
     class MyTest extends TestCase
     {
@@ -386,7 +379,7 @@ not static variables within functions.
 You can provide a blacklist of static attributes that are to be excluded
 from the backup and restore operations:
 
-::
+.. code-block:: php
 
     class MyTest extends TestCase
     {

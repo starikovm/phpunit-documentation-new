@@ -31,7 +31,7 @@ test case classes in the :file:`tests` directory mirror the
 package and class structure of the System Under Test (SUT) in the
 :file:`src` directory:
 
-::
+.. code-block:: bash
 
     src                                 tests
     `-- Currency.php                    `-- CurrencyTest.php
@@ -42,7 +42,7 @@ package and class structure of the System Under Test (SUT) in the
 To run all tests for the library we just need to point the PHPUnit
 command-line test runner to the test directory:
 
-::
+.. code-block:: bash
 
     $  phpunit --bootstrap src/autoload.php tests
     PHPUnit 6.4.0 by Sebastian Bergmann.
@@ -62,7 +62,7 @@ To run only the tests that are declared in the ``CurrencyTest``
 test case class in :file:`tests/CurrencyTest.php` we can use
 the following command:
 
-::
+.. code-block:: bash
 
     $  phpunit --bootstrap src/autoload.php tests/CurrencyTest
     PHPUnit 6.4.0 by Sebastian Bergmann.
@@ -76,7 +76,7 @@ the following command:
 For more fine-grained control of which tests to run we can use the
 ``--filter`` option:
 
-::
+.. code-block:: bash
 
     $  phpunit --bootstrap src/autoload.php --filter testObjectCanBeConstructedForValidConstructorArgument tests
     PHPUnit 6.4.0 by Sebastian Bergmann.
@@ -102,15 +102,14 @@ Composing a Test Suite Using XML Configuration
 
 PHPUnit's XML configuration file (:ref:`appendixes.configuration`)
 can also be used to compose a test suite.
-:ref:`organizing-tests.xml-configuration.examples.phpunit.xml`
+:numref:`organizing-tests.xml-configuration.examples.phpunit.xml`
 shows a minimal :file:`phpunit.xml` file that will add all
 ``*Test`` classes that are found in
 :file:`*Test.php` files when the :file:`tests`
 directory is recursively traversed.
 
-**Composing a Test Suite Using XML Configuration**
-
 .. code-block:: php
+    :caption: Composing a Test Suite Using XML Configuration
     :name: organizing-tests.xml-configuration.examples.phpunit.xml
 
     <phpunit bootstrap="src/autoload.php">
@@ -120,8 +119,6 @@ directory is recursively traversed.
         </testsuite>
       </testsuites>
     </phpunit>
-.. code-block:: bash
-    :name: organizing-tests.xml-configuration.examples.phpunit.xml-bash
 
 If :file:`phpunit.xml` or
 :file:`phpunit.xml.dist` (in that order) exist in the
@@ -131,9 +128,8 @@ read from that file.
 
 The order in which tests are executed can be made explicit:
 
-**Composing a Test Suite Using XML Configuration**
-
 .. code-block:: php
+    :caption: Composing a Test Suite Using XML Configuration
     :name: organizing-tests.xml-configuration.examples.phpunit.xml2
 
     <phpunit bootstrap="src/autoload.php">
@@ -145,7 +141,5 @@ The order in which tests are executed can be made explicit:
         </testsuite>
       </testsuites>
     </phpunit>
-.. code-block:: bash
-    :name: organizing-tests.xml-configuration.examples.phpunit.xml2-bash
 
 
